@@ -1,0 +1,1 @@
+C#/.NET Deep Dive — Add csharp/: value vs reference types, GC internals, LINQ, delegates, DI patterns (especially valuable since your examples are C#-focused).

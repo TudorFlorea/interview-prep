@@ -1,0 +1,1 @@
+Object-Oriented Design (OOD/LLD) — Add an ood/ folder with classic problems: parking lot, elevator, chess game, library system, ATM, vending machine. Different from design patterns—focuses on class design interviews.
