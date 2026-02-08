@@ -3,11 +3,7 @@ layout: home
 hero:
   name: Interview Prep
   text: Technical Interview Notes
-  tagline: DSA, Databases, Design Patterns & Networking
-  actions:
-    - theme: brand
-      text: Get Started
-      link: /dsa/00-index
+  tagline: DSA, Databases, Design Patterns, Networking, Behavioral, System Design
 features:
   - title: 📊 DSA
     details: Data structures and algorithms for coding interviews
@@ -21,4 +17,10 @@ features:
   - title: 🌐 Networking
     details: HTTP, TCP/IP, DNS, and more
     link: /networking/00-index
+  - title: 🎯 Behavioral
+    details: STAR method, story bank, and leadership principles
+    link: /behavioral/00-index
+  - title: 🏛️ System Design
+    details: Fundamentals, scaling, and real-world system design problems
+    link: /system-design/00-index
 ---
