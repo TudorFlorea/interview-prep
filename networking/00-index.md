@@ -36,7 +36,7 @@
 | [WebSockets & Real-Time](/networking/11-websockets-and-real-time.md) | ⬜ Not Started | 🟡 Intermediate |
 | [Physical & Link Layer](/networking/12-physical-and-link-layer.md) | ⬜ Not Started | 🟢 Foundational |
 | [Debugging & Tools](/networking/13-debugging-and-tools.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Cloud Networking](/networking/14-cloud-networking.md) | ⬜ Not Started | 🔴 Advanced |
+| Cloud Networking | ⬜ Not Started | 🔴 Advanced |
 
 ---
 

@@ -26,9 +26,9 @@
 | 14 | [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) | ⬜ Not Started | 🔴 Advanced | Leader election, consensus, sagas, locks |
 | 15 | [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md) | ⬜ Not Started | 🟡 Intermediate | WebSockets, SSE, long polling, presence |
 | 16 | [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) | ⬜ Not Started | 🟡 Intermediate | Elasticsearch, inverted indexes, ranking |
-| 17 | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md) | ⬜ Not Started | 🟡 Intermediate | S3, presigned URLs, edge caching |
+| 17 | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) | ⬜ Not Started | 🟡 Intermediate | S3, presigned URLs, edge caching |
 | 18 | [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) | ⬜ Not Started | 🟡 Intermediate | Token bucket, sliding window, distributed |
-| 19 | [Monitoring & Observability](/system-design/fundamentals/19-monitoring-observability.md) | ⬜ Not Started | 🟡 Intermediate | Metrics, logging, tracing, SLOs |
+| 19 | [Monitoring & Observability](/system-design/fundamentals/19-monitoring-and-observability.md) | ⬜ Not Started | 🟡 Intermediate | Metrics, logging, tracing, SLOs |
 | 20 | [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) | ⬜ Not Started | 🔴 Advanced | Circuit breakers, retries, bulkheads |
 | 21 | [Security](/system-design/fundamentals/21-security.md) | ⬜ Not Started | 🟡 Intermediate | AuthN/AuthZ, OAuth, encryption, API security |
 
@@ -213,7 +213,7 @@ Understanding how fundamentals connect helps you navigate complex problems:
 | Estimate capacity | [Back-of-Envelope](/system-design/fundamentals/03-back-of-envelope-calculations.md) |
 | Design API contracts | [API Design](/system-design/fundamentals/04-api-design.md) |
 | Choose a database | [Databases](/system-design/fundamentals/06-databases.md), [Data Modeling](/system-design/fundamentals/05-data-modeling.md) |
-| Speed up reads | [Caching](/system-design/fundamentals/07-caching.md), [CDN](/system-design/fundamentals/17-blob-storage-cdn.md) |
+| Speed up reads | [Caching](/system-design/fundamentals/07-caching.md), [CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) |
 | Handle high traffic | [Load Balancing](/system-design/fundamentals/08-load-balancing.md), [Scaling](/system-design/fundamentals/10-scaling-strategies.md) |
 | Decouple services | [Message Queues](/system-design/fundamentals/09-message-queues.md) |
 | Scale your database | [Database Scaling](/system-design/fundamentals/11-database-scaling.md) |
@@ -222,9 +222,9 @@ Understanding how fundamentals connect helps you navigate complex problems:
 | Coordinate services | [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) |
 | Build real-time features | [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md) |
 | Implement search | [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) |
-| Store files/media | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md) |
+| Store files/media | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) |
 | Protect from abuse | [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) |
-| Monitor production | [Observability](/system-design/fundamentals/19-monitoring-observability.md) |
+| Monitor production | [Observability](/system-design/fundamentals/19-monitoring-and-observability.md) |
 | Handle failures | [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) |
 | Secure the system | [Security](/system-design/fundamentals/21-security.md) |
 

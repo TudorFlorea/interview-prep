@@ -221,7 +221,7 @@ Each problem follows a consistent structure:
 4. 🎯 Solve [Notification System](/system-design/problems/09-notification-system.md)
 
 ### Week 5-6: Real-Time & Media
-1. ✅ Study [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md), [Blob Storage](/system-design/fundamentals/17-blob-storage-cdn.md)
+1. ✅ Study [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md), [Blob Storage](/system-design/fundamentals/17-blob-storage-and-cdn.md)
 2. 🎯 Solve [YouTube](/system-design/problems/05-youtube.md)
 3. 🎯 Solve [WhatsApp](/system-design/problems/07-whatsapp.md)
 4. 🎯 Solve [Dropbox](/system-design/problems/08-dropbox.md)

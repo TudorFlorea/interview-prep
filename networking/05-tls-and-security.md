@@ -730,4 +730,4 @@ nginx -s reload
 
 - [HTTP & HTTPS](/networking/02-http-and-https.md) - HTTP over TLS
 - [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Network security
-- [Cloud Networking](/networking/14-cloud-networking.md) - Managed certificates, mTLS in service mesh
+- Cloud Networking - Managed certificates, mTLS in service mesh

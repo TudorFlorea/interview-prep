@@ -442,7 +442,7 @@ CREATE TABLE click_aggregates_daily (
 
 - [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Kafka streaming
 - [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - OLAP databases
-- [22-batch-processing.md](/system-design/fundamentals/22-batch-processing.md) - MapReduce patterns
+- Batch Processing - MapReduce patterns
 
 ---
 

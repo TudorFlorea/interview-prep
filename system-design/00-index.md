@@ -27,9 +27,9 @@
 | 14 | [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) | ⬜ Not Started | 🔴 Advanced |
 | 15 | [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md) | ⬜ Not Started | 🟡 Intermediate |
 | 16 | [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) | ⬜ Not Started | 🟡 Intermediate |
-| 17 | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md) | ⬜ Not Started | 🟡 Intermediate |
+| 17 | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) | ⬜ Not Started | 🟡 Intermediate |
 | 18 | [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) | ⬜ Not Started | 🟡 Intermediate |
-| 19 | [Monitoring & Observability](/system-design/fundamentals/19-monitoring-observability.md) | ⬜ Not Started | 🟡 Intermediate |
+| 19 | [Monitoring & Observability](/system-design/fundamentals/19-monitoring-and-observability.md) | ⬜ Not Started | 🟡 Intermediate |
 | 20 | [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) | ⬜ Not Started | 🔴 Advanced |
 | 21 | [Security](/system-design/fundamentals/21-security.md) | ⬜ Not Started | 🟡 Intermediate |
 
@@ -96,14 +96,14 @@ Deep dive into distributed systems and specialized infrastructure.
 - **[Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md)** - Consensus, locks, sagas
 - **[Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md)** - WebSockets, SSE, presence
 - **[Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md)** - Elasticsearch, inverted indexes
-- **[Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md)** - S3, edge caching
+- **[Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md)** - S3, edge caching
 - 🎯 **Practice**: [WhatsApp](/system-design/problems/07-whatsapp.md), [Dropbox](/system-design/problems/08-dropbox.md), [Google Docs](/system-design/problems/12-google-docs.md)
 
 ### Phase 5: Operations & Reliability (Week 9-10)
 Ensure systems are production-ready with proper safeguards.
 
 - **[Rate Limiting](/system-design/fundamentals/18-rate-limiting.md)** - Algorithms, distributed limiting
-- **[Monitoring & Observability](/system-design/fundamentals/19-monitoring-observability.md)** - Metrics, logging, tracing
+- **[Monitoring & Observability](/system-design/fundamentals/19-monitoring-and-observability.md)** - Metrics, logging, tracing
 - **[Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md)** - Circuit breakers, failover
 - **[Security](/system-design/fundamentals/21-security.md)** - AuthN/AuthZ, encryption
 - 🎯 **Practice**: [Uber](/system-design/problems/06-uber.md), [Ticketmaster](/system-design/problems/11-ticketmaster.md), [Payment System](/system-design/problems/16-payment-system.md)

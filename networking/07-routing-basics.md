@@ -669,4 +669,4 @@ mtr app.example.com
 
 - [IP Addressing & Subnets](/networking/06-ip-addressing-and-subnets.md) - Understanding CIDR
 - [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Filtering traffic
-- [Cloud Networking](/networking/14-cloud-networking.md) - VPC routing patterns
+- Cloud Networking - VPC routing patterns

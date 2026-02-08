@@ -881,6 +881,6 @@ Layer your security controls.
 
 ## Related Topics
 
-- [Cloud Networking](/networking/14-cloud-networking.md) - VPC architecture
+- Cloud Networking - VPC architecture
 - [TLS & Security](/networking/05-tls-and-security.md) - Encryption in transit
 - [Load Balancing](/networking/08-load-balancing.md) - Where to terminate SSL

@@ -672,4 +672,4 @@ docker stop local-dns && docker rm local-dns
 
 - [Internet & Protocols](/networking/01-internet-and-protocols.md) - How DNS fits in the stack
 - [Load Balancing](/networking/08-load-balancing.md) - DNS-based load balancing
-- [Cloud Networking](/networking/14-cloud-networking.md) - Cloud DNS services
+- Cloud Networking - Cloud DNS services

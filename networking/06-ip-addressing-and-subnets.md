@@ -537,4 +537,4 @@ aws ec2 describe-network-acls
 
 - [Routing Basics](/networking/07-routing-basics.md) - How packets find their way
 - [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Network access control
-- [Cloud Networking](/networking/14-cloud-networking.md) - VPC design patterns
+- Cloud Networking - VPC design patterns

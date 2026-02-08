@@ -484,7 +484,7 @@ CREATE TABLE engagements (
 
 - [05-caching.md](/system-design/fundamentals/07-caching.md) - Feature caching
 - [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Event streaming
-- [22-batch-processing.md](/system-design/fundamentals/22-batch-processing.md) - ML pipelines
+- Batch Processing - ML pipelines
 
 ---
 

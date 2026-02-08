@@ -746,4 +746,4 @@ aws cloudfront create-invalidation \
 
 - [Load Balancing](/networking/08-load-balancing.md) - Traffic distribution
 - [HTTP & HTTPS](/networking/02-http-and-https.md) - Cache headers in depth
-- [Cloud Networking](/networking/14-cloud-networking.md) - Cloud CDN and API Gateway services
+- Cloud Networking - Cloud CDN and API Gateway services

@@ -238,7 +238,7 @@ Use these prompts to discover stories from your experience:
 - When did you design a scalable system?
   - _Cross-ref: [System Design Fundamentals](/system-design/fundamentals/00-index.md)_
 - When did you solve a performance bottleneck?
-  - _Cross-ref: [Caching](/system-design/fundamentals/05-caching.md), [Database Performance](/databases/10-performance-tuning.md)_
+  - _Cross-ref: [Caching](/system-design/fundamentals/07-caching.md), [Database Performance](/databases/10-performance-tuning.md)_
 - When did you implement distributed systems patterns?
   - _Cross-ref: [Distributed Systems](/system-design/fundamentals/14-distributed-patterns.md)_
 
@@ -334,7 +334,7 @@ The performance test suite I created became the standard for all backend teams, 
 - Related prep topics:
   - [Database Indexing](/databases/07-indexing-deep-dive.md) - Composite indexes
   - [Query Optimization](/databases/09-query-optimization.md) - N+1 query patterns
-  - [Caching Strategies](/system-design/fundamentals/05-caching.md) - Redis TTL patterns
+  - [Caching Strategies](/system-design/fundamentals/07-caching.md) - Redis TTL patterns
   - [Performance Tuning](/databases/10-performance-tuning.md) - Profiling approaches
 - Technologies: Redis, PostgreSQL, New Relic, JMeter, C# Entity Framework, Feature Flags
 
