@@ -2,7 +2,7 @@
 
 > A comprehensive guide to mastering relational databases beyond the basics
 
-[← Back to Main](../README.md)
+[← Back to Main](/index.md)
 
 ---
 
@@ -11,47 +11,47 @@
 ### Foundations & Design
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Database Design Principles](01-database-design-principles.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Normalization](02-normalization.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Keys and Constraints](03-keys-and-constraints.md) | ⬜ Not Started | 🟢 Foundational |
+| [Database Design Principles](/databases/01-database-design-principles.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Normalization](/databases/02-normalization.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Keys and Constraints](/databases/03-keys-and-constraints.md) | ⬜ Not Started | 🟢 Foundational |
 
 ### Querying
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Multi-Table Queries](04-multi-table-queries.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Subqueries and CTEs](05-subqueries-and-ctes.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Advanced SQL Patterns](06-advanced-sql-patterns.md) | ⬜ Not Started | 🔴 Advanced |
+| [Multi-Table Queries](/databases/04-multi-table-queries.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Subqueries and CTEs](/databases/05-subqueries-and-ctes.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Advanced SQL Patterns](/databases/06-advanced-sql-patterns.md) | ⬜ Not Started | 🔴 Advanced |
 
 ### Performance & Optimization
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Indexing Deep Dive](07-indexing-deep-dive.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Query Execution Internals](08-query-execution-internals.md) | ⬜ Not Started | 🔴 Advanced |
-| [Query Optimization](09-query-optimization.md) | ⬜ Not Started | 🔴 Advanced |
-| [Performance Tuning](10-performance-tuning.md) | ⬜ Not Started | 🔴 Advanced |
+| [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Query Execution Internals](/databases/08-query-execution-internals.md) | ⬜ Not Started | 🔴 Advanced |
+| [Query Optimization](/databases/09-query-optimization.md) | ⬜ Not Started | 🔴 Advanced |
+| [Performance Tuning](/databases/10-performance-tuning.md) | ⬜ Not Started | 🔴 Advanced |
 
 ### Transactions & Concurrency
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Transactions and ACID](11-transactions-and-acid.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Locking and Concurrency](12-locking-and-concurrency.md) | ⬜ Not Started | 🔴 Advanced |
+| [Transactions and ACID](/databases/11-transactions-and-acid.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Locking and Concurrency](/databases/12-locking-and-concurrency.md) | ⬜ Not Started | 🔴 Advanced |
 
 ### Architecture & Scaling
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Partitioning and Sharding](13-partitioning-and-sharding.md) | ⬜ Not Started | 🔴 Advanced |
-| [Replication and Consistency](14-replication-and-consistency.md) | ⬜ Not Started | 🔴 Advanced |
-| [Database Internals](15-database-internals.md) | ⬜ Not Started | 🔴 Advanced |
+| [Partitioning and Sharding](/databases/13-partitioning-and-sharding.md) | ⬜ Not Started | 🔴 Advanced |
+| [Replication and Consistency](/databases/14-replication-and-consistency.md) | ⬜ Not Started | 🔴 Advanced |
+| [Database Internals](/databases/15-database-internals.md) | ⬜ Not Started | 🔴 Advanced |
 
 ### Practical Topics
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [JSON and Document Storage](16-json-and-document-storage.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Full-Text Search](17-full-text-search.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Stored Procedures & Triggers](18-stored-procedures-triggers.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Security and Access Control](19-security-and-access-control.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Migrations and Versioning](20-migrations-and-versioning.md) | ⬜ Not Started | 🟡 Intermediate |
-| [ORM vs Raw SQL](21-orm-vs-raw-sql.md) | ⬜ Not Started | 🟡 Intermediate |
+| [JSON and Document Storage](/databases/16-json-and-document-storage.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Full-Text Search](/databases/17-full-text-search.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Stored Procedures & Triggers](/databases/18-stored-procedures-triggers.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Security and Access Control](/databases/19-security-and-access-control.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Migrations and Versioning](/databases/20-migrations-and-versioning.md) | ⬜ Not Started | 🟡 Intermediate |
+| [ORM vs Raw SQL](/databases/21-orm-vs-raw-sql.md) | ⬜ Not Started | 🟡 Intermediate |
 
 ---
 

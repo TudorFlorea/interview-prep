@@ -1,6 +1,6 @@
 # Locking and Concurrency
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -696,6 +696,6 @@ def worker_loop():
 
 ## Related Topics
 
-- [Transactions and ACID](11-transactions-and-acid.md) - Transaction fundamentals
-- [Performance Tuning](10-performance-tuning.md) - Connection and lock tuning
-- [Database Internals](15-database-internals.md) - How locks are implemented
+- [Transactions and ACID](/databases/11-transactions-and-acid.md) - Transaction fundamentals
+- [Performance Tuning](/databases/10-performance-tuning.md) - Connection and lock tuning
+- [Database Internals](/databases/15-database-internals.md) - How locks are implemented

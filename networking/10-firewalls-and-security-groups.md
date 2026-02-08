@@ -1,6 +1,6 @@
 # Firewalls & Security Groups
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -881,6 +881,6 @@ Layer your security controls.
 
 ## Related Topics
 
-- [Cloud Networking](14-cloud-networking.md) - VPC architecture
-- [TLS & Security](05-tls-and-security.md) - Encryption in transit
-- [Load Balancing](08-load-balancing.md) - Where to terminate SSL
+- [Cloud Networking](/networking/14-cloud-networking.md) - VPC architecture
+- [TLS & Security](/networking/05-tls-and-security.md) - Encryption in transit
+- [Load Balancing](/networking/08-load-balancing.md) - Where to terminate SSL

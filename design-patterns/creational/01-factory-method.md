@@ -1,6 +1,6 @@
 # Factory Method Pattern
 
-[← Back to Creational Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Creational Patterns](/design-patterns/creational/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -421,6 +421,6 @@ doc.Open(); // Works with any document type
 
 ## Related Patterns
 
-- [Abstract Factory](02-abstract-factory.md) - Often implemented with Factory Methods
-- [Prototype](04-prototype.md) - Alternative creational pattern
-- [Template Method](../behavioral/09-template-method.md) - Factory Method is often called within a Template Method
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Often implemented with Factory Methods
+- [Prototype](/design-patterns/creational/04-prototype.md) - Alternative creational pattern
+- [Template Method](/design-patterns/behavioral/09-template-method.md) - Factory Method is often called within a Template Method

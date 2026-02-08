@@ -1,6 +1,6 @@
 # Performance Tuning
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -766,6 +766,6 @@ Phase 4 - Sharding (if needed):
 
 ## Related Topics
 
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - Index optimization
-- [Query Optimization](09-query-optimization.md) - Query-level tuning
-- [Transactions and ACID](11-transactions-and-acid.md) - Transaction overhead
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - Index optimization
+- [Query Optimization](/databases/09-query-optimization.md) - Query-level tuning
+- [Transactions and ACID](/databases/11-transactions-and-acid.md) - Transaction overhead

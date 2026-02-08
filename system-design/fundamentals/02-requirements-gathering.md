@@ -1,6 +1,6 @@
 # Requirements Gathering
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -466,6 +466,6 @@ Use this template to organize your notes during the interview:
 
 ## 📚 Related Topics
 
-- [Back-of-Envelope Calculations](03-back-of-envelope-calculations.md) - Detailed capacity math
-- [Introduction & Framework](01-introduction-and-framework.md) - Overall interview approach
-- [API Design](04-api-design.md) - Translating requirements to APIs
+- [Back-of-Envelope Calculations](/system-design/fundamentals/03-back-of-envelope-calculations.md) - Detailed capacity math
+- [Introduction & Framework](/system-design/fundamentals/01-introduction-and-framework.md) - Overall interview approach
+- [API Design](/system-design/fundamentals/04-api-design.md) - Translating requirements to APIs

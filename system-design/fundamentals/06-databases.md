@@ -1,6 +1,6 @@
 # Databases
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -563,7 +563,7 @@ GET /posts/_search
 
 ## 📚 Related Topics
 
-- [Data Modeling](05-data-modeling.md) - Designing schemas
-- [Caching](07-caching.md) - Cache strategies and Redis
-- [Database Scaling](11-database-scaling.md) - Replication and sharding
-- [CAP Theorem](13-cap-theorem.md) - Consistency vs availability
+- [Data Modeling](/system-design/fundamentals/05-data-modeling.md) - Designing schemas
+- [Caching](/system-design/fundamentals/07-caching.md) - Cache strategies and Redis
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Replication and sharding
+- [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) - Consistency vs availability

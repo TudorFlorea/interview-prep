@@ -1,6 +1,6 @@
 # Design Metrics and Monitoring System
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -444,10 +444,10 @@ CREATE TABLE dashboards (
 
 ## 12. References
 
-- [11-databases.md](../fundamentals/11-databases.md) - Storage engines
-- [05-caching.md](../fundamentals/05-caching.md) - Hot tier caching
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Kafka buffering
+- [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - Storage engines
+- [05-caching.md](/system-design/fundamentals/07-caching.md) - Hot tier caching
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Kafka buffering
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Ad Click Aggregator →](18-ad-click-aggregator.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Ad Click Aggregator →](/system-design/problems/18-ad-click-aggregator.md)

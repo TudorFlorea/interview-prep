@@ -1,6 +1,6 @@
 # Observer Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -577,6 +577,6 @@ foreach (var observer in _observers.ToList())
 
 ## Related Patterns
 
-- [Mediator](04-mediator.md) - Centralizes observer communication
-- [Singleton](../creational/05-singleton.md) - Often used with global event managers
-- [Chain of Responsibility](01-chain-of-responsibility.md) - Alternative notification routing
+- [Mediator](/design-patterns/behavioral/04-mediator.md) - Centralizes observer communication
+- [Singleton](/design-patterns/creational/05-singleton.md) - Often used with global event managers
+- [Chain of Responsibility](/design-patterns/behavioral/01-chain-of-responsibility.md) - Alternative notification routing

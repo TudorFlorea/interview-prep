@@ -1,6 +1,6 @@
 # Database Design Principles
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -610,6 +610,6 @@ CREATE INDEX idx_outbox_status ON outbox(status, created_at);
 
 ## Related Topics
 
-- [Normalization](02-normalization.md) - Formal rules for schema design
-- [Keys and Constraints](03-keys-and-constraints.md) - Enforcing data integrity
-- [Multi-Table Queries](04-multi-table-queries.md) - Querying your designed schema
+- [Normalization](/databases/02-normalization.md) - Formal rules for schema design
+- [Keys and Constraints](/databases/03-keys-and-constraints.md) - Enforcing data integrity
+- [Multi-Table Queries](/databases/04-multi-table-queries.md) - Querying your designed schema

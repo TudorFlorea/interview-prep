@@ -1,6 +1,6 @@
 # Design Amazon Locker
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -585,10 +585,10 @@ CREATE TABLE locker_returns (
 
 ## 14. References
 
-- [11-databases.md](../fundamentals/11-databases.md) - Locking strategies
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - State machines
-- [05-caching.md](../fundamentals/05-caching.md) - Availability caching
+- [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - Locking strategies
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - State machines
+- [05-caching.md](/system-design/fundamentals/07-caching.md) - Availability caching
 
 ---
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)

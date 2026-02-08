@@ -1,6 +1,6 @@
 # Prototype Pattern
 
-[← Back to Creational Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Creational Patterns](/design-patterns/creational/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -632,7 +632,7 @@ public T DeepClone&lt;T>(T obj)
 
 ## Related Patterns
 
-- [Factory Method](01-factory-method.md) - Alternative creational pattern
-- [Abstract Factory](02-abstract-factory.md) - Can store prototypes
-- [Composite](../structural/03-composite.md) - Cloning complex trees
-- [Memento](../behavioral/05-memento.md) - Can use cloning for state snapshots
+- [Factory Method](/design-patterns/creational/01-factory-method.md) - Alternative creational pattern
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Can store prototypes
+- [Composite](/design-patterns/structural/03-composite.md) - Cloning complex trees
+- [Memento](/design-patterns/behavioral/05-memento.md) - Can use cloning for state snapshots

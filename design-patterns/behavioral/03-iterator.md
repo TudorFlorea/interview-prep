@@ -1,6 +1,6 @@
 # Iterator Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -575,7 +575,7 @@ foreach (var item in collection.ToList())
 
 ## Related Patterns
 
-- [Composite](../structural/03-composite.md) - Iterators often traverse composites
-- [Factory Method](../creational/01-factory-method.md) - Used to create iterators
-- [Visitor](10-visitor.md) - Can use iterator for traversal
-- [Memento](05-memento.md) - Iterator can use memento to capture state
+- [Composite](/design-patterns/structural/03-composite.md) - Iterators often traverse composites
+- [Factory Method](/design-patterns/creational/01-factory-method.md) - Used to create iterators
+- [Visitor](/design-patterns/behavioral/10-visitor.md) - Can use iterator for traversal
+- [Memento](/design-patterns/behavioral/05-memento.md) - Iterator can use memento to capture state

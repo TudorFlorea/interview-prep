@@ -1,6 +1,6 @@
 # Indexing Deep Dive
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -654,6 +654,6 @@ LIMIT 100;
 
 ## Related Topics
 
-- [Query Execution Internals](08-query-execution-internals.md) - How indexes are used
-- [Query Optimization](09-query-optimization.md) - Choosing the right index
-- [Performance Tuning](10-performance-tuning.md) - Overall optimization strategy
+- [Query Execution Internals](/databases/08-query-execution-internals.md) - How indexes are used
+- [Query Optimization](/databases/09-query-optimization.md) - Choosing the right index
+- [Performance Tuning](/databases/10-performance-tuning.md) - Overall optimization strategy

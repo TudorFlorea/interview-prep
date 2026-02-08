@@ -1,6 +1,6 @@
 # Consistent Hashing
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -488,7 +488,7 @@ NGINX example:
 
 ## 📚 Related Topics
 
-- [Database Scaling](11-database-scaling.md) - Sharding strategies
-- [Caching](07-caching.md) - Distributed cache design
-- [CAP Theorem](13-cap-theorem.md) - Consistency in distribution
-- [Distributed Patterns](14-distributed-patterns.md) - Related patterns
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Sharding strategies
+- [Caching](/system-design/fundamentals/07-caching.md) - Distributed cache design
+- [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) - Consistency in distribution
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Related patterns

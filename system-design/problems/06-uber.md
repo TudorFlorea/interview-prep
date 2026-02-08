@@ -1,6 +1,6 @@
 # Design Uber
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -659,10 +659,10 @@ class MatchingService:
 
 ## 13. References
 
-- [15-real-time-communication.md](../fundamentals/15-real-time-communication.md) - WebSockets
-- [12-consistent-hashing.md](../fundamentals/12-consistent-hashing.md) - Partitioning
-- [18-rate-limiting.md](../fundamentals/18-rate-limiting.md) - API protection
+- [15-real-time-communication.md](/system-design/fundamentals/15-real-time-communication.md) - WebSockets
+- [12-consistent-hashing.md](/system-design/fundamentals/12-consistent-hashing.md) - Partitioning
+- [18-rate-limiting.md](/system-design/fundamentals/18-rate-limiting.md) - API protection
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: WhatsApp →](07-whatsapp.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: WhatsApp →](/system-design/problems/07-whatsapp.md)

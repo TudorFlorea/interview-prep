@@ -1,6 +1,6 @@
 # TLS & Security
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -728,6 +728,6 @@ nginx -s reload
 
 ## Related Topics
 
-- [HTTP & HTTPS](02-http-and-https.md) - HTTP over TLS
-- [Firewalls & Security Groups](10-firewalls-and-security-groups.md) - Network security
-- [Cloud Networking](14-cloud-networking.md) - Managed certificates, mTLS in service mesh
+- [HTTP & HTTPS](/networking/02-http-and-https.md) - HTTP over TLS
+- [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Network security
+- [Cloud Networking](/networking/14-cloud-networking.md) - Managed certificates, mTLS in service mesh

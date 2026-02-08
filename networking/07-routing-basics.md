@@ -1,6 +1,6 @@
 # Routing Basics
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -667,6 +667,6 @@ mtr app.example.com
 
 ## Related Topics
 
-- [IP Addressing & Subnets](06-ip-addressing-and-subnets.md) - Understanding CIDR
-- [Firewalls & Security Groups](10-firewalls-and-security-groups.md) - Filtering traffic
-- [Cloud Networking](14-cloud-networking.md) - VPC routing patterns
+- [IP Addressing & Subnets](/networking/06-ip-addressing-and-subnets.md) - Understanding CIDR
+- [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Filtering traffic
+- [Cloud Networking](/networking/14-cloud-networking.md) - VPC routing patterns

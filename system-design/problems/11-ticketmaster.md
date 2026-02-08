@@ -1,6 +1,6 @@
 # Design Ticketmaster
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -560,10 +560,10 @@ class TicketReservationService:
 
 ## 12. References
 
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - Locking
-- [18-rate-limiting.md](../fundamentals/18-rate-limiting.md) - Rate limiting
-- [11-transactions-and-acid.md](../../databases/11-transactions-and-acid.md) - ACID
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - Locking
+- [18-rate-limiting.md](/system-design/fundamentals/18-rate-limiting.md) - Rate limiting
+- [11-transactions-and-acid.md](/databases/11-transactions-and-acid.md) - ACID
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Google Docs →](12-google-docs.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Google Docs →](/system-design/problems/12-google-docs.md)

@@ -1,6 +1,6 @@
 # Proxy Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -533,6 +533,6 @@ public class GoodProxy : ISubject
 
 ## Related Patterns
 
-- [Adapter](01-adapter.md) - Changes interface; Proxy keeps same interface
-- [Decorator](04-decorator.md) - Adds behavior; Proxy controls access
-- [Facade](05-facade.md) - Simplifies; Proxy represents
+- [Adapter](/design-patterns/structural/01-adapter.md) - Changes interface; Proxy keeps same interface
+- [Decorator](/design-patterns/structural/04-decorator.md) - Adds behavior; Proxy controls access
+- [Facade](/design-patterns/structural/05-facade.md) - Simplifies; Proxy represents

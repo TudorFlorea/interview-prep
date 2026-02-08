@@ -1,6 +1,6 @@
 # IP Addressing & Subnets
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -535,6 +535,6 @@ aws ec2 describe-network-acls
 
 ## Related Topics
 
-- [Routing Basics](07-routing-basics.md) - How packets find their way
-- [Firewalls & Security Groups](10-firewalls-and-security-groups.md) - Network access control
-- [Cloud Networking](14-cloud-networking.md) - VPC design patterns
+- [Routing Basics](/networking/07-routing-basics.md) - How packets find their way
+- [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) - Network access control
+- [Cloud Networking](/networking/14-cloud-networking.md) - VPC design patterns

@@ -2,7 +2,7 @@
 
 > Master behavioral interviews with the STAR method, leadership principles, and company-specific strategies
 
-[← Back to Main](../index.md)
+[← Back to Main](/index.md)
 
 ---
 
@@ -10,15 +10,15 @@
 
 | Topic | Status | Difficulty | Est. Time |
 |-------|--------|------------|-----------|
-| [STAR Method Framework](01-star-method.md) | ⬜ Not Started | 🟢 Foundational | 2 hours |
-| [Story Bank Template](02-story-bank.md) | ⬜ Not Started | 🟡 Intermediate | 4-6 hours |
-| [Leadership Principles](03-leadership-principles.md) | ⬜ Not Started | 🟡 Intermediate | 3 hours |
-| [Common Questions](04-common-questions.md) | ⬜ Not Started | 🟡 Intermediate | 3 hours |
-| [Anti-Patterns to Avoid](05-anti-patterns.md) | ⬜ Not Started | 🟢 Foundational | 1 hour |
-| [Company-Specific Guides](06-company-specific-guides.md) | ⬜ Not Started | 🔴 Advanced | 4 hours |
-| [Tell Me About Yourself](07-tell-me-about-yourself.md) | ⬜ Not Started | 🟢 Foundational | 2 hours |
-| [Questions to Ask Interviewers](08-questions-to-ask.md) | ⬜ Not Started | 🟢 Foundational | 1 hour |
-| [Practice Guide](09-practice-guide.md) | ⬜ Not Started | 🟡 Intermediate | 2 hours |
+| [STAR Method Framework](/behavioral/01-star-method.md) | ⬜ Not Started | 🟢 Foundational | 2 hours |
+| [Story Bank Template](/behavioral/02-story-bank.md) | ⬜ Not Started | 🟡 Intermediate | 4-6 hours |
+| [Leadership Principles](/behavioral/03-leadership-principles.md) | ⬜ Not Started | 🟡 Intermediate | 3 hours |
+| [Common Questions](/behavioral/04-common-questions.md) | ⬜ Not Started | 🟡 Intermediate | 3 hours |
+| [Anti-Patterns to Avoid](/behavioral/05-anti-patterns.md) | ⬜ Not Started | 🟢 Foundational | 1 hour |
+| [Company-Specific Guides](/behavioral/06-company-specific-guides.md) | ⬜ Not Started | 🔴 Advanced | 4 hours |
+| [Tell Me About Yourself](/behavioral/07-tell-me-about-yourself.md) | ⬜ Not Started | 🟢 Foundational | 2 hours |
+| [Questions to Ask Interviewers](/behavioral/08-questions-to-ask.md) | ⬜ Not Started | 🟢 Foundational | 1 hour |
+| [Practice Guide](/behavioral/09-practice-guide.md) | ⬜ Not Started | 🟡 Intermediate | 2 hours |
 
 **Total Estimated Time**: 22-24 hours
 
@@ -111,12 +111,12 @@ Most companies allocate **30-50%** of interview time to behavioral rounds.
 ## 📚 Resources & Next Steps
 
 ### Start Here
-1. Read [STAR Method Framework](01-star-method.md)
-2. Review [Anti-Patterns to Avoid](05-anti-patterns.md)
-3. Begin filling out [Story Bank Template](02-story-bank.md)
+1. Read [STAR Method Framework](/behavioral/01-star-method.md)
+2. Review [Anti-Patterns to Avoid](/behavioral/05-anti-patterns.md)
+3. Begin filling out [Story Bank Template](/behavioral/02-story-bank.md)
 
 ### For Target Companies
-- Check [Company-Specific Guides](06-company-specific-guides.md)
+- Check [Company-Specific Guides](/behavioral/06-company-specific-guides.md)
 - Research company blogs and engineering posts
 - Read Glassdoor interview experiences
 

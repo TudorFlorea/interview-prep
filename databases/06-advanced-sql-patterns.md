@@ -1,6 +1,6 @@
 # Advanced SQL Patterns
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -804,6 +804,6 @@ WHERE streak_days >= 7
 
 ## Related Topics
 
-- [Subqueries and CTEs](05-subqueries-and-ctes.md) - Building blocks for window queries
-- [Query Optimization](09-query-optimization.md) - Window function performance
-- [Performance Tuning](10-performance-tuning.md) - Analytics query optimization
+- [Subqueries and CTEs](/databases/05-subqueries-and-ctes.md) - Building blocks for window queries
+- [Query Optimization](/databases/09-query-optimization.md) - Window function performance
+- [Performance Tuning](/databases/10-performance-tuning.md) - Analytics query optimization

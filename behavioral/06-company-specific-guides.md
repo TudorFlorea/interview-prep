@@ -2,7 +2,7 @@
 
 > Detailed strategies for behavioral interviews at top tech companies
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -145,7 +145,7 @@ Amazon expects 2-3 metrics per story:
 
 ### Amazon Resources
 
-- [Amazon Leadership Principles Detailed](03-leadership-principles.md#-amazon-leadership-principles-lps)
+- [Amazon Leadership Principles Detailed](/behavioral/03-leadership-principles.md#-amazon-leadership-principles-lps)
 - Official: amazon.jobs/principles
 
 ---
@@ -245,7 +245,7 @@ Google values HOW you learn, not just what you accomplished:
 
 ### Google Resources
 
-- [Google Googleyness](03-leadership-principles.md#-google---googleyness--general-cognitive-ability)
+- [Google Googleyness](/behavioral/03-leadership-principles.md#-google---googleyness--general-cognitive-ability)
 - careers.google.com/how-we-hire
 
 ---
@@ -345,7 +345,7 @@ Microsoft LOVES failure stories that show growth:
 
 ### Microsoft Resources
 
-- [Microsoft Values](03-leadership-principles.md#-microsoft---growth-mindset--core-values)
+- [Microsoft Values](/behavioral/03-leadership-principles.md#-microsoft---growth-mindset--core-values)
 - careers.microsoft.com
 
 ---
@@ -437,7 +437,7 @@ Microsoft LOVES failure stories that show growth:
 
 ### Meta Resources
 
-- [Meta Values](03-leadership-principles.md#-meta-facebook---values)
+- [Meta Values](/behavioral/03-leadership-principles.md#-meta-facebook---values)
 
 ---
 
@@ -606,10 +606,10 @@ Here's how to adjust ONE story for different companies:
 
 1. Identify your target companies
 2. Review their specific sections above
-3. Tailor your [Story Bank](02-story-bank.md) for each company
+3. Tailor your [Story Bank](/behavioral/02-story-bank.md) for each company
 4. Practice the same story with different emphasis
 5. Research recent company news and products
-6. Review [Leadership Principles](03-leadership-principles.md) for your targets
+6. Review [Leadership Principles](/behavioral/03-leadership-principles.md) for your targets
 
 ---
 

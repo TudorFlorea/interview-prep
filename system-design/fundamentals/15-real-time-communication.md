@@ -1,6 +1,6 @@
 # Real-Time Communication
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -602,7 +602,7 @@ wss.on('connection', (ws) => {
 
 ## 📚 Related Topics
 
-- [API Design](04-api-design.md) - REST and GraphQL alternatives
-- [Message Queues](09-message-queues.md) - Async messaging
-- [Load Balancing](08-load-balancing.md) - Sticky sessions for WebSockets
-- [Caching](07-caching.md) - Redis for presence/pub-sub
+- [API Design](/system-design/fundamentals/04-api-design.md) - REST and GraphQL alternatives
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Async messaging
+- [Load Balancing](/system-design/fundamentals/08-load-balancing.md) - Sticky sessions for WebSockets
+- [Caching](/system-design/fundamentals/07-caching.md) - Redis for presence/pub-sub

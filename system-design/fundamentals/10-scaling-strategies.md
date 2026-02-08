@@ -1,6 +1,6 @@
 # Scaling Strategies
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -488,7 +488,7 @@ Solutions:
 
 ## 📚 Related Topics
 
-- [Database Scaling](11-database-scaling.md) - Replication and sharding
-- [Load Balancing](08-load-balancing.md) - Distributing traffic
-- [Caching](07-caching.md) - Reducing load
-- [Consistent Hashing](12-consistent-hashing.md) - Distributing data
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Replication and sharding
+- [Load Balancing](/system-design/fundamentals/08-load-balancing.md) - Distributing traffic
+- [Caching](/system-design/fundamentals/07-caching.md) - Reducing load
+- [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) - Distributing data

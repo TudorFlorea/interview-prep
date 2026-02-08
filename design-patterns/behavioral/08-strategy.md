@@ -1,6 +1,6 @@
 # Strategy Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -637,7 +637,7 @@ public class GoodStrategy : IStrategy
 
 ## Related Patterns
 
-- [State](07-state.md) - Similar structure, different intent
-- [Command](02-command.md) - Can use strategy for execution logic
-- [Template Method](09-template-method.md) - Uses inheritance instead of composition
-- [Decorator](../structural/04-decorator.md) - Can wrap strategies
+- [State](/design-patterns/behavioral/07-state.md) - Similar structure, different intent
+- [Command](/design-patterns/behavioral/02-command.md) - Can use strategy for execution logic
+- [Template Method](/design-patterns/behavioral/09-template-method.md) - Uses inheritance instead of composition
+- [Decorator](/design-patterns/structural/04-decorator.md) - Can wrap strategies

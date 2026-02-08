@@ -1,6 +1,6 @@
 # Replication and Consistency
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -696,6 +696,6 @@ DELETE FROM customers_eu WHERE customer_id = ?;
 
 ## Related Topics
 
-- [Partitioning and Sharding](13-partitioning-and-sharding.md) - Data distribution
-- [Transactions and ACID](11-transactions-and-acid.md) - Consistency in single node
-- [Database Internals](15-database-internals.md) - How WAL replication works
+- [Partitioning and Sharding](/databases/13-partitioning-and-sharding.md) - Data distribution
+- [Transactions and ACID](/databases/11-transactions-and-acid.md) - Consistency in single node
+- [Database Internals](/databases/15-database-internals.md) - How WAL replication works

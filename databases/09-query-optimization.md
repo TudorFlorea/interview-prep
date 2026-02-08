@@ -1,6 +1,6 @@
 # Query Optimization
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -664,6 +664,6 @@ CREATE INDEX idx_mv_month ON monthly_customer_revenue(month);
 
 ## Related Topics
 
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - Creating effective indexes
-- [Query Execution Internals](08-query-execution-internals.md) - Understanding plans
-- [Performance Tuning](10-performance-tuning.md) - System-level optimization
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - Creating effective indexes
+- [Query Execution Internals](/databases/08-query-execution-internals.md) - Understanding plans
+- [Performance Tuning](/databases/10-performance-tuning.md) - System-level optimization

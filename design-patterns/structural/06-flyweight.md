@@ -1,6 +1,6 @@
 # Flyweight Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -495,7 +495,7 @@ public class ImmutableFlyweight
 
 ## Related Patterns
 
-- [Composite](03-composite.md) - Often uses Flyweight for leaf nodes
-- [State](../behavioral/07-state.md) - State objects can be Flyweights
-- [Strategy](../behavioral/08-strategy.md) - Strategy objects can be Flyweights
-- [Singleton](../creational/05-singleton.md) - Similar sharing concept but for one instance
+- [Composite](/design-patterns/structural/03-composite.md) - Often uses Flyweight for leaf nodes
+- [State](/design-patterns/behavioral/07-state.md) - State objects can be Flyweights
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Strategy objects can be Flyweights
+- [Singleton](/design-patterns/creational/05-singleton.md) - Similar sharing concept but for one instance

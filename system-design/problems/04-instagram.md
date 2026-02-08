@@ -1,6 +1,6 @@
 # Design Instagram
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -924,7 +924,7 @@ class StoriesService:
 
 ## 📚 Related Topics
 
-- [Blob Storage & CDN](../fundamentals/17-blob-storage-and-cdn.md) - Media delivery
-- [Message Queues](../fundamentals/09-message-queues.md) - Async processing
-- [Twitter Feed](03-twitter-feed.md) - Similar feed patterns
-- [YouTube](05-youtube.md) - Video processing at scale
+- [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) - Media delivery
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Async processing
+- [Twitter Feed](/system-design/problems/03-twitter-feed.md) - Similar feed patterns
+- [YouTube](/system-design/problems/05-youtube.md) - Video processing at scale

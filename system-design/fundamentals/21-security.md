@@ -1,6 +1,6 @@
 # Security Fundamentals
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -613,7 +613,7 @@ def login():
 
 ## 📚 Related Topics
 
-- [API Design](04-api-design.md) - API authentication patterns
-- [Distributed Patterns](14-distributed-patterns.md) - Service-to-service auth
-- [Rate Limiting](18-rate-limiting.md) - Security rate limits
-- [Monitoring](19-monitoring-and-observability.md) - Security monitoring
+- [API Design](/system-design/fundamentals/04-api-design.md) - API authentication patterns
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Service-to-service auth
+- [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) - Security rate limits
+- [Monitoring](/system-design/fundamentals/19-monitoring-and-observability.md) - Security monitoring

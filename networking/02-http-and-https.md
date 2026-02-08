@@ -1,6 +1,6 @@
 # HTTP & HTTPS
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -601,6 +601,6 @@ curl -v -X OPTIONS https://api.mysite.com/data \
 
 ## Related Topics
 
-- [TLS & Security](05-tls-and-security.md) - Deep dive into HTTPS/TLS
-- [WebSockets & Real-Time](11-websockets-and-real-time.md) - Beyond request/response
-- [Proxies & Gateways](09-proxies-and-gateways.md) - CDNs and reverse proxies
+- [TLS & Security](/networking/05-tls-and-security.md) - Deep dive into HTTPS/TLS
+- [WebSockets & Real-Time](/networking/11-websockets-and-real-time.md) - Beyond request/response
+- [Proxies & Gateways](/networking/09-proxies-and-gateways.md) - CDNs and reverse proxies

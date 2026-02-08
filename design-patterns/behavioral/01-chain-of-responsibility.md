@@ -1,6 +1,6 @@
 # Chain of Responsibility Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -524,6 +524,6 @@ public void Handle(Request request)
 
 ## Related Patterns
 
-- [Command](02-command.md) - Can be passed along the chain
-- [Composite](../structural/03-composite.md) - Parent can act as successor
-- [Decorator](../structural/04-decorator.md) - Similar structure but different intent
+- [Command](/design-patterns/behavioral/02-command.md) - Can be passed along the chain
+- [Composite](/design-patterns/structural/03-composite.md) - Parent can act as successor
+- [Decorator](/design-patterns/structural/04-decorator.md) - Similar structure but different intent

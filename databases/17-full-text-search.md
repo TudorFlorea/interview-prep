@@ -1,6 +1,6 @@
 # Full-Text Search
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -791,6 +791,6 @@ SELECT * FROM unified_search('database', 1, 10);
 
 ## Related Topics
 
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - GIN index internals
-- [JSON and Document Storage](16-json-and-document-storage.md) - Searching JSON text
-- [Query Optimization](09-query-optimization.md) - Optimizing search queries
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - GIN index internals
+- [JSON and Document Storage](/databases/16-json-and-document-storage.md) - Searching JSON text
+- [Query Optimization](/databases/09-query-optimization.md) - Optimizing search queries

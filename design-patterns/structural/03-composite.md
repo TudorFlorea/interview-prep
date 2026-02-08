@@ -1,6 +1,6 @@
 # Composite Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -478,7 +478,7 @@ void Process(IComponent component)
 
 ## Related Patterns
 
-- [Decorator](04-decorator.md) - Similar structure, different purpose
-- [Iterator](../behavioral/03-iterator.md) - Traverse composite structures
-- [Visitor](../behavioral/10-visitor.md) - Apply operations across composite
-- [Flyweight](06-flyweight.md) - Share leaf nodes
+- [Decorator](/design-patterns/structural/04-decorator.md) - Similar structure, different purpose
+- [Iterator](/design-patterns/behavioral/03-iterator.md) - Traverse composite structures
+- [Visitor](/design-patterns/behavioral/10-visitor.md) - Apply operations across composite
+- [Flyweight](/design-patterns/structural/06-flyweight.md) - Share leaf nodes

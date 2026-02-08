@@ -1,6 +1,6 @@
 # Design Web Crawler
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -531,10 +531,10 @@ class CrawlerWorker:
 
 ## 12. References
 
-- [18-rate-limiting.md](../fundamentals/18-rate-limiting.md) - Rate limiting
-- [10-scaling-strategies.md](../fundamentals/10-scaling-strategies.md) - Scaling
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - URL distribution
+- [18-rate-limiting.md](/system-design/fundamentals/18-rate-limiting.md) - Rate limiting
+- [10-scaling-strategies.md](/system-design/fundamentals/10-scaling-strategies.md) - Scaling
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - URL distribution
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Ticketmaster →](11-ticketmaster.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Ticketmaster →](/system-design/problems/11-ticketmaster.md)

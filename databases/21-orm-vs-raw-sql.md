@@ -1,6 +1,6 @@
 # ORM vs Raw SQL
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -766,6 +766,6 @@ stats = repo.get_category_stats()
 
 ## Related Topics
 
-- [Query Optimization](09-query-optimization.md) - Optimizing generated SQL
-- [Performance Tuning](10-performance-tuning.md) - Connection pooling
-- [Security and Access Control](19-security-and-access-control.md) - Parameterized queries
+- [Query Optimization](/databases/09-query-optimization.md) - Optimizing generated SQL
+- [Performance Tuning](/databases/10-performance-tuning.md) - Connection pooling
+- [Security and Access Control](/databases/19-security-and-access-control.md) - Parameterized queries

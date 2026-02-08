@@ -1,6 +1,6 @@
 # Multi-Table Queries
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -770,6 +770,6 @@ SELECT * FROM ranked_categories WHERE rn = 1;
 
 ## Related Topics
 
-- [Subqueries and CTEs](05-subqueries-and-ctes.md) - Alternative to JOINs
-- [Advanced SQL Patterns](06-advanced-sql-patterns.md) - Window functions, pivots
-- [Query Optimization](09-query-optimization.md) - JOIN performance
+- [Subqueries and CTEs](/databases/05-subqueries-and-ctes.md) - Alternative to JOINs
+- [Advanced SQL Patterns](/databases/06-advanced-sql-patterns.md) - Window functions, pivots
+- [Query Optimization](/databases/09-query-optimization.md) - JOIN performance

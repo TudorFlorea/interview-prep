@@ -1,6 +1,6 @@
 # Rate Limiting
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -520,7 +520,7 @@ class APIClient {
 
 ## 📚 Related Topics
 
-- [API Design](04-api-design.md) - API quotas and throttling
-- [Caching](07-caching.md) - Redis for rate limit storage
-- [Load Balancing](08-load-balancing.md) - Traffic distribution
-- [Distributed Patterns](14-distributed-patterns.md) - Circuit breakers
+- [API Design](/system-design/fundamentals/04-api-design.md) - API quotas and throttling
+- [Caching](/system-design/fundamentals/07-caching.md) - Redis for rate limit storage
+- [Load Balancing](/system-design/fundamentals/08-load-balancing.md) - Traffic distribution
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Circuit breakers

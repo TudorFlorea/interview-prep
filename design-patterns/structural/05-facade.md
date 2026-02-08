@@ -1,6 +1,6 @@
 # Facade Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -578,7 +578,7 @@ public class ModuleBFacade { /* B-related operations */ }
 
 ## Related Patterns
 
-- [Adapter](01-adapter.md) - Changes interface; Facade simplifies
-- [Abstract Factory](../creational/02-abstract-factory.md) - Can use Facade to hide creation complexity
-- [Singleton](../creational/05-singleton.md) - Facade is often a Singleton
-- [Mediator](../behavioral/04-mediator.md) - Both reduce coupling, but Mediator adds behavior
+- [Adapter](/design-patterns/structural/01-adapter.md) - Changes interface; Facade simplifies
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Can use Facade to hide creation complexity
+- [Singleton](/design-patterns/creational/05-singleton.md) - Facade is often a Singleton
+- [Mediator](/design-patterns/behavioral/04-mediator.md) - Both reduce coupling, but Mediator adds behavior

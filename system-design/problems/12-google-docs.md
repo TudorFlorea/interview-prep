@@ -1,6 +1,6 @@
 # Design Google Docs
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -543,10 +543,10 @@ class CollaborationEngine:
 
 ## 11. References
 
-- [15-real-time-communication.md](../fundamentals/15-real-time-communication.md) - WebSockets
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - Consistency
-- [13-cap-theorem.md](../fundamentals/13-cap-theorem.md) - CAP tradeoffs
+- [15-real-time-communication.md](/system-design/fundamentals/15-real-time-communication.md) - WebSockets
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - Consistency
+- [13-cap-theorem.md](/system-design/fundamentals/13-cap-theorem.md) - CAP tradeoffs
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Search Autocomplete →](13-search-autocomplete.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Search Autocomplete →](/system-design/problems/13-search-autocomplete.md)

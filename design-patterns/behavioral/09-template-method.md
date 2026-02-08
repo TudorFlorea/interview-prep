@@ -1,6 +1,6 @@
 # Template Method Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -650,6 +650,6 @@ public abstract class JustRight
 
 ## Related Patterns
 
-- [Strategy](08-strategy.md) - Composition alternative to Template Method
-- [Factory Method](../creational/01-factory-method.md) - Often called within template method
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Composition alternative to Template Method
+- [Factory Method](/design-patterns/creational/01-factory-method.md) - Often called within template method
 - [Hook Methods](https://en.wikipedia.org/wiki/Template_method_pattern#Hook_methods) - Empty methods for optional behavior

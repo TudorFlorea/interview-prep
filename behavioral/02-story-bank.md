@@ -2,7 +2,7 @@
 
 > Build your personal repository of 10-15 STAR stories mapped to behavioral themes
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -11,16 +11,16 @@
 This is YOUR personal story bank. Fill it out with real experiences from your career, mapping each story to common behavioral themes. A single story can often be reused for multiple questions by emphasizing different aspects.
 
 **Goal**: Document 10-15 unique stories that cover all major themes. Each story should:
-- Use the [STAR Method](01-star-method.md) framework
+- Use the [STAR Method](/behavioral/01-star-method.md) framework
 - Include quantifiable results
 - Cross-reference technical topics where relevant
 - Be recent (last 2-3 years preferred)
 
 **Cross-Reference Format**: When stories involve technical decisions, link to relevant prep materials:
-- Database decisions → [databases/](../databases/00-index.md)
-- System architecture → [system-design/fundamentals/](../system-design/fundamentals/00-index.md)
-- Design patterns → [design-patterns/](../design-patterns/00-index.md)
-- Algorithm choices → [dsa/](../dsa/00-index.md)
+- Database decisions → [databases/](/databases/00-index.md)
+- System architecture → [system-design/fundamentals/](/system-design/fundamentals/00-index.md)
+- Design patterns → [design-patterns/](/design-patterns/00-index.md)
+- Algorithm choices → [dsa/](/dsa/00-index.md)
 
 ---
 
@@ -84,7 +84,7 @@ Track which themes your stories cover:
 ```
 
 #### Technical Cross-References
-- Related prep topics: _[e.g., [Database Indexing](../databases/07-indexing-deep-dive.md), [Caching Strategies](../system-design/fundamentals/05-caching.md)]_
+- Related prep topics: _[e.g., [Database Indexing](/databases/07-indexing-deep-dive.md), [Caching Strategies](/system-design/fundamentals/07-caching.md)]_
 - Technologies used: _[e.g., Redis, PostgreSQL, C# async/await]_
 
 #### Variations
@@ -230,17 +230,17 @@ Use these prompts to discover stories from your experience:
 - When did you choose between competing technologies?
 - When did you refactor or optimize critical code?
 - When did you make a database design decision?
-  - _Cross-ref: [Database Design Principles](../databases/01-database-design-principles.md)_
+  - _Cross-ref: [Database Design Principles](/databases/01-database-design-principles.md)_
 - When did you implement a complex algorithm?
-  - _Cross-ref: [DSA topics](../dsa/00-index.md)_
+  - _Cross-ref: [DSA topics](/dsa/00-index.md)_
 
 ### System Design
 - When did you design a scalable system?
-  - _Cross-ref: [System Design Fundamentals](../system-design/fundamentals/00-index.md)_
+  - _Cross-ref: [System Design Fundamentals](/system-design/fundamentals/00-index.md)_
 - When did you solve a performance bottleneck?
-  - _Cross-ref: [Caching](../system-design/fundamentals/05-caching.md), [Database Performance](../databases/10-performance-tuning.md)_
+  - _Cross-ref: [Caching](/system-design/fundamentals/05-caching.md), [Database Performance](/databases/10-performance-tuning.md)_
 - When did you implement distributed systems patterns?
-  - _Cross-ref: [Distributed Systems](../system-design/fundamentals/12-distributed-systems-patterns.md)_
+  - _Cross-ref: [Distributed Systems](/system-design/fundamentals/14-distributed-patterns.md)_
 
 ### Leadership
 - When did you mentor a junior engineer?
@@ -332,10 +332,10 @@ The performance test suite I created became the standard for all backend teams, 
 
 #### Technical Cross-References
 - Related prep topics:
-  - [Database Indexing](../databases/07-indexing-deep-dive.md) - Composite indexes
-  - [Query Optimization](../databases/09-query-optimization.md) - N+1 query patterns
-  - [Caching Strategies](../system-design/fundamentals/05-caching.md) - Redis TTL patterns
-  - [Performance Tuning](../databases/10-performance-tuning.md) - Profiling approaches
+  - [Database Indexing](/databases/07-indexing-deep-dive.md) - Composite indexes
+  - [Query Optimization](/databases/09-query-optimization.md) - N+1 query patterns
+  - [Caching Strategies](/system-design/fundamentals/05-caching.md) - Redis TTL patterns
+  - [Performance Tuning](/databases/10-performance-tuning.md) - Profiling approaches
 - Technologies: Redis, PostgreSQL, New Relic, JMeter, C# Entity Framework, Feature Flags
 
 #### Variations
@@ -360,7 +360,7 @@ The performance test suite I created became the standard for all backend teams, 
 4. Map each to 2-3 themes
 5. Cross-reference technical stories to your prep materials
 6. Practice each story out loud and time yourself
-7. Score yourself using the [STAR Method Rubric](01-star-method.md#-self-evaluation-rubric)
+7. Score yourself using the [STAR Method Rubric](/behavioral/01-star-method.md#-self-evaluation-rubric)
 8. Refine based on feedback
 
 ---

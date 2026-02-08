@@ -1,6 +1,6 @@
 # Database Internals
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -708,6 +708,6 @@ ORDER BY n_dead_tup DESC;
 
 ## Related Topics
 
-- [Query Execution Internals](08-query-execution-internals.md) - Query plans
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - B-tree details
-- [Performance Tuning](10-performance-tuning.md) - Configuration tuning
+- [Query Execution Internals](/databases/08-query-execution-internals.md) - Query plans
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - B-tree details
+- [Performance Tuning](/databases/10-performance-tuning.md) - Configuration tuning

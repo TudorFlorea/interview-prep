@@ -2,7 +2,7 @@
 
 > Common mistakes that tank behavioral interviews and how to avoid them
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -34,7 +34,7 @@ Anti-patterns are common mistakes that signal red flags to interviewers. Even wi
 - Be specific: "I designed while Sarah implemented" vs "we built it"
 - Practice replacing "we" with "I" in your stories
 
-**Related**: [STAR Method - Action Section](01-star-method.md#a---action)
+**Related**: [STAR Method - Action Section](/behavioral/01-star-method.md#a---action)
 
 ---
 
@@ -59,7 +59,7 @@ Anti-patterns are common mistakes that signal red flags to interviewers. Even wi
 **How to Fix**:
 - Time yourself: aim for 2-3 minutes
 - Cut unnecessary context (company politics, tangential history)
-- Use the [STAR Method](01-star-method.md) to stay structured
+- Use the [STAR Method](/behavioral/01-star-method.md) to stay structured
 - Practice out loud and record yourself
 
 ---
@@ -156,7 +156,7 @@ Anti-patterns are common mistakes that signal red flags to interviewers. Even wi
 - Discuss what you'd do differently (shows growth)
 - Use phrases: "This taught me...", "Since then I've...", "If I could redo this..."
 
-**Related**: [STAR Method - Result Section](01-star-method.md#r---result)
+**Related**: [STAR Method - Result Section](/behavioral/01-star-method.md#r---result)
 
 ---
 
@@ -201,8 +201,8 @@ Anti-patterns are common mistakes that signal red flags to interviewers. Even wi
 - If interviewer seems lost, ask: "Would you like me to go deeper on that?"
 
 **Cross-Reference**: Link to detailed technical content when appropriate:
-- [Database patterns](../databases/00-index.md)
-- [System design decisions](../system-design/fundamentals/00-index.md)
+- [Database patterns](/databases/00-index.md)
+- [System design decisions](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -238,7 +238,7 @@ Anti-patterns are common mistakes that signal red flags to interviewers. Even wi
 **How to Fix**:
 - Prefer stories from last 2-3 years
 - If using older stories, explain why they're still relevant
-- Update your [Story Bank](02-story-bank.md) regularly with recent experiences
+- Update your [Story Bank](/behavioral/02-story-bank.md) regularly with recent experiences
 - For career switchers: acknowledge the context shift
 
 ---
@@ -302,7 +302,7 @@ Before your interview, check your stories against these anti-patterns:
 | The Kitchen Sink | ⬜ | Count stories—only ONE per answer? |
 | The Fake Story | ⬜ | Honesty check—100% your experience? |
 
-**Goal**: All boxes checked for each story in your [Story Bank](02-story-bank.md)
+**Goal**: All boxes checked for each story in your [Story Bank](/behavioral/02-story-bank.md)
 
 ---
 
@@ -463,12 +463,12 @@ If you catch yourself mid-interview falling into an anti-pattern:
 
 ## ✅ Next Steps
 
-1. Review your [Story Bank](02-story-bank.md) for these anti-patterns
-2. Record yourself answering [Common Questions](04-common-questions.md)
+1. Review your [Story Bank](/behavioral/02-story-bank.md) for these anti-patterns
+2. Record yourself answering [Common Questions](/behavioral/04-common-questions.md)
 3. Use the self-assessment checklist above
 4. Get feedback from a peer or mentor
 5. Practice the "after" versions until they feel natural
-6. Review [STAR Method](01-star-method.md) for positive patterns to follow
+6. Review [STAR Method](/behavioral/01-star-method.md) for positive patterns to follow
 
 ---
 

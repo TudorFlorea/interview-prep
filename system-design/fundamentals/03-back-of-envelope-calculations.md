@@ -1,6 +1,6 @@
 # Back-of-Envelope Calculations
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -459,6 +459,6 @@ Use this template during interviews:
 
 ## 📚 Related Topics
 
-- [Requirements Gathering](02-requirements-gathering.md) - Context for estimates
-- [Scaling Strategies](10-scaling-strategies.md) - What to do with these numbers
-- [Database Scaling](11-database-scaling.md) - Database capacity planning
+- [Requirements Gathering](/system-design/fundamentals/02-requirements-gathering.md) - Context for estimates
+- [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) - What to do with these numbers
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Database capacity planning

@@ -2,7 +2,7 @@
 
 > Crafting a compelling career narrative that sets the tone for your interview
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -302,7 +302,7 @@ Before your interview, customize your answer:
 - [ ] Research the company's recent news, products, blog posts
 - [ ] Identify 1-2 specific things that excite you about them
 - [ ] Align your background with their job description
-- [ ] Match your emphasis to their values (see [Company-Specific Guides](06-company-specific-guides.md))
+- [ ] Match your emphasis to their values (see [Company-Specific Guides](/behavioral/06-company-specific-guides.md))
 - [ ] Mention specific technologies or problems they work on
 - [ ] Practice your customized version 3+ times
 - [ ] Time it (should be 2-3 minutes)
@@ -390,7 +390,7 @@ This role particularly appeals to me because [alignment], and I'm eager to [cont
 ## ✅ Next Steps
 
 1. Draft your "Tell Me About Yourself" using the template above
-2. Customize it for your target company using [Company-Specific Guides](06-company-specific-guides.md)
+2. Customize it for your target company using [Company-Specific Guides](/behavioral/06-company-specific-guides.md)
 3. Time yourself (aim for 2-3 minutes)
 4. Record yourself and watch it back
 5. Practice out loud 5+ times until it feels natural

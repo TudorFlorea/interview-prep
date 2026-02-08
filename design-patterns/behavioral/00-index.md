@@ -1,6 +1,6 @@
 # Behavioral Design Patterns
 
-[← Back to Main Index](../00-index.md)
+[← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -25,16 +25,16 @@ Behavioral design patterns are concerned with algorithms and the assignment of r
 
 | # | Pattern | Intent | Complexity |
 |---|---------|--------|------------|
-| 1 | [Chain of Responsibility](01-chain-of-responsibility.md) | Pass requests along a chain of handlers until one handles it | 🟡 Medium |
-| 2 | [Command](02-command.md) | Encapsulate a request as an object, enabling parameterization and queuing | 🟡 Medium |
-| 3 | [Iterator](03-iterator.md) | Provide a way to access elements of a collection sequentially | 🟢 Low |
-| 4 | [Mediator](04-mediator.md) | Define an object that encapsulates how objects interact | 🟡 Medium |
-| 5 | [Memento](05-memento.md) | Capture and externalize an object's internal state for later restoration | 🟡 Medium |
-| 6 | [Observer](06-observer.md) | Define a subscription mechanism to notify multiple objects about events | 🟡 Medium |
-| 7 | [State](07-state.md) | Allow an object to alter its behavior when its internal state changes | 🟡 Medium |
-| 8 | [Strategy](08-strategy.md) | Define a family of algorithms, encapsulate each one, and make them interchangeable | 🟢 Low |
-| 9 | [Template Method](09-template-method.md) | Define the skeleton of an algorithm, deferring some steps to subclasses | 🟢 Low |
-| 10 | [Visitor](10-visitor.md) | Separate algorithms from the objects on which they operate | 🔴 High |
+| 1 | [Chain of Responsibility](/design-patterns/behavioral/01-chain-of-responsibility.md) | Pass requests along a chain of handlers until one handles it | 🟡 Medium |
+| 2 | [Command](/design-patterns/behavioral/02-command.md) | Encapsulate a request as an object, enabling parameterization and queuing | 🟡 Medium |
+| 3 | [Iterator](/design-patterns/behavioral/03-iterator.md) | Provide a way to access elements of a collection sequentially | 🟢 Low |
+| 4 | [Mediator](/design-patterns/behavioral/04-mediator.md) | Define an object that encapsulates how objects interact | 🟡 Medium |
+| 5 | [Memento](/design-patterns/behavioral/05-memento.md) | Capture and externalize an object's internal state for later restoration | 🟡 Medium |
+| 6 | [Observer](/design-patterns/behavioral/06-observer.md) | Define a subscription mechanism to notify multiple objects about events | 🟡 Medium |
+| 7 | [State](/design-patterns/behavioral/07-state.md) | Allow an object to alter its behavior when its internal state changes | 🟡 Medium |
+| 8 | [Strategy](/design-patterns/behavioral/08-strategy.md) | Define a family of algorithms, encapsulate each one, and make them interchangeable | 🟢 Low |
+| 9 | [Template Method](/design-patterns/behavioral/09-template-method.md) | Define the skeleton of an algorithm, deferring some steps to subclasses | 🟢 Low |
+| 10 | [Visitor](/design-patterns/behavioral/10-visitor.md) | Separate algorithms from the objects on which they operate | 🔴 High |
 
 ---
 

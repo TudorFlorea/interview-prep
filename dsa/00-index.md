@@ -6,24 +6,24 @@
 
 | Category | Progress | Easy | Medium | Hard |
 |----------|----------|------|--------|------|
-| [Arrays & Hashing](01-arrays-and-hashing.md) | 0/9 | 4🟢 | 4🟡 | 1🔴 |
-| [Two Pointers](02-two-pointers.md) | 0/5 | 1🟢 | 3🟡 | 1🔴 |
-| [Sliding Window](03-sliding-window.md) | 0/6 | 1🟢 | 3🟡 | 2🔴 |
-| [Stack](04-stack.md) | 0/7 | 1🟢 | 5🟡 | 1🔴 |
-| [Binary Search](05-binary-search.md) | 0/7 | 1🟢 | 5🟡 | 1🔴 |
-| [Linked List](06-linked-list.md) | 0/11 | 3🟢 | 6🟡 | 2🔴 |
-| [Trees](07-trees.md) | 0/15 | 6🟢 | 7🟡 | 2🔴 |
-| [Tries](08-tries.md) | 0/3 | 0🟢 | 2🟡 | 1🔴 |
-| [Heap / Priority Queue](09-heap-priority-queue.md) | 0/7 | 2🟢 | 4🟡 | 1🔴 |
-| [Backtracking](10-backtracking.md) | 0/9 | 0🟢 | 7🟡 | 2🔴 |
-| [Graphs](11-graphs.md) | 0/13 | 0🟢 | 12🟡 | 1🔴 |
-| [Advanced Graphs](12-advanced-graphs.md) | 0/6 | 0🟢 | 4🟡 | 2🔴 |
-| [1-D Dynamic Programming](13-1d-dynamic-programming.md) | 0/12 | 2🟢 | 9🟡 | 1🔴 |
-| [2-D Dynamic Programming](14-2d-dynamic-programming.md) | 0/11 | 0🟢 | 8🟡 | 3🔴 |
-| [Greedy](15-greedy.md) | 0/8 | 1🟢 | 6🟡 | 1🔴 |
-| [Intervals](16-intervals.md) | 0/6 | 1🟢 | 4🟡 | 1🔴 |
-| [Math & Geometry](17-math-and-geometry.md) | 0/8 | 2🟢 | 5🟡 | 1🔴 |
-| [Bit Manipulation](18-bit-manipulation.md) | 0/7 | 5🟢 | 1🟡 | 1🔴 |
+| [Arrays & Hashing](/dsa/01-arrays-and-hashing.md) | 0/9 | 4🟢 | 4🟡 | 1🔴 |
+| [Two Pointers](/dsa/02-two-pointers.md) | 0/5 | 1🟢 | 3🟡 | 1🔴 |
+| [Sliding Window](/dsa/03-sliding-window.md) | 0/6 | 1🟢 | 3🟡 | 2🔴 |
+| [Stack](/dsa/04-stack.md) | 0/7 | 1🟢 | 5🟡 | 1🔴 |
+| [Binary Search](/dsa/05-binary-search.md) | 0/7 | 1🟢 | 5🟡 | 1🔴 |
+| [Linked List](/dsa/06-linked-list.md) | 0/11 | 3🟢 | 6🟡 | 2🔴 |
+| [Trees](/dsa/07-trees.md) | 0/15 | 6🟢 | 7🟡 | 2🔴 |
+| [Tries](/dsa/08-tries.md) | 0/3 | 0🟢 | 2🟡 | 1🔴 |
+| [Heap / Priority Queue](/dsa/09-heap-priority-queue.md) | 0/7 | 2🟢 | 4🟡 | 1🔴 |
+| [Backtracking](/dsa/10-backtracking.md) | 0/9 | 0🟢 | 7🟡 | 2🔴 |
+| [Graphs](/dsa/11-graphs.md) | 0/13 | 0🟢 | 12🟡 | 1🔴 |
+| [Advanced Graphs](/dsa/12-advanced-graphs.md) | 0/6 | 0🟢 | 4🟡 | 2🔴 |
+| [1-D Dynamic Programming](/dsa/13-1d-dynamic-programming.md) | 0/12 | 2🟢 | 9🟡 | 1🔴 |
+| [2-D Dynamic Programming](/dsa/14-2d-dynamic-programming.md) | 0/11 | 0🟢 | 8🟡 | 3🔴 |
+| [Greedy](/dsa/15-greedy.md) | 0/8 | 1🟢 | 6🟡 | 1🔴 |
+| [Intervals](/dsa/16-intervals.md) | 0/6 | 1🟢 | 4🟡 | 1🔴 |
+| [Math & Geometry](/dsa/17-math-and-geometry.md) | 0/8 | 2🟢 | 5🟡 | 1🔴 |
+| [Bit Manipulation](/dsa/18-bit-manipulation.md) | 0/7 | 5🟢 | 1🟡 | 1🔴 |
 | **TOTAL** | **0/150** | **30🟢** | **95🟡** | **25🔴** |
 
 ---
@@ -33,44 +33,44 @@
 ### Phase 1: Foundations (Weeks 1-2)
 Build core problem-solving patterns with fundamental data structures.
 
-1. **[Arrays & Hashing](01-arrays-and-hashing.md)** - HashMap/HashSet operations, frequency counting
-2. **[Two Pointers](02-two-pointers.md)** - Opposite ends, same direction traversal
-3. **[Sliding Window](03-sliding-window.md)** - Variable/fixed window, optimization
+1. **[Arrays & Hashing](/dsa/01-arrays-and-hashing.md)** - HashMap/HashSet operations, frequency counting
+2. **[Two Pointers](/dsa/02-two-pointers.md)** - Opposite ends, same direction traversal
+3. **[Sliding Window](/dsa/03-sliding-window.md)** - Variable/fixed window, optimization
 
 ### Phase 2: Core Data Structures (Weeks 3-4)
 Master essential data structure manipulations.
 
-4. **[Stack](04-stack.md)** - LIFO operations, monotonic stacks
-5. **[Binary Search](05-binary-search.md)** - Search space reduction, boundary finding
-6. **[Linked List](06-linked-list.md)** - Pointer manipulation, fast/slow patterns
+4. **[Stack](/dsa/04-stack.md)** - LIFO operations, monotonic stacks
+5. **[Binary Search](/dsa/05-binary-search.md)** - Search space reduction, boundary finding
+6. **[Linked List](/dsa/06-linked-list.md)** - Pointer manipulation, fast/slow patterns
 
 ### Phase 3: Tree Structures (Weeks 5-6)
 Tree traversal and hierarchical data.
 
-7. **[Trees](07-trees.md)** - BFS, DFS, BST properties
-8. **[Tries](08-tries.md)** - Prefix trees, word search
-9. **[Heap / Priority Queue](09-heap-priority-queue.md)** - Top K, streaming median
+7. **[Trees](/dsa/07-trees.md)** - BFS, DFS, BST properties
+8. **[Tries](/dsa/08-tries.md)** - Prefix trees, word search
+9. **[Heap / Priority Queue](/dsa/09-heap-priority-queue.md)** - Top K, streaming median
 
 ### Phase 4: Graph Algorithms (Weeks 7-8)
 Graph traversal and pathfinding.
 
-10. **[Backtracking](10-backtracking.md)** - Permutations, combinations, pruning
-11. **[Graphs](11-graphs.md)** - BFS, DFS, connected components
-12. **[Advanced Graphs](12-advanced-graphs.md)** - Dijkstra, Union-Find, topological sort
+10. **[Backtracking](/dsa/10-backtracking.md)** - Permutations, combinations, pruning
+11. **[Graphs](/dsa/11-graphs.md)** - BFS, DFS, connected components
+12. **[Advanced Graphs](/dsa/12-advanced-graphs.md)** - Dijkstra, Union-Find, topological sort
 
 ### Phase 5: Dynamic Programming (Weeks 9-10)
 Optimization through memoization.
 
-13. **[1-D Dynamic Programming](13-1d-dynamic-programming.md)** - Linear DP, state transitions
-14. **[2-D Dynamic Programming](14-2d-dynamic-programming.md)** - Grid DP, string matching
+13. **[1-D Dynamic Programming](/dsa/13-1d-dynamic-programming.md)** - Linear DP, state transitions
+14. **[2-D Dynamic Programming](/dsa/14-2d-dynamic-programming.md)** - Grid DP, string matching
 
 ### Phase 6: Specialized Topics (Weeks 11-12)
 Rounding out the preparation.
 
-15. **[Greedy](15-greedy.md)** - Local optimal choices
-16. **[Intervals](16-intervals.md)** - Overlap detection, merging
-17. **[Math & Geometry](17-math-and-geometry.md)** - Matrix operations, number theory
-18. **[Bit Manipulation](18-bit-manipulation.md)** - Binary operations, XOR tricks
+15. **[Greedy](/dsa/15-greedy.md)** - Local optimal choices
+16. **[Intervals](/dsa/16-intervals.md)** - Overlap detection, merging
+17. **[Math & Geometry](/dsa/17-math-and-geometry.md)** - Matrix operations, number theory
+18. **[Bit Manipulation](/dsa/18-bit-manipulation.md)** - Binary operations, XOR tricks
 
 ---
 
@@ -121,7 +121,7 @@ Rounding out the preparation.
 
 ## 🏁 Quick Start
 
-1. Begin with [Arrays & Hashing](01-arrays-and-hashing.md)
+1. Begin with [Arrays & Hashing](/dsa/01-arrays-and-hashing.md)
 2. Complete at least 2-3 problems per day
 3. Review completed problems weekly
 4. Track your progress by checking boxes

@@ -1,6 +1,6 @@
 # Memento Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -547,6 +547,6 @@ public class LimitedHistory
 
 ## Related Patterns
 
-- [Command](02-command.md) - Alternative for undo (reverse operations vs saved state)
-- [Iterator](03-iterator.md) - Can use memento to capture iteration state
-- [Prototype](../creational/04-prototype.md) - Both involve copying state
+- [Command](/design-patterns/behavioral/02-command.md) - Alternative for undo (reverse operations vs saved state)
+- [Iterator](/design-patterns/behavioral/03-iterator.md) - Can use memento to capture iteration state
+- [Prototype](/design-patterns/creational/04-prototype.md) - Both involve copying state

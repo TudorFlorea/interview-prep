@@ -1,6 +1,6 @@
 # Networking for Backend & Full-Stack Engineers
 
-[← Back to Main](../README.md)
+[← Back to Main](/index.md)
 
 > A practical guide to computer networking concepts essential for backend and full-stack development.
 
@@ -11,32 +11,32 @@
 ### Phase 1: Foundations
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Internet & Protocols](01-internet-and-protocols.md) | ⬜ Not Started | 🟢 Foundational |
-| [HTTP & HTTPS](02-http-and-https.md) | ⬜ Not Started | 🟢 Foundational |
-| [DNS Resolution](03-dns.md) | ⬜ Not Started | 🟢 Foundational |
+| [Internet & Protocols](/networking/01-internet-and-protocols.md) | ⬜ Not Started | 🟢 Foundational |
+| [HTTP & HTTPS](/networking/02-http-and-https.md) | ⬜ Not Started | 🟢 Foundational |
+| [DNS Resolution](/networking/03-dns.md) | ⬜ Not Started | 🟢 Foundational |
 
 ### Phase 2: Transport & Security
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [TCP & UDP](04-tcp-and-udp.md) | ⬜ Not Started | 🟡 Intermediate |
-| [TLS & Security](05-tls-and-security.md) | ⬜ Not Started | 🟡 Intermediate |
-| [IP Addressing & Subnets](06-ip-addressing-and-subnets.md) | ⬜ Not Started | 🟡 Intermediate |
+| [TCP & UDP](/networking/04-tcp-and-udp.md) | ⬜ Not Started | 🟡 Intermediate |
+| [TLS & Security](/networking/05-tls-and-security.md) | ⬜ Not Started | 🟡 Intermediate |
+| [IP Addressing & Subnets](/networking/06-ip-addressing-and-subnets.md) | ⬜ Not Started | 🟡 Intermediate |
 
 ### Phase 3: Infrastructure
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [Routing Basics](07-routing-basics.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Load Balancing](08-load-balancing.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Proxies & Gateways](09-proxies-and-gateways.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Firewalls & Security Groups](10-firewalls-and-security-groups.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Routing Basics](/networking/07-routing-basics.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Load Balancing](/networking/08-load-balancing.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Proxies & Gateways](/networking/09-proxies-and-gateways.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Firewalls & Security Groups](/networking/10-firewalls-and-security-groups.md) | ⬜ Not Started | 🟡 Intermediate |
 
 ### Phase 4: Modern Patterns
 | Topic | Status | Difficulty |
 |-------|--------|------------|
-| [WebSockets & Real-Time](11-websockets-and-real-time.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Physical & Link Layer](12-physical-and-link-layer.md) | ⬜ Not Started | 🟢 Foundational |
-| [Debugging & Tools](13-debugging-and-tools.md) | ⬜ Not Started | 🟡 Intermediate |
-| [Cloud Networking](14-cloud-networking.md) | ⬜ Not Started | 🔴 Advanced |
+| [WebSockets & Real-Time](/networking/11-websockets-and-real-time.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Physical & Link Layer](/networking/12-physical-and-link-layer.md) | ⬜ Not Started | 🟢 Foundational |
+| [Debugging & Tools](/networking/13-debugging-and-tools.md) | ⬜ Not Started | 🟡 Intermediate |
+| [Cloud Networking](/networking/14-cloud-networking.md) | ⬜ Not Started | 🔴 Advanced |
 
 ---
 

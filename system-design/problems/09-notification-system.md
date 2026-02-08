@@ -1,6 +1,6 @@
 # Design Notification System
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -457,10 +457,10 @@ CREATE TABLE device_tokens (
 
 ## 12. References
 
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Queue patterns
-- [18-rate-limiting.md](../fundamentals/18-rate-limiting.md) - Rate limiting
-- [20-fault-tolerance.md](../fundamentals/20-fault-tolerance.md) - Retry logic
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Queue patterns
+- [18-rate-limiting.md](/system-design/fundamentals/18-rate-limiting.md) - Rate limiting
+- [20-fault-tolerance.md](/system-design/fundamentals/20-fault-tolerance.md) - Retry logic
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Web Crawler →](10-web-crawler.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Web Crawler →](/system-design/problems/10-web-crawler.md)

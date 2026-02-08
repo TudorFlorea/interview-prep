@@ -1,6 +1,6 @@
 # Design Job Scheduler
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -530,10 +530,10 @@ class SchedulerService:
 
 ## 13. References
 
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Queue patterns
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - Leader election
-- [20-fault-tolerance.md](../fundamentals/20-fault-tolerance.md) - Retry patterns
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Queue patterns
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - Leader election
+- [20-fault-tolerance.md](/system-design/fundamentals/20-fault-tolerance.md) - Retry patterns
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Payment System →](16-payment-system.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Payment System →](/system-design/problems/16-payment-system.md)

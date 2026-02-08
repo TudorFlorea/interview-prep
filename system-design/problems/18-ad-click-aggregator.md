@@ -1,6 +1,6 @@
 # Design Ad Click Aggregator
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -440,10 +440,10 @@ CREATE TABLE click_aggregates_daily (
 
 ## 12. References
 
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Kafka streaming
-- [11-databases.md](../fundamentals/11-databases.md) - OLAP databases
-- [22-batch-processing.md](../fundamentals/22-batch-processing.md) - MapReduce patterns
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Kafka streaming
+- [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - OLAP databases
+- [22-batch-processing.md](/system-design/fundamentals/22-batch-processing.md) - MapReduce patterns
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Distributed Key-Value Store →](19-key-value-store.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Distributed Key-Value Store →](/system-design/problems/19-key-value-store.md)

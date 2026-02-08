@@ -8,9 +8,9 @@ A comprehensive guide to the 22 Gang of Four (GoF) design patterns with C# imple
 
 | Category | Patterns | Completed | Progress |
 |----------|----------|-----------|----------|
-| [Creational](creational/00-index.md) | 5 | 0 | ⬜⬜⬜⬜⬜ |
-| [Structural](structural/00-index.md) | 7 | 0 | ⬜⬜⬜⬜⬜⬜⬜ |
-| [Behavioral](behavioral/00-index.md) | 10 | 0 | ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
+| [Creational](/design-patterns/creational/00-index.md) | 5 | 0 | ⬜⬜⬜⬜⬜ |
+| [Structural](/design-patterns/structural/00-index.md) | 7 | 0 | ⬜⬜⬜⬜⬜⬜⬜ |
+| [Behavioral](/design-patterns/behavioral/00-index.md) | 10 | 0 | ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ |
 | **Total** | **22** | **0** | **0%** |
 
 ---
@@ -21,11 +21,11 @@ A comprehensive guide to the 22 Gang of Four (GoF) design patterns with C# imple
 
 | # | Pattern | Description | Status |
 |---|---------|-------------|--------|
-| 1 | [Factory Method](creational/01-factory-method.md) | Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects | ⬜ |
-| 2 | [Abstract Factory](creational/02-abstract-factory.md) | Produces families of related objects without specifying their concrete classes | ⬜ |
-| 3 | [Builder](creational/03-builder.md) | Constructs complex objects step by step | ⬜ |
-| 4 | [Prototype](creational/04-prototype.md) | Copies existing objects without making code dependent on their classes | ⬜ |
-| 5 | [Singleton](creational/05-singleton.md) | Ensures a class has only one instance while providing global access point | ⬜ |
+| 1 | [Factory Method](/design-patterns/creational/01-factory-method.md) | Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects | ⬜ |
+| 2 | [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) | Produces families of related objects without specifying their concrete classes | ⬜ |
+| 3 | [Builder](/design-patterns/creational/03-builder.md) | Constructs complex objects step by step | ⬜ |
+| 4 | [Prototype](/design-patterns/creational/04-prototype.md) | Copies existing objects without making code dependent on their classes | ⬜ |
+| 5 | [Singleton](/design-patterns/creational/05-singleton.md) | Ensures a class has only one instance while providing global access point | ⬜ |
 
 ---
 
@@ -35,13 +35,13 @@ A comprehensive guide to the 22 Gang of Four (GoF) design patterns with C# imple
 
 | # | Pattern | Description | Status |
 |---|---------|-------------|--------|
-| 1 | [Adapter](structural/01-adapter.md) | Allows objects with incompatible interfaces to collaborate | ⬜ |
-| 2 | [Bridge](structural/02-bridge.md) | Splits a large class or related classes into separate hierarchies | ⬜ |
-| 3 | [Composite](structural/03-composite.md) | Composes objects into tree structures and works with them as individual objects | ⬜ |
-| 4 | [Decorator](structural/04-decorator.md) | Attaches new behaviors to objects by placing them inside wrapper objects | ⬜ |
-| 5 | [Facade](structural/05-facade.md) | Provides a simplified interface to a library, framework, or complex set of classes | ⬜ |
-| 6 | [Flyweight](structural/06-flyweight.md) | Fits more objects into available RAM by sharing common state between objects | ⬜ |
-| 7 | [Proxy](structural/07-proxy.md) | Provides a substitute or placeholder for another object | ⬜ |
+| 1 | [Adapter](/design-patterns/structural/01-adapter.md) | Allows objects with incompatible interfaces to collaborate | ⬜ |
+| 2 | [Bridge](/design-patterns/structural/02-bridge.md) | Splits a large class or related classes into separate hierarchies | ⬜ |
+| 3 | [Composite](/design-patterns/structural/03-composite.md) | Composes objects into tree structures and works with them as individual objects | ⬜ |
+| 4 | [Decorator](/design-patterns/structural/04-decorator.md) | Attaches new behaviors to objects by placing them inside wrapper objects | ⬜ |
+| 5 | [Facade](/design-patterns/structural/05-facade.md) | Provides a simplified interface to a library, framework, or complex set of classes | ⬜ |
+| 6 | [Flyweight](/design-patterns/structural/06-flyweight.md) | Fits more objects into available RAM by sharing common state between objects | ⬜ |
+| 7 | [Proxy](/design-patterns/structural/07-proxy.md) | Provides a substitute or placeholder for another object | ⬜ |
 
 ---
 
@@ -51,16 +51,16 @@ A comprehensive guide to the 22 Gang of Four (GoF) design patterns with C# imple
 
 | # | Pattern | Description | Status |
 |---|---------|-------------|--------|
-| 1 | [Chain of Responsibility](behavioral/01-chain-of-responsibility.md) | Passes requests along a chain of handlers | ⬜ |
-| 2 | [Command](behavioral/02-command.md) | Turns a request into a stand-alone object containing all request information | ⬜ |
-| 3 | [Iterator](behavioral/03-iterator.md) | Traverses elements of a collection without exposing its underlying representation | ⬜ |
-| 4 | [Mediator](behavioral/04-mediator.md) | Reduces chaotic dependencies between objects | ⬜ |
-| 5 | [Memento](behavioral/05-memento.md) | Saves and restores the previous state of an object | ⬜ |
-| 6 | [Observer](behavioral/06-observer.md) | Defines a subscription mechanism to notify multiple objects about events | ⬜ |
-| 7 | [State](behavioral/07-state.md) | Alters object behavior when its internal state changes | ⬜ |
-| 8 | [Strategy](behavioral/08-strategy.md) | Defines a family of algorithms and makes them interchangeable | ⬜ |
-| 9 | [Template Method](behavioral/09-template-method.md) | Defines skeleton of an algorithm, deferring some steps to subclasses | ⬜ |
-| 10 | [Visitor](behavioral/10-visitor.md) | Separates algorithms from the objects on which they operate | ⬜ |
+| 1 | [Chain of Responsibility](/design-patterns/behavioral/01-chain-of-responsibility.md) | Passes requests along a chain of handlers | ⬜ |
+| 2 | [Command](/design-patterns/behavioral/02-command.md) | Turns a request into a stand-alone object containing all request information | ⬜ |
+| 3 | [Iterator](/design-patterns/behavioral/03-iterator.md) | Traverses elements of a collection without exposing its underlying representation | ⬜ |
+| 4 | [Mediator](/design-patterns/behavioral/04-mediator.md) | Reduces chaotic dependencies between objects | ⬜ |
+| 5 | [Memento](/design-patterns/behavioral/05-memento.md) | Saves and restores the previous state of an object | ⬜ |
+| 6 | [Observer](/design-patterns/behavioral/06-observer.md) | Defines a subscription mechanism to notify multiple objects about events | ⬜ |
+| 7 | [State](/design-patterns/behavioral/07-state.md) | Alters object behavior when its internal state changes | ⬜ |
+| 8 | [Strategy](/design-patterns/behavioral/08-strategy.md) | Defines a family of algorithms and makes them interchangeable | ⬜ |
+| 9 | [Template Method](/design-patterns/behavioral/09-template-method.md) | Defines skeleton of an algorithm, deferring some steps to subclasses | ⬜ |
+| 10 | [Visitor](/design-patterns/behavioral/10-visitor.md) | Separates algorithms from the objects on which they operate | ⬜ |
 
 ---
 

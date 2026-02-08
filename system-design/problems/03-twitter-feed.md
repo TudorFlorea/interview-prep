@@ -1,6 +1,6 @@
 # Design Twitter/X Feed
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -826,8 +826,8 @@ class TrendingService:
 
 ## 📚 Related Topics
 
-- [Message Queues](../fundamentals/09-message-queues.md) - Kafka for async fanout
-- [Database Scaling](../fundamentals/11-database-scaling.md) - Sharding tweets
-- [Caching](../fundamentals/07-caching.md) - Redis timeline cache
-- [Search & Indexing](../fundamentals/16-search-and-indexing.md) - Tweet search
-- [Instagram](04-instagram.md) - Similar social media patterns
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Kafka for async fanout
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Sharding tweets
+- [Caching](/system-design/fundamentals/07-caching.md) - Redis timeline cache
+- [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) - Tweet search
+- [Instagram](/system-design/problems/04-instagram.md) - Similar social media patterns

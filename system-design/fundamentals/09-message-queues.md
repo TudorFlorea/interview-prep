@@ -1,6 +1,6 @@
 # Message Queues
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -592,6 +592,6 @@ while True:
 
 ## 📚 Related Topics
 
-- [Distributed Patterns](14-distributed-patterns.md) - Saga pattern, event choreography
-- [Fault Tolerance](20-fault-tolerance.md) - Retry strategies
-- [Scaling Strategies](10-scaling-strategies.md) - Scaling consumers
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Saga pattern, event choreography
+- [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) - Retry strategies
+- [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) - Scaling consumers

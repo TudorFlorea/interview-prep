@@ -1,6 +1,6 @@
 # Design Distributed Key-Value Store
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -434,10 +434,10 @@ Nodes:
 
 ## 12. References
 
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - Consensus
-- [04-consistent-hashing.md](../fundamentals/04-consistent-hashing.md) - Partitioning
-- [11-databases.md](../fundamentals/11-databases.md) - Storage engines
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - Consensus
+- [04-consistent-hashing.md](/system-design/fundamentals/12-consistent-hashing.md) - Partitioning
+- [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - Storage engines
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: News Feed Ranking →](20-news-feed-ranking.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: News Feed Ranking →](/system-design/problems/20-news-feed-ranking.md)

@@ -1,6 +1,6 @@
 # DNS (Domain Name System)
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -670,6 +670,6 @@ docker stop local-dns && docker rm local-dns
 
 ## Related Topics
 
-- [Internet & Protocols](01-internet-and-protocols.md) - How DNS fits in the stack
-- [Load Balancing](08-load-balancing.md) - DNS-based load balancing
-- [Cloud Networking](14-cloud-networking.md) - Cloud DNS services
+- [Internet & Protocols](/networking/01-internet-and-protocols.md) - How DNS fits in the stack
+- [Load Balancing](/networking/08-load-balancing.md) - DNS-based load balancing
+- [Cloud Networking](/networking/14-cloud-networking.md) - Cloud DNS services

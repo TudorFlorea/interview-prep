@@ -1,6 +1,6 @@
 # Design Dropbox
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -606,10 +606,10 @@ class ChunkService:
 
 ## 12. References
 
-- [17-blob-storage-and-cdn.md](../fundamentals/17-blob-storage-and-cdn.md) - Storage
-- [15-real-time-communication.md](../fundamentals/15-real-time-communication.md) - Sync
-- [20-fault-tolerance.md](../fundamentals/20-fault-tolerance.md) - Durability
+- [17-blob-storage-and-cdn.md](/system-design/fundamentals/17-blob-storage-and-cdn.md) - Storage
+- [15-real-time-communication.md](/system-design/fundamentals/15-real-time-communication.md) - Sync
+- [20-fault-tolerance.md](/system-design/fundamentals/20-fault-tolerance.md) - Durability
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Notification System →](09-notification-system.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Notification System →](/system-design/problems/09-notification-system.md)

@@ -1,6 +1,6 @@
 # Design News Feed Ranking
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -482,10 +482,10 @@ CREATE TABLE engagements (
 
 ## 12. References
 
-- [05-caching.md](../fundamentals/05-caching.md) - Feature caching
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Event streaming
-- [22-batch-processing.md](../fundamentals/22-batch-processing.md) - ML pipelines
+- [05-caching.md](/system-design/fundamentals/07-caching.md) - Feature caching
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Event streaming
+- [22-batch-processing.md](/system-design/fundamentals/22-batch-processing.md) - ML pipelines
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Amazon Locker →](21-amazon-locker.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Amazon Locker →](/system-design/problems/21-amazon-locker.md)

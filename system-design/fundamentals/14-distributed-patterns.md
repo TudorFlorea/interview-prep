@@ -1,6 +1,6 @@
 # Distributed System Patterns
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -782,7 +782,7 @@ public class PaymentService
 
 ## 📚 Related Topics
 
-- [CAP Theorem](13-cap-theorem.md) - Consistency trade-offs
-- [Message Queues](09-message-queues.md) - Async communication
-- [Fault Tolerance](20-fault-tolerance.md) - Handling failures
-- [Databases](06-databases.md) - Transaction fundamentals
+- [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) - Consistency trade-offs
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Async communication
+- [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) - Handling failures
+- [Databases](/system-design/fundamentals/06-databases.md) - Transaction fundamentals

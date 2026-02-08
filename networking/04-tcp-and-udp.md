@@ -1,6 +1,6 @@
 # TCP & UDP
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -694,6 +694,6 @@ class ReliableUDP:
 
 ## Related Topics
 
-- [HTTP & HTTPS](02-http-and-https.md) - Application layer over TCP
-- [WebSockets & Real-Time](11-websockets-and-real-time.md) - Persistent TCP connections
-- [Debugging & Tools](13-debugging-and-tools.md) - tcpdump, Wireshark analysis
+- [HTTP & HTTPS](/networking/02-http-and-https.md) - Application layer over TCP
+- [WebSockets & Real-Time](/networking/11-websockets-and-real-time.md) - Persistent TCP connections
+- [Debugging & Tools](/networking/13-debugging-and-tools.md) - tcpdump, Wireshark analysis

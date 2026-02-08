@@ -1,6 +1,6 @@
 # Monitoring and Observability
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -559,6 +559,6 @@ groups:
 
 ## 📚 Related Topics
 
-- [Distributed Patterns](14-distributed-patterns.md) - Tracing in distributed systems
-- [Fault Tolerance](20-fault-tolerance.md) - Detecting failures
-- [Scaling Strategies](10-scaling-strategies.md) - Monitoring at scale
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Tracing in distributed systems
+- [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) - Detecting failures
+- [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) - Monitoring at scale

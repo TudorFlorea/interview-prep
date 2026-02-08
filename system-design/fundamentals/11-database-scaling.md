@@ -1,6 +1,6 @@
 # Database Scaling
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -515,7 +515,7 @@ Trade-offs:
 
 ## 📚 Related Topics
 
-- [Databases](06-databases.md) - Database fundamentals
-- [Consistent Hashing](12-consistent-hashing.md) - Better sharding
-- [CAP Theorem](13-cap-theorem.md) - Consistency trade-offs
-- [Caching](07-caching.md) - Reducing database load
+- [Databases](/system-design/fundamentals/06-databases.md) - Database fundamentals
+- [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) - Better sharding
+- [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) - Consistency trade-offs
+- [Caching](/system-design/fundamentals/07-caching.md) - Reducing database load

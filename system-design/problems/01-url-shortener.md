@@ -1,6 +1,6 @@
 # Design a URL Shortener
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -676,7 +676,7 @@ class UrlService:
 
 ## 📚 Related Topics
 
-- [Caching](../fundamentals/07-caching.md) - Cache strategies
-- [Database Scaling](../fundamentals/11-database-scaling.md) - Replication and sharding
-- [Consistent Hashing](../fundamentals/12-consistent-hashing.md) - Distributed ID generation
-- [Rate Limiter](02-rate-limiter.md) - Abuse prevention
+- [Caching](/system-design/fundamentals/07-caching.md) - Cache strategies
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Replication and sharding
+- [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) - Distributed ID generation
+- [Rate Limiter](/system-design/problems/02-rate-limiter.md) - Abuse prevention

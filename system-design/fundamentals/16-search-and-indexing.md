@@ -1,6 +1,6 @@
 # Search and Indexing
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -581,7 +581,7 @@ b = 0.75 (document length normalization)
 
 ## 📚 Related Topics
 
-- [Database Scaling](11-database-scaling.md) - Read replicas for search
-- [Caching](07-caching.md) - Cache search results
-- [Data Modeling](05-data-modeling.md) - Denormalization for search
-- [Message Queues](09-message-queues.md) - CDC pipeline
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Read replicas for search
+- [Caching](/system-design/fundamentals/07-caching.md) - Cache search results
+- [Data Modeling](/system-design/fundamentals/05-data-modeling.md) - Denormalization for search
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - CDC pipeline

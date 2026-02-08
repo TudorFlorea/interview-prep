@@ -1,6 +1,6 @@
 # Partitioning and Sharding
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -644,6 +644,6 @@ dropdb old_db
 
 ## Related Topics
 
-- [Replication and Consistency](14-replication-and-consistency.md) - High availability
-- [Performance Tuning](10-performance-tuning.md) - Optimization before sharding
-- [Database Internals](15-database-internals.md) - How partitions are stored
+- [Replication and Consistency](/databases/14-replication-and-consistency.md) - High availability
+- [Performance Tuning](/databases/10-performance-tuning.md) - Optimization before sharding
+- [Database Internals](/databases/15-database-internals.md) - How partitions are stored

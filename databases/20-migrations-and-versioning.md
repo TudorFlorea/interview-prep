@@ -1,6 +1,6 @@
 # Migrations and Schema Versioning
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -699,6 +699,6 @@ FROM orders;
 
 ## Related Topics
 
-- [Database Design Principles](01-database-design-principles.md) - Initial schema design
-- [Performance Tuning](10-performance-tuning.md) - Index strategies
-- [Locking and Concurrency](12-locking-and-concurrency.md) - Understanding locks
+- [Database Design Principles](/databases/01-database-design-principles.md) - Initial schema design
+- [Performance Tuning](/databases/10-performance-tuning.md) - Index strategies
+- [Locking and Concurrency](/databases/12-locking-and-concurrency.md) - Understanding locks

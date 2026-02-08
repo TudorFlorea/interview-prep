@@ -1,6 +1,6 @@
 # Security and Access Control
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -701,6 +701,6 @@ SELECT * FROM ssn_access_log ORDER BY accessed_at DESC LIMIT 100;
 
 ## Related Topics
 
-- [Stored Procedures and Triggers](18-stored-procedures-triggers.md) - SECURITY DEFINER functions
-- [ORM vs Raw SQL](21-orm-vs-raw-sql.md) - Parameterized queries in ORMs
-- [Transactions and ACID](11-transactions-and-acid.md) - Transaction-level security
+- [Stored Procedures and Triggers](/databases/18-stored-procedures-triggers.md) - SECURITY DEFINER functions
+- [ORM vs Raw SQL](/databases/21-orm-vs-raw-sql.md) - Parameterized queries in ORMs
+- [Transactions and ACID](/databases/11-transactions-and-acid.md) - Transaction-level security

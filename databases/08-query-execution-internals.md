@@ -1,6 +1,6 @@
 # Query Execution Internals
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -629,6 +629,6 @@ WHERE c.tier = 'gold';
 
 ## Related Topics
 
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - Index types and strategies
-- [Query Optimization](09-query-optimization.md) - Rewriting for performance
-- [Performance Tuning](10-performance-tuning.md) - System-level optimization
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - Index types and strategies
+- [Query Optimization](/databases/09-query-optimization.md) - Rewriting for performance
+- [Performance Tuning](/databases/10-performance-tuning.md) - System-level optimization

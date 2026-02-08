@@ -1,6 +1,6 @@
 # Abstract Factory Pattern
 
-[← Back to Creational Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Creational Patterns](/design-patterns/creational/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -561,7 +561,7 @@ public interface INavigationFactory { ... }
 
 ## Related Patterns
 
-- [Factory Method](01-factory-method.md) - Abstract Factory often uses Factory Methods internally
-- [Singleton](05-singleton.md) - Factories are often singletons
-- [Prototype](04-prototype.md) - Alternative when families are created by cloning
-- [Builder](03-builder.md) - Can be used with Abstract Factory for complex products
+- [Factory Method](/design-patterns/creational/01-factory-method.md) - Abstract Factory often uses Factory Methods internally
+- [Singleton](/design-patterns/creational/05-singleton.md) - Factories are often singletons
+- [Prototype](/design-patterns/creational/04-prototype.md) - Alternative when families are created by cloning
+- [Builder](/design-patterns/creational/03-builder.md) - Can be used with Abstract Factory for complex products

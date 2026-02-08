@@ -1,6 +1,6 @@
 # Transactions and ACID
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -660,6 +660,6 @@ COMMIT;
 
 ## Related Topics
 
-- [Locking and Concurrency](12-locking-and-concurrency.md) - Deeper dive into locks
-- [Performance Tuning](10-performance-tuning.md) - Transaction performance
-- [Database Internals](15-database-internals.md) - How MVCC works under the hood
+- [Locking and Concurrency](/databases/12-locking-and-concurrency.md) - Deeper dive into locks
+- [Performance Tuning](/databases/10-performance-tuning.md) - Transaction performance
+- [Database Internals](/databases/15-database-internals.md) - How MVCC works under the hood

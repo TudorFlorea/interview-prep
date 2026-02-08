@@ -1,6 +1,6 @@
 # Design WhatsApp
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -635,10 +635,10 @@ class GroupMessageService:
 
 ## 12. References
 
-- [15-real-time-communication.md](../fundamentals/15-real-time-communication.md) - WebSockets
-- [21-security.md](../fundamentals/21-security.md) - Encryption
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Async processing
+- [15-real-time-communication.md](/system-design/fundamentals/15-real-time-communication.md) - WebSockets
+- [21-security.md](/system-design/fundamentals/21-security.md) - Encryption
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Async processing
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Dropbox →](08-dropbox.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Dropbox →](/system-design/problems/08-dropbox.md)

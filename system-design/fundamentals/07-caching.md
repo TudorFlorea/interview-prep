@@ -1,6 +1,6 @@
 # Caching
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -585,7 +585,7 @@ If hit rate is low:
 
 ## 📚 Related Topics
 
-- [Databases](06-databases.md) - What you're caching
-- [Load Balancing](08-load-balancing.md) - Sticky sessions and caching
-- [Consistent Hashing](12-consistent-hashing.md) - Distributing cache keys
-- [Blob Storage & CDN](17-blob-storage-cdn.md) - CDN caching for static content
+- [Databases](/system-design/fundamentals/06-databases.md) - What you're caching
+- [Load Balancing](/system-design/fundamentals/08-load-balancing.md) - Sticky sessions and caching
+- [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) - Distributing cache keys
+- [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) - CDN caching for static content

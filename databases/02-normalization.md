@@ -1,6 +1,6 @@
 # Normalization
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -755,6 +755,6 @@ Option C: Application-level cache (Redis/Memcached)
 
 ## Related Topics
 
-- [Database Design Principles](01-database-design-principles.md) - Context for normalization
-- [Keys and Constraints](03-keys-and-constraints.md) - Enforcing normalized structure
-- [Performance Tuning](10-performance-tuning.md) - When to denormalize
+- [Database Design Principles](/databases/01-database-design-principles.md) - Context for normalization
+- [Keys and Constraints](/databases/03-keys-and-constraints.md) - Enforcing normalized structure
+- [Performance Tuning](/databases/10-performance-tuning.md) - When to denormalize

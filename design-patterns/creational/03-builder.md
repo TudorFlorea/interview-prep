@@ -1,6 +1,6 @@
 # Builder Pattern
 
-[← Back to Creational Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Creational Patterns](/design-patterns/creational/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -632,7 +632,7 @@ var car = CarBuilder.Start()
 
 ## Related Patterns
 
-- [Abstract Factory](02-abstract-factory.md) - Can use Builder for complex product creation
-- [Prototype](04-prototype.md) - Alternative when object variations are minimal
-- [Singleton](05-singleton.md) - Director can be a Singleton
-- [Composite](../structural/03-composite.md) - Builder often builds Composite structures
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Can use Builder for complex product creation
+- [Prototype](/design-patterns/creational/04-prototype.md) - Alternative when object variations are minimal
+- [Singleton](/design-patterns/creational/05-singleton.md) - Director can be a Singleton
+- [Composite](/design-patterns/structural/03-composite.md) - Builder often builds Composite structures

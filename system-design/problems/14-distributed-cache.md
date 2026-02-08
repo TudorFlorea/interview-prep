@@ -1,6 +1,6 @@
 # Design Distributed Cache
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -501,10 +501,10 @@ PERSIST key
 
 ## 12. References
 
-- [12-consistent-hashing.md](../fundamentals/12-consistent-hashing.md) - Partitioning
-- [07-caching.md](../fundamentals/07-caching.md) - Caching patterns
-- [13-cap-theorem.md](../fundamentals/13-cap-theorem.md) - Consistency tradeoffs
+- [12-consistent-hashing.md](/system-design/fundamentals/12-consistent-hashing.md) - Partitioning
+- [07-caching.md](/system-design/fundamentals/07-caching.md) - Caching patterns
+- [13-cap-theorem.md](/system-design/fundamentals/13-cap-theorem.md) - Consistency tradeoffs
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Job Scheduler →](15-job-scheduler.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Job Scheduler →](/system-design/problems/15-job-scheduler.md)

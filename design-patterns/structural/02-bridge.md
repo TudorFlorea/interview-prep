@@ -1,6 +1,6 @@
 # Bridge Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -465,6 +465,6 @@ public class Notification
 
 ## Related Patterns
 
-- [Adapter](01-adapter.md) - Adapter is retrofit; Bridge is designed upfront
-- [Abstract Factory](../creational/02-abstract-factory.md) - Can create Bridge components
-- [Strategy](../behavioral/08-strategy.md) - Similar structure but different intent
+- [Adapter](/design-patterns/structural/01-adapter.md) - Adapter is retrofit; Bridge is designed upfront
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Can create Bridge components
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Similar structure but different intent

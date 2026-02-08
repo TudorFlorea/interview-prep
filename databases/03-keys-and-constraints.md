@@ -1,6 +1,6 @@
 # Keys and Constraints
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -867,6 +867,6 @@ CREATE INDEX idx_products_active ON products(is_active) WHERE is_active = TRUE;
 
 ## Related Topics
 
-- [Database Design Principles](01-database-design-principles.md) - Schema design context
-- [Normalization](02-normalization.md) - Why these structures exist
-- [Multi-Table Queries](04-multi-table-queries.md) - Querying related tables
+- [Database Design Principles](/databases/01-database-design-principles.md) - Schema design context
+- [Normalization](/databases/02-normalization.md) - Why these structures exist
+- [Multi-Table Queries](/databases/04-multi-table-queries.md) - Querying related tables

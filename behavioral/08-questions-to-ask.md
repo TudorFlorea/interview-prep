@@ -2,7 +2,7 @@
 
 > Smart questions that demonstrate curiosity, assess company fit, and leave a strong impression
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -477,7 +477,7 @@ If you can only prepare 5 questions, make them these:
 3. Match questions to likely interviewer types
 4. Practice asking them naturally (not reading from a list)
 5. Prepare follow-up questions for different conversation directions
-6. Review [Company-Specific Guides](06-company-specific-guides.md) to tailor emphasis
+6. Review [Company-Specific Guides](/behavioral/06-company-specific-guides.md) to tailor emphasis
 
 ---
 

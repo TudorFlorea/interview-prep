@@ -1,6 +1,6 @@
 # Adapter Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -458,7 +458,7 @@ public class GoodAdapter : ITarget
 
 ## Related Patterns
 
-- [Bridge](02-bridge.md) - Designed up-front; Adapter is retrofit
-- [Decorator](04-decorator.md) - Wraps without changing interface
-- [Facade](05-facade.md) - Simplifies; Adapter converts
-- [Proxy](07-proxy.md) - Same interface; Adapter changes interface
+- [Bridge](/design-patterns/structural/02-bridge.md) - Designed up-front; Adapter is retrofit
+- [Decorator](/design-patterns/structural/04-decorator.md) - Wraps without changing interface
+- [Facade](/design-patterns/structural/05-facade.md) - Simplifies; Adapter converts
+- [Proxy](/design-patterns/structural/07-proxy.md) - Same interface; Adapter changes interface

@@ -1,6 +1,6 @@
 # Fault Tolerance and Resilience
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -722,7 +722,7 @@ def check_external_api():
 
 ## 📚 Related Topics
 
-- [Distributed Patterns](14-distributed-patterns.md) - Saga, consensus
-- [Monitoring](19-monitoring-and-observability.md) - Detecting failures
-- [Load Balancing](08-load-balancing.md) - Health checks in LB
-- [Message Queues](09-message-queues.md) - Async for resilience
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Saga, consensus
+- [Monitoring](/system-design/fundamentals/19-monitoring-and-observability.md) - Detecting failures
+- [Load Balancing](/system-design/fundamentals/08-load-balancing.md) - Health checks in LB
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Async for resilience

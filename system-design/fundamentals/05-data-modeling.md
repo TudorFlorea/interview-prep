@@ -1,6 +1,6 @@
 # Data Modeling
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -547,6 +547,6 @@ SELECT * FROM posts WHERE deleted_at IS NULL;
 
 ## 📚 Related Topics
 
-- [Databases](06-databases.md) - SQL vs NoSQL deep dive
-- [Database Scaling](11-database-scaling.md) - Sharding and replication
-- [API Design](04-api-design.md) - Exposing your data model
+- [Databases](/system-design/fundamentals/06-databases.md) - SQL vs NoSQL deep dive
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Sharding and replication
+- [API Design](/system-design/fundamentals/04-api-design.md) - Exposing your data model

@@ -1,6 +1,6 @@
 # Arrays & Hashing
 
-[← Back to Index](00-index.md)
+[← Back to Index](/dsa/00-index.md)
 
 ## Overview
 

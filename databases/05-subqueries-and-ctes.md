@@ -1,6 +1,6 @@
 # Subqueries and CTEs
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -779,6 +779,6 @@ FROM ancestors;
 
 ## Related Topics
 
-- [Multi-Table Queries](04-multi-table-queries.md) - JOINs as alternative to subqueries
-- [Advanced SQL Patterns](06-advanced-sql-patterns.md) - Window functions
-- [Query Optimization](09-query-optimization.md) - Subquery performance
+- [Multi-Table Queries](/databases/04-multi-table-queries.md) - JOINs as alternative to subqueries
+- [Advanced SQL Patterns](/databases/06-advanced-sql-patterns.md) - Window functions
+- [Query Optimization](/databases/09-query-optimization.md) - Subquery performance

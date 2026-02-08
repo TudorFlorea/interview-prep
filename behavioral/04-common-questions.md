@@ -2,7 +2,7 @@
 
 > 40+ frequently asked questions organized by category with answer guidance
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -16,7 +16,7 @@ Each question includes:
 
 **Preparation Strategy**:
 1. Review all questions in your target categories
-2. Map questions to your [Story Bank](02-story-bank.md) stories
+2. Map questions to your [Story Bank](/behavioral/02-story-bank.md) stories
 3. Practice adapting the same story for different questions
 4. Time yourself (aim for 2-3 minutes per answer)
 
@@ -56,7 +56,7 @@ Each question includes:
 - ❌ Micromanaging instead of empowering
 - ❌ Taking all credit without acknowledging team
 
-**Related Stories**: Use leadership stories from your [Story Bank](02-story-bank.md)
+**Related Stories**: Use leadership stories from your [Story Bank](/behavioral/02-story-bank.md)
 
 **Amazon LP**: Ownership, Deliver Results  
 **Google**: Leadership, Collaboration  
@@ -230,7 +230,7 @@ Each question includes:
 **Google**: Intellectual Humility  
 **Meta**: Be Open
 
-**Example Structure**: See [STAR Method - Conflict Example](01-star-method.md#example-2-conflict-resolution)
+**Example Structure**: See [STAR Method - Conflict Example](/behavioral/01-star-method.md#example-2-conflict-resolution)
 
 ---
 
@@ -449,14 +449,14 @@ Each question includes:
 - ❌ Not acknowledging tradeoffs
 
 **Cross-Reference**: Link to relevant technical topics:
-- Database decisions → [Databases](../databases/00-index.md)
-- Architecture decisions → [System Design](../system-design/fundamentals/00-index.md)
-- Algorithm choices → [DSA](../dsa/00-index.md)
+- Database decisions → [Databases](/databases/00-index.md)
+- Architecture decisions → [System Design](/system-design/fundamentals/00-index.md)
+- Algorithm choices → [DSA](/dsa/00-index.md)
 
 **Amazon LP**: Are Right, A Lot, Dive Deep  
 **Google**: General Cognitive Ability
 
-**Example Structure**: See [STAR Method - Technical Example](01-star-method.md#example-1-technical-decision-making)
+**Example Structure**: See [STAR Method - Technical Example](/behavioral/01-star-method.md#example-1-technical-decision-making)
 
 ---
 
@@ -473,7 +473,7 @@ Each question includes:
 - **Action**: Profiling, identifying bottlenecks, implementing fixes, testing
 - **Result**: Performance improvements with metrics
 
-**Cross-Reference**: [Performance Tuning](../databases/10-performance-tuning.md), [System Design Fundamentals](../system-design/fundamentals/00-index.md)
+**Cross-Reference**: [Performance Tuning](/databases/10-performance-tuning.md), [System Design Fundamentals](/system-design/fundamentals/00-index.md)
 
 **Amazon LP**: Dive Deep, Insist on the Highest Standards
 
@@ -529,7 +529,7 @@ Each question includes:
 - **Action**: Your debugging process (hypothesis, testing, tools used, narrowing scope)
 - **Result**: Root cause found, fix implemented, lessons learned
 
-**Cross-Reference**: [Debugging Tools](../networking/13-debugging-and-tools.md)
+**Cross-Reference**: [Debugging Tools](/networking/13-debugging-and-tools.md)
 
 **Amazon LP**: Dive Deep
 
@@ -548,7 +548,7 @@ Each question includes:
 - **Action**: Options evaluated, POCs run, tradeoffs considered
 - **Result**: Choice made and validation
 
-**Cross-Reference**: [Database Design Principles](../databases/01-database-design-principles.md), [NoSQL considerations](../databases/16-json-and-document-storage.md)
+**Cross-Reference**: [Database Design Principles](/databases/01-database-design-principles.md), [NoSQL considerations](/databases/16-json-and-document-storage.md)
 
 ---
 
@@ -896,7 +896,7 @@ Each question includes:
 
 ## 📊 Quick Question Mapping Tool
 
-Use this to map questions to your [Story Bank](02-story-bank.md):
+Use this to map questions to your [Story Bank](/behavioral/02-story-bank.md):
 
 | Question # | Your Story | Key Emphasis |
 |------------|-----------|--------------|
@@ -910,11 +910,11 @@ Use this to map questions to your [Story Bank](02-story-bank.md):
 ## ✅ Next Steps
 
 1. Review questions for your target role and company
-2. Map to your [Story Bank](02-story-bank.md)
+2. Map to your [Story Bank](/behavioral/02-story-bank.md)
 3. Identify gaps—stories you need to develop
 4. Practice top 10 most common questions
-5. Review [Anti-Patterns](05-anti-patterns.md) to avoid common mistakes
-6. Check [Company-Specific Guides](06-company-specific-guides.md) for additional questions
+5. Review [Anti-Patterns](/behavioral/05-anti-patterns.md) to avoid common mistakes
+6. Check [Company-Specific Guides](/behavioral/06-company-specific-guides.md) for additional questions
 
 ---
 

@@ -1,6 +1,6 @@
 # Creational Design Patterns
 
-[← Back to Main Index](../00-index.md)
+[← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -24,11 +24,11 @@ Creational design patterns provide various object creation mechanisms, which inc
 
 | # | Pattern | Intent | Complexity |
 |---|---------|--------|------------|
-| 1 | [Factory Method](01-factory-method.md) | Define an interface for creating objects, letting subclasses decide which class to instantiate | 🟢 Low |
-| 2 | [Abstract Factory](02-abstract-factory.md) | Create families of related objects without specifying concrete classes | 🟡 Medium |
-| 3 | [Builder](03-builder.md) | Construct complex objects step by step, allowing different representations | 🟡 Medium |
-| 4 | [Prototype](04-prototype.md) | Clone existing objects without coupling to their concrete classes | 🟢 Low |
-| 5 | [Singleton](05-singleton.md) | Ensure a class has only one instance with a global access point | 🟢 Low |
+| 1 | [Factory Method](/design-patterns/creational/01-factory-method.md) | Define an interface for creating objects, letting subclasses decide which class to instantiate | 🟢 Low |
+| 2 | [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) | Create families of related objects without specifying concrete classes | 🟡 Medium |
+| 3 | [Builder](/design-patterns/creational/03-builder.md) | Construct complex objects step by step, allowing different representations | 🟡 Medium |
+| 4 | [Prototype](/design-patterns/creational/04-prototype.md) | Clone existing objects without coupling to their concrete classes | 🟢 Low |
+| 5 | [Singleton](/design-patterns/creational/05-singleton.md) | Ensure a class has only one instance with a global access point | 🟢 Low |
 
 ---
 

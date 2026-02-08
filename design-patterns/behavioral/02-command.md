@@ -1,6 +1,6 @@
 # Command Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -528,7 +528,7 @@ public class ReversibleCommand : ICommand
 
 ## Related Patterns
 
-- [Memento](05-memento.md) - Alternative for undo (save state vs reverse operations)
-- [Chain of Responsibility](01-chain-of-responsibility.md) - Commands can be passed through chain
-- [Strategy](08-strategy.md) - Both encapsulate algorithms but different purpose
-- [Composite](../structural/03-composite.md) - MacroCommand uses composite structure
+- [Memento](/design-patterns/behavioral/05-memento.md) - Alternative for undo (save state vs reverse operations)
+- [Chain of Responsibility](/design-patterns/behavioral/01-chain-of-responsibility.md) - Commands can be passed through chain
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Both encapsulate algorithms but different purpose
+- [Composite](/design-patterns/structural/03-composite.md) - MacroCommand uses composite structure

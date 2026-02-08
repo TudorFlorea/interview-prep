@@ -1,6 +1,6 @@
 # Decorator Pattern
 
-[← Back to Structural Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Structural Patterns](/design-patterns/structural/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -445,7 +445,7 @@ public class BadDecorator : CoffeeDecorator
 
 ## Related Patterns
 
-- [Composite](03-composite.md) - Similar recursive structure
-- [Adapter](01-adapter.md) - Changes interface; Decorator adds behavior
-- [Proxy](07-proxy.md) - Controls access; Decorator adds features
-- [Strategy](../behavioral/08-strategy.md) - Changes internals; Decorator wraps externally
+- [Composite](/design-patterns/structural/03-composite.md) - Similar recursive structure
+- [Adapter](/design-patterns/structural/01-adapter.md) - Changes interface; Decorator adds behavior
+- [Proxy](/design-patterns/structural/07-proxy.md) - Controls access; Decorator adds features
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Changes internals; Decorator wraps externally

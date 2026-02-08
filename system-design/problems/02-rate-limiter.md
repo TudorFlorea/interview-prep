@@ -1,6 +1,6 @@
 # Design a Rate Limiter
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -912,7 +912,7 @@ class ResilientRateLimiter:
 
 ## 📚 Related Topics
 
-- [Rate Limiting Fundamentals](../fundamentals/18-rate-limiting.md) - Deep dive on algorithms
-- [Caching](../fundamentals/07-caching.md) - Redis patterns
-- [Distributed Patterns](../fundamentals/14-distributed-patterns.md) - Consensus for distributed limits
-- [URL Shortener](01-url-shortener.md) - Uses rate limiting
+- [Rate Limiting Fundamentals](/system-design/fundamentals/18-rate-limiting.md) - Deep dive on algorithms
+- [Caching](/system-design/fundamentals/07-caching.md) - Redis patterns
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Consensus for distributed limits
+- [URL Shortener](/system-design/problems/01-url-shortener.md) - Uses rate limiting

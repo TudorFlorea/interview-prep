@@ -2,7 +2,7 @@
 
 > The gold standard for answering behavioral interview questions
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -304,8 +304,8 @@ Fill out this template:
 
 ## ✅ Next Steps
 
-1. Review [Anti-Patterns to Avoid](05-anti-patterns.md) for common mistakes
-2. Start building your [Story Bank](02-story-bank.md) using this framework
+1. Review [Anti-Patterns to Avoid](/behavioral/05-anti-patterns.md) for common mistakes
+2. Start building your [Story Bank](/behavioral/02-story-bank.md) using this framework
 3. Practice out loud with a timer
 4. Record yourself and evaluate using the rubric above
 

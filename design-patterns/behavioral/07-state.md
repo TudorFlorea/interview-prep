@@ -1,6 +1,6 @@
 # State Pattern
 
-[← Back to Behavioral Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Behavioral Patterns](/design-patterns/behavioral/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -580,6 +580,6 @@ public class GoodState : IState
 
 ## Related Patterns
 
-- [Strategy](08-strategy.md) - Similar structure but different intent
-- [Singleton](../creational/05-singleton.md) - State objects can be singletons
-- [Flyweight](../structural/06-flyweight.md) - Can share state objects
+- [Strategy](/design-patterns/behavioral/08-strategy.md) - Similar structure but different intent
+- [Singleton](/design-patterns/creational/05-singleton.md) - State objects can be singletons
+- [Flyweight](/design-patterns/structural/06-flyweight.md) - Can share state objects

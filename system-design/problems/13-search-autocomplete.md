@@ -1,6 +1,6 @@
 # Design Search Autocomplete
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -435,10 +435,10 @@ X-Request-ID: abc123
 
 ## 12. References
 
-- [07-caching.md](../fundamentals/07-caching.md) - Caching strategies
-- [16-search-and-indexing.md](../fundamentals/16-search-and-indexing.md) - Search
-- [12-consistent-hashing.md](../fundamentals/12-consistent-hashing.md) - Sharding
+- [07-caching.md](/system-design/fundamentals/07-caching.md) - Caching strategies
+- [16-search-and-indexing.md](/system-design/fundamentals/16-search-and-indexing.md) - Search
+- [12-consistent-hashing.md](/system-design/fundamentals/12-consistent-hashing.md) - Sharding
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Distributed Cache →](14-distributed-cache.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Distributed Cache →](/system-design/problems/14-distributed-cache.md)

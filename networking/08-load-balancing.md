@@ -1,6 +1,6 @@
 # Load Balancing
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -677,6 +677,6 @@ process.on('SIGTERM', async () => {
 
 ## Related Topics
 
-- [Proxies & Gateways](09-proxies-and-gateways.md) - Reverse proxies and CDNs
-- [Cloud Networking](14-cloud-networking.md) - Cloud load balancer services
-- [HTTP & HTTPS](02-http-and-https.md) - HTTP protocol details
+- [Proxies & Gateways](/networking/09-proxies-and-gateways.md) - Reverse proxies and CDNs
+- [Cloud Networking](/networking/14-cloud-networking.md) - Cloud load balancer services
+- [HTTP & HTTPS](/networking/02-http-and-https.md) - HTTP protocol details

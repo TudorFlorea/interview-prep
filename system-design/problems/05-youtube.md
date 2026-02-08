@@ -1,6 +1,6 @@
 # Design YouTube
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -596,10 +596,10 @@ class TranscodeWorker:
 
 ## 12. References
 
-- [17-blob-storage-and-cdn.md](../fundamentals/17-blob-storage-and-cdn.md) - CDN & storage patterns
-- [07-caching.md](../fundamentals/07-caching.md) - Caching strategies
-- [09-message-queues.md](../fundamentals/09-message-queues.md) - Async processing
+- [17-blob-storage-and-cdn.md](/system-design/fundamentals/17-blob-storage-and-cdn.md) - CDN & storage patterns
+- [07-caching.md](/system-design/fundamentals/07-caching.md) - Caching strategies
+- [09-message-queues.md](/system-design/fundamentals/09-message-queues.md) - Async processing
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Uber →](06-uber.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Uber →](/system-design/problems/06-uber.md)

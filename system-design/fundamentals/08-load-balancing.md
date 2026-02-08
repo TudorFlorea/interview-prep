@@ -1,6 +1,6 @@
 # Load Balancing
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -593,7 +593,7 @@ server {
 
 ## 📚 Related Topics
 
-- [Scaling Strategies](10-scaling-strategies.md) - When to add more servers
-- [Fault Tolerance](20-fault-tolerance.md) - Handling failures
-- [CDN](17-blob-storage-cdn.md) - Edge load balancing
-- [API Gateway](04-api-design.md) - API-level routing
+- [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) - When to add more servers
+- [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) - Handling failures
+- [CDN](/system-design/fundamentals/17-blob-storage-and-cdn.md) - Edge load balancing
+- [API Gateway](/system-design/fundamentals/04-api-design.md) - API-level routing

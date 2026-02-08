@@ -1,6 +1,6 @@
 # Stored Procedures and Triggers
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -898,6 +898,6 @@ SELECT * FROM order_status_log WHERE order_id = 1;
 
 ## Related Topics
 
-- [Transactions and ACID](11-transactions-and-acid.md) - Transaction control in procedures
-- [Security and Access Control](19-security-and-access-control.md) - Function permissions
-- [Performance Tuning](10-performance-tuning.md) - Trigger performance impact
+- [Transactions and ACID](/databases/11-transactions-and-acid.md) - Transaction control in procedures
+- [Security and Access Control](/databases/19-security-and-access-control.md) - Function permissions
+- [Performance Tuning](/databases/10-performance-tuning.md) - Trigger performance impact

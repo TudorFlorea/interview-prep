@@ -1,6 +1,6 @@
 # Internet & Protocols
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -492,6 +492,6 @@ That 200ms comes from:
 
 ## Related Topics
 
-- [HTTP & HTTPS](02-http-and-https.md) - Application layer protocol deep dive
-- [TCP & UDP](04-tcp-and-udp.md) - Transport layer details
-- [DNS](03-dns.md) - How names become IP addresses
+- [HTTP & HTTPS](/networking/02-http-and-https.md) - Application layer protocol deep dive
+- [TCP & UDP](/networking/04-tcp-and-udp.md) - Transport layer details
+- [DNS](/networking/03-dns.md) - How names become IP addresses

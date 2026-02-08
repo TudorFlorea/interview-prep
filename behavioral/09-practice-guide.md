@@ -2,7 +2,7 @@
 
 > Systematic approach to mastering behavioral interviews through deliberate practice
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -42,10 +42,10 @@
 **Goal**: Document 10-15 stories using the STAR method
 
 **Tasks**:
-1. Read [STAR Method](01-star-method.md) thoroughly
-2. Read [Anti-Patterns](05-anti-patterns.md) to know what to avoid
-3. Use [Story Bank Template](02-story-bank.md) to document stories
-4. Map stories to [Common Questions](04-common-questions.md)
+1. Read [STAR Method](/behavioral/01-star-method.md) thoroughly
+2. Read [Anti-Patterns](/behavioral/05-anti-patterns.md) to know what to avoid
+3. Use [Story Bank Template](/behavioral/02-story-bank.md) to document stories
+4. Map stories to [Common Questions](/behavioral/04-common-questions.md)
 5. Ensure coverage of all major themes
 
 **Time Breakdown**:
@@ -73,11 +73,11 @@
 **Equipment Needed**:
 - Camera (phone is fine) or audio recorder
 - Timer
-- [STAR Method Rubric](01-star-method.md#-self-evaluation-rubric)
+- [STAR Method Rubric](/behavioral/01-star-method.md#-self-evaluation-rubric)
 
 **Process**:
 
-1. **Choose a question** from [Common Questions](04-common-questions.md)
+1. **Choose a question** from [Common Questions](/behavioral/04-common-questions.md)
 2. **Set up recording** (video preferred to see body language)
 3. **Start timer** and answer the question
 4. **Watch/listen** to your recording
@@ -99,7 +99,7 @@
 
 - Choose questions from different categories
 - Record each answer
-- Watch and rate yourself using [STAR Rubric](01-star-method.md#-self-evaluation-rubric)
+- Watch and rate yourself using [STAR Rubric](/behavioral/01-star-method.md#-self-evaluation-rubric)
 - Re-record if score is <20/30
 - Aim to improve timing and reduce filler words
 
@@ -178,12 +178,12 @@
 - Find a friend, colleague, or fellow job seeker
 - Trade roles (you interview them, they interview you)
 - Each session: 45-60 minutes
-- Use questions from [Common Questions](04-common-questions.md)
+- Use questions from [Common Questions](/behavioral/04-common-questions.md)
 
 **Structure** (45 min session):
 1. **Introduction** (5 min): "Tell me about yourself"
 2. **Behavioral Questions** (30 min): 4-5 questions with follow-ups
-3. **Candidate Questions** (5 min): Practice your [Questions to Ask](08-questions-to-ask.md)
+3. **Candidate Questions** (5 min): Practice your [Questions to Ask](/behavioral/08-questions-to-ask.md)
 4. **Feedback** (5 min): Structured feedback exchange
 
 **Feedback Template**:
@@ -273,9 +273,9 @@
 ### Mock Interview Best Practices
 
 **Before the Session**:
-- [ ] Review your [Story Bank](02-story-bank.md)
-- [ ] Refresh on [STAR Method](01-star-method.md)
-- [ ] Review [Anti-Patterns](05-anti-patterns.md) to avoid
+- [ ] Review your [Story Bank](/behavioral/02-story-bank.md)
+- [ ] Refresh on [STAR Method](/behavioral/01-star-method.md)
+- [ ] Review [Anti-Patterns](/behavioral/05-anti-patterns.md) to avoid
 - [ ] Set up good lighting and audio (for video)
 - [ ] Eliminate distractions (close Slack, email)
 - [ ] Have paper and pen for notes
@@ -325,7 +325,7 @@
 **Purpose**: Simulate real interview unpredictability
 
 **Process**:
-1. Put all [Common Questions](04-common-questions.md) in a randomizer
+1. Put all [Common Questions](/behavioral/04-common-questions.md) in a randomizer
 2. Draw one question
 3. Give yourself 10 seconds to think
 4. Answer out loud (record if possible)
@@ -366,7 +366,7 @@
 **Purpose**: Tailor emphasis for target company
 
 **Process**:
-1. Review [Company-Specific Guides](06-company-specific-guides.md)
+1. Review [Company-Specific Guides](/behavioral/06-company-specific-guides.md)
 2. Take one story and practice telling it THREE ways:
    - For Amazon (emphasize LPs, metrics, dive deep)
    - For Google (emphasize collaboration, learning)
@@ -591,7 +591,7 @@
 
 1. **Assess your timeline**: How many weeks until interview?
 2. **Choose your schedule**: Follow appropriate practice plan
-3. **Start with foundation**: Build your [Story Bank](02-story-bank.md)
+3. **Start with foundation**: Build your [Story Bank](/behavioral/02-story-bank.md)
 4. **Record yourself**: Do solo practice with recordings
 5. **Get feedback**: Schedule 2-3 mock interviews
 6. **Iterate**: Practice weak areas identified in feedback

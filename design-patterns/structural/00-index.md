@@ -1,6 +1,6 @@
 # Structural Design Patterns
 
-[← Back to Main Index](../00-index.md)
+[← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -25,13 +25,13 @@ Structural design patterns explain how to assemble objects and classes into larg
 
 | # | Pattern | Intent | Complexity |
 |---|---------|--------|------------|
-| 1 | [Adapter](01-adapter.md) | Convert interface of a class into another interface clients expect | 🟢 Low |
-| 2 | [Bridge](02-bridge.md) | Separate abstraction from implementation so both can vary independently | 🟡 Medium |
-| 3 | [Composite](03-composite.md) | Compose objects into tree structures to represent part-whole hierarchies | 🟡 Medium |
-| 4 | [Decorator](04-decorator.md) | Attach additional responsibilities to objects dynamically | 🟡 Medium |
-| 5 | [Facade](05-facade.md) | Provide a unified interface to a set of interfaces in a subsystem | 🟢 Low |
-| 6 | [Flyweight](06-flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently | 🔴 High |
-| 7 | [Proxy](07-proxy.md) | Provide a surrogate or placeholder for another object to control access | 🟡 Medium |
+| 1 | [Adapter](/design-patterns/structural/01-adapter.md) | Convert interface of a class into another interface clients expect | 🟢 Low |
+| 2 | [Bridge](/design-patterns/structural/02-bridge.md) | Separate abstraction from implementation so both can vary independently | 🟡 Medium |
+| 3 | [Composite](/design-patterns/structural/03-composite.md) | Compose objects into tree structures to represent part-whole hierarchies | 🟡 Medium |
+| 4 | [Decorator](/design-patterns/structural/04-decorator.md) | Attach additional responsibilities to objects dynamically | 🟡 Medium |
+| 5 | [Facade](/design-patterns/structural/05-facade.md) | Provide a unified interface to a set of interfaces in a subsystem | 🟢 Low |
+| 6 | [Flyweight](/design-patterns/structural/06-flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently | 🔴 High |
+| 7 | [Proxy](/design-patterns/structural/07-proxy.md) | Provide a surrogate or placeholder for another object to control access | 🟡 Medium |
 
 ---
 

@@ -2,7 +2,7 @@
 
 > Master the core concepts and building blocks for designing distributed systems
 
-[← Back to System Design](../00-index.md)
+[← Back to System Design](/system-design/00-index.md)
 
 ---
 
@@ -10,27 +10,27 @@
 
 | # | Topic | Status | Difficulty | Key Concepts |
 |---|-------|--------|------------|--------------|
-| 01 | [Introduction & Framework](01-introduction-and-framework.md) | ⬜ Not Started | 🟢 Foundational | Interview structure, RESHADED, assessment criteria |
-| 02 | [Requirements Gathering](02-requirements-gathering.md) | ⬜ Not Started | 🟢 Foundational | Functional/non-functional, scope definition |
-| 03 | [Back-of-Envelope Calculations](03-back-of-envelope-calculations.md) | ⬜ Not Started | 🟢 Foundational | Capacity estimation, latency numbers, QPS |
-| 04 | [API Design](04-api-design.md) | ⬜ Not Started | 🟢 Foundational | REST, GraphQL, gRPC, pagination, idempotency |
-| 05 | [Data Modeling](05-data-modeling.md) | ⬜ Not Started | 🟢 Foundational | Entities, relationships, normalization |
-| 06 | [Databases](06-databases.md) | ⬜ Not Started | 🟡 Intermediate | SQL vs NoSQL, ACID vs BASE, selection criteria |
-| 07 | [Caching](07-caching.md) | ⬜ Not Started | 🟡 Intermediate | Cache-aside, write-through, Redis, invalidation |
-| 08 | [Load Balancing](08-load-balancing.md) | ⬜ Not Started | 🟡 Intermediate | L4/L7, algorithms, health checks, sticky sessions |
-| 09 | [Message Queues](09-message-queues.md) | ⬜ Not Started | 🟡 Intermediate | Kafka, SQS, pub/sub, event sourcing |
-| 10 | [Scaling Strategies](10-scaling-strategies.md) | ⬜ Not Started | 🟡 Intermediate | Horizontal/vertical, stateless, auto-scaling |
-| 11 | [Database Scaling](11-database-scaling.md) | ⬜ Not Started | 🟡 Intermediate | Replication, sharding, read replicas |
-| 12 | [Consistent Hashing](12-consistent-hashing.md) | ⬜ Not Started | 🔴 Advanced | Hash rings, virtual nodes, rebalancing |
-| 13 | [CAP Theorem](13-cap-theorem.md) | ⬜ Not Started | 🔴 Advanced | Consistency models, partition tolerance |
-| 14 | [Distributed Patterns](14-distributed-patterns.md) | ⬜ Not Started | 🔴 Advanced | Leader election, consensus, sagas, locks |
-| 15 | [Real-Time Communication](15-real-time-communication.md) | ⬜ Not Started | 🟡 Intermediate | WebSockets, SSE, long polling, presence |
-| 16 | [Search & Indexing](16-search-and-indexing.md) | ⬜ Not Started | 🟡 Intermediate | Elasticsearch, inverted indexes, ranking |
-| 17 | [Blob Storage & CDN](17-blob-storage-cdn.md) | ⬜ Not Started | 🟡 Intermediate | S3, presigned URLs, edge caching |
-| 18 | [Rate Limiting](18-rate-limiting.md) | ⬜ Not Started | 🟡 Intermediate | Token bucket, sliding window, distributed |
-| 19 | [Monitoring & Observability](19-monitoring-observability.md) | ⬜ Not Started | 🟡 Intermediate | Metrics, logging, tracing, SLOs |
-| 20 | [Fault Tolerance](20-fault-tolerance.md) | ⬜ Not Started | 🔴 Advanced | Circuit breakers, retries, bulkheads |
-| 21 | [Security](21-security.md) | ⬜ Not Started | 🟡 Intermediate | AuthN/AuthZ, OAuth, encryption, API security |
+| 01 | [Introduction & Framework](/system-design/fundamentals/01-introduction-and-framework.md) | ⬜ Not Started | 🟢 Foundational | Interview structure, RESHADED, assessment criteria |
+| 02 | [Requirements Gathering](/system-design/fundamentals/02-requirements-gathering.md) | ⬜ Not Started | 🟢 Foundational | Functional/non-functional, scope definition |
+| 03 | [Back-of-Envelope Calculations](/system-design/fundamentals/03-back-of-envelope-calculations.md) | ⬜ Not Started | 🟢 Foundational | Capacity estimation, latency numbers, QPS |
+| 04 | [API Design](/system-design/fundamentals/04-api-design.md) | ⬜ Not Started | 🟢 Foundational | REST, GraphQL, gRPC, pagination, idempotency |
+| 05 | [Data Modeling](/system-design/fundamentals/05-data-modeling.md) | ⬜ Not Started | 🟢 Foundational | Entities, relationships, normalization |
+| 06 | [Databases](/system-design/fundamentals/06-databases.md) | ⬜ Not Started | 🟡 Intermediate | SQL vs NoSQL, ACID vs BASE, selection criteria |
+| 07 | [Caching](/system-design/fundamentals/07-caching.md) | ⬜ Not Started | 🟡 Intermediate | Cache-aside, write-through, Redis, invalidation |
+| 08 | [Load Balancing](/system-design/fundamentals/08-load-balancing.md) | ⬜ Not Started | 🟡 Intermediate | L4/L7, algorithms, health checks, sticky sessions |
+| 09 | [Message Queues](/system-design/fundamentals/09-message-queues.md) | ⬜ Not Started | 🟡 Intermediate | Kafka, SQS, pub/sub, event sourcing |
+| 10 | [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) | ⬜ Not Started | 🟡 Intermediate | Horizontal/vertical, stateless, auto-scaling |
+| 11 | [Database Scaling](/system-design/fundamentals/11-database-scaling.md) | ⬜ Not Started | 🟡 Intermediate | Replication, sharding, read replicas |
+| 12 | [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) | ⬜ Not Started | 🔴 Advanced | Hash rings, virtual nodes, rebalancing |
+| 13 | [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) | ⬜ Not Started | 🔴 Advanced | Consistency models, partition tolerance |
+| 14 | [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) | ⬜ Not Started | 🔴 Advanced | Leader election, consensus, sagas, locks |
+| 15 | [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md) | ⬜ Not Started | 🟡 Intermediate | WebSockets, SSE, long polling, presence |
+| 16 | [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) | ⬜ Not Started | 🟡 Intermediate | Elasticsearch, inverted indexes, ranking |
+| 17 | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md) | ⬜ Not Started | 🟡 Intermediate | S3, presigned URLs, edge caching |
+| 18 | [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) | ⬜ Not Started | 🟡 Intermediate | Token bucket, sliding window, distributed |
+| 19 | [Monitoring & Observability](/system-design/fundamentals/19-monitoring-observability.md) | ⬜ Not Started | 🟡 Intermediate | Metrics, logging, tracing, SLOs |
+| 20 | [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) | ⬜ Not Started | 🔴 Advanced | Circuit breakers, retries, bulkheads |
+| 21 | [Security](/system-design/fundamentals/21-security.md) | ⬜ Not Started | 🟡 Intermediate | AuthN/AuthZ, OAuth, encryption, API security |
 
 ---
 
@@ -209,29 +209,29 @@ Understanding how fundamentals connect helps you navigate complex problems:
 
 | When You Need To... | Study These Topics |
 |--------------------|-------------------|
-| Structure your interview | [Introduction & Framework](01-introduction-and-framework.md) |
-| Estimate capacity | [Back-of-Envelope](03-back-of-envelope-calculations.md) |
-| Design API contracts | [API Design](04-api-design.md) |
-| Choose a database | [Databases](06-databases.md), [Data Modeling](05-data-modeling.md) |
-| Speed up reads | [Caching](07-caching.md), [CDN](17-blob-storage-cdn.md) |
-| Handle high traffic | [Load Balancing](08-load-balancing.md), [Scaling](10-scaling-strategies.md) |
-| Decouple services | [Message Queues](09-message-queues.md) |
-| Scale your database | [Database Scaling](11-database-scaling.md) |
-| Distribute data evenly | [Consistent Hashing](12-consistent-hashing.md) |
-| Understand consistency | [CAP Theorem](13-cap-theorem.md) |
-| Coordinate services | [Distributed Patterns](14-distributed-patterns.md) |
-| Build real-time features | [Real-Time Communication](15-real-time-communication.md) |
-| Implement search | [Search & Indexing](16-search-and-indexing.md) |
-| Store files/media | [Blob Storage & CDN](17-blob-storage-cdn.md) |
-| Protect from abuse | [Rate Limiting](18-rate-limiting.md) |
-| Monitor production | [Observability](19-monitoring-observability.md) |
-| Handle failures | [Fault Tolerance](20-fault-tolerance.md) |
-| Secure the system | [Security](21-security.md) |
+| Structure your interview | [Introduction & Framework](/system-design/fundamentals/01-introduction-and-framework.md) |
+| Estimate capacity | [Back-of-Envelope](/system-design/fundamentals/03-back-of-envelope-calculations.md) |
+| Design API contracts | [API Design](/system-design/fundamentals/04-api-design.md) |
+| Choose a database | [Databases](/system-design/fundamentals/06-databases.md), [Data Modeling](/system-design/fundamentals/05-data-modeling.md) |
+| Speed up reads | [Caching](/system-design/fundamentals/07-caching.md), [CDN](/system-design/fundamentals/17-blob-storage-cdn.md) |
+| Handle high traffic | [Load Balancing](/system-design/fundamentals/08-load-balancing.md), [Scaling](/system-design/fundamentals/10-scaling-strategies.md) |
+| Decouple services | [Message Queues](/system-design/fundamentals/09-message-queues.md) |
+| Scale your database | [Database Scaling](/system-design/fundamentals/11-database-scaling.md) |
+| Distribute data evenly | [Consistent Hashing](/system-design/fundamentals/12-consistent-hashing.md) |
+| Understand consistency | [CAP Theorem](/system-design/fundamentals/13-cap-theorem.md) |
+| Coordinate services | [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) |
+| Build real-time features | [Real-Time Communication](/system-design/fundamentals/15-real-time-communication.md) |
+| Implement search | [Search & Indexing](/system-design/fundamentals/16-search-and-indexing.md) |
+| Store files/media | [Blob Storage & CDN](/system-design/fundamentals/17-blob-storage-cdn.md) |
+| Protect from abuse | [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) |
+| Monitor production | [Observability](/system-design/fundamentals/19-monitoring-observability.md) |
+| Handle failures | [Fault Tolerance](/system-design/fundamentals/20-fault-tolerance.md) |
+| Secure the system | [Security](/system-design/fundamentals/21-security.md) |
 
 ---
 
 ## 📖 Related Sections
 
-- [Design Problems](../problems/00-index.md) - Apply fundamentals to real systems
-- [Databases Deep Dive](../../databases/00-index.md) - Detailed database concepts
-- [Networking](../../networking/00-index.md) - Protocol and infrastructure details
+- [Design Problems](/system-design/problems/00-index.md) - Apply fundamentals to real systems
+- [Databases Deep Dive](/databases/00-index.md) - Detailed database concepts
+- [Networking](/networking/00-index.md) - Protocol and infrastructure details

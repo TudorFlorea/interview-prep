@@ -2,7 +2,7 @@
 
 > Understanding and preparing for company-specific leadership principles and values
 
-[← Back to Behavioral Interview Prep](00-index.md)
+[← Back to Behavioral Interview Prep](/behavioral/00-index.md)
 
 ---
 
@@ -635,7 +635,7 @@ Apple is known for extremely high standards and attention to detail.
 
 ## 🎯 Mapping Your Stories to Principles
 
-Use this template to map your [Story Bank](02-story-bank.md) stories to different company principles:
+Use this template to map your [Story Bank](/behavioral/02-story-bank.md) stories to different company principles:
 
 | Your Story | Amazon LP | Google Attribute | Microsoft Value | Meta Value | Apple Value |
 |------------|-----------|------------------|-----------------|------------|-------------|
@@ -649,10 +649,10 @@ Use this template to map your [Story Bank](02-story-bank.md) stories to differen
 
 1. Identify which companies you're targeting
 2. Review their specific principles thoroughly
-3. Map your [Story Bank](02-story-bank.md) stories to their values
+3. Map your [Story Bank](/behavioral/02-story-bank.md) stories to their values
 4. Practice tailoring stories to emphasize different principles
 5. Use company language in your answers
-6. Review [Company-Specific Guides](06-company-specific-guides.md) for detailed strategies
+6. Review [Company-Specific Guides](/behavioral/06-company-specific-guides.md) for detailed strategies
 
 ---
 

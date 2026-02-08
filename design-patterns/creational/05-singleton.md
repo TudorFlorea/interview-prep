@@ -1,6 +1,6 @@
 # Singleton Pattern
 
-[← Back to Creational Patterns](00-index.md) | [← Back to Main Index](../00-index.md)
+[← Back to Creational Patterns](/design-patterns/creational/00-index.md) | [← Back to Main Index](/design-patterns/00-index.md)
 
 ---
 
@@ -636,7 +636,7 @@ public class Service
 
 ## Related Patterns
 
-- [Abstract Factory](02-abstract-factory.md) - Often implemented as Singleton
-- [Builder](03-builder.md) - Directors can be Singletons
-- [Facade](../structural/05-facade.md) - Often implemented as Singleton
-- [State](../behavioral/07-state.md) - State objects are often Singletons
+- [Abstract Factory](/design-patterns/creational/02-abstract-factory.md) - Often implemented as Singleton
+- [Builder](/design-patterns/creational/03-builder.md) - Directors can be Singletons
+- [Facade](/design-patterns/structural/05-facade.md) - Often implemented as Singleton
+- [State](/design-patterns/behavioral/07-state.md) - State objects are often Singletons

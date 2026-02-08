@@ -1,6 +1,6 @@
 # Blob Storage and CDN
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -578,7 +578,7 @@ def complete_multipart_upload(bucket, key, upload_id, parts):
 
 ## 📚 Related Topics
 
-- [Caching](07-caching.md) - Application-level caching
-- [Scaling Strategies](10-scaling-strategies.md) - Handling media at scale
-- [API Design](04-api-design.md) - Upload/download endpoints
-- [Message Queues](09-message-queues.md) - Async processing triggers
+- [Caching](/system-design/fundamentals/07-caching.md) - Application-level caching
+- [Scaling Strategies](/system-design/fundamentals/10-scaling-strategies.md) - Handling media at scale
+- [API Design](/system-design/fundamentals/04-api-design.md) - Upload/download endpoints
+- [Message Queues](/system-design/fundamentals/09-message-queues.md) - Async processing triggers

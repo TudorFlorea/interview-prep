@@ -1,6 +1,6 @@
 # Physical & Data Link Layer
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -570,6 +570,6 @@ $ ip link show eth0
 
 ## Related Topics
 
-- [IP Addressing & Subnets](06-ip-addressing-and-subnets.md) - Layer 3 addressing
-- [Routing Basics](07-routing-basics.md) - How routers connect networks
-- [Debugging & Tools](13-debugging-and-tools.md) - Troubleshooting commands
+- [IP Addressing & Subnets](/networking/06-ip-addressing-and-subnets.md) - Layer 3 addressing
+- [Routing Basics](/networking/07-routing-basics.md) - How routers connect networks
+- [Debugging & Tools](/networking/13-debugging-and-tools.md) - Troubleshooting commands

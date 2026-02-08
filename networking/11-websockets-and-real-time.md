@@ -1,6 +1,6 @@
 # WebSockets & Real-Time Communication
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -1058,6 +1058,6 @@ async function getMessageHistory(room, limit = 100) {
 
 ## Related Topics
 
-- [HTTP & HTTPS](02-http-and-https.md) - HTTP/2 server push, upgrade mechanism
-- [TCP & UDP](04-tcp-and-udp.md) - Underlying transport
-- [Load Balancing](08-load-balancing.md) - Sticky sessions for WebSocket
+- [HTTP & HTTPS](/networking/02-http-and-https.md) - HTTP/2 server push, upgrade mechanism
+- [TCP & UDP](/networking/04-tcp-and-udp.md) - Underlying transport
+- [Load Balancing](/networking/08-load-balancing.md) - Sticky sessions for WebSocket

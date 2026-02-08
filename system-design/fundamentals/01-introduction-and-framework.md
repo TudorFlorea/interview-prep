@@ -1,6 +1,6 @@
 # Introduction & Framework
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -424,6 +424,6 @@ End by identifying where the system might break:
 
 ## 📚 Related Topics
 
-- [Requirements Gathering](02-requirements-gathering.md) - Deep dive on scoping
-- [Back-of-Envelope Calculations](03-back-of-envelope-calculations.md) - Capacity estimation
-- [API Design](04-api-design.md) - Designing system interfaces
+- [Requirements Gathering](/system-design/fundamentals/02-requirements-gathering.md) - Deep dive on scoping
+- [Back-of-Envelope Calculations](/system-design/fundamentals/03-back-of-envelope-calculations.md) - Capacity estimation
+- [API Design](/system-design/fundamentals/04-api-design.md) - Designing system interfaces

@@ -1,6 +1,6 @@
 # API Design
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -600,6 +600,6 @@ GET /api/v1/orders/123
 
 ## 📚 Related Topics
 
-- [Data Modeling](05-data-modeling.md) - What resources to expose
-- [Rate Limiting](18-rate-limiting.md) - Detailed rate limiting strategies
-- [Security](21-security.md) - Authentication and authorization deep dive
+- [Data Modeling](/system-design/fundamentals/05-data-modeling.md) - What resources to expose
+- [Rate Limiting](/system-design/fundamentals/18-rate-limiting.md) - Detailed rate limiting strategies
+- [Security](/system-design/fundamentals/21-security.md) - Authentication and authorization deep dive

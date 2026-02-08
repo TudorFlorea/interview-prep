@@ -1,6 +1,6 @@
 # Design Payment System
 
-[← Back to Problems](00-index.md)
+[← Back to Problems](/system-design/problems/00-index.md)
 
 ---
 
@@ -515,10 +515,10 @@ CREATE TABLE refunds (
 
 ## 13. References
 
-- [11-databases.md](../fundamentals/11-databases.md) - ACID
-- [14-distributed-patterns.md](../fundamentals/14-distributed-patterns.md) - Idempotency
-- [17-security.md](../fundamentals/17-security.md) - PCI compliance
+- [11-databases.md](/system-design/fundamentals/11-database-scaling.md) - ACID
+- [14-distributed-patterns.md](/system-design/fundamentals/14-distributed-patterns.md) - Idempotency
+- [17-security.md](/system-design/fundamentals/21-security.md) - PCI compliance
 
 ---
 
-[← Back to Problems](00-index.md) | [Next: Metrics System →](17-metrics-system.md)
+[← Back to Problems](/system-design/problems/00-index.md) | [Next: Metrics System →](/system-design/problems/17-metrics-system.md)

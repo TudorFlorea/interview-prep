@@ -1,6 +1,6 @@
 # CAP Theorem and Consistency Models
 
-[← Back to Fundamentals](00-index.md)
+[← Back to Fundamentals](/system-design/fundamentals/00-index.md)
 
 ---
 
@@ -469,7 +469,7 @@ Eventual Consistency OK When:
 
 ## 📚 Related Topics
 
-- [Databases](06-databases.md) - Database fundamentals
-- [Distributed Patterns](14-distributed-patterns.md) - Consensus, leader election
-- [Database Scaling](11-database-scaling.md) - Replication and consistency
-- [Transactions](../../../databases/11-transactions-and-acid.md) - ACID properties
+- [Databases](/system-design/fundamentals/06-databases.md) - Database fundamentals
+- [Distributed Patterns](/system-design/fundamentals/14-distributed-patterns.md) - Consensus, leader election
+- [Database Scaling](/system-design/fundamentals/11-database-scaling.md) - Replication and consistency
+- [Transactions](/databases/11-transactions-and-acid.md) - ACID properties

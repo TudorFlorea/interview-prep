@@ -1,6 +1,6 @@
 # Network Debugging & Tools
 
-[← Back to Index](00-index.md)
+[← Back to Index](/networking/00-index.md)
 
 ---
 
@@ -892,6 +892,6 @@ $ sudo sysctl net.ipv4.tcp_keepalive_probes=3
 
 ## Related Topics
 
-- [TCP & UDP](04-tcp-and-udp.md) - Understanding connection states
-- [DNS](03-dns.md) - DNS resolution details
-- [TLS & Security](05-tls-and-security.md) - Certificate troubleshooting
+- [TCP & UDP](/networking/04-tcp-and-udp.md) - Understanding connection states
+- [DNS](/networking/03-dns.md) - DNS resolution details
+- [TLS & Security](/networking/05-tls-and-security.md) - Certificate troubleshooting

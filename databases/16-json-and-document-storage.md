@@ -1,6 +1,6 @@
 # JSON and Document Storage
 
-[← Back to Index](00-index.md)
+[← Back to Index](/databases/00-index.md)
 
 ---
 
@@ -719,6 +719,6 @@ ORDER BY price;
 
 ## Related Topics
 
-- [Full-Text Search](17-full-text-search.md) - Searching within JSON text
-- [Indexing Deep Dive](07-indexing-deep-dive.md) - GIN index details
-- [Database Design Principles](01-database-design-principles.md) - When to use JSON
+- [Full-Text Search](/databases/17-full-text-search.md) - Searching within JSON text
+- [Indexing Deep Dive](/databases/07-indexing-deep-dive.md) - GIN index details
+- [Database Design Principles](/databases/01-database-design-principles.md) - When to use JSON
