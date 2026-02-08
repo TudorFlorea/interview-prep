@@ -1,4 +1,5 @@
 export default {
+   base: '/interview-prep/',
   title: 'Interview Prep',
   description: 'Technical interview preparation notes',
   themeConfig: {
