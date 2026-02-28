@@ -30,7 +30,7 @@ Design a URL shortening service like bit.ly or TinyURL that converts long URLs i
 | **CAP** | CP - consistency preferred (same short URL → same long URL) |
 | **Compliance** | May need to handle abuse/malicious URLs |
 | **Scalability** | 100M URLs created per day, 1B redirects per day |
-| **Latency** | Redirect < 100ms, creation < 500ms |
+| **Latency** | Redirect &lt; 100ms, creation &lt; 500ms |
 | **Environment** | Global users, need geo-distribution |
 | **Durability** | URLs should be durable (no data loss) |
 | **Security** | Prevent enumeration attacks, rate limit creation |

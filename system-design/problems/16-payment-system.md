@@ -30,7 +30,7 @@ Design a payment system that handles credit card transactions, maintains ACID gu
 | **Reliability** | 99.999% (financial) |
 | **Consistency** | Strong (money) |
 | **Security** | PCI DSS compliant |
-| **Latency** | < 2s for payment |
+| **Latency** | &lt; 2s for payment |
 | **Durability** | Never lose transaction |
 
 ---

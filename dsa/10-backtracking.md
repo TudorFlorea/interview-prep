@@ -166,7 +166,7 @@ public class Solution {
 
 #### Key Takeaways
 - Pass `i` (not `i+1`) to allow reuse of same element
-- Prune when remaining < 0
+- Prune when remaining &lt; 0
 - Sort candidates for optimization (can prune when candidate > remaining)
 
 ---

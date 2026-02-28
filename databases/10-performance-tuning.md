@@ -25,7 +25,7 @@ Performance tuning is a holistic approach to database optimization that goes bey
 | **Query latency** | Response time | p99 > 1s, increasing trend |
 | **Throughput** | Queries/second | Decreasing under load |
 | **Connection count** | Active connections | Near pool maximum |
-| **Buffer hit ratio** | Cache effectiveness | < 99% for OLTP |
+| **Buffer hit ratio** | Cache effectiveness | &lt; 99% for OLTP |
 | **Lock waits** | Contention | Increasing wait times |
 | **Disk I/O** | Storage performance | High read latency, saturation |
 | **CPU usage** | Processing capacity | Sustained > 80% |
@@ -632,7 +632,7 @@ Or per-app-server pools (less efficient):
 **Scenario:** You're taking over a database with these characteristics:
 - 500GB data, 50M row main table
 - 100 queries/second average, spikes to 500/second
-- p99 latency: 500ms (goal: <100ms)
+- p99 latency: 500ms (goal: &lt;100ms)
 - Current settings: defaults
 
 **Create a tuning plan covering:**

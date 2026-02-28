@@ -210,7 +210,7 @@ Rate your STAR answers on this scale:
 | **Task** | Unclear role | Role stated | Clear ownership with "I" |
 | **Action** | High-level, uses "we" | Some detail on actions | Detailed steps, uses "I", shows process |
 | **Result** | No metrics | Some metrics | Specific metrics + business impact + learning |
-| **Time Management** | Too short (<1 min) or too long (>4 min) | 2-4 minutes | 2-3 minutes |
+| **Time Management** | Too short (&lt;1 min) or too long (>4 min) | 2-4 minutes | 2-3 minutes |
 | **Specificity** | Generic, could apply to anyone | Some specific details | Highly specific, memorable |
 
 **Target Score**: 22-30 points (average 4+ per criteria)

@@ -28,7 +28,7 @@ Design a distributed key-value store (like DynamoDB, Cassandra, or Redis Cluster
 | Aspect | Requirement |
 |--------|-------------|
 | **Availability** | 99.99% |
-| **Latency** | < 10ms p99 |
+| **Latency** | &lt; 10ms p99 |
 | **Scalability** | Petabytes of data |
 | **Durability** | No data loss |
 | **Consistency** | Tunable (eventual to strong) |

@@ -77,7 +77,7 @@ public class Solution {
 
 #### Key Takeaways
 - Three phases: before, overlap, after
-- Overlap condition: intervals[i].start <= newInterval.end
+- Overlap condition: intervals[i].start &lt;= newInterval.end
 - Merge by taking min start, max end
 
 ---
@@ -358,8 +358,8 @@ public class Solution {
 
 #### Key Takeaways
 - Process queries in sorted order (offline)
-- Add intervals that could contain query (start <= q)
-- Remove intervals that can't contain query (end < q)
+- Add intervals that could contain query (start &lt;= q)
+- Remove intervals that can't contain query (end &lt; q)
 - Min-heap by size gives smallest containing interval
 
 ---

@@ -31,7 +31,7 @@ Design a social media platform like Twitter/X that allows users to post tweets, 
 | **CAP** | AP - Availability over consistency |
 | **Compliance** | Content moderation, GDPR |
 | **Scalability** | 500M DAU, 500M tweets/day |
-| **Latency** | Timeline load < 200ms, Tweet post < 500ms |
+| **Latency** | Timeline load &lt; 200ms, Tweet post &lt; 500ms |
 | **Environment** | Global, mobile-heavy traffic |
 | **Durability** | Tweets must be durable |
 | **Security** | Authentication, spam prevention |

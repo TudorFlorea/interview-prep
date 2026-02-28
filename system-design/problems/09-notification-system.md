@@ -33,7 +33,7 @@ Design a scalable notification system that delivers messages across multiple cha
 | **CAP** | AP - Eventual delivery |
 | **Compliance** | CAN-SPAM, GDPR, TCPA |
 | **Scalability** | 1B notifications/day |
-| **Latency** | < 1s for urgent, < 1min for normal |
+| **Latency** | &lt; 1s for urgent, &lt; 1min for normal |
 | **Environment** | Global |
 | **Durability** | At-least-once delivery |
 | **Security** | PII protection |

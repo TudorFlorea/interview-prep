@@ -27,7 +27,7 @@ Design a personalized news feed ranking system (like Facebook/Twitter feed) that
 
 | Aspect | Requirement |
 |--------|-------------|
-| **Latency** | < 200ms for feed |
+| **Latency** | &lt; 200ms for feed |
 | **Freshness** | New posts within 1 minute |
 | **Personalization** | Per-user ranking |
 | **Scale** | 1 billion users |

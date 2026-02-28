@@ -344,7 +344,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- If digit < 9, just increment and return
+- If digit &lt; 9, just increment and return
 - If digit = 9, set to 0 and continue carry
 - All 9s: create new array with 1 at front
 

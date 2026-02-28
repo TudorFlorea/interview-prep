@@ -86,7 +86,7 @@
 
 | Aspect | Good Signs | Red Flags |
 |--------|-----------|-----------|
-| **Timing** | 2-3 minutes | <1:30 or >4 minutes |
+| **Timing** | 2-3 minutes | &lt;1:30 or >4 minutes |
 | **Structure** | Clear STAR flow | Jumping around, unclear |
 | **Filler Words** | Occasional "um" | Excessive "um, uh, like" |
 | **Pacing** | Natural, conversational | Too fast or too slow |
@@ -100,7 +100,7 @@
 - Choose questions from different categories
 - Record each answer
 - Watch and rate yourself using [STAR Rubric](/behavioral/01-star-method.md#-self-evaluation-rubric)
-- Re-record if score is <20/30
+- Re-record if score is &lt;20/30
 - Aim to improve timing and reduce filler words
 
 **Time Investment**: 4-5 hours (30-45 min per question including review)

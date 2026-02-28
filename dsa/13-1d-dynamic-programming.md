@@ -623,7 +623,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- DP: dp[i] = 1 + max(dp[j]) for all j where nums[j] < nums[i]
+- DP: dp[i] = 1 + max(dp[j]) for all j where nums[j] &lt; nums[i]
 - Binary search: maintain smallest tail of each length subsequence
 - Binary search doesn't give actual subsequence, just length
 
@@ -688,7 +688,7 @@ public class Solution {
 | Fibonacci-style | Climbing Stairs | dp[i] = dp[i-1] + dp[i-2] |
 | Take or Skip | House Robber | dp[i] = max(dp[i-1], dp[i-2] + val) |
 | Unbounded | Coin Change | dp[i] = min(dp[i-coin] + 1) |
-| LIS | Longest Increasing | dp[i] = max(dp[j] + 1) where j < i |
+| LIS | Longest Increasing | dp[i] = max(dp[j] + 1) where j &lt; i |
 | Knapsack | Partition Subset | dp[j] = dp[j] || dp[j-num] |
 
 ### Space Optimization

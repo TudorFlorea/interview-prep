@@ -95,5 +95,5 @@ These patterns are often confused because they all use composition and wrapping:
 - **Abstract Classes** - Common base for Composite, Decorator
 - **Indexers** - Composite pattern for child access
 - **Extension Methods** - Can complement Decorator pattern
-- **Lazy<T>** - Proxy pattern for lazy initialization
-- **Dictionary<K,V>** - Flyweight pattern for caching
+- **Lazy&lt;T>** - Proxy pattern for lazy initialization
+- **Dictionary&lt;K,V>** - Flyweight pattern for caching

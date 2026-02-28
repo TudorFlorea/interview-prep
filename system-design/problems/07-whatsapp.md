@@ -33,7 +33,7 @@ Design a real-time messaging application like WhatsApp that supports 1-on-1 and 
 | **CAP** | AP - Eventual consistency, strong ordering per chat |
 | **Compliance** | GDPR, data residency |
 | **Scalability** | 2B users, 100B messages/day |
-| **Latency** | Message delivery < 500ms |
+| **Latency** | Message delivery &lt; 500ms |
 | **Environment** | Global, mobile-first |
 | **Durability** | Messages stored until delivered |
 | **Security** | E2E encryption, no server-side access |

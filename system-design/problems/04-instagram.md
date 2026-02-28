@@ -32,7 +32,7 @@ Design a photo and video sharing social network like Instagram that allows users
 | **CAP** | AP - Eventual consistency for feeds |
 | **Compliance** | Content moderation, COPPA, GDPR |
 | **Scalability** | 2B users, 500M DAU, 100M posts/day |
-| **Latency** | Feed load < 300ms, Upload < 2s |
+| **Latency** | Feed load &lt; 300ms, Upload &lt; 2s |
 | **Environment** | Global, mobile-first |
 | **Durability** | Never lose user media |
 | **Security** | Private accounts, content encryption |

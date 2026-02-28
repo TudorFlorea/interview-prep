@@ -149,7 +149,7 @@ public class Solution {
 - [ ] Completed | 🟡 Medium | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [NeetCode](https://neetcode.io/problems/two-integer-sum-ii)
 
 #### Problem
-Given a **1-indexed** sorted array `numbers`, find two numbers that add up to `target`. Return their indices as `[index1, index2]` where `index1 < index2`.
+Given a **1-indexed** sorted array `numbers`, find two numbers that add up to `target`. Return their indices as `[index1, index2]` where `index1 &lt; index2`.
 
 You must use only constant extra space.
 
@@ -214,7 +214,7 @@ public class Solution {
 
 #### Why Does This Work?
 - Array is sorted, so `numbers[left] ≤ numbers[right]`
-- If `sum < target`: moving `left` right increases sum
+- If `sum &lt; target`: moving `left` right increases sum
 - If `sum > target`: moving `right` left decreases sum
 - We never miss the answer because we only skip pairs that can't be solutions
 
@@ -545,7 +545,7 @@ public class Solution {
 ```
 
 #### Why Does Two Pointers Work?
-- If `height[left] < height[right]`, we know `rightMax >= height[right] > height[left]`
+- If `height[left] &lt; height[right]`, we know `rightMax >= height[right] > height[left]`
 - So water at `left` is determined by `leftMax` alone (it's the limiting factor)
 - Same logic applies when processing from the right
 - We always process the side with the smaller height

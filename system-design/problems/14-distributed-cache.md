@@ -30,7 +30,7 @@ Design a distributed caching system like Redis or Memcached that provides low-la
 | **Fault Tolerance** | 99.99% availability |
 | **CAP** | AP with tunable consistency |
 | **Scalability** | Millions of ops/second |
-| **Latency** | < 1ms P99 |
+| **Latency** | &lt; 1ms P99 |
 | **Durability** | Configurable (memory vs disk) |
 
 ---

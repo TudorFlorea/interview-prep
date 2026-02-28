@@ -30,7 +30,7 @@ Design a search autocomplete system (typeahead) that suggests query completions 
 | **Fault Tolerance** | 99.9% availability |
 | **CAP** | AP - Stale suggestions acceptable |
 | **Scalability** | 10B queries/day |
-| **Latency** | < 100ms (P99) |
+| **Latency** | &lt; 100ms (P99) |
 | **Environment** | Global |
 
 ---

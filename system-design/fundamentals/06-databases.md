@@ -542,7 +542,7 @@ GET /posts/_search
 | Database | Read QPS | Write QPS | Latency |
 |----------|----------|-----------|---------|
 | PostgreSQL | 10K-50K | 5K-20K | 1-10ms |
-| Redis | 100K+ | 100K+ | <1ms |
+| Redis | 100K+ | 100K+ | &lt;1ms |
 | MongoDB | 10K-100K | 10K-50K | 1-10ms |
 | Cassandra | 10K-50K/node | 10K-50K/node | 1-10ms |
 | Elasticsearch | 1K-10K | 1K-10K | 10-100ms |

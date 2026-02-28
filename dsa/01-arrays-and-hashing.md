@@ -8,7 +8,7 @@ Arrays and Hashing form the foundation of most coding interview problems. This c
 
 ### When to Use This Pattern
 - Need to check if an element exists → **HashSet**
-- Need to count frequencies → **Dictionary<T, int>**
+- Need to count frequencies → **Dictionary&lt;T, int>**
 - Need to find pairs/groups with specific properties → **HashMap**
 - Need O(1) lookup instead of O(n) search
 
@@ -540,7 +540,7 @@ public class Solution {
 #### Key Takeaways
 - Bucket sort achieves O(n) when frequency is bounded
 - Min-heap of size k is useful for "top K" problems
-- C# `PriorityQueue<TElement, TPriority>` is a min-heap by default
+- C# `PriorityQueue&lt;TElement, TPriority>` is a min-heap by default
 - Frequency counting is the first step in many problems
 
 ---
@@ -932,7 +932,7 @@ public class Solution {
 - Key insight: Only start counting from sequence START (where n-1 doesn't exist)
 - This ensures O(n) because each number is part of exactly one sequence count
 - Without the "start check", it would be O(n²) in worst case
-- Use `new HashSet<int>(nums)` to initialize from array
+- Use `new HashSet&lt;int>(nums)` to initialize from array
 - Edge case: empty array → return 0
 
 ---
@@ -944,7 +944,7 @@ public class Solution {
 | If you see... | Consider... |
 |---------------|-------------|
 | "Find duplicates" | HashSet |
-| "Count frequencies" | Dictionary<T, int> |
+| "Count frequencies" | Dictionary&lt;T, int> |
 | "Find pair with sum" | HashMap complement lookup |
 | "Group by property" | HashMap with computed key |
 | "Top K frequent" | Bucket sort or Heap |

@@ -33,7 +33,7 @@ Design a video sharing platform like YouTube that allows users to upload, transc
 | **CAP** | AP - Eventual consistency acceptable |
 | **Compliance** | DMCA, COPPA, regional content restrictions |
 | **Scalability** | 2B users, 1B videos, 500M DAU |
-| **Latency** | Video start < 2s, search < 200ms |
+| **Latency** | Video start &lt; 2s, search &lt; 200ms |
 | **Environment** | Global, multi-device |
 | **Durability** | Never lose uploaded content |
 | **Security** | DRM, content protection |

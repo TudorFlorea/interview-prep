@@ -14,7 +14,7 @@ Bit manipulation uses bitwise operators to solve problems efficiently. It's esse
 | `\|` | OR | `5 \| 3` | 7 (0101 \| 0011 = 0111) |
 | `^` | XOR | `5 ^ 3` | 6 (0101 ^ 0011 = 0110) |
 | `~` | NOT | `~5` | -6 (inverts all bits) |
-| `<<` | Left Shift | `5 << 1` | 10 (multiply by 2) |
+| `&lt;&lt;` | Left Shift | `5 &lt;&lt; 1` | 10 (multiply by 2) |
 | `>>` | Right Shift | `5 >> 1` | 2 (divide by 2) |
 
 ### Key XOR Properties
@@ -398,9 +398,9 @@ public class Solution {
 | Pattern | Operation |
 |---------|-----------|
 | Check if bit i is set | `(n >> i) & 1` |
-| Set bit i | `n \| (1 << i)` |
-| Clear bit i | `n & ~(1 << i)` |
-| Toggle bit i | `n ^ (1 << i)` |
+| Set bit i | `n \| (1 &lt;&lt; i)` |
+| Clear bit i | `n & ~(1 &lt;&lt; i)` |
+| Toggle bit i | `n ^ (1 &lt;&lt; i)` |
 | Clear lowest set bit | `n & (n - 1)` |
 | Get lowest set bit | `n & (-n)` |
 | Check power of 2 | `(n & (n-1)) == 0` |

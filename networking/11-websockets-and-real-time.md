@@ -815,7 +815,7 @@ class WebSocketWithHeartbeat {
 **Key considerations:**
 - Server uses protocol-level ping (efficient, 2 bytes)
 - Client uses application-level ping (browsers can't send ws ping)
-- 30s interval < 60s proxy timeout
+- 30s interval &lt; 60s proxy timeout
 - Grace period for slow responses
 - Clean termination for dead connections
 

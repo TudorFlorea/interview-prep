@@ -546,9 +546,9 @@ Solutions:
 
 | Metric | Target | Concern If |
 |--------|--------|------------|
-| Hit Rate | >90% | <80% - review cache strategy |
-| Latency (P99) | <5ms | >10ms - check network/size |
-| Memory Usage | <80% | >90% - add capacity/eviction |
+| Hit Rate | >90% | &lt;80% - review cache strategy |
+| Latency (P99) | &lt;5ms | >10ms - check network/size |
+| Memory Usage | &lt;80% | >90% - add capacity/eviction |
 | Evictions | Low, stable | Spiking - add memory |
 | Connections | Stable | Growing - connection leak |
 

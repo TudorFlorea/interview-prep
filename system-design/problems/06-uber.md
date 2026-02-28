@@ -33,7 +33,7 @@ Design a ride-sharing platform like Uber that matches riders with nearby drivers
 | **CAP** | AP for location, CP for payments |
 | **Compliance** | PCI-DSS, local transportation laws |
 | **Scalability** | 100M users, 20M trips/day |
-| **Latency** | Match < 5s, location update < 1s |
+| **Latency** | Match &lt; 5s, location update &lt; 1s |
 | **Environment** | Global, mobile-first |
 | **Durability** | Never lose trip/payment data |
 | **Security** | Rider/driver safety features |

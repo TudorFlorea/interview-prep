@@ -61,7 +61,7 @@ An index is like a book's index: instead of scanning every page (full table scan
 
 | Type | Description | Use Case | Example |
 |------|-------------|----------|---------|
-| **B-Tree** | Balanced tree, sorted | Most queries: =, <, >, BETWEEN, ORDER BY | Default index type |
+| **B-Tree** | Balanced tree, sorted | Most queries: =, &lt;, >, BETWEEN, ORDER BY | Default index type |
 | **Hash** | Hash table | Equality only (=) | PostgreSQL specific |
 | **GIN** | Generalized Inverted | Full-text, arrays, JSONB | Array contains, text search |
 | **GiST** | Generalized Search Tree | Geometric, range types | Geo queries, overlap |
@@ -114,7 +114,7 @@ The most common index type. Keeps data sorted and balanced.
 
 **Good for:**
 - `=` equality
-- `<`, `>`, `<=`, `>=` comparisons
+- `&lt;`, `>`, `&lt;=`, `>=` comparisons
 - `BETWEEN`
 - `LIKE 'prefix%'` (prefix search)
 - `ORDER BY` (already sorted!)
@@ -406,7 +406,7 @@ DROP INDEX IF EXISTS idx_never_used;
 ### ❌ Avoid:
 - **Over-indexing**: Each index has write cost
 - **Indexing low-selectivity columns alone**: Boolean, status fields
-- **Indexing small tables**: Sequential scan is fine for <1000 rows
+- **Indexing small tables**: Sequential scan is fine for &lt;1000 rows
 - **Duplicate indexes**: Check if composite index covers simpler queries
 - **Ignoring index maintenance**: Bloated indexes are slow
 
@@ -642,7 +642,7 @@ LIMIT 100;
 
 ## Key Takeaways
 
-- 🌲 **B-Tree** is the default and handles most use cases (=, <, >, BETWEEN, ORDER BY)
+- 🌲 **B-Tree** is the default and handles most use cases (=, &lt;, >, BETWEEN, ORDER BY)
 - 📊 **Selectivity matters** - index columns that filter out most rows
 - 📚 **Column order in composites** - leftmost prefix must be used
 - 📑 **Covering indexes** eliminate table access for huge speedups

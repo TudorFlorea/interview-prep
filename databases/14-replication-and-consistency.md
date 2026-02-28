@@ -560,7 +560,7 @@ def get_order(order_id, just_created=False):
 - Users in US, EU, and Asia-Pacific
 - Data must stay in region for compliance (GDPR for EU)
 - Need 99.99% availability
-- Acceptable latency: <100ms for reads, <500ms for writes
+- Acceptable latency: &lt;100ms for reads, &lt;500ms for writes
 
 <details>
 <summary>✅ Solution</summary>

@@ -415,7 +415,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- Two rules: `open < n` and `close < open`
+- Two rules: `open &lt; n` and `close &lt; open`
 - This is backtracking, but stack-based iteration also works
 - `StringBuilder.Length--` removes last character (backtracking)
 - Time complexity involves Catalan numbers C_n = (2n)! / ((n+1)! × n!)

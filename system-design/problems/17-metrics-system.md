@@ -28,10 +28,10 @@ Design a metrics collection and monitoring system (like Datadog/Prometheus) that
 | Aspect | Requirement |
 |--------|-------------|
 | **Write Throughput** | 10M metrics/second |
-| **Query Latency** | < 1s for dashboards |
+| **Query Latency** | &lt; 1s for dashboards |
 | **Availability** | 99.9% |
 | **Retention** | 1 year |
-| **Alert Latency** | < 1 minute |
+| **Alert Latency** | &lt; 1 minute |
 
 ---
 

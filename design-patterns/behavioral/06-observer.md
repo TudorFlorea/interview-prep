@@ -532,7 +532,7 @@ namespace ObserverPattern
 |----------|----------|
 | **Custom Interface** | Full control, simple scenarios |
 | **C# Events/Delegates** | Standard .NET pattern, built-in support |
-| **IObservable<T>/IObserver<T>** | Reactive Extensions, streaming data |
+| **IObservable&lt;T>/IObserver&lt;T>** | Reactive Extensions, streaming data |
 
 ---
 

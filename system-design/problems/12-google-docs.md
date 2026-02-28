@@ -33,7 +33,7 @@ Design a real-time collaborative document editing system like Google Docs where 
 | **CAP** | AP with conflict resolution |
 | **Compliance** | GDPR, data residency |
 | **Scalability** | 100M documents, 10M DAU |
-| **Latency** | < 100ms for local edits, < 500ms for sync |
+| **Latency** | &lt; 100ms for local edits, &lt; 500ms for sync |
 | **Environment** | Global, multi-platform |
 | **Durability** | Never lose user content |
 | **Security** | Fine-grained access control |

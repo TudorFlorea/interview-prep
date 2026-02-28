@@ -659,7 +659,7 @@ public class Solution {
 - "have" counts satisfied character types, not total characters
 - Contract window when valid to find minimum
 - Use `window[c] == need[c]` to detect when requirement is exactly met
-- Use `window[c] < need[c]` to detect when we lose satisfaction
+- Use `window[c] &lt; need[c]` to detect when we lose satisfaction
 - This pattern applies to many "minimum substring containing X" problems
 
 ---
@@ -749,14 +749,14 @@ public class Solution {
 #### Why Monotonic Deque Works
 1. **Decreasing order**: Front of deque is always the maximum
 2. **Remove smaller elements**: If `nums[i] > nums[j]` where `i > j`, then `nums[j]` can never be maximum for any future window containing `i`
-3. **Remove outside elements**: Elements with index < `i - k + 1` are outside current window
+3. **Remove outside elements**: Elements with index &lt; `i - k + 1` are outside current window
 
 #### Key Takeaways
 - **Monotonic deque** is powerful for range max/min queries
 - Store indices, not values, to check window bounds
 - "Decreasing" means each new element removes all smaller elements
 - Similar problems: Next Greater Element, Daily Temperatures
-- C# doesn't have Deque, use `LinkedList<T>` with AddFirst/AddLast/RemoveFirst/RemoveLast
+- C# doesn't have Deque, use `LinkedList&lt;T>` with AddFirst/AddLast/RemoveFirst/RemoveLast
 
 ---
 

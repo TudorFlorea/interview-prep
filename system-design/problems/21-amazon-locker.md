@@ -28,7 +28,7 @@ Design an Amazon Locker system that allows customers to pick up and return packa
 | Aspect | Requirement |
 |--------|-------------|
 | **Availability** | 99.9% |
-| **Latency** | < 100ms for allocation |
+| **Latency** | &lt; 100ms for allocation |
 | **Consistency** | Strong (no double allocation) |
 | **Scale** | 100K locker locations |
 | **Concurrency** | Handle rush periods |

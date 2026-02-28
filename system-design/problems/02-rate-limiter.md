@@ -30,7 +30,7 @@ Design a rate limiting service that can restrict the number of requests a client
 | **CAP** | AP preferred - eventual consistency acceptable |
 | **Compliance** | Fair usage policies, SLA requirements |
 | **Scalability** | Handle millions of requests per second |
-| **Latency** | < 1ms overhead per request |
+| **Latency** | &lt; 1ms overhead per request |
 | **Environment** | Distributed across multiple data centers |
 | **Durability** | Counters can be reset on failure (not critical) |
 | **Security** | Prevent bypass attacks |

@@ -113,8 +113,8 @@ These patterns are structurally similar but have different intents:
 ## C# Language Features Used
 
 - **Delegates & Events** - Observer pattern (built-in support)
-- **IEnumerable<T> & IEnumerator<T>** - Iterator pattern (built-in support)
-- **Func<T> & Action<T>** - Strategy and Command patterns
+- **IEnumerable&lt;T> & IEnumerator&lt;T>** - Iterator pattern (built-in support)
+- **Func&lt;T> & Action&lt;T>** - Strategy and Command patterns
 - **Abstract Classes** - Template Method, State
 - **Interfaces** - All behavioral patterns
 - **LINQ** - Often replaces explicit Iterator

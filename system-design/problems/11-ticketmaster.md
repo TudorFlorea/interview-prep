@@ -33,7 +33,7 @@ Design a ticket booking system like Ticketmaster that handles high-concurrency t
 | **CAP** | CP - No double-booking ever |
 | **Compliance** | PCI-DSS for payments |
 | **Scalability** | 10M concurrent users for hot events |
-| **Latency** | Seat selection < 200ms |
+| **Latency** | Seat selection &lt; 200ms |
 | **Environment** | Global |
 | **Durability** | Never lose confirmed bookings |
 | **Security** | Bot protection, fraud prevention |

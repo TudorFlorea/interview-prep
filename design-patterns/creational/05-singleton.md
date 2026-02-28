@@ -520,7 +520,7 @@ namespace SingletonPattern
 | **Basic** | ❌ No | ✅ Yes | Fast | ❌ |
 | **Lock** | ✅ Yes | ✅ Yes | Slow | ❌ |
 | **Double-Check** | ✅ Yes | ✅ Yes | Good | ⚠️ |
-| **Lazy\<T\>** | ✅ Yes | ✅ Yes | Good | ✅ Best |
+| **Lazy\&lt;T\>** | ✅ Yes | ✅ Yes | Good | ✅ Best |
 | **Static Init** | ✅ Yes | ❌ No | Fast | ⚠️ |
 
 ---
@@ -630,7 +630,7 @@ public class Service
 - ⚡ **Lazy Initialization**: Instance created on first access (usually)
 - 🔒 **Thread Safety**: Must be implemented correctly for multi-threading
 - ⚠️ **Use Sparingly**: Often overused; consider alternatives
-- ✅ **Prefer Lazy\<T\>**: Modern C# best practice
+- ✅ **Prefer Lazy\&lt;T\>**: Modern C# best practice
 
 ---
 

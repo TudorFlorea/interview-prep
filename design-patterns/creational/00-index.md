@@ -75,4 +75,4 @@ Creational design patterns provide various object creation mechanisms, which inc
 - **Static Members** - Singleton instance access
 - **ICloneable Interface** - Prototype pattern support
 - **Fluent Interfaces** - Builder pattern with method chaining
-- **Lazy<T>** - Thread-safe lazy initialization for Singleton
+- **Lazy&lt;T>** - Thread-safe lazy initialization for Singleton

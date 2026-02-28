@@ -196,7 +196,7 @@ Google values HOW you learn, not just what you accomplished:
 **3. Demonstrate Handling Ambiguity**
 
 **Example**:
-> "The initial requirements were vague—just 'make search faster.' **I started by** defining metrics with the PM: what does 'faster' mean? We agreed on P95 latency < 200ms. **Then I broke down** the problem: query optimization vs indexing vs caching. **I ran experiments** on each to determine which had the most impact with available resources."
+> "The initial requirements were vague—just 'make search faster.' **I started by** defining metrics with the PM: what does 'faster' mean? We agreed on P95 latency &lt; 200ms. **Then I broke down** the problem: query optimization vs indexing vs caching. **I ran experiments** on each to determine which had the most impact with available resources."
 
 **4. Show Intellectual Humility**
 

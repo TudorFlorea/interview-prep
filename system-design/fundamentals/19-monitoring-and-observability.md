@@ -450,8 +450,8 @@ def call_payment_service(order_data):
 | Severity | Response Time | Example |
 |----------|---------------|---------|
 | **P1 Critical** | Immediate | Site down, data loss |
-| **P2 High** | < 1 hour | Feature broken, high error rate |
-| **P3 Medium** | < 4 hours | Degraded performance |
+| **P2 High** | &lt; 1 hour | Feature broken, high error rate |
+| **P3 Medium** | &lt; 4 hours | Degraded performance |
 | **P4 Low** | Next business day | Minor issues, warnings |
 
 ### Example Alert Rules (Prometheus)

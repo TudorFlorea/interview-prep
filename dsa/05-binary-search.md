@@ -123,7 +123,7 @@ public class Solution {
 
 #### Key Takeaways
 - Use `left + (right - left) / 2` instead of `(left + right) / 2` to avoid integer overflow
-- `while (left <= right)` - include equality to check single-element ranges
+- `while (left &lt;= right)` - include equality to check single-element ranges
 - Move `left = mid + 1` and `right = mid - 1` to avoid infinite loops
 - Foundation for all binary search variations
 
@@ -385,11 +385,11 @@ public class Solution {
 
 #### Why Compare with Right (not Left)?
 - If `nums[mid] > nums[right]`: rotation point is to the right
-- If `nums[mid] < nums[right]`: this half is sorted, minimum might be at mid or left
+- If `nums[mid] &lt; nums[right]`: this half is sorted, minimum might be at mid or left
 - Comparing with left is ambiguous when array isn't rotated
 
 #### Key Takeaways
-- Use `left < right` (not `left <= right`) to avoid infinite loop
+- Use `left &lt; right` (not `left &lt;= right`) to avoid infinite loop
 - Compare with `nums[right]` to determine which half has minimum
 - `right = mid` (not `mid - 1`) because mid could be the minimum
 - Works for both rotated and non-rotated arrays
@@ -493,7 +493,7 @@ public class Solution {
 
 #### Key Takeaways
 - At least one half is always sorted
-- Check `nums[left] <= nums[mid]` to identify sorted half (use `<=` for edge cases)
+- Check `nums[left] &lt;= nums[mid]` to identify sorted half (use `&lt;=` for edge cases)
 - Check if target is in sorted half's range before deciding direction
 - Can solve in one pass (approach 1) or two passes (approach 2)
 
@@ -795,7 +795,7 @@ return left;
 1. **Overflow**: Use `left + (right - left) / 2` instead of `(left + right) / 2`
 2. **Infinite loop**: Ensure search space shrinks (`left = mid + 1` or `right = mid - 1`)
 3. **Off-by-one**: Check boundary conditions carefully
-4. **Wrong comparison**: Use `<` vs `<=` based on problem requirements
+4. **Wrong comparison**: Use `&lt;` vs `&lt;=` based on problem requirements
 
 ### C# Built-in Binary Search
 

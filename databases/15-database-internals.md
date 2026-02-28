@@ -534,7 +534,7 @@ SHOW checkpoint_completion_target;
 
 **Root Cause:**
 - 10GB/hour WAL = 833 MB every 5 minutes
-- If max_wal_size < 833MB, checkpoints forced by WAL size
+- If max_wal_size &lt; 833MB, checkpoints forced by WAL size
 - All dirty pages flushed at once = I/O spike
 
 **Solution:**
