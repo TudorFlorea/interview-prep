@@ -146,10 +146,10 @@ namespace VisitorPattern
 
     public class Table : IDocumentElement
     {
-        public List&lt;string> Headers { get; }
-        public List&lt;List&lt;string>> Rows { get; }
+        public List<string> Headers { get; }
+        public List<List<string>> Rows { get; }
 
-        public Table(List&lt;string> headers, List&lt;List&lt;string>> rows)
+        public Table(List<string> headers, List<List<string>> rows)
         {
             Headers = headers;
             Rows = rows;
@@ -188,7 +188,7 @@ namespace VisitorPattern
 
         public string GetResult()
         {
-            return $"&lt;!DOCTYPE html>\n<html>\n<body>\n{_html}</body>\n</html>";
+            return $"<!DOCTYPE html>\n<html>\n<body>\n{_html}</body>\n</html>";
         }
 
         public void VisitParagraph(Paragraph p)
@@ -198,7 +198,7 @@ namespace VisitorPattern
 
         public void VisitHeading(Heading h)
         {
-            _html.AppendLine($"  &lt;h{h.Level}>{h.Text}&lt;/h{h.Level}>");
+            _html.AppendLine($"  <h{h.Level}>{h.Text}</h{h.Level}>");
         }
 
         public void VisitImage(Image img)
@@ -307,7 +307,7 @@ namespace VisitorPattern
         {
             foreach (var row in t.Rows)
             {
-                for (int i = 0; i &lt; t.Headers.Count; i++)
+                for (int i = 0; i < t.Headers.Count; i++)
                 {
                     _text.AppendLine($"{t.Headers[i]}: {row[i]}");
                 }
@@ -377,7 +377,7 @@ namespace VisitorPattern
     
     public class Document
     {
-        private readonly List&lt;IDocumentElement> _elements = new();
+        private readonly List<IDocumentElement> _elements = new();
         public string Title { get; }
 
         public Document(string title)
@@ -555,8 +555,8 @@ namespace VisitorPattern
             doc.Add(new Image("diagram.png", "Class Diagram", 400, 300));
             doc.Add(new Paragraph("Here's a table summarizing the pattern:"));
             doc.Add(new Table(
-                new List&lt;string> { "Aspect", "Description" },
-                new List&lt;List&lt;string>>
+                new List<string> { "Aspect", "Description" },
+                new List<List<string>>
                 {
                     new() { "Intent", "Separate algorithm from object structure" },
                     new() { "Key Concept", "Double dispatch" },
@@ -597,7 +597,7 @@ namespace VisitorPattern
             Console.WriteLine("  SHAPE CALCULATOR");
             Console.WriteLine("═══════════════════════════════════════════════");
 
-            var shapes = new List&lt;IShape>
+            var shapes = new List<IShape>
             {
                 new Circle(5),
                 new Rectangle(4, 6),

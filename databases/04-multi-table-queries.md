@@ -335,8 +335,8 @@ SELECT
     p2.name AS product2,
     ABS(p1.price - p2.price) AS price_diff
 FROM products p1
-JOIN products p2 ON p1.product_id &lt; p2.product_id  -- Avoid duplicates
-    AND ABS(p1.price - p2.price) &lt;= 50;  -- Within $50
+JOIN products p2 ON p1.product_id < p2.product_id  -- Avoid duplicates
+    AND ABS(p1.price - p2.price) <= 50;  -- Within $50
 
 -- Non-equality: Date ranges
 SELECT 

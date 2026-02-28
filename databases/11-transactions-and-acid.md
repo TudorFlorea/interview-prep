@@ -342,7 +342,7 @@ def transfer_money(from_id, to_id, amount):
         try:
             with db.transaction(isolation='serializable'):
                 from_balance = db.query("SELECT balance FROM accounts WHERE id = %s", from_id)
-                if from_balance &lt; amount:
+                if from_balance < amount:
                     raise InsufficientFunds()
                 db.execute("UPDATE accounts SET balance = balance - %s WHERE id = %s", amount, from_id)
                 db.execute("UPDATE accounts SET balance = balance + %s WHERE id = %s", amount, to_id)
@@ -454,7 +454,7 @@ DECLARE
 BEGIN
     SELECT balance INTO source_balance FROM accounts WHERE id = 1;
     
-    IF source_balance &lt; transfer_amount THEN
+    IF source_balance < transfer_amount THEN
         RAISE EXCEPTION 'Insufficient funds: balance is %, need %', 
             source_balance, transfer_amount;
     END IF;

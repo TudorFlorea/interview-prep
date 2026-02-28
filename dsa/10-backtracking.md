@@ -74,16 +74,16 @@ For each element, we have two choices: include it or exclude it.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> Subsets(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
-        Backtrack(nums, 0, new List&lt;int>(), result);
+    public IList<IList<int>> Subsets(int[] nums) {
+        List<IList<int>> result = new List<IList<int>>();
+        Backtrack(nums, 0, new List<int>(), result);
         return result;
     }
     
-    private void Backtrack(int[] nums, int index, List&lt;int> current, List&lt;IList&lt;int>> result) {
-        result.Add(new List&lt;int>(current));  // Add copy of current subset
+    private void Backtrack(int[] nums, int index, List<int> current, List<IList<int>> result) {
+        result.Add(new List<int>(current));  // Add copy of current subset
         
-        for (int i = index; i &lt; nums.Length; i++) {
+        for (int i = index; i < nums.Length; i++) {
             current.Add(nums[i]);            // Include nums[i]
             Backtrack(nums, i + 1, current, result);
             current.RemoveAt(current.Count - 1);  // Exclude nums[i] (backtrack)
@@ -95,13 +95,13 @@ public class Solution {
 #### Alternative: Iterative
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> Subsets(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>> { new List&lt;int>() };
+    public IList<IList<int>> Subsets(int[] nums) {
+        List<IList<int>> result = new List<IList<int>> { new List<int>() };
         
         foreach (int num in nums) {
             int n = result.Count;
-            for (int i = 0; i &lt; n; i++) {
-                List&lt;int> newSubset = new List&lt;int>(result[i]);
+            for (int i = 0; i < n; i++) {
+                List<int> newSubset = new List<int>(result[i]);
                 newSubset.Add(num);
                 result.Add(newSubset);
             }
@@ -140,22 +140,22 @@ Backtrack through candidates, allowing repeated use of the same element.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> CombinationSum(int[] candidates, int target) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
-        Backtrack(candidates, target, 0, new List&lt;int>(), result);
+    public IList<IList<int>> CombinationSum(int[] candidates, int target) {
+        List<IList<int>> result = new List<IList<int>>();
+        Backtrack(candidates, target, 0, new List<int>(), result);
         return result;
     }
     
     private void Backtrack(int[] candidates, int remaining, int index, 
-                          List&lt;int> current, List&lt;IList&lt;int>> result) {
+                          List<int> current, List<IList<int>> result) {
         if (remaining == 0) {
-            result.Add(new List&lt;int>(current));
+            result.Add(new List<int>(current));
             return;
         }
         
-        if (remaining &lt; 0) return;  // Prune
+        if (remaining < 0) return;  // Prune
         
-        for (int i = index; i &lt; candidates.Length; i++) {
+        for (int i = index; i < candidates.Length; i++) {
             current.Add(candidates[i]);
             Backtrack(candidates, remaining - candidates[i], i, current, result);  // i, not i+1 (reuse allowed)
             current.RemoveAt(current.Count - 1);
@@ -166,7 +166,7 @@ public class Solution {
 
 #### Key Takeaways
 - Pass `i` (not `i+1`) to allow reuse of same element
-- Prune when remaining &lt; 0
+- Prune when remaining < 0
 - Sort candidates for optimization (can prune when candidate > remaining)
 
 ---
@@ -192,20 +192,20 @@ At each position, try all unused elements.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> Permute(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> Permute(int[] nums) {
+        List<IList<int>> result = new List<IList<int>>();
         bool[] used = new bool[nums.Length];
-        Backtrack(nums, used, new List&lt;int>(), result);
+        Backtrack(nums, used, new List<int>(), result);
         return result;
     }
     
-    private void Backtrack(int[] nums, bool[] used, List&lt;int> current, List&lt;IList&lt;int>> result) {
+    private void Backtrack(int[] nums, bool[] used, List<int> current, List<IList<int>> result) {
         if (current.Count == nums.Length) {
-            result.Add(new List&lt;int>(current));
+            result.Add(new List<int>(current));
             return;
         }
         
-        for (int i = 0; i &lt; nums.Length; i++) {
+        for (int i = 0; i < nums.Length; i++) {
             if (used[i]) continue;
             
             used[i] = true;
@@ -221,19 +221,19 @@ public class Solution {
 #### Alternative: Swap-Based (In-place)
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> Permute(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> Permute(int[] nums) {
+        List<IList<int>> result = new List<IList<int>>();
         Backtrack(nums, 0, result);
         return result;
     }
     
-    private void Backtrack(int[] nums, int start, List&lt;IList&lt;int>> result) {
+    private void Backtrack(int[] nums, int start, List<IList<int>> result) {
         if (start == nums.Length) {
             result.Add(nums.ToList());
             return;
         }
         
-        for (int i = start; i &lt; nums.Length; i++) {
+        for (int i = start; i < nums.Length; i++) {
             Swap(nums, start, i);
             Backtrack(nums, start + 1, result);
             Swap(nums, start, i);  // Backtrack
@@ -276,17 +276,17 @@ Sort first, then skip duplicates at the same level of recursion.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> SubsetsWithDup(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> SubsetsWithDup(int[] nums) {
+        List<IList<int>> result = new List<IList<int>>();
         Array.Sort(nums);  // Sort to group duplicates
-        Backtrack(nums, 0, new List&lt;int>(), result);
+        Backtrack(nums, 0, new List<int>(), result);
         return result;
     }
     
-    private void Backtrack(int[] nums, int index, List&lt;int> current, List&lt;IList&lt;int>> result) {
-        result.Add(new List&lt;int>(current));
+    private void Backtrack(int[] nums, int index, List<int> current, List<IList<int>> result) {
+        result.Add(new List<int>(current));
         
-        for (int i = index; i &lt; nums.Length; i++) {
+        for (int i = index; i < nums.Length; i++) {
             // Skip duplicates at same level
             if (i > index && nums[i] == nums[i - 1]) continue;
             
@@ -323,21 +323,21 @@ Output: [[1,1,6],[1,2,5],[1,7],[2,6]]
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> CombinationSum2(int[] candidates, int target) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> CombinationSum2(int[] candidates, int target) {
+        List<IList<int>> result = new List<IList<int>>();
         Array.Sort(candidates);  // Sort to handle duplicates
-        Backtrack(candidates, target, 0, new List&lt;int>(), result);
+        Backtrack(candidates, target, 0, new List<int>(), result);
         return result;
     }
     
     private void Backtrack(int[] candidates, int remaining, int index, 
-                          List&lt;int> current, List&lt;IList&lt;int>> result) {
+                          List<int> current, List<IList<int>> result) {
         if (remaining == 0) {
-            result.Add(new List&lt;int>(current));
+            result.Add(new List<int>(current));
             return;
         }
         
-        for (int i = index; i &lt; candidates.Length; i++) {
+        for (int i = index; i < candidates.Length; i++) {
             // Skip duplicates at same level
             if (i > index && candidates[i] == candidates[i - 1]) continue;
             
@@ -384,8 +384,8 @@ public class Solution {
         int rows = board.Length;
         int cols = board[0].Length;
         
-        for (int r = 0; r &lt; rows; r++) {
-            for (int c = 0; c &lt; cols; c++) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 if (Backtrack(board, word, r, c, 0)) {
                     return true;
                 }
@@ -398,8 +398,8 @@ public class Solution {
     private bool Backtrack(char[][] board, string word, int row, int col, int index) {
         if (index == word.Length) return true;
         
-        if (row &lt; 0 || row >= board.Length || 
-            col &lt; 0 || col >= board[0].Length ||
+        if (row < 0 || row >= board.Length || 
+            col < 0 || col >= board[0].Length ||
             board[row][col] != word[index]) {
             return false;
         }
@@ -412,7 +412,7 @@ public class Solution {
         int[] dr = {0, 0, 1, -1};
         int[] dc = {1, -1, 0, 0};
         
-        for (int d = 0; d &lt; 4; d++) {
+        for (int d = 0; d < 4; d++) {
             if (Backtrack(board, word, row + dr[d], col + dc[d], index + 1)) {
                 return true;
             }
@@ -452,19 +452,19 @@ Output: [["a","a","b"],["aa","b"]]
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> Partition(string s) {
-        List&lt;IList&lt;string>> result = new List&lt;IList&lt;string>>();
-        Backtrack(s, 0, new List&lt;string>(), result);
+    public IList<IList<string>> Partition(string s) {
+        List<IList<string>> result = new List<IList<string>>();
+        Backtrack(s, 0, new List<string>(), result);
         return result;
     }
     
-    private void Backtrack(string s, int start, List&lt;string> current, List&lt;IList&lt;string>> result) {
+    private void Backtrack(string s, int start, List<string> current, List<IList<string>> result) {
         if (start == s.Length) {
-            result.Add(new List&lt;string>(current));
+            result.Add(new List<string>(current));
             return;
         }
         
-        for (int end = start; end &lt; s.Length; end++) {
+        for (int end = start; end < s.Length; end++) {
             if (IsPalindrome(s, start, end)) {
                 current.Add(s.Substring(start, end - start + 1));
                 Backtrack(s, end + 1, current, result);
@@ -474,7 +474,7 @@ public class Solution {
     }
     
     private bool IsPalindrome(string s, int left, int right) {
-        while (left &lt; right) {
+        while (left < right) {
             if (s[left++] != s[right--]) return false;
         }
         return true;
@@ -485,32 +485,32 @@ public class Solution {
 #### Alternative: DP for Palindrome Check
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> Partition(string s) {
+    public IList<IList<string>> Partition(string s) {
         int n = s.Length;
         bool[,] isPalin = new bool[n, n];
         
         // DP: isPalin[i,j] = true if s[i..j] is palindrome
         for (int i = n - 1; i >= 0; i--) {
-            for (int j = i; j &lt; n; j++) {
-                if (s[i] == s[j] && (j - i &lt;= 2 || isPalin[i + 1, j - 1])) {
+            for (int j = i; j < n; j++) {
+                if (s[i] == s[j] && (j - i <= 2 || isPalin[i + 1, j - 1])) {
                     isPalin[i, j] = true;
                 }
             }
         }
         
-        List&lt;IList&lt;string>> result = new List&lt;IList&lt;string>>();
-        Backtrack(s, 0, new List&lt;string>(), result, isPalin);
+        List<IList<string>> result = new List<IList<string>>();
+        Backtrack(s, 0, new List<string>(), result, isPalin);
         return result;
     }
     
-    private void Backtrack(string s, int start, List&lt;string> current, 
-                          List&lt;IList&lt;string>> result, bool[,] isPalin) {
+    private void Backtrack(string s, int start, List<string> current, 
+                          List<IList<string>> result, bool[,] isPalin) {
         if (start == s.Length) {
-            result.Add(new List&lt;string>(current));
+            result.Add(new List<string>(current));
             return;
         }
         
-        for (int end = start; end &lt; s.Length; end++) {
+        for (int end = start; end < s.Length; end++) {
             if (isPalin[start, end]) {
                 current.Add(s.Substring(start, end - start + 1));
                 Backtrack(s, end + 1, current, result, isPalin);
@@ -554,15 +554,15 @@ public class Solution {
         "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"
     };
     
-    public IList&lt;string> LetterCombinations(string digits) {
-        List&lt;string> result = new List&lt;string>();
+    public IList<string> LetterCombinations(string digits) {
+        List<string> result = new List<string>();
         if (string.IsNullOrEmpty(digits)) return result;
         
         Backtrack(digits, 0, new StringBuilder(), result);
         return result;
     }
     
-    private void Backtrack(string digits, int index, StringBuilder current, List&lt;string> result) {
+    private void Backtrack(string digits, int index, StringBuilder current, List<string> result) {
         if (index == digits.Length) {
             result.Add(current.ToString());
             return;
@@ -608,28 +608,28 @@ Place queens row by row. Use sets to track columns and diagonals under attack.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> SolveNQueens(int n) {
-        List&lt;IList&lt;string>> result = new List&lt;IList&lt;string>>();
+    public IList<IList<string>> SolveNQueens(int n) {
+        List<IList<string>> result = new List<IList<string>>();
         char[][] board = new char[n][];
         
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             board[i] = new char[n];
             Array.Fill(board[i], '.');
         }
         
-        HashSet&lt;int> cols = new HashSet&lt;int>();
-        HashSet&lt;int> posDiag = new HashSet&lt;int>();  // row + col
-        HashSet&lt;int> negDiag = new HashSet&lt;int>();  // row - col
+        HashSet<int> cols = new HashSet<int>();
+        HashSet<int> posDiag = new HashSet<int>();  // row + col
+        HashSet<int> negDiag = new HashSet<int>();  // row - col
         
         Backtrack(board, 0, cols, posDiag, negDiag, result);
         return result;
     }
     
     private void Backtrack(char[][] board, int row, 
-                          HashSet&lt;int> cols, HashSet&lt;int> posDiag, HashSet&lt;int> negDiag,
-                          List&lt;IList&lt;string>> result) {
+                          HashSet<int> cols, HashSet<int> posDiag, HashSet<int> negDiag,
+                          List<IList<string>> result) {
         if (row == board.Length) {
-            List&lt;string> solution = new List&lt;string>();
+            List<string> solution = new List<string>();
             foreach (char[] r in board) {
                 solution.Add(new string(r));
             }
@@ -637,7 +637,7 @@ public class Solution {
             return;
         }
         
-        for (int col = 0; col &lt; board.Length; col++) {
+        for (int col = 0; col < board.Length; col++) {
             // Check if position is under attack
             if (cols.Contains(col) || 
                 posDiag.Contains(row + col) || 

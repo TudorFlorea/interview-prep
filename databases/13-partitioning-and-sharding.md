@@ -369,7 +369,7 @@ If step 2 fails:
 ### ❌ Avoid:
 - **Sharding prematurely**: Adds significant complexity
 - **Cross-shard transactions**: Design to avoid them
-- **Too many partitions**: Each has overhead (aim for &lt; 1000)
+- **Too many partitions**: Each has overhead (aim for < 1000)
 - **Changing shard key later**: Very difficult migration
 
 ---

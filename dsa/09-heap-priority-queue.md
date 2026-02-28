@@ -20,7 +20,7 @@ A Heap is a complete binary tree satisfying the heap property. A Priority Queue 
 ### Key C# Implementation
 ```csharp
 // C# PriorityQueue (min-heap by default)
-PriorityQueue&lt;TElement, TPriority> pq = new PriorityQueue&lt;TElement, TPriority>();
+PriorityQueue<TElement, TPriority> pq = new PriorityQueue<TElement, TPriority>();
 pq.Enqueue(element, priority);  // Add element with priority
 pq.Dequeue();                   // Remove and return min priority element
 pq.Peek();                      // View min priority element
@@ -30,8 +30,8 @@ pq.Count;                       // Number of elements
 pq.Enqueue(element, -priority);
 
 // Or use custom comparer
-PriorityQueue&lt;int, int> maxHeap = new PriorityQueue&lt;int, int>(
-    Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>(
+    Comparer<int>.Create((a, b) => b.CompareTo(a))
 );
 ```
 
@@ -72,12 +72,12 @@ Maintain a min-heap of size k. The root is always the kth largest.
 
 ```csharp
 public class KthLargest {
-    private PriorityQueue&lt;int, int> minHeap;
+    private PriorityQueue<int, int> minHeap;
     private int k;
     
     public KthLargest(int k, int[] nums) {
         this.k = k;
-        minHeap = new PriorityQueue&lt;int, int>();
+        minHeap = new PriorityQueue<int, int>();
         
         foreach (int num in nums) {
             Add(num);
@@ -128,7 +128,7 @@ Use a max-heap to always get the two heaviest stones.
 public class Solution {
     public int LastStoneWeight(int[] stones) {
         // Max-heap using negated values
-        PriorityQueue&lt;int, int> maxHeap = new PriorityQueue&lt;int, int>();
+        PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>();
         
         foreach (int stone in stones) {
             maxHeap.Enqueue(stone, -stone);  // Negate for max-heap
@@ -180,8 +180,8 @@ Use a max-heap of size k to keep track of k smallest distances.
 public class Solution {
     public int[][] KClosest(int[][] points, int k) {
         // Max-heap: keep k smallest by removing largest when > k
-        PriorityQueue&lt;int[], int> maxHeap = new PriorityQueue&lt;int[], int>(
-            Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+        PriorityQueue<int[], int> maxHeap = new PriorityQueue<int[], int>(
+            Comparer<int>.Create((a, b) => b.CompareTo(a))
         );
         
         foreach (int[] point in points) {
@@ -194,7 +194,7 @@ public class Solution {
         }
         
         int[][] result = new int[k][];
-        for (int i = 0; i &lt; k; i++) {
+        for (int i = 0; i < k; i++) {
             result[i] = maxHeap.Dequeue();
         }
         
@@ -211,7 +211,7 @@ public class Solution {
 public class Solution {
     public int[][] KClosest(int[][] points, int k) {
         // Min-heap: all points, extract k smallest
-        PriorityQueue&lt;int[], int> minHeap = new PriorityQueue&lt;int[], int>();
+        PriorityQueue<int[], int> minHeap = new PriorityQueue<int[], int>();
         
         foreach (int[] point in points) {
             int dist = point[0] * point[0] + point[1] * point[1];
@@ -219,7 +219,7 @@ public class Solution {
         }
         
         int[][] result = new int[k][];
-        for (int i = 0; i &lt; k; i++) {
+        for (int i = 0; i < k; i++) {
             result[i] = minHeap.Dequeue();
         }
         
@@ -254,7 +254,7 @@ Output: 5
 ```csharp
 public class Solution {
     public int FindKthLargest(int[] nums, int k) {
-        PriorityQueue&lt;int, int> minHeap = new PriorityQueue&lt;int, int>();
+        PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
         
         foreach (int num in nums) {
             minHeap.Enqueue(num, num);
@@ -287,7 +287,7 @@ public class Solution {
         
         if (pivotIndex == k) {
             return nums[pivotIndex];
-        } else if (pivotIndex &lt; k) {
+        } else if (pivotIndex < k) {
             return QuickSelect(nums, pivotIndex + 1, right, k);
         } else {
             return QuickSelect(nums, left, pivotIndex - 1, k);
@@ -298,8 +298,8 @@ public class Solution {
         int pivot = nums[right];
         int i = left;
         
-        for (int j = left; j &lt; right; j++) {
-            if (nums[j] &lt;= pivot) {
+        for (int j = left; j < right; j++) {
+            if (nums[j] <= pivot) {
                 Swap(nums, i, j);
                 i++;
             }
@@ -355,8 +355,8 @@ public class Solution {
         }
         
         // Max-heap of frequencies
-        PriorityQueue&lt;int, int> maxHeap = new PriorityQueue&lt;int, int>(
-            Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+        PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>(
+            Comparer<int>.Create((a, b) => b.CompareTo(a))
         );
         
         foreach (int f in freq) {
@@ -364,7 +364,7 @@ public class Solution {
         }
         
         // Queue for cooling tasks: (count, available_time)
-        Queue&lt;(int count, int availableTime)> cooldown = new Queue&lt;(int, int)>();
+        Queue<(int count, int availableTime)> cooldown = new Queue<(int, int)>();
         
         int time = 0;
         
@@ -442,31 +442,31 @@ HashMap for follows, merge K sorted lists for feed.
 ```csharp
 public class Twitter {
     private int timestamp = 0;
-    private Dictionary&lt;int, List&lt;(int time, int tweetId)>> tweets;
-    private Dictionary&lt;int, HashSet&lt;int>> following;
+    private Dictionary<int, List<(int time, int tweetId)>> tweets;
+    private Dictionary<int, HashSet<int>> following;
     
     public Twitter() {
-        tweets = new Dictionary&lt;int, List&lt;(int, int)>>();
-        following = new Dictionary&lt;int, HashSet&lt;int>>();
+        tweets = new Dictionary<int, List<(int, int)>>();
+        following = new Dictionary<int, HashSet<int>>();
     }
     
     public void PostTweet(int userId, int tweetId) {
         if (!tweets.ContainsKey(userId)) {
-            tweets[userId] = new List&lt;(int, int)>();
+            tweets[userId] = new List<(int, int)>();
         }
         tweets[userId].Add((timestamp++, tweetId));
     }
     
-    public IList&lt;int> GetNewsFeed(int userId) {
+    public IList<int> GetNewsFeed(int userId) {
         // Max-heap: (time, tweetId, userId, index)
-        PriorityQueue&lt;(int time, int tweetId, int userId, int index), int> maxHeap = 
-            new PriorityQueue&lt;(int, int, int, int), int>(
-                Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+        PriorityQueue<(int time, int tweetId, int userId, int index), int> maxHeap = 
+            new PriorityQueue<(int, int, int, int), int>(
+                Comparer<int>.Create((a, b) => b.CompareTo(a))
             );
         
         // Add user's own tweets
         if (!following.ContainsKey(userId)) {
-            following[userId] = new HashSet&lt;int>();
+            following[userId] = new HashSet<int>();
         }
         following[userId].Add(userId);  // Follow self for feed
         
@@ -480,9 +480,9 @@ public class Twitter {
             }
         }
         
-        List&lt;int> feed = new List&lt;int>();
+        List<int> feed = new List<int>();
         
-        while (maxHeap.Count > 0 && feed.Count &lt; 10) {
+        while (maxHeap.Count > 0 && feed.Count < 10) {
             var (time, tweetId, followeeId, idx) = maxHeap.Dequeue();
             feed.Add(tweetId);
             
@@ -501,7 +501,7 @@ public class Twitter {
     
     public void Follow(int followerId, int followeeId) {
         if (!following.ContainsKey(followerId)) {
-            following[followerId] = new HashSet&lt;int>();
+            following[followerId] = new HashSet<int>();
         }
         following[followerId].Add(followeeId);
     }
@@ -550,15 +550,15 @@ Use two heaps: max-heap for smaller half, min-heap for larger half. Median is at
 ```csharp
 public class MedianFinder {
     // Max-heap for smaller half
-    private PriorityQueue&lt;int, int> maxHeap;
+    private PriorityQueue<int, int> maxHeap;
     // Min-heap for larger half
-    private PriorityQueue&lt;int, int> minHeap;
+    private PriorityQueue<int, int> minHeap;
     
     public MedianFinder() {
-        maxHeap = new PriorityQueue&lt;int, int>(
-            Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+        maxHeap = new PriorityQueue<int, int>(
+            Comparer<int>.Create((a, b) => b.CompareTo(a))
         );
-        minHeap = new PriorityQueue&lt;int, int>();
+        minHeap = new PriorityQueue<int, int>();
     }
     
     public void AddNum(int num) {
@@ -631,20 +631,20 @@ Even count: median = (maxHeap.Peek() + minHeap.Peek()) / 2
 
 ```csharp
 // Min-heap (default)
-PriorityQueue&lt;int, int> minHeap = new PriorityQueue&lt;int, int>();
+PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
 minHeap.Enqueue(element, priority);  // Lower priority = dequeued first
 minHeap.Dequeue();                   // Remove min
 minHeap.Peek();                      // View min
 
 // Max-heap (custom comparer)
-PriorityQueue&lt;int, int> maxHeap = new PriorityQueue&lt;int, int>(
-    Comparer&lt;int>.Create((a, b) => b.CompareTo(a))
+PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>(
+    Comparer<int>.Create((a, b) => b.CompareTo(a))
 );
 
 // Max-heap (negate priority)
 minHeap.Enqueue(element, -priority);
 
 // With complex objects
-PriorityQueue&lt;ListNode, int> pq = new PriorityQueue&lt;ListNode, int>();
+PriorityQueue<ListNode, int> pq = new PriorityQueue<ListNode, int>();
 pq.Enqueue(node, node.val);
 ```

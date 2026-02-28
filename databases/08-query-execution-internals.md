@@ -501,7 +501,7 @@ Execution Time: 2500.500 ms
 
 ```sql
 -- 1. Rewrite date filter to use range (allows index)
-WHERE o.order_date >= '2024-01-01' AND o.order_date &lt; '2025-01-01'
+WHERE o.order_date >= '2024-01-01' AND o.order_date < '2025-01-01'
 
 -- 2. Create supporting indexes
 CREATE INDEX idx_orders_date ON orders(order_date);
@@ -513,7 +513,7 @@ SELECT p.name, SUM(oi.quantity) as total_sold
 FROM products p
 JOIN order_items oi ON p.product_id = oi.product_id
 JOIN orders o ON oi.order_id = o.order_id
-WHERE o.order_date >= '2024-01-01' AND o.order_date &lt; '2025-01-01'
+WHERE o.order_date >= '2024-01-01' AND o.order_date < '2025-01-01'
 GROUP BY p.product_id, p.name
 ORDER BY total_sold DESC
 LIMIT 10;

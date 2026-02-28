@@ -10,20 +10,20 @@ A graph is a data structure consisting of vertices (nodes) and edges (connection
 
 ```csharp
 // Adjacency List (most common, space efficient)
-Dictionary&lt;int, List&lt;int>> graph = new Dictionary&lt;int, List&lt;int>>();
+Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
 
 // Adjacency Matrix (good for dense graphs)
 int[,] graph = new int[n, n];
 
 // Edge List
-List&lt;int[]> edges = new List&lt;int[]>();  // [[from, to], ...]
+List<int[]> edges = new List<int[]>();  // [[from, to], ...]
 ```
 
 ### Graph Traversal Templates
 
 ```csharp
 // DFS - Recursive
-void DFS(int node, HashSet&lt;int> visited) {
+void DFS(int node, HashSet<int> visited) {
     visited.Add(node);
     foreach (int neighbor in graph[node]) {
         if (!visited.Contains(neighbor)) {
@@ -34,8 +34,8 @@ void DFS(int node, HashSet&lt;int> visited) {
 
 // BFS - Iterative
 void BFS(int start) {
-    Queue&lt;int> queue = new Queue&lt;int>();
-    HashSet&lt;int> visited = new HashSet&lt;int>();
+    Queue<int> queue = new Queue<int>();
+    HashSet<int> visited = new HashSet<int>();
     queue.Enqueue(start);
     visited.Add(start);
     
@@ -92,8 +92,8 @@ public class Solution {
         int rows = grid.Length;
         int cols = grid[0].Length;
         
-        for (int r = 0; r &lt; rows; r++) {
-            for (int c = 0; c &lt; cols; c++) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 if (grid[r][c] == '1') {
                     islands++;
                     DFS(grid, r, c);
@@ -105,8 +105,8 @@ public class Solution {
     }
     
     private void DFS(char[][] grid, int r, int c) {
-        if (r &lt; 0 || r >= grid.Length || 
-            c &lt; 0 || c >= grid[0].Length || 
+        if (r < 0 || r >= grid.Length || 
+            c < 0 || c >= grid[0].Length || 
             grid[r][c] != '1') {
             return;
         }
@@ -129,8 +129,8 @@ public class Solution {
         int rows = grid.Length;
         int cols = grid[0].Length;
         
-        for (int r = 0; r &lt; rows; r++) {
-            for (int c = 0; c &lt; cols; c++) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 if (grid[r][c] == '1') {
                     islands++;
                     BFS(grid, r, c);
@@ -142,7 +142,7 @@ public class Solution {
     }
     
     private void BFS(char[][] grid, int r, int c) {
-        Queue&lt;(int, int)> queue = new Queue&lt;(int, int)>();
+        Queue<(int, int)> queue = new Queue<(int, int)>();
         queue.Enqueue((r, c));
         grid[r][c] = '0';
         
@@ -152,12 +152,12 @@ public class Solution {
         while (queue.Count > 0) {
             var (row, col) = queue.Dequeue();
             
-            for (int d = 0; d &lt; 4; d++) {
+            for (int d = 0; d < 4; d++) {
                 int nr = row + dr[d];
                 int nc = col + dc[d];
                 
-                if (nr >= 0 && nr &lt; grid.Length && 
-                    nc >= 0 && nc &lt; grid[0].Length && 
+                if (nr >= 0 && nr < grid.Length && 
+                    nc >= 0 && nc < grid[0].Length && 
                     grid[nr][nc] == '1') {
                     grid[nr][nc] = '0';
                     queue.Enqueue((nr, nc));
@@ -188,7 +188,7 @@ Given a reference of a node in a connected undirected graph, return a deep copy.
 
 ```csharp
 public class Solution {
-    private Dictionary&lt;Node, Node> visited = new Dictionary&lt;Node, Node>();
+    private Dictionary<Node, Node> visited = new Dictionary<Node, Node>();
     
     public Node CloneGraph(Node node) {
         if (node == null) return null;
@@ -231,8 +231,8 @@ public class Solution {
     public int MaxAreaOfIsland(int[][] grid) {
         int maxArea = 0;
         
-        for (int r = 0; r &lt; grid.Length; r++) {
-            for (int c = 0; c &lt; grid[0].Length; c++) {
+        for (int r = 0; r < grid.Length; r++) {
+            for (int c = 0; c < grid[0].Length; c++) {
                 if (grid[r][c] == 1) {
                     maxArea = Math.Max(maxArea, DFS(grid, r, c));
                 }
@@ -243,8 +243,8 @@ public class Solution {
     }
     
     private int DFS(int[][] grid, int r, int c) {
-        if (r &lt; 0 || r >= grid.Length || 
-            c &lt; 0 || c >= grid[0].Length || 
+        if (r < 0 || r >= grid.Length || 
+            c < 0 || c >= grid[0].Length || 
             grid[r][c] != 1) {
             return 0;
         }
@@ -277,7 +277,7 @@ public class Solution {
     private int rows, cols;
     private int[][] heights;
     
-    public IList&lt;IList&lt;int>> PacificAtlantic(int[][] heights) {
+    public IList<IList<int>> PacificAtlantic(int[][] heights) {
         this.heights = heights;
         rows = heights.Length;
         cols = heights[0].Length;
@@ -286,19 +286,19 @@ public class Solution {
         bool[,] atlantic = new bool[rows, cols];
         
         // DFS from Pacific edges (top row, left column)
-        for (int c = 0; c &lt; cols; c++) DFS(0, c, pacific, int.MinValue);
-        for (int r = 0; r &lt; rows; r++) DFS(r, 0, pacific, int.MinValue);
+        for (int c = 0; c < cols; c++) DFS(0, c, pacific, int.MinValue);
+        for (int r = 0; r < rows; r++) DFS(r, 0, pacific, int.MinValue);
         
         // DFS from Atlantic edges (bottom row, right column)
-        for (int c = 0; c &lt; cols; c++) DFS(rows - 1, c, atlantic, int.MinValue);
-        for (int r = 0; r &lt; rows; r++) DFS(r, cols - 1, atlantic, int.MinValue);
+        for (int c = 0; c < cols; c++) DFS(rows - 1, c, atlantic, int.MinValue);
+        for (int r = 0; r < rows; r++) DFS(r, cols - 1, atlantic, int.MinValue);
         
         // Find cells reachable by both
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
-        for (int r = 0; r &lt; rows; r++) {
-            for (int c = 0; c &lt; cols; c++) {
+        List<IList<int>> result = new List<IList<int>>();
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 if (pacific[r, c] && atlantic[r, c]) {
-                    result.Add(new List&lt;int> { r, c });
+                    result.Add(new List<int> { r, c });
                 }
             }
         }
@@ -307,8 +307,8 @@ public class Solution {
     }
     
     private void DFS(int r, int c, bool[,] visited, int prevHeight) {
-        if (r &lt; 0 || r >= rows || c &lt; 0 || c >= cols || 
-            visited[r, c] || heights[r][c] &lt; prevHeight) {
+        if (r < 0 || r >= rows || c < 0 || c >= cols || 
+            visited[r, c] || heights[r][c] < prevHeight) {
             return;
         }
         
@@ -346,18 +346,18 @@ public class Solution {
         int cols = board[0].Length;
         
         // Mark border-connected 'O's as safe (temporarily 'S')
-        for (int r = 0; r &lt; rows; r++) {
+        for (int r = 0; r < rows; r++) {
             if (board[r][0] == 'O') DFS(board, r, 0);
             if (board[r][cols - 1] == 'O') DFS(board, r, cols - 1);
         }
-        for (int c = 0; c &lt; cols; c++) {
+        for (int c = 0; c < cols; c++) {
             if (board[0][c] == 'O') DFS(board, 0, c);
             if (board[rows - 1][c] == 'O') DFS(board, rows - 1, c);
         }
         
         // Capture surrounded 'O's and restore safe ones
-        for (int r = 0; r &lt; rows; r++) {
-            for (int c = 0; c &lt; cols; c++) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
                 if (board[r][c] == 'O') board[r][c] = 'X';       // Capture
                 else if (board[r][c] == 'S') board[r][c] = 'O';  // Restore
             }
@@ -365,8 +365,8 @@ public class Solution {
     }
     
     private void DFS(char[][] board, int r, int c) {
-        if (r &lt; 0 || r >= board.Length || 
-            c &lt; 0 || c >= board[0].Length || 
+        if (r < 0 || r >= board.Length || 
+            c < 0 || c >= board[0].Length || 
             board[r][c] != 'O') {
             return;
         }
@@ -410,12 +410,12 @@ Multi-source BFS from all rotten oranges simultaneously.
 ```csharp
 public class Solution {
     public int OrangesRotting(int[][] grid) {
-        Queue&lt;(int, int)> queue = new Queue&lt;(int, int)>();
+        Queue<(int, int)> queue = new Queue<(int, int)>();
         int fresh = 0;
         
         // Find all rotten oranges and count fresh
-        for (int r = 0; r &lt; grid.Length; r++) {
-            for (int c = 0; c &lt; grid[0].Length; c++) {
+        for (int r = 0; r < grid.Length; r++) {
+            for (int c = 0; c < grid[0].Length; c++) {
                 if (grid[r][c] == 2) queue.Enqueue((r, c));
                 else if (grid[r][c] == 1) fresh++;
             }
@@ -431,15 +431,15 @@ public class Solution {
             minutes++;
             int size = queue.Count;
             
-            for (int i = 0; i &lt; size; i++) {
+            for (int i = 0; i < size; i++) {
                 var (row, col) = queue.Dequeue();
                 
-                for (int d = 0; d &lt; 4; d++) {
+                for (int d = 0; d < 4; d++) {
                     int nr = row + dr[d];
                     int nc = col + dc[d];
                     
-                    if (nr >= 0 && nr &lt; grid.Length && 
-                        nc >= 0 && nc &lt; grid[0].Length && 
+                    if (nr >= 0 && nr < grid.Length && 
+                        nc >= 0 && nc < grid[0].Length && 
                         grid[nr][nc] == 1) {
                         grid[nr][nc] = 2;
                         fresh--;
@@ -475,11 +475,11 @@ Fill each empty room with distance to nearest gate. Gates = 0, walls = -1, empty
 public class Solution {
     public void WallsAndGates(int[][] rooms) {
         int INF = int.MaxValue;
-        Queue&lt;(int, int)> queue = new Queue&lt;(int, int)>();
+        Queue<(int, int)> queue = new Queue<(int, int)>();
         
         // Find all gates
-        for (int r = 0; r &lt; rooms.Length; r++) {
-            for (int c = 0; c &lt; rooms[0].Length; c++) {
+        for (int r = 0; r < rooms.Length; r++) {
+            for (int c = 0; c < rooms[0].Length; c++) {
                 if (rooms[r][c] == 0) {
                     queue.Enqueue((r, c));
                 }
@@ -492,12 +492,12 @@ public class Solution {
         while (queue.Count > 0) {
             var (row, col) = queue.Dequeue();
             
-            for (int d = 0; d &lt; 4; d++) {
+            for (int d = 0; d < 4; d++) {
                 int nr = row + dr[d];
                 int nc = col + dc[d];
                 
-                if (nr >= 0 && nr &lt; rooms.Length && 
-                    nc >= 0 && nc &lt; rooms[0].Length && 
+                if (nr >= 0 && nr < rooms.Length && 
+                    nc >= 0 && nc < rooms[0].Length && 
                     rooms[nr][nc] == INF) {
                     rooms[nr][nc] = rooms[row][col] + 1;
                     queue.Enqueue((nr, nc));
@@ -536,9 +536,9 @@ Detect cycle in directed graph using DFS or topological sort.
 public class Solution {
     public bool CanFinish(int numCourses, int[][] prerequisites) {
         // Build adjacency list
-        Dictionary&lt;int, List&lt;int>> graph = new Dictionary&lt;int, List&lt;int>>();
-        for (int i = 0; i &lt; numCourses; i++) {
-            graph[i] = new List&lt;int>();
+        Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+        for (int i = 0; i < numCourses; i++) {
+            graph[i] = new List<int>();
         }
         foreach (var prereq in prerequisites) {
             graph[prereq[0]].Add(prereq[1]);
@@ -547,7 +547,7 @@ public class Solution {
         // 0 = unvisited, 1 = visiting (in current path), 2 = visited
         int[] state = new int[numCourses];
         
-        for (int course = 0; course &lt; numCourses; course++) {
+        for (int course = 0; course < numCourses; course++) {
             if (!DFS(graph, course, state)) {
                 return false;
             }
@@ -556,7 +556,7 @@ public class Solution {
         return true;
     }
     
-    private bool DFS(Dictionary&lt;int, List&lt;int>> graph, int course, int[] state) {
+    private bool DFS(Dictionary<int, List<int>> graph, int course, int[] state) {
         if (state[course] == 1) return false;  // Cycle detected
         if (state[course] == 2) return true;   // Already processed
         
@@ -582,10 +582,10 @@ public class Solution {
 public class Solution {
     public bool CanFinish(int numCourses, int[][] prerequisites) {
         int[] inDegree = new int[numCourses];
-        Dictionary&lt;int, List&lt;int>> graph = new Dictionary&lt;int, List&lt;int>>();
+        Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
         
-        for (int i = 0; i &lt; numCourses; i++) {
-            graph[i] = new List&lt;int>();
+        for (int i = 0; i < numCourses; i++) {
+            graph[i] = new List<int>();
         }
         
         foreach (var prereq in prerequisites) {
@@ -593,8 +593,8 @@ public class Solution {
             inDegree[prereq[0]]++;
         }
         
-        Queue&lt;int> queue = new Queue&lt;int>();
-        for (int i = 0; i &lt; numCourses; i++) {
+        Queue<int> queue = new Queue<int>();
+        for (int i = 0; i < numCourses; i++) {
             if (inDegree[i] == 0) queue.Enqueue(i);
         }
         
@@ -637,10 +637,10 @@ Return the ordering of courses to finish all courses. Return empty array if impo
 public class Solution {
     public int[] FindOrder(int numCourses, int[][] prerequisites) {
         int[] inDegree = new int[numCourses];
-        Dictionary&lt;int, List&lt;int>> graph = new Dictionary&lt;int, List&lt;int>>();
+        Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
         
-        for (int i = 0; i &lt; numCourses; i++) {
-            graph[i] = new List&lt;int>();
+        for (int i = 0; i < numCourses; i++) {
+            graph[i] = new List<int>();
         }
         
         foreach (var prereq in prerequisites) {
@@ -648,12 +648,12 @@ public class Solution {
             inDegree[prereq[0]]++;
         }
         
-        Queue&lt;int> queue = new Queue&lt;int>();
-        for (int i = 0; i &lt; numCourses; i++) {
+        Queue<int> queue = new Queue<int>();
+        for (int i = 0; i < numCourses; i++) {
             if (inDegree[i] == 0) queue.Enqueue(i);
         }
         
-        List&lt;int> order = new List&lt;int>();
+        List<int> order = new List<int>();
         while (queue.Count > 0) {
             int course = queue.Dequeue();
             order.Add(course);
@@ -693,7 +693,7 @@ public class Solution {
         parent = new int[n + 1];
         rank = new int[n + 1];
         
-        for (int i = 0; i &lt;= n; i++) {
+        for (int i = 0; i <= n; i++) {
             parent[i] = i;
             rank[i] = 1;
         }
@@ -723,7 +723,7 @@ public class Solution {
         // Union by rank
         if (rank[px] > rank[py]) {
             parent[py] = px;
-        } else if (rank[px] &lt; rank[py]) {
+        } else if (rank[px] < rank[py]) {
             parent[px] = py;
         } else {
             parent[py] = px;
@@ -758,7 +758,7 @@ public class Solution {
     
     public int CountComponents(int n, int[][] edges) {
         parent = new int[n];
-        for (int i = 0; i &lt; n; i++) parent[i] = i;
+        for (int i = 0; i < n; i++) parent[i] = i;
         
         int components = n;
         
@@ -794,8 +794,8 @@ public class Solution {
 ```csharp
 public class Solution {
     public int CountComponents(int n, int[][] edges) {
-        Dictionary&lt;int, List&lt;int>> graph = new Dictionary&lt;int, List&lt;int>>();
-        for (int i = 0; i &lt; n; i++) graph[i] = new List&lt;int>();
+        Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+        for (int i = 0; i < n; i++) graph[i] = new List<int>();
         
         foreach (var edge in edges) {
             graph[edge[0]].Add(edge[1]);
@@ -805,7 +805,7 @@ public class Solution {
         bool[] visited = new bool[n];
         int components = 0;
         
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             if (!visited[i]) {
                 DFS(graph, i, visited);
                 components++;
@@ -815,7 +815,7 @@ public class Solution {
         return components;
     }
     
-    private void DFS(Dictionary&lt;int, List&lt;int>> graph, int node, bool[] visited) {
+    private void DFS(Dictionary<int, List<int>> graph, int node, bool[] visited) {
         visited[node] = true;
         foreach (int neighbor in graph[node]) {
             if (!visited[neighbor]) {
@@ -847,7 +847,7 @@ public class Solution {
         if (edges.Length != n - 1) return false;
         
         parent = new int[n];
-        for (int i = 0; i &lt; n; i++) parent[i] = i;
+        for (int i = 0; i < n; i++) parent[i] = i;
         
         foreach (var edge in edges) {
             if (!Union(edge[0], edge[1])) {
@@ -902,14 +902,14 @@ Output: 5 ("hit" -> "hot" -> "dot" -> "dog" -> "cog")
 
 ```csharp
 public class Solution {
-    public int LadderLength(string beginWord, string endWord, IList&lt;string> wordList) {
-        HashSet&lt;string> wordSet = new HashSet&lt;string>(wordList);
+    public int LadderLength(string beginWord, string endWord, IList<string> wordList) {
+        HashSet<string> wordSet = new HashSet<string>(wordList);
         if (!wordSet.Contains(endWord)) return 0;
         
-        Queue&lt;string> queue = new Queue&lt;string>();
+        Queue<string> queue = new Queue<string>();
         queue.Enqueue(beginWord);
         
-        HashSet&lt;string> visited = new HashSet&lt;string>();
+        HashSet<string> visited = new HashSet<string>();
         visited.Add(beginWord);
         
         int length = 1;
@@ -917,16 +917,16 @@ public class Solution {
         while (queue.Count > 0) {
             int size = queue.Count;
             
-            for (int i = 0; i &lt; size; i++) {
+            for (int i = 0; i < size; i++) {
                 string word = queue.Dequeue();
                 
                 if (word == endWord) return length;
                 
                 char[] chars = word.ToCharArray();
-                for (int j = 0; j &lt; chars.Length; j++) {
+                for (int j = 0; j < chars.Length; j++) {
                     char originalChar = chars[j];
                     
-                    for (char c = 'a'; c &lt;= 'z'; c++) {
+                    for (char c = 'a'; c <= 'z'; c++) {
                         if (c == originalChar) continue;
                         
                         chars[j] = c;
@@ -981,7 +981,7 @@ class UnionFind {
     public UnionFind(int n) {
         parent = new int[n];
         rank = new int[n];
-        for (int i = 0; i &lt; n; i++) parent[i] = i;
+        for (int i = 0; i < n; i++) parent[i] = i;
     }
     
     public int Find(int x) {
@@ -992,7 +992,7 @@ class UnionFind {
     public bool Union(int x, int y) {
         int px = Find(x), py = Find(y);
         if (px == py) return false;
-        if (rank[px] &lt; rank[py]) { int t = px; px = py; py = t; }
+        if (rank[px] < rank[py]) { int t = px; px = py; py = t; }
         parent[py] = px;
         if (rank[px] == rank[py]) rank[px]++;
         return true;

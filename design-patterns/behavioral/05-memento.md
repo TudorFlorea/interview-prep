@@ -88,7 +88,7 @@ namespace MementoPattern
 
         public GameState GetState()
         {
-            return JsonSerializer.Deserialize&lt;GameState>(_serializedState)!;
+            return JsonSerializer.Deserialize<GameState>(_serializedState)!;
         }
 
         public override string ToString() => 
@@ -106,7 +106,7 @@ namespace MementoPattern
         public int Health { get; set; }
         public int Score { get; set; }
         public string CurrentLocation { get; set; } = "Start";
-        public List&lt;string> Inventory { get; set; } = new();
+        public List<string> Inventory { get; set; } = new();
     }
 
     // ═══════════════════════════════════════════════════════════════
@@ -126,7 +126,7 @@ namespace MementoPattern
                 Health = 100,
                 Score = 0,
                 CurrentLocation = "Village",
-                Inventory = new List&lt;string> { "Wooden Sword" }
+                Inventory = new List<string> { "Wooden Sword" }
             };
         }
 
@@ -201,7 +201,7 @@ namespace MementoPattern
     
     public class SaveManager
     {
-        private readonly List&lt;GameMemento> _saves = new();
+        private readonly List<GameMemento> _saves = new();
         private readonly int _maxSaves;
 
         public SaveManager(int maxSaves = 5)
@@ -227,7 +227,7 @@ namespace MementoPattern
 
         public GameMemento? GetSave(int index)
         {
-            if (index >= 0 && index &lt; _saves.Count)
+            if (index >= 0 && index < _saves.Count)
                 return _saves[index];
             return null;
         }
@@ -240,7 +240,7 @@ namespace MementoPattern
                 Console.WriteLine("    (No saves available)");
                 return;
             }
-            for (int i = 0; i &lt; _saves.Count; i++)
+            for (int i = 0; i < _saves.Count; i++)
             {
                 Console.WriteLine($"    [{i}] {_saves[i]}");
             }
@@ -269,8 +269,8 @@ namespace MementoPattern
     {
         private string _content = "";
         private int _cursor = 0;
-        private readonly Stack&lt;EditorMemento> _undoStack = new();
-        private readonly Stack&lt;EditorMemento> _redoStack = new();
+        private readonly Stack<EditorMemento> _undoStack = new();
+        private readonly Stack<EditorMemento> _redoStack = new();
 
         private void SaveState()
         {
@@ -294,7 +294,7 @@ namespace MementoPattern
 
         public void Backspace(int count)
         {
-            if (_cursor &lt; count) return;
+            if (_cursor < count) return;
             SaveState();
             _cursor -= count;
             _content = _content.Remove(_cursor, count);
@@ -494,7 +494,7 @@ namespace MementoPattern
 // ❌ BAD: Memento exposes mutable state
 public class BadMemento
 {
-    public List&lt;string> Items { get; set; }  // Can be modified!
+    public List<string> Items { get; set; }  // Can be modified!
 }
 
 // ✅ GOOD: Immutable memento
@@ -502,14 +502,14 @@ public class GoodMemento
 {
     private readonly string _serializedState;
     
-    public GoodMemento(List&lt;string> items)
+    public GoodMemento(List<string> items)
     {
         _serializedState = JsonSerializer.Serialize(items);
     }
     
-    public List&lt;string> GetState()
+    public List<string> GetState()
     {
-        return JsonSerializer.Deserialize&lt;List&lt;string>>(_serializedState)!;
+        return JsonSerializer.Deserialize<List<string>>(_serializedState)!;
     }
 }
 ```
@@ -522,7 +522,7 @@ public class GoodMemento
 
 public class LimitedHistory
 {
-    private readonly LinkedList&lt;Memento> _history = new();
+    private readonly LinkedList<Memento> _history = new();
     private readonly int _maxSize = 100;
 
     public void Add(Memento m)

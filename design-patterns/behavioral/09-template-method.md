@@ -106,19 +106,19 @@ namespace TemplateMethodPattern
 
         // Abstract methods - MUST be implemented
         protected abstract string OpenFile(string path);
-        protected abstract List&lt;string> ExtractData(string rawData);
+        protected abstract List<string> ExtractData(string rawData);
 
         // Default implementation - CAN be overridden
-        protected virtual List&lt;string> ParseData(List&lt;string> data)
+        protected virtual List<string> ParseData(List<string> data)
         {
             Console.WriteLine("  📝 Parsing data (default: no transformation)");
             return data;
         }
 
-        protected virtual Dictionary&lt;string, int> AnalyzeData(List&lt;string> data)
+        protected virtual Dictionary<string, int> AnalyzeData(List<string> data)
         {
             Console.WriteLine("  🔍 Analyzing data...");
-            var wordCount = new Dictionary&lt;string, int>();
+            var wordCount = new Dictionary<string, int>();
             foreach (var item in data)
             {
                 foreach (var word in item.Split(' ', StringSplitOptions.RemoveEmptyEntries))
@@ -131,7 +131,7 @@ namespace TemplateMethodPattern
         }
 
         // Hook methods - empty by default, CAN be overridden
-        protected virtual void SendReport(Dictionary&lt;string, int> analysis)
+        protected virtual void SendReport(Dictionary<string, int> analysis)
         {
             Console.WriteLine("  📧 Sending report...");
             Console.WriteLine($"    Total unique words: {analysis.Count}");
@@ -156,11 +156,11 @@ namespace TemplateMethodPattern
             return "PDF content: Lorem ipsum dolor sit amet consectetur adipiscing elit";
         }
 
-        protected override List&lt;string> ExtractData(string rawData)
+        protected override List<string> ExtractData(string rawData)
         {
             Console.WriteLine("  📤 Extracting text from PDF layers...");
             // Simulate PDF text extraction
-            return new List&lt;string> { rawData.Replace("PDF content: ", "") };
+            return new List<string> { rawData.Replace("PDF content: ", "") };
         }
 
         protected override void CloseFile()
@@ -178,11 +178,11 @@ namespace TemplateMethodPattern
             return "Name,Age,City\nAlice,30,NYC\nBob,25,LA\nCharlie,35,Chicago";
         }
 
-        protected override List&lt;string> ExtractData(string rawData)
+        protected override List<string> ExtractData(string rawData)
         {
             Console.WriteLine("  📤 Extracting rows from CSV...");
             var lines = rawData.Split('\n');
-            var data = new List&lt;string>();
+            var data = new List<string>();
             foreach (var line in lines)
             {
                 data.Add(line);
@@ -191,18 +191,18 @@ namespace TemplateMethodPattern
             return data;
         }
 
-        protected override List&lt;string> ParseData(List&lt;string> data)
+        protected override List<string> ParseData(List<string> data)
         {
             Console.WriteLine("  📝 Parsing CSV structure...");
-            var parsed = new List&lt;string>();
+            var parsed = new List<string>();
             if (data.Count > 0)
             {
                 var headers = data[0].Split(',');
-                for (int i = 1; i &lt; data.Count; i++)
+                for (int i = 1; i < data.Count; i++)
                 {
                     var values = data[i].Split(',');
                     var sb = new StringBuilder();
-                    for (int j = 0; j &lt; headers.Length; j++)
+                    for (int j = 0; j < headers.Length; j++)
                     {
                         sb.Append($"{headers[j]}={values[j]} ");
                     }
@@ -222,15 +222,15 @@ namespace TemplateMethodPattern
             return "DOC: This is a sample Word document with important data";
         }
 
-        protected override List&lt;string> ExtractData(string rawData)
+        protected override List<string> ExtractData(string rawData)
         {
             Console.WriteLine("  📤 Extracting paragraphs from DOC...");
             var content = rawData.Replace("DOC: ", "");
-            return new List&lt;string> { content };
+            return new List<string> { content };
         }
 
         // Override hook to add custom reporting
-        protected override void SendReport(Dictionary&lt;string, int> analysis)
+        protected override void SendReport(Dictionary<string, int> analysis)
         {
             base.SendReport(analysis);
             Console.WriteLine("    📊 Top words:");
@@ -341,7 +341,7 @@ namespace TemplateMethodPattern
             Console.WriteLine("  🔥 Casting fireballs from safe distance!");
         }
 
-        protected override bool ShouldRetreat() => _random.Next(100) &lt; 30;  // 30% chance
+        protected override bool ShouldRetreat() => _random.Next(100) < 30;  // 30% chance
     }
 
     public class DefenderAI : GameAI
@@ -452,7 +452,7 @@ namespace TemplateMethodPattern
         protected override bool AdditionalValidation()
         {
             Console.WriteLine($"  💳 Checking sufficient funds for ${_amount}...");
-            return _amount &lt; 10000; // Simulate limit
+            return _amount < 10000; // Simulate limit
         }
 
         protected override void PerformOperation()

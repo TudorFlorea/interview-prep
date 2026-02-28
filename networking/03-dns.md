@@ -352,7 +352,7 @@ Providers:
 │  database.internal.company.com         → 10.0.3.30                      │
 │                                                                          │
 │  Kubernetes DNS:                                                         │
-│  &lt;service>.&lt;namespace>.svc.cluster.local                                │
+│  <service>.<namespace>.svc.cluster.local                                │
 │                                                                          │
 │  my-api.default.svc.cluster.local      → ClusterIP                      │
 │  postgres.database.svc.cluster.local   → ClusterIP                      │
@@ -538,7 +538,7 @@ Debug systematically using DNS tools.
 # 1. Basic resolution test
 $ dig api.internal.company.com
 ;; Got answer:
-;; ->>HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN
 # NXDOMAIN = domain doesn't exist (in this DNS server's view)
 
 # 2. Check what DNS server you're using
@@ -549,7 +549,7 @@ nameserver 8.8.8.8      # Google
 # 3. Try internal DNS server directly
 $ dig @10.0.0.53 api.internal.company.com
 ;; Got answer:
-;; ->>HEADER&lt;&lt;- opcode: QUERY, status: NOERROR
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR
 api.internal.company.com. 300 IN A 10.0.5.100
 # Works with internal DNS!
 
@@ -605,7 +605,7 @@ kubectl run -it --rm debug --image=alpine -- nslookup kubernetes.default
 # Create dnsmasq configuration
 mkdir -p dns-lab && cd dns-lab
 
-cat > dnsmasq.conf &lt;&lt; 'EOF'
+cat > dnsmasq.conf << 'EOF'
 # Don't use /etc/resolv.conf
 no-resolv
 

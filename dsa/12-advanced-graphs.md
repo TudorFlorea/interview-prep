@@ -18,11 +18,11 @@ Advanced graph problems involve weighted edges, complex traversals, and algorith
 
 ### Dijkstra's Template
 ```csharp
-int[] Dijkstra(int start, Dictionary&lt;int, List&lt;(int node, int weight)>> graph, int n) {
+int[] Dijkstra(int start, Dictionary<int, List<(int node, int weight)>> graph, int n) {
     int[] dist = Enumerable.Repeat(int.MaxValue, n).ToArray();
     dist[start] = 0;
     
-    PriorityQueue&lt;int, int> pq = new PriorityQueue&lt;int, int>();
+    PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
     pq.Enqueue(start, 0);
     
     while (pq.Count > 0) {
@@ -30,7 +30,7 @@ int[] Dijkstra(int start, Dictionary&lt;int, List&lt;(int node, int weight)>> gr
         
         foreach (var (neighbor, weight) in graph[node]) {
             int newDist = dist[node] + weight;
-            if (newDist &lt; dist[neighbor]) {
+            if (newDist < dist[neighbor]) {
                 dist[neighbor] = newDist;
                 pq.Enqueue(neighbor, newDist);
             }
@@ -66,27 +66,27 @@ Hierholzer's algorithm for Eulerian path. Use each edge exactly once.
 
 ```csharp
 public class Solution {
-    public IList&lt;string> FindItinerary(IList&lt;IList&lt;string>> tickets) {
+    public IList<string> FindItinerary(IList<IList<string>> tickets) {
         // Build adjacency list with sorted destinations (for lex order)
-        Dictionary&lt;string, LinkedList&lt;string>> graph = new Dictionary&lt;string, LinkedList&lt;string>>();
+        Dictionary<string, LinkedList<string>> graph = new Dictionary<string, LinkedList<string>>();
         
         // Sort tickets by destination
         var sortedTickets = tickets.OrderBy(t => t[1]).ToList();
         
         foreach (var ticket in sortedTickets) {
             if (!graph.ContainsKey(ticket[0])) {
-                graph[ticket[0]] = new LinkedList&lt;string>();
+                graph[ticket[0]] = new LinkedList<string>();
             }
             graph[ticket[0]].AddLast(ticket[1]);
         }
         
-        LinkedList&lt;string> result = new LinkedList&lt;string>();
+        LinkedList<string> result = new LinkedList<string>();
         DFS("JFK", graph, result);
         
         return result.ToList();
     }
     
-    private void DFS(string airport, Dictionary&lt;string, LinkedList&lt;string>> graph, LinkedList&lt;string> result) {
+    private void DFS(string airport, Dictionary<string, LinkedList<string>> graph, LinkedList<string> result) {
         if (graph.ContainsKey(airport)) {
             while (graph[airport].Count > 0) {
                 string next = graph[airport].First.Value;
@@ -133,13 +133,13 @@ public class Solution {
         bool[] visited = new bool[n];
         
         // Min-heap: (cost, pointIndex)
-        PriorityQueue&lt;(int cost, int point), int> pq = new PriorityQueue&lt;(int, int), int>();
+        PriorityQueue<(int cost, int point), int> pq = new PriorityQueue<(int, int), int>();
         pq.Enqueue((0, 0), 0);  // Start from point 0
         
         int totalCost = 0;
         int edgesUsed = 0;
         
-        while (edgesUsed &lt; n) {
+        while (edgesUsed < n) {
             var (cost, point) = pq.Dequeue();
             
             if (visited[point]) continue;
@@ -149,7 +149,7 @@ public class Solution {
             edgesUsed++;
             
             // Add edges to unvisited points
-            for (int next = 0; next &lt; n; next++) {
+            for (int next = 0; next < n; next++) {
                 if (!visited[next]) {
                     int dist = Math.Abs(points[point][0] - points[next][0]) + 
                                Math.Abs(points[point][1] - points[next][1]);
@@ -173,11 +173,11 @@ public class Solution {
     
     public int MinCostConnectPoints(int[][] points) {
         int n = points.Length;
-        List&lt;(int cost, int u, int v)> edges = new List&lt;(int, int, int)>();
+        List<(int cost, int u, int v)> edges = new List<(int, int, int)>();
         
         // Build all edges
-        for (int i = 0; i &lt; n; i++) {
-            for (int j = i + 1; j &lt; n; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 int cost = Math.Abs(points[i][0] - points[j][0]) + 
                            Math.Abs(points[i][1] - points[j][1]);
                 edges.Add((cost, i, j));
@@ -189,7 +189,7 @@ public class Solution {
         
         // Union-Find
         parent = new int[n];
-        for (int i = 0; i &lt; n; i++) parent[i] = i;
+        for (int i = 0; i < n; i++) parent[i] = i;
         
         int totalCost = 0;
         int edgesUsed = 0;
@@ -246,8 +246,8 @@ Output: 2
 public class Solution {
     public int NetworkDelayTime(int[][] times, int n, int k) {
         // Build graph
-        Dictionary&lt;int, List&lt;(int node, int time)>> graph = new Dictionary&lt;int, List&lt;(int, int)>>();
-        for (int i = 1; i &lt;= n; i++) graph[i] = new List&lt;(int, int)>();
+        Dictionary<int, List<(int node, int time)>> graph = new Dictionary<int, List<(int, int)>>();
+        for (int i = 1; i <= n; i++) graph[i] = new List<(int, int)>();
         
         foreach (var time in times) {
             graph[time[0]].Add((time[1], time[2]));
@@ -257,7 +257,7 @@ public class Solution {
         int[] dist = Enumerable.Repeat(int.MaxValue, n + 1).ToArray();
         dist[k] = 0;
         
-        PriorityQueue&lt;int, int> pq = new PriorityQueue&lt;int, int>();
+        PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
         pq.Enqueue(k, 0);
         
         while (pq.Count > 0) {
@@ -265,7 +265,7 @@ public class Solution {
             
             foreach (var (neighbor, time) in graph[node]) {
                 int newDist = dist[node] + time;
-                if (newDist &lt; dist[neighbor]) {
+                if (newDist < dist[neighbor]) {
                     dist[neighbor] = newDist;
                     pq.Enqueue(neighbor, newDist);
                 }
@@ -273,7 +273,7 @@ public class Solution {
         }
         
         int maxTime = 0;
-        for (int i = 1; i &lt;= n; i++) {
+        for (int i = 1; i <= n; i++) {
             if (dist[i] == int.MaxValue) return -1;
             maxTime = Math.Max(maxTime, dist[i]);
         }
@@ -311,13 +311,13 @@ public class Solution {
     public int SwimInWater(int[][] grid) {
         int n = grid.Length;
         int[][] dist = new int[n][];
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             dist[i] = Enumerable.Repeat(int.MaxValue, n).ToArray();
         }
         
         dist[0][0] = grid[0][0];
         
-        PriorityQueue&lt;(int r, int c), int> pq = new PriorityQueue&lt;(int, int), int>();
+        PriorityQueue<(int r, int c), int> pq = new PriorityQueue<(int, int), int>();
         pq.Enqueue((0, 0), grid[0][0]);
         
         int[] dr = {0, 0, 1, -1};
@@ -330,13 +330,13 @@ public class Solution {
                 return dist[row][col];
             }
             
-            for (int d = 0; d &lt; 4; d++) {
+            for (int d = 0; d < 4; d++) {
                 int nr = row + dr[d];
                 int nc = col + dc[d];
                 
-                if (nr >= 0 && nr &lt; n && nc >= 0 && nc &lt; n) {
+                if (nr >= 0 && nr < n && nc >= 0 && nc < n) {
                     int newDist = Math.Max(dist[row][col], grid[nr][nc]);
-                    if (newDist &lt; dist[nr][nc]) {
+                    if (newDist < dist[nr][nc]) {
                         dist[nr][nc] = newDist;
                         pq.Enqueue((nr, nc), newDist);
                     }
@@ -359,7 +359,7 @@ public class Solution {
         int n = grid.Length;
         int left = grid[0][0], right = n * n - 1;
         
-        while (left &lt; right) {
+        while (left < right) {
             int mid = (left + right) / 2;
             if (CanReach(grid, mid)) {
                 right = mid;
@@ -375,7 +375,7 @@ public class Solution {
         int n = grid.Length;
         if (grid[0][0] > t) return false;
         
-        Queue&lt;(int, int)> queue = new Queue&lt;(int, int)>();
+        Queue<(int, int)> queue = new Queue<(int, int)>();
         bool[,] visited = new bool[n, n];
         queue.Enqueue((0, 0));
         visited[0, 0] = true;
@@ -388,12 +388,12 @@ public class Solution {
             
             if (row == n - 1 && col == n - 1) return true;
             
-            for (int d = 0; d &lt; 4; d++) {
+            for (int d = 0; d < 4; d++) {
                 int nr = row + dr[d];
                 int nc = col + dc[d];
                 
-                if (nr >= 0 && nr &lt; n && nc >= 0 && nc &lt; n && 
-                    !visited[nr, nc] && grid[nr][nc] &lt;= t) {
+                if (nr >= 0 && nr < n && nc >= 0 && nc < n && 
+                    !visited[nr, nc] && grid[nr][nc] <= t) {
                     visited[nr, nc] = true;
                     queue.Enqueue((nr, nc));
                 }
@@ -435,21 +435,21 @@ Build a graph from adjacent word pairs, then topological sort.
 public class Solution {
     public string AlienOrder(string[] words) {
         // Build graph
-        Dictionary&lt;char, HashSet&lt;char>> graph = new Dictionary&lt;char, HashSet&lt;char>>();
-        Dictionary&lt;char, int> inDegree = new Dictionary&lt;char, int>();
+        Dictionary<char, HashSet<char>> graph = new Dictionary<char, HashSet<char>>();
+        Dictionary<char, int> inDegree = new Dictionary<char, int>();
         
         // Initialize all characters
         foreach (string word in words) {
             foreach (char c in word) {
                 if (!graph.ContainsKey(c)) {
-                    graph[c] = new HashSet&lt;char>();
+                    graph[c] = new HashSet<char>();
                     inDegree[c] = 0;
                 }
             }
         }
         
         // Build edges from adjacent words
-        for (int i = 0; i &lt; words.Length - 1; i++) {
+        for (int i = 0; i < words.Length - 1; i++) {
             string word1 = words[i];
             string word2 = words[i + 1];
             
@@ -459,7 +459,7 @@ public class Solution {
             }
             
             int minLen = Math.Min(word1.Length, word2.Length);
-            for (int j = 0; j &lt; minLen; j++) {
+            for (int j = 0; j < minLen; j++) {
                 if (word1[j] != word2[j]) {
                     // word1[j] comes before word2[j]
                     if (!graph[word1[j]].Contains(word2[j])) {
@@ -472,7 +472,7 @@ public class Solution {
         }
         
         // Topological sort (Kahn's)
-        Queue&lt;char> queue = new Queue&lt;char>();
+        Queue<char> queue = new Queue<char>();
         foreach (var kvp in inDegree) {
             if (kvp.Value == 0) queue.Enqueue(kvp.Key);
         }
@@ -528,7 +528,7 @@ public class Solution {
         prices[src] = 0;
         
         // k stops means k+1 edges
-        for (int i = 0; i &lt;= k; i++) {
+        for (int i = 0; i <= k; i++) {
             int[] temp = (int[])prices.Clone();
             
             foreach (var flight in flights) {
@@ -555,8 +555,8 @@ public class Solution {
 public class Solution {
     public int FindCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
         // Build graph
-        Dictionary&lt;int, List&lt;(int to, int price)>> graph = new Dictionary&lt;int, List&lt;(int, int)>>();
-        for (int i = 0; i &lt; n; i++) graph[i] = new List&lt;(int, int)>();
+        Dictionary<int, List<(int to, int price)>> graph = new Dictionary<int, List<(int, int)>>();
+        for (int i = 0; i < n; i++) graph[i] = new List<(int, int)>();
         
         foreach (var flight in flights) {
             graph[flight[0]].Add((flight[1], flight[2]));
@@ -566,21 +566,21 @@ public class Solution {
         dist[src] = 0;
         
         // BFS with stops tracking
-        Queue&lt;(int node, int cost)> queue = new Queue&lt;(int, int)>();
+        Queue<(int node, int cost)> queue = new Queue<(int, int)>();
         queue.Enqueue((src, 0));
         
         int stops = 0;
         
-        while (queue.Count > 0 && stops &lt;= k) {
+        while (queue.Count > 0 && stops <= k) {
             int size = queue.Count;
             
-            for (int i = 0; i &lt; size; i++) {
+            for (int i = 0; i < size; i++) {
                 var (node, cost) = queue.Dequeue();
                 
                 foreach (var (next, price) in graph[node]) {
                     int newCost = cost + price;
                     
-                    if (newCost &lt; dist[next]) {
+                    if (newCost < dist[next]) {
                         dist[next] = newCost;
                         queue.Enqueue((next, newCost));
                     }
@@ -629,10 +629,10 @@ public class Solution {
 
 ```csharp
 // Dijkstra's: shortest path with non-negative weights
-PriorityQueue&lt;(node, dist), int> pq;  // Min-heap by distance
+PriorityQueue<(node, dist), int> pq;  // Min-heap by distance
 while (pq.Count > 0) {
     var (node, d) = pq.Dequeue();
-    foreach neighbor: if dist[node] + weight &lt; dist[neighbor]: update and enqueue
+    foreach neighbor: if dist[node] + weight < dist[neighbor]: update and enqueue
 }
 
 // Bellman-Ford: k iterations for at most k edges
@@ -640,7 +640,7 @@ for (i = 0 to k):
     foreach edge: relax with temp array
 
 // MST Prim's: grow tree, always add minimum edge
-while (nodes &lt; n):
+while (nodes < n):
     pick minimum edge to unvisited node
     add to tree
 

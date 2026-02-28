@@ -163,7 +163,7 @@ public class Solution {
         ListNode current = dummy;
         
         while (list1 != null && list2 != null) {
-            if (list1.val &lt;= list2.val) {
+            if (list1.val <= list2.val) {
                 current.next = list1;
                 list1 = list1.next;
             } else {
@@ -193,7 +193,7 @@ public class Solution {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
         
-        if (list1.val &lt;= list2.val) {
+        if (list1.val <= list2.val) {
             list1.next = MergeTwoLists(list1.next, list2);
             return list1;
         } else {
@@ -321,7 +321,7 @@ public class Solution {
         ListNode slow = dummy, fast = dummy;
         
         // Move fast n+1 steps ahead (so slow ends up before target)
-        for (int i = 0; i &lt;= n; i++) {
+        for (int i = 0; i <= n; i++) {
             fast = fast.next;
         }
         
@@ -372,7 +372,7 @@ public class Solution {
     public Node CopyRandomList(Node head) {
         if (head == null) return null;
         
-        Dictionary&lt;Node, Node> map = new Dictionary&lt;Node, Node>();
+        Dictionary<Node, Node> map = new Dictionary<Node, Node>();
         
         // First pass: create all nodes
         Node current = head;
@@ -533,7 +533,7 @@ Track visited nodes.
 ```csharp
 public class Solution {
     public bool HasCycle(ListNode head) {
-        HashSet&lt;ListNode> visited = new HashSet&lt;ListNode>();
+        HashSet<ListNode> visited = new HashSet<ListNode>();
         
         while (head != null) {
             if (visited.Contains(head)) {
@@ -683,13 +683,13 @@ public class LRUCache {
         }
     }
     
-    private Dictionary&lt;int, Node> cache;
+    private Dictionary<int, Node> cache;
     private Node head, tail;  // Dummy nodes
     private int capacity;
     
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        cache = new Dictionary&lt;int, Node>();
+        cache = new Dictionary<int, Node>();
         
         // Initialize dummy head and tail
         head = new Node(0, 0);
@@ -790,7 +790,7 @@ public class Solution {
         ListNode current = dummy;
         
         while (l1 != null && l2 != null) {
-            if (l1.val &lt;= l2.val) {
+            if (l1.val <= l2.val) {
                 current.next = l1;
                 l1 = l1.next;
             } else {
@@ -818,7 +818,7 @@ public class Solution {
         if (lists == null || lists.Length == 0) return null;
         
         // Min-heap by node value
-        PriorityQueue&lt;ListNode, int> minHeap = new PriorityQueue&lt;ListNode, int>();
+        PriorityQueue<ListNode, int> minHeap = new PriorityQueue<ListNode, int>();
         
         // Add first node of each list
         foreach (var list in lists) {
@@ -874,7 +874,7 @@ public class Solution {
         ListNode current = dummy;
         
         while (l1 != null && l2 != null) {
-            if (l1.val &lt;= l2.val) {
+            if (l1.val <= l2.val) {
                 current.next = l1; l1 = l1.next;
             } else {
                 current.next = l2; l2 = l2.next;
@@ -1030,8 +1030,8 @@ public class ListNode {
     }
 }
 
-// Built-in LinkedList&lt;T> is doubly linked
-LinkedList&lt;int> list = new LinkedList&lt;int>();
+// Built-in LinkedList<T> is doubly linked
+LinkedList<int> list = new LinkedList<int>();
 list.AddFirst(1);
 list.AddLast(2);
 list.RemoveFirst();

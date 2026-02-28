@@ -47,7 +47,7 @@ Write queries that can leverage indexes.
 SELECT * FROM users WHERE YEAR(created_at) = 2024;
 
 -- ✅ Good: Range condition uses index
-SELECT * FROM users WHERE created_at >= '2024-01-01' AND created_at &lt; '2025-01-01';
+SELECT * FROM users WHERE created_at >= '2024-01-01' AND created_at < '2025-01-01';
 
 -- ❌ Bad: Implicit type conversion
 SELECT * FROM users WHERE phone = 5551234567;  -- phone is VARCHAR
@@ -170,8 +170,8 @@ SELECT * FROM orders WHERE order_date + INTERVAL 7 DAY > NOW();
 SELECT * FROM users WHERE LOWER(email) = 'alice@example.com';
 
 -- ✅ Rewrite to preserve index usage
-SELECT * FROM orders WHERE order_date >= '2024-01-15' AND order_date &lt; '2024-01-16';
-SELECT * FROM orders WHERE order_date >= '2024-01-01' AND order_date &lt; '2025-01-01';
+SELECT * FROM orders WHERE order_date >= '2024-01-15' AND order_date < '2024-01-16';
+SELECT * FROM orders WHERE order_date >= '2024-01-01' AND order_date < '2025-01-01';
 SELECT * FROM orders WHERE order_date > NOW() - INTERVAL 7 DAY;
 -- For case-insensitive: create expression index on LOWER(email) or use CITEXT type
 ```
@@ -402,7 +402,7 @@ SELECT * FROM products ORDER BY created_at DESC, id DESC LIMIT 20;
 
 -- Next pages: use last row's values
 SELECT * FROM products 
-WHERE (created_at, id) &lt; ('2024-01-15 10:30:00', 12345)
+WHERE (created_at, id) < ('2024-01-15 10:30:00', 12345)
 ORDER BY created_at DESC, id DESC 
 LIMIT 20;
 
@@ -478,9 +478,9 @@ WHERE (SELECT COUNT(*) FROM orders o WHERE o.customer_id = c.id) > 0;
 -- Query 1: Use date range instead of function
 SELECT * FROM users 
 WHERE created_at >= DATE_TRUNC('year', NOW())
-  AND created_at &lt; DATE_TRUNC('year', NOW()) + INTERVAL '1 year';
+  AND created_at < DATE_TRUNC('year', NOW()) + INTERVAL '1 year';
 -- Or simply:
--- WHERE created_at >= '2024-01-01' AND created_at &lt; '2025-01-01';
+-- WHERE created_at >= '2024-01-01' AND created_at < '2025-01-01';
 
 -- Query 2: Use NOT EXISTS (safer with NULLs, often faster)
 SELECT * FROM products p
@@ -537,7 +537,7 @@ WHERE DATE(order_date) = '2024-01-15'
 
 -- Optimized query:
 SELECT * FROM orders 
-WHERE order_date >= '2024-01-15' AND order_date &lt; '2024-01-16'
+WHERE order_date >= '2024-01-15' AND order_date < '2024-01-16'
   AND status IN ('pending', 'processing')
   AND customer_email = 'john@example.com';  -- If case-sensitive is OK
 
@@ -595,7 +595,7 @@ WITH january_orders AS (
     -- Pre-filter orders for the month
     SELECT order_id, customer_id, order_date
     FROM orders
-    WHERE order_date >= '2024-01-01' AND order_date &lt; '2024-02-01'
+    WHERE order_date >= '2024-01-01' AND order_date < '2024-02-01'
 ),
 order_totals AS (
     -- Pre-aggregate order items

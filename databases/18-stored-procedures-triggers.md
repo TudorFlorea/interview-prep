@@ -360,7 +360,7 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
     -- Check order total is positive
-    IF NEW.total_amount &lt;= 0 THEN
+    IF NEW.total_amount <= 0 THEN
         RAISE EXCEPTION 'Order total must be positive';
     END IF;
     
@@ -660,7 +660,7 @@ BEGIN
     new_qty := old_qty + p_change;
     
     -- Prevent negative inventory
-    IF new_qty &lt; 0 THEN
+    IF new_qty < 0 THEN
         RAISE EXCEPTION 'Insufficient inventory. Available: %, Requested: %', old_qty, -p_change;
     END IF;
     

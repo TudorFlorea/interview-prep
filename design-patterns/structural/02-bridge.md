@@ -27,7 +27,7 @@ The Bridge pattern attempts to solve this problem by switching from inheritance 
          │   Abstraction   │
          │─────────────────│
          │ - impl: IImpl   │───────────►┌─────────────────┐
-         │ + Operation()   │            │ &lt;&lt;interface>>   │
+         │ + Operation()   │            │ <<interface>>   │
          └────────┬────────┘            │ IImplementation │
                   │                     │─────────────────│
                   │                     │ + OperationImpl │

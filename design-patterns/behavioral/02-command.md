@@ -81,7 +81,7 @@ namespace CommandPattern
 
         public string DeleteText(int position, int length)
         {
-            if (position &lt; 0 || position + length > _content.Length)
+            if (position < 0 || position + length > _content.Length)
                 throw new ArgumentOutOfRangeException();
 
             string deleted = _content.Substring(position, length);
@@ -212,8 +212,8 @@ namespace CommandPattern
     
     public class CommandManager
     {
-        private readonly Stack&lt;ICommand> _undoStack = new();
-        private readonly Stack&lt;ICommand> _redoStack = new();
+        private readonly Stack<ICommand> _undoStack = new();
+        private readonly Stack<ICommand> _redoStack = new();
 
         public void ExecuteCommand(ICommand command)
         {
@@ -264,7 +264,7 @@ namespace CommandPattern
     
     public class MacroCommand : ICommand
     {
-        private readonly List&lt;ICommand> _commands = new();
+        private readonly List<ICommand> _commands = new();
         private readonly string _name;
 
         public string Description => $"Macro: {_name} ({_commands.Count} commands)";
@@ -303,7 +303,7 @@ namespace CommandPattern
     
     public class CommandQueue
     {
-        private readonly Queue&lt;ICommand> _queue = new();
+        private readonly Queue<ICommand> _queue = new();
 
         public void Enqueue(ICommand command)
         {

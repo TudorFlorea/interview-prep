@@ -15,10 +15,10 @@ Interval problems involve ranges with start and end points. Common operations in
 ```
 Given intervals [a, b] and [c, d]:
 
-Overlapping:     |------|        max(a,c) &lt;= min(b,d)
+Overlapping:     |------|        max(a,c) <= min(b,d)
                     |------|
 
-Non-overlapping: |------|  |------|    b &lt; c or d &lt; a
+Non-overlapping: |------|  |------|    b < c or d < a
 
 Merged:          |-----------|        [min(a,c), max(b,d)]
 ```
@@ -46,18 +46,18 @@ Output: [[1,5],[6,9]]
 ```csharp
 public class Solution {
     public int[][] Insert(int[][] intervals, int[] newInterval) {
-        List&lt;int[]> result = new List&lt;int[]>();
+        List<int[]> result = new List<int[]>();
         int i = 0;
         int n = intervals.Length;
         
         // Add all intervals that come before newInterval
-        while (i &lt; n && intervals[i][1] &lt; newInterval[0]) {
+        while (i < n && intervals[i][1] < newInterval[0]) {
             result.Add(intervals[i]);
             i++;
         }
         
         // Merge overlapping intervals
-        while (i &lt; n && intervals[i][0] &lt;= newInterval[1]) {
+        while (i < n && intervals[i][0] <= newInterval[1]) {
             newInterval[0] = Math.Min(newInterval[0], intervals[i][0]);
             newInterval[1] = Math.Max(newInterval[1], intervals[i][1]);
             i++;
@@ -65,7 +65,7 @@ public class Solution {
         result.Add(newInterval);
         
         // Add all intervals that come after
-        while (i &lt; n) {
+        while (i < n) {
             result.Add(intervals[i]);
             i++;
         }
@@ -77,7 +77,7 @@ public class Solution {
 
 #### Key Takeaways
 - Three phases: before, overlap, after
-- Overlap condition: intervals[i].start &lt;= newInterval.end
+- Overlap condition: intervals[i].start <= newInterval.end
 - Merge by taking min start, max end
 
 ---
@@ -101,16 +101,16 @@ Output: [[1,6],[8,10],[15,18]]
 ```csharp
 public class Solution {
     public int[][] Merge(int[][] intervals) {
-        if (intervals.Length &lt;= 1) return intervals;
+        if (intervals.Length <= 1) return intervals;
         
         // Sort by start time
         Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
         
-        List&lt;int[]> result = new List&lt;int[]>();
+        List<int[]> result = new List<int[]>();
         int[] current = intervals[0];
         
-        for (int i = 1; i &lt; intervals.Length; i++) {
-            if (intervals[i][0] &lt;= current[1]) {
+        for (int i = 1; i < intervals.Length; i++) {
+            if (intervals[i][0] <= current[1]) {
                 // Overlapping: extend current interval
                 current[1] = Math.Max(current[1], intervals[i][1]);
             } else {
@@ -203,12 +203,12 @@ Output: false
 ```csharp
 public class Solution {
     public bool CanAttendMeetings(int[][] intervals) {
-        if (intervals.Length &lt;= 1) return true;
+        if (intervals.Length <= 1) return true;
         
         Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
         
-        for (int i = 1; i &lt; intervals.Length; i++) {
-            if (intervals[i][0] &lt; intervals[i - 1][1]) {
+        for (int i = 1; i < intervals.Length; i++) {
+            if (intervals[i][0] < intervals[i - 1][1]) {
                 return false;  // Overlap detected
             }
         }
@@ -243,7 +243,7 @@ Output: 2
 ```csharp
 public class Solution {
     public int MinMeetingRooms(int[][] intervals) {
-        List&lt;(int time, int type)> events = new List&lt;(int, int)>();
+        List<(int time, int type)> events = new List<(int, int)>();
         
         foreach (var interval in intervals) {
             events.Add((interval[0], 1));   // Start event
@@ -278,11 +278,11 @@ public class Solution {
         Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
         
         // Min-heap of end times
-        PriorityQueue&lt;int, int> pq = new PriorityQueue&lt;int, int>();
+        PriorityQueue<int, int> pq = new PriorityQueue<int, int>();
         
         foreach (var interval in intervals) {
             // If earliest ending meeting ends before this starts
-            if (pq.Count > 0 && pq.Peek() &lt;= interval[0]) {
+            if (pq.Count > 0 && pq.Peek() <= interval[0]) {
                 pq.Dequeue();  // Reuse that room
             }
             
@@ -328,7 +328,7 @@ public class Solution {
         Array.Sort(sortedQueries, (a, b) => queries[a].CompareTo(queries[b]));
         
         // Min-heap of (size, end) for active intervals
-        PriorityQueue&lt;(int size, int end), int> pq = new PriorityQueue&lt;(int, int), int>();
+        PriorityQueue<(int size, int end), int> pq = new PriorityQueue<(int, int), int>();
         
         int[] result = new int[queries.Length];
         int i = 0;
@@ -336,15 +336,15 @@ public class Solution {
         foreach (int qi in sortedQueries) {
             int q = queries[qi];
             
-            // Add all intervals that start &lt;= query
-            while (i &lt; intervals.Length && intervals[i][0] &lt;= q) {
+            // Add all intervals that start <= query
+            while (i < intervals.Length && intervals[i][0] <= q) {
                 int size = intervals[i][1] - intervals[i][0] + 1;
                 pq.Enqueue((size, intervals[i][1]), size);
                 i++;
             }
             
             // Remove intervals that end before query
-            while (pq.Count > 0 && pq.Peek().end &lt; q) {
+            while (pq.Count > 0 && pq.Peek().end < q) {
                 pq.Dequeue();
             }
             
@@ -358,8 +358,8 @@ public class Solution {
 
 #### Key Takeaways
 - Process queries in sorted order (offline)
-- Add intervals that could contain query (start &lt;= q)
-- Remove intervals that can't contain query (end &lt; q)
+- Add intervals that could contain query (start <= q)
+- Remove intervals that can't contain query (end < q)
 - Min-heap by size gives smallest containing interval
 
 ---
@@ -379,17 +379,17 @@ public class Solution {
 ### Overlap Detection
 ```csharp
 // Two intervals [a1, a2] and [b1, b2] overlap if:
-bool overlap = !(a2 &lt; b1 || b2 &lt; a1);
+bool overlap = !(a2 < b1 || b2 < a1);
 // Equivalent to:
-bool overlap = a1 &lt;= b2 && b1 &lt;= a2;
+bool overlap = a1 <= b2 && b1 <= a2;
 // Or:
-bool overlap = Math.Max(a1, b1) &lt;= Math.Min(a2, b2);
+bool overlap = Math.Max(a1, b1) <= Math.Min(a2, b2);
 ```
 
 ### Sweep Line Template
 ```csharp
 // For counting concurrent events
-List&lt;(int time, int delta)> events = new List&lt;(int, int)>();
+List<(int time, int delta)> events = new List<(int, int)>();
 foreach (var interval in intervals) {
     events.Add((interval.start, +1));
     events.Add((interval.end, -1));

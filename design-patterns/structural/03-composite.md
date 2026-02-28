@@ -26,7 +26,7 @@ For a product, it returns the product's price. For a box, it goes over each item
 
 ```
                     ┌─────────────────┐
-                    │  &lt;&lt;interface>>  │
+                    │  <<interface>>  │
                     │   IComponent    │
                     │─────────────────│
                     │ + Operation()   │
@@ -141,7 +141,7 @@ namespace CompositePattern
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             double len = bytes;
             int order = 0;
-            while (len >= 1024 && order &lt; sizes.Length - 1)
+            while (len >= 1024 && order < sizes.Length - 1)
             {
                 order++;
                 len /= 1024;
@@ -161,7 +161,7 @@ namespace CompositePattern
     public class Folder : IFileSystemItem
     {
         public string Name { get; }
-        private readonly List&lt;IFileSystemItem> _children = new();
+        private readonly List<IFileSystemItem> _children = new();
 
         public Folder(string name)
         {
@@ -178,7 +178,7 @@ namespace CompositePattern
             _children.Remove(item);
         }
 
-        public IReadOnlyList&lt;IFileSystemItem> Children => _children.AsReadOnly();
+        public IReadOnlyList<IFileSystemItem> Children => _children.AsReadOnly();
 
         public long GetSize()
         {
@@ -219,7 +219,7 @@ namespace CompositePattern
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             double len = bytes;
             int order = 0;
-            while (len >= 1024 && order &lt; sizes.Length - 1)
+            while (len >= 1024 && order < sizes.Length - 1)
             {
                 order++;
                 len /= 1024;
@@ -267,7 +267,7 @@ namespace CompositePattern
         public string Name { get; }
         public string Title { get; }
         public decimal Salary { get; }
-        private readonly List&lt;IEmployee> _subordinates = new();
+        private readonly List<IEmployee> _subordinates = new();
 
         public Manager(string name, string title, decimal salary)
         {
@@ -393,7 +393,7 @@ namespace CompositePattern
             Console.WriteLine("═══════════════════════════════════════════════\n");
 
             // Client code doesn't need to know if it's a file or folder
-            var items = new List&lt;IFileSystemItem>
+            var items = new List<IFileSystemItem>
             {
                 new File("single_file.txt", 1024),
                 src,  // This is a folder with nested content

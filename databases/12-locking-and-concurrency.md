@@ -367,7 +367,7 @@ InnoDB uses special locks to prevent phantom reads:
 -- Prevents inserts into that range
 
 -- Example: Table has id values 1, 5, 10
--- Query locks id > 3 AND id &lt; 7
+-- Query locks id > 3 AND id < 7
 -- Gap lock covers (5, 10) - prevents insert of id=7, 8, 9
 
 -- Next-Key Lock = Gap Lock + Record Lock
@@ -459,7 +459,7 @@ UPDATE accounts SET balance = 200 WHERE id = 1;
 SELECT * FROM orders WHERE customer_id = 5 FOR SHARE;
 
 -- Query 4
-DELETE FROM old_logs WHERE created_at &lt; '2020-01-01';
+DELETE FROM old_logs WHERE created_at < '2020-01-01';
 ```
 
 <details>
@@ -612,7 +612,7 @@ WHERE job_id = (
     SELECT job_id 
     FROM job_queue 
     WHERE status = 'pending' 
-      AND attempts &lt; max_attempts
+      AND attempts < max_attempts
     ORDER BY priority DESC, created_at
     LIMIT 1
     FOR UPDATE SKIP LOCKED  -- Key: Skip jobs other workers are claiming
@@ -647,7 +647,7 @@ SET
     worker_id = NULL,
     claimed_at = NULL
 WHERE status = 'processing'
-  AND claimed_at &lt; NOW() - INTERVAL '5 minutes';  -- Stuck for 5+ minutes
+  AND claimed_at < NOW() - INTERVAL '5 minutes';  -- Stuck for 5+ minutes
 ```
 
 **Complete Worker Loop (Pseudocode):**

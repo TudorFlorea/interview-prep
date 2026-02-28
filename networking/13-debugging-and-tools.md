@@ -230,9 +230,9 @@ $ curl -v https://api.example.com
 > Host: api.example.com
 > User-Agent: curl/7.88.1
 >
-&lt; HTTP/2 200
-&lt; content-type: application/json
-&lt; cache-control: max-age=3600
+< HTTP/2 200
+< content-type: application/json
+< cache-control: max-age=3600
 
 # POST request with JSON
 $ curl -X POST https://api.example.com/users \
@@ -258,7 +258,7 @@ $ curl -o output.json https://api.example.com/data
 $ curl -w "\nTime: %{time_total}s\n" https://api.example.com
 
 # Detailed timing breakdown
-$ curl -w @- -o /dev/null -s https://api.example.com &lt;&lt; 'EOF'
+$ curl -w @- -o /dev/null -s https://api.example.com << 'EOF'
     time_namelookup:  %{time_namelookup}s\n
    time_connect:  %{time_connect}s\n
    time_appconnect:  %{time_appconnect}s\n
@@ -466,7 +466,7 @@ $ nc -u -zv 8.8.8.8 53
 # Receiver:
 $ nc -l 9999 > received_file.txt
 # Sender:
-$ nc destination.com 9999 &lt; file.txt
+$ nc destination.com 9999 < file.txt
 
 # HTTP request manually
 $ echo -e "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n" | nc example.com 80

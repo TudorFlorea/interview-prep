@@ -628,10 +628,10 @@ $ aws elbv2 describe-target-health
 dig app.example.com
 
 # 2. Test basic connectivity
-ping -c 4 &lt;ip-address>
+ping -c 4 <ip-address>
 
 # 3. Test actual service port
-nc -zv &lt;ip-address> 443
+nc -zv <ip-address> 443
 curl -v https://app.example.com
 
 # 4. Check from multiple locations

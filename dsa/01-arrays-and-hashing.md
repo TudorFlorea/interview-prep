@@ -8,19 +8,19 @@ Arrays and Hashing form the foundation of most coding interview problems. This c
 
 ### When to Use This Pattern
 - Need to check if an element exists → **HashSet**
-- Need to count frequencies → **Dictionary&lt;T, int>**
+- Need to count frequencies → **Dictionary<T, int>**
 - Need to find pairs/groups with specific properties → **HashMap**
 - Need O(1) lookup instead of O(n) search
 
 ### Key C# Data Structures
 ```csharp
 // HashSet - unique elements, O(1) add/remove/contains
-HashSet&lt;int> set = new HashSet&lt;int>();
+HashSet<int> set = new HashSet<int>();
 set.Add(1);           // Returns true if added, false if exists
 set.Contains(1);      // O(1) lookup
 
 // Dictionary - key-value pairs, O(1) operations
-Dictionary&lt;string, int> map = new Dictionary&lt;string, int>();
+Dictionary<string, int> map = new Dictionary<string, int>();
 map["key"] = value;                    // Add or update
 map.TryGetValue("key", out int val);   // Safe lookup
 map.ContainsKey("key");                // Check existence
@@ -75,8 +75,8 @@ Compare every element with every other element.
 ```csharp
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
-        for (int i = 0; i &lt; nums.Length; i++) {
-            for (int j = i + 1; j &lt; nums.Length; j++) {
+        for (int i = 0; i < nums.Length; i++) {
+            for (int j = i + 1; j < nums.Length; j++) {
                 if (nums[i] == nums[j]) {
                     return true;
                 }
@@ -96,7 +96,7 @@ Use a HashSet to track seen elements. If we try to add an element that already e
 ```csharp
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
-        HashSet&lt;int> seen = new HashSet&lt;int>();
+        HashSet<int> seen = new HashSet<int>();
         foreach (int num in nums) {
             if (!seen.Add(num)) {
                 return true;  // Add returns false if element exists
@@ -117,7 +117,7 @@ Sort the array and check adjacent elements.
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
         Array.Sort(nums);
-        for (int i = 1; i &lt; nums.Length; i++) {
+        for (int i = 1; i < nums.Length; i++) {
             if (nums[i] == nums[i - 1]) {
                 return true;
             }
@@ -188,7 +188,7 @@ public class Solution {
         
         int[] count = new int[26];
         
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             count[s[i] - 'a']++;
             count[t[i] - 'a']--;
         }
@@ -213,7 +213,7 @@ public class Solution {
     public bool IsAnagram(string s, string t) {
         if (s.Length != t.Length) return false;
         
-        Dictionary&lt;char, int> count = new Dictionary&lt;char, int>();
+        Dictionary<char, int> count = new Dictionary<char, int>();
         
         foreach (char c in s) {
             count[c] = count.GetValueOrDefault(c, 0) + 1;
@@ -222,7 +222,7 @@ public class Solution {
         foreach (char c in t) {
             if (!count.ContainsKey(c)) return false;
             count[c]--;
-            if (count[c] &lt; 0) return false;
+            if (count[c] < 0) return false;
         }
         
         return true;
@@ -265,8 +265,8 @@ Check every pair of numbers.
 ```csharp
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
-        for (int i = 0; i &lt; nums.Length; i++) {
-            for (int j = i + 1; j &lt; nums.Length; j++) {
+        for (int i = 0; i < nums.Length; i++) {
+            for (int j = i + 1; j < nums.Length; j++) {
                 if (nums[i] + nums[j] == target) {
                     return new int[] { i, j };
                 }
@@ -286,9 +286,9 @@ One-pass HashMap: for each element, check if complement exists, then add current
 ```csharp
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
-        Dictionary&lt;int, int> map = new Dictionary&lt;int, int>();
+        Dictionary<int, int> map = new Dictionary<int, int>();
         
-        for (int i = 0; i &lt; nums.Length; i++) {
+        for (int i = 0; i < nums.Length; i++) {
             int complement = target - nums[i];
             
             if (map.ContainsKey(complement)) {
@@ -334,17 +334,17 @@ Compare each string with every other string to check if they're anagrams.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> GroupAnagrams(string[] strs) {
-        List&lt;IList&lt;string>> result = new List&lt;IList&lt;string>>();
+    public IList<IList<string>> GroupAnagrams(string[] strs) {
+        List<IList<string>> result = new List<IList<string>>();
         bool[] used = new bool[strs.Length];
         
-        for (int i = 0; i &lt; strs.Length; i++) {
+        for (int i = 0; i < strs.Length; i++) {
             if (used[i]) continue;
             
-            List&lt;string> group = new List&lt;string> { strs[i] };
+            List<string> group = new List<string> { strs[i] };
             used[i] = true;
             
-            for (int j = i + 1; j &lt; strs.Length; j++) {
+            for (int j = i + 1; j < strs.Length; j++) {
                 if (!used[j] && IsAnagram(strs[i], strs[j])) {
                     group.Add(strs[j]);
                     used[j] = true;
@@ -372,8 +372,8 @@ Sort each string and use it as HashMap key.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> GroupAnagrams(string[] strs) {
-        Dictionary&lt;string, List&lt;string>> map = new Dictionary&lt;string, List&lt;string>>();
+    public IList<IList<string>> GroupAnagrams(string[] strs) {
+        Dictionary<string, List<string>> map = new Dictionary<string, List<string>>();
         
         foreach (string s in strs) {
             char[] chars = s.ToCharArray();
@@ -381,12 +381,12 @@ public class Solution {
             string key = new string(chars);
             
             if (!map.ContainsKey(key)) {
-                map[key] = new List&lt;string>();
+                map[key] = new List<string>();
             }
             map[key].Add(s);
         }
         
-        return new List&lt;IList&lt;string>>(map.Values);
+        return new List<IList<string>>(map.Values);
     }
 }
 ```
@@ -399,8 +399,8 @@ Use character frequency as key (avoids sorting).
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;string>> GroupAnagrams(string[] strs) {
-        Dictionary&lt;string, List&lt;string>> map = new Dictionary&lt;string, List&lt;string>>();
+    public IList<IList<string>> GroupAnagrams(string[] strs) {
+        Dictionary<string, List<string>> map = new Dictionary<string, List<string>>();
         
         foreach (string s in strs) {
             int[] count = new int[26];
@@ -412,12 +412,12 @@ public class Solution {
             string key = string.Join("#", count);
             
             if (!map.ContainsKey(key)) {
-                map[key] = new List&lt;string>();
+                map[key] = new List<string>();
             }
             map[key].Add(s);
         }
         
-        return new List&lt;IList&lt;string>>(map.Values);
+        return new List<IList<string>>(map.Values);
     }
 }
 ```
@@ -454,7 +454,7 @@ Count frequencies, then sort by frequency.
 ```csharp
 public class Solution {
     public int[] TopKFrequent(int[] nums, int k) {
-        Dictionary&lt;int, int> count = new Dictionary&lt;int, int>();
+        Dictionary<int, int> count = new Dictionary<int, int>();
         foreach (int num in nums) {
             count[num] = count.GetValueOrDefault(num, 0) + 1;
         }
@@ -477,15 +477,15 @@ Use frequency as index into buckets. Since max frequency is n, we create n+1 buc
 public class Solution {
     public int[] TopKFrequent(int[] nums, int k) {
         // Step 1: Count frequencies
-        Dictionary&lt;int, int> count = new Dictionary&lt;int, int>();
+        Dictionary<int, int> count = new Dictionary<int, int>();
         foreach (int num in nums) {
             count[num] = count.GetValueOrDefault(num, 0) + 1;
         }
         
         // Step 2: Create buckets where index = frequency
-        List&lt;int>[] buckets = new List&lt;int>[nums.Length + 1];
-        for (int i = 0; i &lt; buckets.Length; i++) {
-            buckets[i] = new List&lt;int>();
+        List<int>[] buckets = new List<int>[nums.Length + 1];
+        for (int i = 0; i < buckets.Length; i++) {
+            buckets[i] = new List<int>();
         }
         
         foreach (var kvp in count) {
@@ -493,8 +493,8 @@ public class Solution {
         }
         
         // Step 3: Collect top k from highest frequency buckets
-        List&lt;int> result = new List&lt;int>();
-        for (int i = buckets.Length - 1; i >= 0 && result.Count &lt; k; i--) {
+        List<int> result = new List<int>();
+        for (int i = buckets.Length - 1; i >= 0 && result.Count < k; i--) {
             result.AddRange(buckets[i]);
         }
         
@@ -512,13 +512,13 @@ Maintain a min-heap of size k.
 ```csharp
 public class Solution {
     public int[] TopKFrequent(int[] nums, int k) {
-        Dictionary&lt;int, int> count = new Dictionary&lt;int, int>();
+        Dictionary<int, int> count = new Dictionary<int, int>();
         foreach (int num in nums) {
             count[num] = count.GetValueOrDefault(num, 0) + 1;
         }
         
         // Use PriorityQueue (min-heap by frequency)
-        PriorityQueue&lt;int, int> minHeap = new PriorityQueue&lt;int, int>();
+        PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
         
         foreach (var kvp in count) {
             minHeap.Enqueue(kvp.Key, kvp.Value);
@@ -528,7 +528,7 @@ public class Solution {
         }
         
         int[] result = new int[k];
-        for (int i = 0; i &lt; k; i++) {
+        for (int i = 0; i < k; i++) {
             result[i] = minHeap.Dequeue();
         }
         
@@ -540,7 +540,7 @@ public class Solution {
 #### Key Takeaways
 - Bucket sort achieves O(n) when frequency is bounded
 - Min-heap of size k is useful for "top K" problems
-- C# `PriorityQueue&lt;TElement, TPriority>` is a min-heap by default
+- C# `PriorityQueue<TElement, TPriority>` is a min-heap by default
 - Frequency counting is the first step in many problems
 
 ---
@@ -574,9 +574,9 @@ public class Solution {
         int n = nums.Length;
         int[] result = new int[n];
         
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             int product = 1;
-            for (int j = 0; j &lt; n; j++) {
+            for (int j = 0; j < n; j++) {
                 if (i != j) {
                     product *= nums[j];
                 }
@@ -604,7 +604,7 @@ public class Solution {
         // First pass: compute prefix products
         // result[i] = product of all elements before index i
         result[0] = 1;
-        for (int i = 1; i &lt; n; i++) {
+        for (int i = 1; i < n; i++) {
             result[i] = result[i - 1] * nums[i - 1];
         }
         
@@ -657,9 +657,9 @@ Three separate passes: check all rows, then all columns, then all boxes.
 public class Solution {
     public bool IsValidSudoku(char[][] board) {
         // Check rows
-        for (int r = 0; r &lt; 9; r++) {
-            HashSet&lt;char> seen = new HashSet&lt;char>();
-            for (int c = 0; c &lt; 9; c++) {
+        for (int r = 0; r < 9; r++) {
+            HashSet<char> seen = new HashSet<char>();
+            for (int c = 0; c < 9; c++) {
                 if (board[r][c] != '.') {
                     if (!seen.Add(board[r][c])) return false;
                 }
@@ -667,9 +667,9 @@ public class Solution {
         }
         
         // Check columns
-        for (int c = 0; c &lt; 9; c++) {
-            HashSet&lt;char> seen = new HashSet&lt;char>();
-            for (int r = 0; r &lt; 9; r++) {
+        for (int c = 0; c < 9; c++) {
+            HashSet<char> seen = new HashSet<char>();
+            for (int r = 0; r < 9; r++) {
                 if (board[r][c] != '.') {
                     if (!seen.Add(board[r][c])) return false;
                 }
@@ -677,11 +677,11 @@ public class Solution {
         }
         
         // Check 3x3 boxes
-        for (int boxRow = 0; boxRow &lt; 3; boxRow++) {
-            for (int boxCol = 0; boxCol &lt; 3; boxCol++) {
-                HashSet&lt;char> seen = new HashSet&lt;char>();
-                for (int r = boxRow * 3; r &lt; boxRow * 3 + 3; r++) {
-                    for (int c = boxCol * 3; c &lt; boxCol * 3 + 3; c++) {
+        for (int boxRow = 0; boxRow < 3; boxRow++) {
+            for (int boxCol = 0; boxCol < 3; boxCol++) {
+                HashSet<char> seen = new HashSet<char>();
+                for (int r = boxRow * 3; r < boxRow * 3 + 3; r++) {
+                    for (int c = boxCol * 3; c < boxCol * 3 + 3; c++) {
                         if (board[r][c] != '.') {
                             if (!seen.Add(board[r][c])) return false;
                         }
@@ -704,18 +704,18 @@ Use arrays of HashSets to track all constraints simultaneously.
 ```csharp
 public class Solution {
     public bool IsValidSudoku(char[][] board) {
-        HashSet&lt;char>[] rows = new HashSet&lt;char>[9];
-        HashSet&lt;char>[] cols = new HashSet&lt;char>[9];
-        HashSet&lt;char>[] boxes = new HashSet&lt;char>[9];
+        HashSet<char>[] rows = new HashSet<char>[9];
+        HashSet<char>[] cols = new HashSet<char>[9];
+        HashSet<char>[] boxes = new HashSet<char>[9];
         
-        for (int i = 0; i &lt; 9; i++) {
-            rows[i] = new HashSet&lt;char>();
-            cols[i] = new HashSet&lt;char>();
-            boxes[i] = new HashSet&lt;char>();
+        for (int i = 0; i < 9; i++) {
+            rows[i] = new HashSet<char>();
+            cols[i] = new HashSet<char>();
+            boxes[i] = new HashSet<char>();
         }
         
-        for (int r = 0; r &lt; 9; r++) {
-            for (int c = 0; c &lt; 9; c++) {
+        for (int r = 0; r < 9; r++) {
+            for (int c = 0; c < 9; c++) {
                 char val = board[r][c];
                 if (val == '.') continue;
                 
@@ -769,7 +769,7 @@ Use format: `length#string` for each string. The `#` delimiter is safe because w
 ```csharp
 public class Codec {
     // Encodes a list of strings to a single string
-    public string Encode(IList&lt;string> strs) {
+    public string Encode(IList<string> strs) {
         StringBuilder sb = new StringBuilder();
         foreach (string s in strs) {
             sb.Append(s.Length);
@@ -780,11 +780,11 @@ public class Codec {
     }
 
     // Decodes a single string to a list of strings
-    public IList&lt;string> Decode(string s) {
-        List&lt;string> result = new List&lt;string>();
+    public IList<string> Decode(string s) {
+        List<string> result = new List<string>();
         int i = 0;
         
-        while (i &lt; s.Length) {
+        while (i < s.Length) {
             // Find the delimiter
             int j = i;
             while (s[j] != '#') {
@@ -812,7 +812,7 @@ Use 4-byte fixed-width length prefix.
 
 ```csharp
 public class Codec {
-    public string Encode(IList&lt;string> strs) {
+    public string Encode(IList<string> strs) {
         StringBuilder sb = new StringBuilder();
         foreach (string s in strs) {
             // Use 4-character padded length
@@ -822,11 +822,11 @@ public class Codec {
         return sb.ToString();
     }
 
-    public IList&lt;string> Decode(string s) {
-        List&lt;string> result = new List&lt;string>();
+    public IList<string> Decode(string s) {
+        List<string> result = new List<string>();
         int i = 0;
         
-        while (i &lt; s.Length) {
+        while (i < s.Length) {
             int length = int.Parse(s.Substring(i, 4));
             i += 4;
             result.Add(s.Substring(i, length));
@@ -879,7 +879,7 @@ public class Solution {
         int longest = 1;
         int current = 1;
         
-        for (int i = 1; i &lt; nums.Length; i++) {
+        for (int i = 1; i < nums.Length; i++) {
             if (nums[i] == nums[i - 1]) {
                 continue;  // Skip duplicates
             } else if (nums[i] == nums[i - 1] + 1) {
@@ -904,7 +904,7 @@ Only start counting from sequence beginnings to avoid redundant work.
 ```csharp
 public class Solution {
     public int LongestConsecutive(int[] nums) {
-        HashSet&lt;int> numSet = new HashSet&lt;int>(nums);
+        HashSet<int> numSet = new HashSet<int>(nums);
         int longest = 0;
         
         foreach (int num in numSet) {
@@ -932,7 +932,7 @@ public class Solution {
 - Key insight: Only start counting from sequence START (where n-1 doesn't exist)
 - This ensures O(n) because each number is part of exactly one sequence count
 - Without the "start check", it would be O(n²) in worst case
-- Use `new HashSet&lt;int>(nums)` to initialize from array
+- Use `new HashSet<int>(nums)` to initialize from array
 - Edge case: empty array → return 0
 
 ---
@@ -944,7 +944,7 @@ public class Solution {
 | If you see... | Consider... |
 |---------------|-------------|
 | "Find duplicates" | HashSet |
-| "Count frequencies" | Dictionary&lt;T, int> |
+| "Count frequencies" | Dictionary<T, int> |
 | "Find pair with sum" | HashMap complement lookup |
 | "Group by property" | HashMap with computed key |
 | "Top K frequent" | Bucket sort or Heap |
@@ -956,14 +956,14 @@ public class Solution {
 
 ```csharp
 // Frequency counting pattern
-Dictionary&lt;T, int> count = new Dictionary&lt;T, int>();
+Dictionary<T, int> count = new Dictionary<T, int>();
 count[key] = count.GetValueOrDefault(key, 0) + 1;
 
 // HashSet duplicate detection
 if (!set.Add(element)) { /* duplicate found */ }
 
 // Initialize HashSet from array
-HashSet&lt;int> set = new HashSet&lt;int>(array);
+HashSet<int> set = new HashSet<int>(array);
 
 // Dictionary safe access
 if (dict.TryGetValue(key, out var value)) { /* use value */ }

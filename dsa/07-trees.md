@@ -44,7 +44,7 @@ void DFS(TreeNode node) {
 }
 
 // BFS template
-Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+Queue<TreeNode> queue = new Queue<TreeNode>();
 queue.Enqueue(root);
 while (queue.Count > 0) {
     TreeNode node = queue.Dequeue();
@@ -122,7 +122,7 @@ public class Solution {
     public TreeNode InvertTree(TreeNode root) {
         if (root == null) return null;
         
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
         while (queue.Count > 0) {
@@ -187,7 +187,7 @@ public class Solution {
     public int MaxDepth(TreeNode root) {
         if (root == null) return 0;
         
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         int depth = 0;
         
@@ -195,7 +195,7 @@ public class Solution {
             int levelSize = queue.Count;
             depth++;
             
-            for (int i = 0; i &lt; levelSize; i++) {
+            for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.Dequeue();
                 if (node.left != null) queue.Enqueue(node.left);
                 if (node.right != null) queue.Enqueue(node.right);
@@ -429,7 +429,7 @@ Use BST property: if both p and q are smaller, go left; if both larger, go right
 ```csharp
 public class Solution {
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (p.val &lt; root.val && q.val &lt; root.val) {
+        if (p.val < root.val && q.val < root.val) {
             return LowestCommonAncestor(root.left, p, q);
         }
         if (p.val > root.val && q.val > root.val) {
@@ -448,7 +448,7 @@ public class Solution {
 public class Solution {
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         while (root != null) {
-            if (p.val &lt; root.val && q.val &lt; root.val) {
+            if (p.val < root.val && q.val < root.val) {
                 root = root.left;
             } else if (p.val > root.val && q.val > root.val) {
                 root = root.right;
@@ -486,18 +486,18 @@ Output: [[3],[9,20],[15,7]]
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> LevelOrder(TreeNode root) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> LevelOrder(TreeNode root) {
+        List<IList<int>> result = new List<IList<int>>();
         if (root == null) return result;
         
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
         while (queue.Count > 0) {
             int levelSize = queue.Count;
-            List&lt;int> level = new List&lt;int>();
+            List<int> level = new List<int>();
             
-            for (int i = 0; i &lt; levelSize; i++) {
+            for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.Dequeue();
                 level.Add(node.val);
                 
@@ -540,17 +540,17 @@ Take last node at each level.
 
 ```csharp
 public class Solution {
-    public IList&lt;int> RightSideView(TreeNode root) {
-        List&lt;int> result = new List&lt;int>();
+    public IList<int> RightSideView(TreeNode root) {
+        List<int> result = new List<int>();
         if (root == null) return result;
         
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
         while (queue.Count > 0) {
             int levelSize = queue.Count;
             
-            for (int i = 0; i &lt; levelSize; i++) {
+            for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.Dequeue();
                 
                 // Last node in level
@@ -576,13 +576,13 @@ Visit right subtree first, add first node at each depth.
 
 ```csharp
 public class Solution {
-    public IList&lt;int> RightSideView(TreeNode root) {
-        List&lt;int> result = new List&lt;int>();
+    public IList<int> RightSideView(TreeNode root) {
+        List<int> result = new List<int>();
         DFS(root, 0, result);
         return result;
     }
     
-    private void DFS(TreeNode node, int depth, List&lt;int> result) {
+    private void DFS(TreeNode node, int depth, List<int> result) {
         if (node == null) return;
         
         // First node at this depth (rightmost due to right-first traversal)
@@ -682,7 +682,7 @@ public class Solution {
     private bool Validate(TreeNode node, long min, long max) {
         if (node == null) return true;
         
-        if (node.val &lt;= min || node.val >= max) {
+        if (node.val <= min || node.val >= max) {
             return false;
         }
         
@@ -708,7 +708,7 @@ public class Solution {
         
         if (!Inorder(node.left)) return false;
         
-        if (node.val &lt;= prev) return false;
+        if (node.val <= prev) return false;
         prev = node.val;
         
         return Inorder(node.right);
@@ -774,7 +774,7 @@ public class Solution {
 ```csharp
 public class Solution {
     public int KthSmallest(TreeNode root, int k) {
-        Stack&lt;TreeNode> stack = new Stack&lt;TreeNode>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode current = root;
         
         while (current != null || stack.Count > 0) {
@@ -827,13 +827,13 @@ Use HashMap for O(1) lookup in inorder.
 
 ```csharp
 public class Solution {
-    private Dictionary&lt;int, int> inorderMap;
+    private Dictionary<int, int> inorderMap;
     private int preorderIdx = 0;
     
     public TreeNode BuildTree(int[] preorder, int[] inorder) {
         // Map value to index in inorder
-        inorderMap = new Dictionary&lt;int, int>();
-        for (int i = 0; i &lt; inorder.Length; i++) {
+        inorderMap = new Dictionary<int, int>();
+        for (int i = 0; i < inorder.Length; i++) {
             inorderMap[inorder[i]] = i;
         }
         
@@ -960,11 +960,11 @@ public class Codec {
 
     // Decodes your encoded data to tree
     public TreeNode deserialize(string data) {
-        Queue&lt;string> nodes = new Queue&lt;string>(data.Split(','));
+        Queue<string> nodes = new Queue<string>(data.Split(','));
         return DeserializeHelper(nodes);
     }
     
-    private TreeNode DeserializeHelper(Queue&lt;string> nodes) {
+    private TreeNode DeserializeHelper(Queue<string> nodes) {
         string val = nodes.Dequeue();
         
         if (val == "null" || string.IsNullOrEmpty(val)) {
@@ -989,7 +989,7 @@ public class Codec {
         if (root == null) return "";
         
         StringBuilder sb = new StringBuilder();
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
         while (queue.Count > 0) {
@@ -1012,11 +1012,11 @@ public class Codec {
         
         string[] nodes = data.Split(',');
         TreeNode root = new TreeNode(int.Parse(nodes[0]));
-        Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+        Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
         int i = 1;
-        while (queue.Count > 0 && i &lt; nodes.Length) {
+        while (queue.Count > 0 && i < nodes.Length) {
             TreeNode parent = queue.Dequeue();
             
             if (nodes[i] != "null" && !string.IsNullOrEmpty(nodes[i])) {
@@ -1025,7 +1025,7 @@ public class Codec {
             }
             i++;
             
-            if (i &lt; nodes.Length && nodes[i] != "null" && !string.IsNullOrEmpty(nodes[i])) {
+            if (i < nodes.Length && nodes[i] != "null" && !string.IsNullOrEmpty(nodes[i])) {
                 parent.right = new TreeNode(int.Parse(nodes[i]));
                 queue.Enqueue(parent.right);
             }
@@ -1079,11 +1079,11 @@ void Inorder(TreeNode node) {
 
 // BFS Level Order
 void LevelOrder(TreeNode root) {
-    Queue&lt;TreeNode> queue = new Queue&lt;TreeNode>();
+    Queue<TreeNode> queue = new Queue<TreeNode>();
     queue.Enqueue(root);
     while (queue.Count > 0) {
         int levelSize = queue.Count;
-        for (int i = 0; i &lt; levelSize; i++) {
+        for (int i = 0; i < levelSize; i++) {
             TreeNode node = queue.Dequeue();
             Process(node);
             if (node.left != null) queue.Enqueue(node.left);
@@ -1096,7 +1096,7 @@ void LevelOrder(TreeNode root) {
 ### BST Properties
 
 ```csharp
-// BST: left &lt; root &lt; right
+// BST: left < root < right
 // Inorder traversal gives sorted order
 // Search/Insert/Delete: O(h) where h = height
 // Balanced BST: h = O(log n)

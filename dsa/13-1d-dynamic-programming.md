@@ -24,7 +24,7 @@ Dynamic Programming (DP) solves problems by breaking them into overlapping subpr
 int[] dp = new int[n + 1];
 dp[0] = base_case;  // Initialize base cases
 
-for (int i = 1; i &lt;= n; i++) {
+for (int i = 1; i <= n; i++) {
     dp[i] = optimal(dp[i-1], dp[i-2], ...);  // Recurrence
 }
 
@@ -57,11 +57,11 @@ To reach step n, you came from step n-1 or n-2. This is the Fibonacci sequence.
 ```csharp
 public class Solution {
     public int ClimbStairs(int n) {
-        if (n &lt;= 2) return n;
+        if (n <= 2) return n;
         
         int prev2 = 1, prev1 = 2;
         
-        for (int i = 3; i &lt;= n; i++) {
+        for (int i = 3; i <= n; i++) {
             int current = prev1 + prev2;
             prev2 = prev1;
             prev1 = current;
@@ -101,7 +101,7 @@ public class Solution {
         int n = cost.Length;
         int prev2 = cost[0], prev1 = cost[1];
         
-        for (int i = 2; i &lt; n; i++) {
+        for (int i = 2; i < n; i++) {
             int current = cost[i] + Math.Min(prev1, prev2);
             prev2 = prev1;
             prev1 = current;
@@ -143,7 +143,7 @@ public class Solution {
         int prev2 = nums[0];              // Max if we're at house 0
         int prev1 = Math.Max(nums[0], nums[1]);  // Max if we're at house 1
         
-        for (int i = 2; i &lt; nums.Length; i++) {
+        for (int i = 2; i < nums.Length; i++) {
             int current = Math.Max(
                 prev1,              // Don't rob house i
                 prev2 + nums[i]     // Rob house i (skip i-1)
@@ -196,7 +196,7 @@ public class Solution {
         int prev2 = nums[start];
         int prev1 = Math.Max(nums[start], nums[start + 1]);
         
-        for (int i = start + 2; i &lt;= end; i++) {
+        for (int i = start + 2; i <= end; i++) {
             int current = Math.Max(prev1, prev2 + nums[i]);
             prev2 = prev1;
             prev1 = current;
@@ -235,7 +235,7 @@ public class Solution {
     public string LongestPalindrome(string s) {
         int start = 0, maxLen = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             // Odd length: center at i
             int len1 = ExpandAroundCenter(s, i, i);
             // Even length: center between i and i+1
@@ -252,7 +252,7 @@ public class Solution {
     }
     
     private int ExpandAroundCenter(string s, int left, int right) {
-        while (left >= 0 && right &lt; s.Length && s[left] == s[right]) {
+        while (left >= 0 && right < s.Length && s[left] == s[right]) {
             left--;
             right++;
         }
@@ -274,10 +274,10 @@ public class Solution {
         int start = 0, maxLen = 1;
         
         // All substrings of length 1 are palindromes
-        for (int i = 0; i &lt; n; i++) dp[i, i] = true;
+        for (int i = 0; i < n; i++) dp[i, i] = true;
         
         // Check length 2
-        for (int i = 0; i &lt; n - 1; i++) {
+        for (int i = 0; i < n - 1; i++) {
             if (s[i] == s[i + 1]) {
                 dp[i, i + 1] = true;
                 start = i;
@@ -286,8 +286,8 @@ public class Solution {
         }
         
         // Check lengths 3 to n
-        for (int len = 3; len &lt;= n; len++) {
-            for (int i = 0; i &lt;= n - len; i++) {
+        for (int len = 3; len <= n; len++) {
+            for (int i = 0; i <= n - len; i++) {
                 int j = i + len - 1;
                 if (s[i] == s[j] && dp[i + 1, j - 1]) {
                     dp[i, j] = true;
@@ -330,7 +330,7 @@ public class Solution {
     public int CountSubstrings(string s) {
         int count = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             count += CountPalindromes(s, i, i);      // Odd
             count += CountPalindromes(s, i, i + 1);  // Even
         }
@@ -340,7 +340,7 @@ public class Solution {
     
     private int CountPalindromes(string s, int left, int right) {
         int count = 0;
-        while (left >= 0 && right &lt; s.Length && s[left] == s[right]) {
+        while (left >= 0 && right < s.Length && s[left] == s[right]) {
             count++;
             left--;
             right++;
@@ -376,7 +376,7 @@ public class Solution {
         int prev2 = 1;  // dp[i-2]: ways to decode empty prefix
         int prev1 = 1;  // dp[i-1]: ways to decode first char
         
-        for (int i = 1; i &lt; s.Length; i++) {
+        for (int i = 1; i < s.Length; i++) {
             int current = 0;
             
             // Single digit decode
@@ -386,7 +386,7 @@ public class Solution {
             
             // Two digit decode
             int twoDigit = int.Parse(s.Substring(i - 1, 2));
-            if (twoDigit >= 10 && twoDigit &lt;= 26) {
+            if (twoDigit >= 10 && twoDigit <= 26) {
                 current += prev2;
             }
             
@@ -430,9 +430,9 @@ public class Solution {
         Array.Fill(dp, amount + 1);  // Use large value instead of int.MaxValue
         dp[0] = 0;
         
-        for (int i = 1; i &lt;= amount; i++) {
+        for (int i = 1; i <= amount; i++) {
             foreach (int coin in coins) {
-                if (coin &lt;= i) {
+                if (coin <= i) {
                     dp[i] = Math.Min(dp[i], dp[i - coin] + 1);
                 }
             }
@@ -476,11 +476,11 @@ public class Solution {
         int minProd = nums[0];
         int result = nums[0];
         
-        for (int i = 1; i &lt; nums.Length; i++) {
+        for (int i = 1; i < nums.Length; i++) {
             int num = nums[i];
             
             // If negative, max becomes min and vice versa
-            if (num &lt; 0) {
+            if (num < 0) {
                 int temp = maxProd;
                 maxProd = minProd;
                 minProd = temp;
@@ -522,13 +522,13 @@ Output: true
 
 ```csharp
 public class Solution {
-    public bool WordBreak(string s, IList&lt;string> wordDict) {
-        HashSet&lt;string> words = new HashSet&lt;string>(wordDict);
+    public bool WordBreak(string s, IList<string> wordDict) {
+        HashSet<string> words = new HashSet<string>(wordDict);
         bool[] dp = new bool[s.Length + 1];
         dp[0] = true;  // Empty string can be segmented
         
-        for (int i = 1; i &lt;= s.Length; i++) {
-            for (int j = 0; j &lt; i; j++) {
+        for (int i = 1; i <= s.Length; i++) {
+            for (int j = 0; j < i; j++) {
                 if (dp[j] && words.Contains(s.Substring(j, i - j))) {
                     dp[i] = true;
                     break;
@@ -572,9 +572,9 @@ public class Solution {
         
         int maxLen = 1;
         
-        for (int i = 1; i &lt; nums.Length; i++) {
-            for (int j = 0; j &lt; i; j++) {
-                if (nums[j] &lt; nums[i]) {
+        for (int i = 1; i < nums.Length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[j] < nums[i]) {
                     dp[i] = Math.Max(dp[i], dp[j] + 1);
                 }
             }
@@ -593,7 +593,7 @@ public class Solution {
 ```csharp
 public class Solution {
     public int LengthOfLIS(int[] nums) {
-        List&lt;int> sub = new List&lt;int>();
+        List<int> sub = new List<int>();
         
         foreach (int num in nums) {
             int pos = BinarySearch(sub, num);
@@ -607,11 +607,11 @@ public class Solution {
         return sub.Count;
     }
     
-    private int BinarySearch(List&lt;int> sub, int target) {
+    private int BinarySearch(List<int> sub, int target) {
         int left = 0, right = sub.Count;
-        while (left &lt; right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
-            if (sub[mid] &lt; target) {
+            if (sub[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid;
@@ -623,7 +623,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- DP: dp[i] = 1 + max(dp[j]) for all j where nums[j] &lt; nums[i]
+- DP: dp[i] = 1 + max(dp[j]) for all j where nums[j] < nums[i]
 - Binary search: maintain smallest tail of each length subsequence
 - Binary search doesn't give actual subsequence, just length
 
@@ -688,7 +688,7 @@ public class Solution {
 | Fibonacci-style | Climbing Stairs | dp[i] = dp[i-1] + dp[i-2] |
 | Take or Skip | House Robber | dp[i] = max(dp[i-1], dp[i-2] + val) |
 | Unbounded | Coin Change | dp[i] = min(dp[i-coin] + 1) |
-| LIS | Longest Increasing | dp[i] = max(dp[j] + 1) where j &lt; i |
+| LIS | Longest Increasing | dp[i] = max(dp[j] + 1) where j < i |
 | Knapsack | Partition Subset | dp[j] = dp[j] || dp[j-num] |
 
 ### Space Optimization
@@ -698,7 +698,7 @@ Many 1D DP problems only depend on previous 1-2 values:
 int prev2 = base_case2;
 int prev1 = base_case1;
 
-for (int i = 2; i &lt;= n; i++) {
+for (int i = 2; i <= n; i++) {
     int current = f(prev1, prev2);
     prev2 = prev1;
     prev1 = current;

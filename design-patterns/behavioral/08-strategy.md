@@ -32,7 +32,7 @@ The Strategy pattern suggests extracting each algorithm into a separate class (s
                               │ uses
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                     &lt;&lt;interface>> IStrategy                      │
+│                     <<interface>> IStrategy                      │
 │─────────────────────────────────────────────────────────────────│
 │  + execute()                                                    │
 └─────────────────────────────────────────────────────────────────┘
@@ -224,7 +224,7 @@ namespace StrategyPattern
     
     public class ShoppingCart
     {
-        private readonly List&lt;(string Name, decimal Price)> _items = new();
+        private readonly List<(string Name, decimal Price)> _items = new();
         private IPaymentStrategy? _paymentStrategy;
 
         public void AddItem(string name, decimal price)
@@ -284,22 +284,22 @@ namespace StrategyPattern
     // SORTING STRATEGY EXAMPLE
     // ═══════════════════════════════════════════════════════════════
     
-    public interface ISortStrategy&lt;T>
+    public interface ISortStrategy<T>
     {
         string Name { get; }
-        void Sort(List&lt;T> data);
+        void Sort(List<T> data);
     }
 
-    public class BubbleSort&lt;T> : ISortStrategy&lt;T> where T : IComparable&lt;T>
+    public class BubbleSort<T> : ISortStrategy<T> where T : IComparable<T>
     {
         public string Name => "Bubble Sort";
 
-        public void Sort(List&lt;T> data)
+        public void Sort(List<T> data)
         {
             Console.WriteLine($"    🔄 Using {Name} (O(n²))...");
-            for (int i = 0; i &lt; data.Count - 1; i++)
+            for (int i = 0; i < data.Count - 1; i++)
             {
-                for (int j = 0; j &lt; data.Count - 1 - i; j++)
+                for (int j = 0; j < data.Count - 1 - i; j++)
                 {
                     if (data[j].CompareTo(data[j + 1]) > 0)
                     {
@@ -310,19 +310,19 @@ namespace StrategyPattern
         }
     }
 
-    public class QuickSort&lt;T> : ISortStrategy&lt;T> where T : IComparable&lt;T>
+    public class QuickSort<T> : ISortStrategy<T> where T : IComparable<T>
     {
         public string Name => "Quick Sort";
 
-        public void Sort(List&lt;T> data)
+        public void Sort(List<T> data)
         {
             Console.WriteLine($"    ⚡ Using {Name} (O(n log n) average)...");
             QuickSortRecursive(data, 0, data.Count - 1);
         }
 
-        private void QuickSortRecursive(List&lt;T> data, int low, int high)
+        private void QuickSortRecursive(List<T> data, int low, int high)
         {
-            if (low &lt; high)
+            if (low < high)
             {
                 int pi = Partition(data, low, high);
                 QuickSortRecursive(data, low, pi - 1);
@@ -330,14 +330,14 @@ namespace StrategyPattern
             }
         }
 
-        private int Partition(List&lt;T> data, int low, int high)
+        private int Partition(List<T> data, int low, int high)
         {
             T pivot = data[high];
             int i = low - 1;
 
-            for (int j = low; j &lt; high; j++)
+            for (int j = low; j < high; j++)
             {
-                if (data[j].CompareTo(pivot) &lt;= 0)
+                if (data[j].CompareTo(pivot) <= 0)
                 {
                     i++;
                     (data[i], data[j]) = (data[j], data[i]);
@@ -348,11 +348,11 @@ namespace StrategyPattern
         }
     }
 
-    public class MergeSort&lt;T> : ISortStrategy&lt;T> where T : IComparable&lt;T>
+    public class MergeSort<T> : ISortStrategy<T> where T : IComparable<T>
     {
         public string Name => "Merge Sort";
 
-        public void Sort(List&lt;T> data)
+        public void Sort(List<T> data)
         {
             Console.WriteLine($"    🔀 Using {Name} (O(n log n) guaranteed)...");
             var sorted = MergeSortRecursive(data);
@@ -360,9 +360,9 @@ namespace StrategyPattern
             data.AddRange(sorted);
         }
 
-        private List&lt;T> MergeSortRecursive(List&lt;T> data)
+        private List<T> MergeSortRecursive(List<T> data)
         {
-            if (data.Count &lt;= 1) return data;
+            if (data.Count <= 1) return data;
 
             int mid = data.Count / 2;
             var left = MergeSortRecursive(data.Take(mid).ToList());
@@ -371,14 +371,14 @@ namespace StrategyPattern
             return Merge(left, right);
         }
 
-        private List&lt;T> Merge(List&lt;T> left, List&lt;T> right)
+        private List<T> Merge(List<T> left, List<T> right)
         {
-            var result = new List&lt;T>();
+            var result = new List<T>();
             int i = 0, j = 0;
 
-            while (i &lt; left.Count && j &lt; right.Count)
+            while (i < left.Count && j < right.Count)
             {
-                if (left[i].CompareTo(right[j]) &lt;= 0)
+                if (left[i].CompareTo(right[j]) <= 0)
                     result.Add(left[i++]);
                 else
                     result.Add(right[j++]);
@@ -390,17 +390,17 @@ namespace StrategyPattern
         }
     }
 
-    public class DataProcessor&lt;T> where T : IComparable&lt;T>
+    public class DataProcessor<T> where T : IComparable<T>
     {
-        private ISortStrategy&lt;T>? _sortStrategy;
+        private ISortStrategy<T>? _sortStrategy;
 
-        public void SetSortStrategy(ISortStrategy&lt;T> strategy)
+        public void SetSortStrategy(ISortStrategy<T> strategy)
         {
             _sortStrategy = strategy;
             Console.WriteLine($"  🔧 Sort strategy: {strategy.Name}");
         }
 
-        public void ProcessData(List&lt;T> data)
+        public void ProcessData(List<T> data)
         {
             if (_sortStrategy == null)
             {
@@ -422,9 +422,9 @@ namespace StrategyPattern
     
     public class TextFormatter
     {
-        private Func&lt;string, string> _formatStrategy = s => s;
+        private Func<string, string> _formatStrategy = s => s;
 
-        public void SetFormatter(Func&lt;string, string> formatter)
+        public void SetFormatter(Func<string, string> formatter)
         {
             _formatStrategy = formatter;
         }
@@ -488,14 +488,14 @@ namespace StrategyPattern
             Console.WriteLine("  SORTING STRATEGIES");
             Console.WriteLine("═══════════════════════════════════════════════");
 
-            var processor = new DataProcessor&lt;int>();
+            var processor = new DataProcessor<int>();
             var random = new Random(42);
 
             // Small dataset - use simple sort
             var smallData = Enumerable.Range(0, 20).Select(_ => random.Next(100)).ToList();
             Console.WriteLine($"\n  Original: [{string.Join(", ", smallData.Take(10))}...]");
             
-            processor.SetSortStrategy(new BubbleSort&lt;int>());
+            processor.SetSortStrategy(new BubbleSort<int>());
             processor.ProcessData(smallData);
             Console.WriteLine($"  Sorted: [{string.Join(", ", smallData.Take(10))}...]");
 
@@ -503,11 +503,11 @@ namespace StrategyPattern
             var largeData = Enumerable.Range(0, 1000).Select(_ => random.Next(10000)).ToList();
             Console.WriteLine($"\n  📊 Large dataset: {largeData.Count} items");
             
-            processor.SetSortStrategy(new QuickSort&lt;int>());
-            processor.ProcessData(new List&lt;int>(largeData));
+            processor.SetSortStrategy(new QuickSort<int>());
+            processor.ProcessData(new List<int>(largeData));
 
-            processor.SetSortStrategy(new MergeSort&lt;int>());
-            processor.ProcessData(new List&lt;int>(largeData));
+            processor.SetSortStrategy(new MergeSort<int>());
+            processor.ProcessData(new List<int>(largeData));
 
             // ─────────────────────────────────────────────
             // Demo 3: Lambda Strategies
@@ -584,7 +584,7 @@ Strategy is often replaced by simple lambdas in modern C#:
 // Instead of interface + multiple classes
 public class Processor
 {
-    public void Process(List&lt;int> data, Func&lt;int, int, int> compare)
+    public void Process(List<int> data, Func<int, int, int> compare)
     {
         data.Sort((a, b) => compare(a, b));
     }

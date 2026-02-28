@@ -68,7 +68,7 @@ ORDER BY ts_rank(to_tsvector('english', description), to_tsquery('english', 'wir
 │  │ 'cat' & 'run'           -- cat AND run                            │   │
 │  │ 'cat' | 'dog'           -- cat OR dog                             │   │
 │  │ !'cat'                  -- NOT cat                                │   │
-│  │ 'quick' &lt;-> 'cat'       -- quick FOLLOWED BY cat                  │   │
+│  │ 'quick' <-> 'cat'       -- quick FOLLOWED BY cat                  │   │
 │  └──────────────────────────────────────────────────────────────────┘   │
 │                                                                          │
 │  @@ operator: Matches tsvector against tsquery                           │
@@ -101,7 +101,7 @@ SELECT to_tsvector('english', 'The quick brown fox') @@ phraseto_tsquery('englis
 
 -- Web-style search with websearch_to_tsquery (PostgreSQL 11+)
 SELECT websearch_to_tsquery('english', 'quick -lazy "brown fox"');
--- Result: 'quick' & !'lazi' & 'brown' &lt;-> 'fox'
+-- Result: 'quick' & !'lazi' & 'brown' <-> 'fox'
 ```
 
 ### Query Operators
@@ -121,9 +121,9 @@ WHERE search_vector @@ to_tsquery('mouse & !gaming');
 
 -- FOLLOWED BY: Phrase/proximity
 SELECT * FROM products 
-WHERE search_vector @@ to_tsquery('wireless &lt;-> mouse');  -- Adjacent
+WHERE search_vector @@ to_tsquery('wireless <-> mouse');  -- Adjacent
 SELECT * FROM products 
-WHERE search_vector @@ to_tsquery('wireless &lt;2> mouse');  -- Within 2 words
+WHERE search_vector @@ to_tsquery('wireless <2> mouse');  -- Within 2 words
 
 -- Prefix matching
 SELECT * FROM products 
@@ -290,7 +290,7 @@ ORDER BY relevance DESC;
 -- * wildcard suffix
 -- "" phrase
 -- > increase relevance
--- &lt; decrease relevance
+-- < decrease relevance
 -- () grouping
 
 SELECT * FROM products

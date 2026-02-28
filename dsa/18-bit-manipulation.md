@@ -14,7 +14,7 @@ Bit manipulation uses bitwise operators to solve problems efficiently. It's esse
 | `\|` | OR | `5 \| 3` | 7 (0101 \| 0011 = 0111) |
 | `^` | XOR | `5 ^ 3` | 6 (0101 ^ 0011 = 0110) |
 | `~` | NOT | `~5` | -6 (inverts all bits) |
-| `&lt;&lt;` | Left Shift | `5 &lt;&lt; 1` | 10 (multiply by 2) |
+| `<<` | Left Shift | `5 << 1` | 10 (multiply by 2) |
 | `>>` | Right Shift | `5 >> 1` | 2 (divide by 2) |
 
 ### Key XOR Properties
@@ -35,13 +35,13 @@ bool isPow2 = (n & (n - 1)) == 0 && n > 0;
 int bit = (n >> i) & 1;
 
 // Set i-th bit
-n = n | (1 &lt;&lt; i);
+n = n | (1 << i);
 
 // Clear i-th bit
-n = n & ~(1 &lt;&lt; i);
+n = n & ~(1 << i);
 
 // Toggle i-th bit
-n = n ^ (1 &lt;&lt; i);
+n = n ^ (1 << i);
 
 // Get lowest set bit
 int lowest = n & (-n);
@@ -170,7 +170,7 @@ public class Solution {
     public int[] CountBits(int n) {
         int[] dp = new int[n + 1];
         
-        for (int i = 1; i &lt;= n; i++) {
+        for (int i = 1; i <= n; i++) {
             dp[i] = dp[i >> 1] + (i & 1);
             // Alternatively: dp[i] = dp[i & (i - 1)] + 1;
         }
@@ -208,8 +208,8 @@ public class Solution {
     public uint reverseBits(uint n) {
         uint result = 0;
         
-        for (int i = 0; i &lt; 32; i++) {
-            result &lt;&lt;= 1;          // Make room for next bit
+        for (int i = 0; i < 32; i++) {
+            result <<= 1;          // Make room for next bit
             result |= (n & 1);     // Add last bit of n
             n >>= 1;               // Move to next bit
         }
@@ -247,7 +247,7 @@ public class Solution {
     public int MissingNumber(int[] nums) {
         int xor = nums.Length;
         
-        for (int i = 0; i &lt; nums.Length; i++) {
+        for (int i = 0; i < nums.Length; i++) {
             xor ^= i ^ nums[i];
         }
         
@@ -297,7 +297,7 @@ public class Solution {
         while (b != 0) {
             int carry = a & b;      // Carry where both bits are 1
             a = a ^ b;              // Sum without carry
-            b = carry &lt;&lt; 1;         // Shift carry left
+            b = carry << 1;         // Shift carry left
         }
         return a;
     }
@@ -311,22 +311,22 @@ a = 5 (0101), b = 3 (0011)
 Step 1:
 carry = 0101 & 0011 = 0001
 a = 0101 ^ 0011 = 0110
-b = 0001 &lt;&lt; 1 = 0010
+b = 0001 << 1 = 0010
 
 Step 2:
 carry = 0110 & 0010 = 0010
 a = 0110 ^ 0010 = 0100
-b = 0010 &lt;&lt; 1 = 0100
+b = 0010 << 1 = 0100
 
 Step 3:
 carry = 0100 & 0100 = 0100
 a = 0100 ^ 0100 = 0000
-b = 0100 &lt;&lt; 1 = 1000
+b = 0100 << 1 = 1000
 
 Step 4:
 carry = 0000 & 1000 = 0000
 a = 0000 ^ 1000 = 1000 = 8
-b = 0000 &lt;&lt; 1 = 0000
+b = 0000 << 1 = 0000
 
 Result: 8
 ```
@@ -371,8 +371,8 @@ public class Solution {
                 (result == int.MaxValue / 10 && digit > 7)) {
                 return 0;
             }
-            if (result &lt; int.MinValue / 10 || 
-                (result == int.MinValue / 10 && digit &lt; -8)) {
+            if (result < int.MinValue / 10 || 
+                (result == int.MinValue / 10 && digit < -8)) {
                 return 0;
             }
             
@@ -398,9 +398,9 @@ public class Solution {
 | Pattern | Operation |
 |---------|-----------|
 | Check if bit i is set | `(n >> i) & 1` |
-| Set bit i | `n \| (1 &lt;&lt; i)` |
-| Clear bit i | `n & ~(1 &lt;&lt; i)` |
-| Toggle bit i | `n ^ (1 &lt;&lt; i)` |
+| Set bit i | `n \| (1 << i)` |
+| Clear bit i | `n & ~(1 << i)` |
+| Toggle bit i | `n ^ (1 << i)` |
 | Clear lowest set bit | `n & (n - 1)` |
 | Get lowest set bit | `n & (-n)` |
 | Check power of 2 | `(n & (n-1)) == 0` |
@@ -413,7 +413,7 @@ public class Solution {
 ### Addition Without +
 ```
 Sum = a ^ b          (add without carry)
-Carry = (a & b) &lt;&lt; 1 (calculate carry)
+Carry = (a & b) << 1 (calculate carry)
 Repeat until no carry
 ```
 

@@ -61,7 +61,7 @@ An index is like a book's index: instead of scanning every page (full table scan
 
 | Type | Description | Use Case | Example |
 |------|-------------|----------|---------|
-| **B-Tree** | Balanced tree, sorted | Most queries: =, &lt;, >, BETWEEN, ORDER BY | Default index type |
+| **B-Tree** | Balanced tree, sorted | Most queries: =, <, >, BETWEEN, ORDER BY | Default index type |
 | **Hash** | Hash table | Equality only (=) | PostgreSQL specific |
 | **GIN** | Generalized Inverted | Full-text, arrays, JSONB | Array contains, text search |
 | **GiST** | Generalized Search Tree | Geometric, range types | Geo queries, overlap |
@@ -114,7 +114,7 @@ The most common index type. Keeps data sorted and balanced.
 
 **Good for:**
 - `=` equality
-- `&lt;`, `>`, `&lt;=`, `>=` comparisons
+- `<`, `>`, `<=`, `>=` comparisons
 - `BETWEEN`
 - `LIKE 'prefix%'` (prefix search)
 - `ORDER BY` (already sorted!)
@@ -406,7 +406,7 @@ DROP INDEX IF EXISTS idx_never_used;
 ### ❌ Avoid:
 - **Over-indexing**: Each index has write cost
 - **Indexing low-selectivity columns alone**: Boolean, status fields
-- **Indexing small tables**: Sequential scan is fine for &lt;1000 rows
+- **Indexing small tables**: Sequential scan is fine for <1000 rows
 - **Duplicate indexes**: Check if composite index covers simpler queries
 - **Ignoring index maintenance**: Bloated indexes are slow
 
@@ -585,7 +585,7 @@ LIMIT 100;
 
 ```sql
 -- 1. Fix the date filter (use range instead of function)
-WHERE order_date >= '2024-01-01' AND order_date &lt; '2025-01-01'
+WHERE order_date >= '2024-01-01' AND order_date < '2025-01-01'
 
 -- 2. Create better index
 CREATE INDEX idx_orders_date_customer ON orders(order_date DESC, customer_id);
@@ -595,7 +595,7 @@ SELECT o.*
 FROM orders o
 JOIN vip_customers v ON o.customer_id = v.customer_id
 WHERE o.order_date >= '2024-01-01' 
-  AND o.order_date &lt; '2025-01-01'
+  AND o.order_date < '2025-01-01'
 ORDER BY o.order_date DESC
 LIMIT 100;
 
@@ -612,7 +612,7 @@ CREATE INDEX idx_orders_year ON orders(EXTRACT(YEAR FROM order_date), customer_i
 SELECT o.*
 FROM orders o
 WHERE o.order_date >= '2024-01-01' 
-  AND o.order_date &lt; '2025-01-01'
+  AND o.order_date < '2025-01-01'
   AND EXISTS (SELECT 1 FROM vip_customers v WHERE v.customer_id = o.customer_id)
 ORDER BY o.order_date DESC
 LIMIT 100;
@@ -626,7 +626,7 @@ EXPLAIN ANALYZE
 SELECT o.* 
 FROM orders o
 JOIN vip_customers v ON o.customer_id = v.customer_id
-WHERE o.order_date >= '2024-01-01' AND o.order_date &lt; '2025-01-01'
+WHERE o.order_date >= '2024-01-01' AND o.order_date < '2025-01-01'
 ORDER BY o.order_date DESC
 LIMIT 100;
 
@@ -642,7 +642,7 @@ LIMIT 100;
 
 ## Key Takeaways
 
-- 🌲 **B-Tree** is the default and handles most use cases (=, &lt;, >, BETWEEN, ORDER BY)
+- 🌲 **B-Tree** is the default and handles most use cases (=, <, >, BETWEEN, ORDER BY)
 - 📊 **Selectivity matters** - index columns that filter out most rows
 - 📚 **Column order in composites** - leftmost prefix must be used
 - 📑 **Covering indexes** eliminate table access for huge speedups

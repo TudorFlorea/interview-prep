@@ -269,7 +269,7 @@ How databases implement Multi-Version Concurrency Control.
 │                                                                          │
 │  Visibility Rule:                                                        │
 │  Transaction sees row if:                                                │
-│  - xmin committed AND xmin &lt; snapshot_xid                                │
+│  - xmin committed AND xmin < snapshot_xid                                │
 │  - xmax null OR xmax > snapshot_xid OR xmax aborted                      │
 │                                                                          │
 │  VACUUM removes old versions when no transaction needs them              │
@@ -316,7 +316,7 @@ How databases implement Multi-Version Concurrency Control.
 │               ┌────────────────┐                                         │
 │               │   [50, 100]    │                                         │
 │               └─┬─────┬─────┬──┘                                         │
-│              &lt;50│  50-99 │ ≥100                                          │
+│              <50│  50-99 │ ≥100                                          │
 │            ┌────┘    │    └────┐                                         │
 │            ▼         ▼         ▼                                         │
 │     INTERNAL     INTERNAL    INTERNAL                                    │
@@ -534,7 +534,7 @@ SHOW checkpoint_completion_target;
 
 **Root Cause:**
 - 10GB/hour WAL = 833 MB every 5 minutes
-- If max_wal_size &lt; 833MB, checkpoints forced by WAL size
+- If max_wal_size < 833MB, checkpoints forced by WAL size
 - All dirty pages flushed at once = I/O spike
 
 **Solution:**

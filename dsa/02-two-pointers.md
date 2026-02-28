@@ -26,14 +26,14 @@ The Two Pointers technique uses two pointer variables to traverse a data structu
 ```csharp
 // Opposite direction pointers
 int left = 0, right = arr.Length - 1;
-while (left &lt; right) {
+while (left < right) {
     // Process arr[left] and arr[right]
     // Move pointers based on condition
 }
 
 // Same direction (fast/slow)
 int slow = 0;
-for (int fast = 0; fast &lt; arr.Length; fast++) {
+for (int fast = 0; fast < arr.Length; fast++) {
     if (condition) {
         arr[slow] = arr[fast];
         slow++;
@@ -41,7 +41,7 @@ for (int fast = 0; fast &lt; arr.Length; fast++) {
 }
 
 // Skip duplicates pattern
-while (left &lt; right && arr[left] == arr[left + 1]) left++;
+while (left < right && arr[left] == arr[left + 1]) left++;
 ```
 
 ### Complexity Patterns
@@ -113,13 +113,13 @@ public class Solution {
     public bool IsPalindrome(string s) {
         int left = 0, right = s.Length - 1;
         
-        while (left &lt; right) {
+        while (left < right) {
             // Skip non-alphanumeric from left
-            while (left &lt; right && !char.IsLetterOrDigit(s[left])) {
+            while (left < right && !char.IsLetterOrDigit(s[left])) {
                 left++;
             }
             // Skip non-alphanumeric from right
-            while (left &lt; right && !char.IsLetterOrDigit(s[right])) {
+            while (left < right && !char.IsLetterOrDigit(s[right])) {
                 right--;
             }
             
@@ -149,7 +149,7 @@ public class Solution {
 - [ ] Completed | 🟡 Medium | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [NeetCode](https://neetcode.io/problems/two-integer-sum-ii)
 
 #### Problem
-Given a **1-indexed** sorted array `numbers`, find two numbers that add up to `target`. Return their indices as `[index1, index2]` where `index1 &lt; index2`.
+Given a **1-indexed** sorted array `numbers`, find two numbers that add up to `target`. Return their indices as `[index1, index2]` where `index1 < index2`.
 
 You must use only constant extra space.
 
@@ -172,8 +172,8 @@ Check every pair (ignores the sorted property).
 ```csharp
 public class Solution {
     public int[] TwoSum(int[] numbers, int target) {
-        for (int i = 0; i &lt; numbers.Length; i++) {
-            for (int j = i + 1; j &lt; numbers.Length; j++) {
+        for (int i = 0; i < numbers.Length; i++) {
+            for (int j = i + 1; j < numbers.Length; j++) {
                 if (numbers[i] + numbers[j] == target) {
                     return new int[] { i + 1, j + 1 };  // 1-indexed
                 }
@@ -195,12 +195,12 @@ public class Solution {
     public int[] TwoSum(int[] numbers, int target) {
         int left = 0, right = numbers.Length - 1;
         
-        while (left &lt; right) {
+        while (left < right) {
             int sum = numbers[left] + numbers[right];
             
             if (sum == target) {
                 return new int[] { left + 1, right + 1 };  // 1-indexed
-            } else if (sum &lt; target) {
+            } else if (sum < target) {
                 left++;   // Need larger sum, move left pointer right
             } else {
                 right--;  // Need smaller sum, move right pointer left
@@ -214,7 +214,7 @@ public class Solution {
 
 #### Why Does This Work?
 - Array is sorted, so `numbers[left] ≤ numbers[right]`
-- If `sum &lt; target`: moving `left` right increases sum
+- If `sum < target`: moving `left` right increases sum
 - If `sum > target`: moving `right` left decreases sum
 - We never miss the answer because we only skip pairs that can't be solutions
 
@@ -251,19 +251,19 @@ Check all triplets.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> ThreeSum(int[] nums) {
+    public IList<IList<int>> ThreeSum(int[] nums) {
         Array.Sort(nums);
-        HashSet&lt;(int, int, int)> seen = new HashSet&lt;(int, int, int)>();
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+        HashSet<(int, int, int)> seen = new HashSet<(int, int, int)>();
+        List<IList<int>> result = new List<IList<int>>();
         
-        for (int i = 0; i &lt; nums.Length; i++) {
-            for (int j = i + 1; j &lt; nums.Length; j++) {
-                for (int k = j + 1; k &lt; nums.Length; k++) {
+        for (int i = 0; i < nums.Length; i++) {
+            for (int j = i + 1; j < nums.Length; j++) {
+                for (int k = j + 1; k < nums.Length; k++) {
                     if (nums[i] + nums[j] + nums[k] == 0) {
                         var triplet = (nums[i], nums[j], nums[k]);
                         if (!seen.Contains(triplet)) {
                             seen.Add(triplet);
-                            result.Add(new List&lt;int> { nums[i], nums[j], nums[k] });
+                            result.Add(new List<int> { nums[i], nums[j], nums[k] });
                         }
                     }
                 }
@@ -282,11 +282,11 @@ Sort + Two Pointers for each fixed first element.
 
 ```csharp
 public class Solution {
-    public IList&lt;IList&lt;int>> ThreeSum(int[] nums) {
-        List&lt;IList&lt;int>> result = new List&lt;IList&lt;int>>();
+    public IList<IList<int>> ThreeSum(int[] nums) {
+        List<IList<int>> result = new List<IList<int>>();
         Array.Sort(nums);
         
-        for (int i = 0; i &lt; nums.Length - 2; i++) {
+        for (int i = 0; i < nums.Length - 2; i++) {
             // Skip duplicates for first element
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             
@@ -297,20 +297,20 @@ public class Solution {
             int right = nums.Length - 1;
             int target = -nums[i];  // We need nums[left] + nums[right] = target
             
-            while (left &lt; right) {
+            while (left < right) {
                 int sum = nums[left] + nums[right];
                 
                 if (sum == target) {
-                    result.Add(new List&lt;int> { nums[i], nums[left], nums[right] });
+                    result.Add(new List<int> { nums[i], nums[left], nums[right] });
                     
                     // Skip duplicates for second element
-                    while (left &lt; right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[left] == nums[left + 1]) left++;
                     // Skip duplicates for third element
-                    while (left &lt; right && nums[right] == nums[right - 1]) right--;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
                     
                     left++;
                     right--;
-                } else if (sum &lt; target) {
+                } else if (sum < target) {
                     left++;
                 } else {
                     right--;
@@ -361,8 +361,8 @@ public class Solution {
     public int MaxArea(int[] height) {
         int maxArea = 0;
         
-        for (int i = 0; i &lt; height.Length; i++) {
-            for (int j = i + 1; j &lt; height.Length; j++) {
+        for (int i = 0; i < height.Length; i++) {
+            for (int j = i + 1; j < height.Length; j++) {
                 int h = Math.Min(height[i], height[j]);
                 int w = j - i;
                 maxArea = Math.Max(maxArea, h * w);
@@ -386,14 +386,14 @@ public class Solution {
         int left = 0, right = height.Length - 1;
         int maxArea = 0;
         
-        while (left &lt; right) {
+        while (left < right) {
             // Calculate current area
             int h = Math.Min(height[left], height[right]);
             int w = right - left;
             maxArea = Math.Max(maxArea, h * w);
             
             // Move the shorter line inward
-            if (height[left] &lt; height[right]) {
+            if (height[left] < height[right]) {
                 left++;
             } else {
                 right--;
@@ -444,16 +444,16 @@ public class Solution {
     public int Trap(int[] height) {
         int totalWater = 0;
         
-        for (int i = 0; i &lt; height.Length; i++) {
+        for (int i = 0; i < height.Length; i++) {
             int leftMax = 0, rightMax = 0;
             
             // Find max height to the left
-            for (int j = 0; j &lt;= i; j++) {
+            for (int j = 0; j <= i; j++) {
                 leftMax = Math.Max(leftMax, height[j]);
             }
             
             // Find max height to the right
-            for (int j = i; j &lt; height.Length; j++) {
+            for (int j = i; j < height.Length; j++) {
                 rightMax = Math.Max(rightMax, height[j]);
             }
             
@@ -483,7 +483,7 @@ public class Solution {
         
         // Compute leftMax for each position
         leftMax[0] = height[0];
-        for (int i = 1; i &lt; n; i++) {
+        for (int i = 1; i < n; i++) {
             leftMax[i] = Math.Max(leftMax[i - 1], height[i]);
         }
         
@@ -495,7 +495,7 @@ public class Solution {
         
         // Calculate trapped water
         int totalWater = 0;
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             totalWater += Math.Min(leftMax[i], rightMax[i]) - height[i];
         }
         
@@ -519,8 +519,8 @@ public class Solution {
         int leftMax = 0, rightMax = 0;
         int totalWater = 0;
         
-        while (left &lt; right) {
-            if (height[left] &lt; height[right]) {
+        while (left < right) {
+            if (height[left] < height[right]) {
                 // Process left side
                 if (height[left] >= leftMax) {
                     leftMax = height[left];  // Update max, no water here
@@ -545,7 +545,7 @@ public class Solution {
 ```
 
 #### Why Does Two Pointers Work?
-- If `height[left] &lt; height[right]`, we know `rightMax >= height[right] > height[left]`
+- If `height[left] < height[right]`, we know `rightMax >= height[right] > height[left]`
 - So water at `left` is determined by `leftMax` alone (it's the limiting factor)
 - Same logic applies when processing from the right
 - We always process the side with the smaller height
@@ -559,10 +559,10 @@ Process bars and use a stack to track potential containers.
 ```csharp
 public class Solution {
     public int Trap(int[] height) {
-        Stack&lt;int> stack = new Stack&lt;int>();  // Stores indices
+        Stack<int> stack = new Stack<int>();  // Stores indices
         int totalWater = 0;
         
-        for (int i = 0; i &lt; height.Length; i++) {
+        for (int i = 0; i < height.Length; i++) {
             // While current bar is taller than stack top
             while (stack.Count > 0 && height[i] > height[stack.Peek()]) {
                 int bottom = stack.Pop();
@@ -619,14 +619,14 @@ public class Solution {
 ```csharp
 // Opposite direction template
 int left = 0, right = arr.Length - 1;
-while (left &lt; right) {
+while (left < right) {
     // Process
     if (condition) left++;
     else right--;
 }
 
 // Skip duplicates pattern
-while (left &lt; right && arr[left] == arr[left + 1]) left++;
+while (left < right && arr[left] == arr[left + 1]) left++;
 
 // Character helpers
 char.IsLetterOrDigit(c);

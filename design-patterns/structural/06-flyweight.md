@@ -142,7 +142,7 @@ namespace FlyweightPattern
     /// </summary>
     public class CharacterStyleFactory
     {
-        private readonly Dictionary&lt;string, CharacterStyle> _styles = new();
+        private readonly Dictionary<string, CharacterStyle> _styles = new();
 
         public CharacterStyle GetStyle(string fontFamily, int fontSize, string color, bool bold = false, bool italic = false)
         {
@@ -207,7 +207,7 @@ namespace FlyweightPattern
     
     public class TextDocument
     {
-        private readonly List&lt;Character> _characters = new();
+        private readonly List<Character> _characters = new();
         private readonly CharacterStyleFactory _styleFactory;
         private int _cursorX = 0;
         private int _cursorY = 0;
@@ -301,7 +301,7 @@ namespace FlyweightPattern
 
     public class ParticleFactory
     {
-        private readonly Dictionary&lt;string, ParticleType> _types = new();
+        private readonly Dictionary<string, ParticleType> _types = new();
 
         public ParticleType GetParticleType(string sprite, string color)
         {
@@ -363,7 +363,7 @@ namespace FlyweightPattern
             Console.WriteLine("═══════════════════════════════════════════════");
 
             var particleFactory = new ParticleFactory();
-            var particles = new List&lt;Particle>();
+            var particles = new List<Particle>();
             var random = new Random(42);
 
             // Create 100,000 particles with only 5 types
@@ -374,7 +374,7 @@ namespace FlyweightPattern
             Console.WriteLine($"\n  Creating {particleCount:N0} particles...");
 
             var sw = Stopwatch.StartNew();
-            for (int i = 0; i &lt; particleCount; i++)
+            for (int i = 0; i < particleCount; i++)
             {
                 string sprite = sprites[random.Next(sprites.Length)];
                 string color = colors[random.Next(colors.Length)];

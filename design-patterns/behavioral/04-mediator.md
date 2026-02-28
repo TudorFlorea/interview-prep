@@ -160,7 +160,7 @@ namespace MediatorPattern
     
     public class ChatRoom : IChatMediator
     {
-        private readonly List&lt;User> _users = new();
+        private readonly List<User> _users = new();
         private readonly string _roomName;
 
         public ChatRoom(string roomName)

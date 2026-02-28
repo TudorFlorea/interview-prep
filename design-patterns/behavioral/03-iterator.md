@@ -32,8 +32,8 @@ The Iterator pattern extracts the traversal behavior into a separate object call
           ┌────────────────┴────────────────┐
           ▼                                 ▼
 ┌──────────────────┐             ┌──────────────────────┐
-│  &lt;&lt;interface>>   │             │    &lt;&lt;interface>>     │
-│  IIterator&lt;T>    │             │ IIterableCollection  │
+│  <<interface>>   │             │    <<interface>>     │
+│  IIterator<T>    │             │ IIterableCollection  │
 │──────────────────│             │──────────────────────│
 │ + Current: T     │◄────────────│ + CreateIterator()   │
 │ + MoveNext()     │   returns   └──────────────────────┘
@@ -67,11 +67,11 @@ namespace IteratorPattern
     // CUSTOM ITERATOR - Binary Tree Traversal
     // ═══════════════════════════════════════════════════════════════
     
-    public class TreeNode&lt;T>
+    public class TreeNode<T>
     {
         public T Value { get; set; }
-        public TreeNode&lt;T>? Left { get; set; }
-        public TreeNode&lt;T>? Right { get; set; }
+        public TreeNode<T>? Left { get; set; }
+        public TreeNode<T>? Right { get; set; }
 
         public TreeNode(T value)
         {
@@ -79,28 +79,28 @@ namespace IteratorPattern
         }
     }
 
-    public class BinaryTree&lt;T> : IEnumerable&lt;T>
+    public class BinaryTree<T> : IEnumerable<T>
     {
-        public TreeNode&lt;T>? Root { get; set; }
+        public TreeNode<T>? Root { get; set; }
 
         // Default iterator (in-order)
-        public IEnumerator&lt;T> GetEnumerator() => new InOrderIterator&lt;T>(Root);
+        public IEnumerator<T> GetEnumerator() => new InOrderIterator<T>(Root);
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         // Additional traversal methods
-        public IEnumerable&lt;T> PreOrder() => new PreOrderEnumerable&lt;T>(Root);
-        public IEnumerable&lt;T> PostOrder() => new PostOrderEnumerable&lt;T>(Root);
-        public IEnumerable&lt;T> BreadthFirst() => new BreadthFirstEnumerable&lt;T>(Root);
+        public IEnumerable<T> PreOrder() => new PreOrderEnumerable<T>(Root);
+        public IEnumerable<T> PostOrder() => new PostOrderEnumerable<T>(Root);
+        public IEnumerable<T> BreadthFirst() => new BreadthFirstEnumerable<T>(Root);
     }
 
     // In-Order Iterator (Left -> Node -> Right)
-    public class InOrderIterator&lt;T> : IEnumerator&lt;T>
+    public class InOrderIterator<T> : IEnumerator<T>
     {
-        private readonly Stack&lt;TreeNode&lt;T>> _stack = new();
-        private TreeNode&lt;T>? _current;
-        private readonly TreeNode&lt;T>? _root;
+        private readonly Stack<TreeNode<T>> _stack = new();
+        private TreeNode<T>? _current;
+        private readonly TreeNode<T>? _root;
 
-        public InOrderIterator(TreeNode&lt;T>? root)
+        public InOrderIterator(TreeNode<T>? root)
         {
             _root = root;
             Reset();
@@ -142,16 +142,16 @@ namespace IteratorPattern
     }
 
     // Pre-Order Enumerable (Node -> Left -> Right)
-    public class PreOrderEnumerable&lt;T> : IEnumerable&lt;T>
+    public class PreOrderEnumerable<T> : IEnumerable<T>
     {
-        private readonly TreeNode&lt;T>? _root;
-        public PreOrderEnumerable(TreeNode&lt;T>? root) => _root = root;
+        private readonly TreeNode<T>? _root;
+        public PreOrderEnumerable(TreeNode<T>? root) => _root = root;
         
-        public IEnumerator&lt;T> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             if (_root == null) yield break;
             
-            var stack = new Stack&lt;TreeNode&lt;T>>();
+            var stack = new Stack<TreeNode<T>>();
             stack.Push(_root);
             
             while (stack.Count > 0)
@@ -167,19 +167,19 @@ namespace IteratorPattern
     }
 
     // Post-Order Enumerable (Left -> Right -> Node)
-    public class PostOrderEnumerable&lt;T> : IEnumerable&lt;T>
+    public class PostOrderEnumerable<T> : IEnumerable<T>
     {
-        private readonly TreeNode&lt;T>? _root;
-        public PostOrderEnumerable(TreeNode&lt;T>? root) => _root = root;
+        private readonly TreeNode<T>? _root;
+        public PostOrderEnumerable(TreeNode<T>? root) => _root = root;
         
-        public IEnumerator&lt;T> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
-            var result = new List&lt;T>();
+            var result = new List<T>();
             PostOrderTraverse(_root, result);
             return result.GetEnumerator();
         }
 
-        private void PostOrderTraverse(TreeNode&lt;T>? node, List&lt;T> result)
+        private void PostOrderTraverse(TreeNode<T>? node, List<T> result)
         {
             if (node == null) return;
             PostOrderTraverse(node.Left, result);
@@ -191,16 +191,16 @@ namespace IteratorPattern
     }
 
     // Breadth-First Enumerable (Level by Level)
-    public class BreadthFirstEnumerable&lt;T> : IEnumerable&lt;T>
+    public class BreadthFirstEnumerable<T> : IEnumerable<T>
     {
-        private readonly TreeNode&lt;T>? _root;
-        public BreadthFirstEnumerable(TreeNode&lt;T>? root) => _root = root;
+        private readonly TreeNode<T>? _root;
+        public BreadthFirstEnumerable(TreeNode<T>? root) => _root = root;
         
-        public IEnumerator&lt;T> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             if (_root == null) yield break;
             
-            var queue = new Queue&lt;TreeNode&lt;T>>();
+            var queue = new Queue<TreeNode<T>>();
             queue.Enqueue(_root);
             
             while (queue.Count > 0)
@@ -235,22 +235,22 @@ namespace IteratorPattern
         public override string ToString() => $"{Artist} - {Title} ({Duration:mm\\:ss})";
     }
 
-    public class Playlist : IEnumerable&lt;Song>
+    public class Playlist : IEnumerable<Song>
     {
-        private readonly List&lt;Song> _songs = new();
+        private readonly List<Song> _songs = new();
         private readonly Random _random = new();
 
         public void AddSong(Song song) => _songs.Add(song);
         public int Count => _songs.Count;
 
         // Default: sequential
-        public IEnumerator&lt;Song> GetEnumerator() => _songs.GetEnumerator();
+        public IEnumerator<Song> GetEnumerator() => _songs.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         // Shuffle iterator
-        public IEnumerable&lt;Song> Shuffle()
+        public IEnumerable<Song> Shuffle()
         {
-            var shuffled = new List&lt;Song>(_songs);
+            var shuffled = new List<Song>(_songs);
             for (int i = shuffled.Count - 1; i > 0; i--)
             {
                 int j = _random.Next(i + 1);
@@ -260,7 +260,7 @@ namespace IteratorPattern
         }
 
         // Reverse iterator
-        public IEnumerable&lt;Song> Reverse()
+        public IEnumerable<Song> Reverse()
         {
             for (int i = _songs.Count - 1; i >= 0; i--)
             {
@@ -269,7 +269,7 @@ namespace IteratorPattern
         }
 
         // Filter iterator
-        public IEnumerable&lt;Song> ByArtist(string artist)
+        public IEnumerable<Song> ByArtist(string artist)
         {
             foreach (var song in _songs)
             {
@@ -279,7 +279,7 @@ namespace IteratorPattern
         }
 
         // Repeat iterator
-        public IEnumerable&lt;Song> RepeatForever()
+        public IEnumerable<Song> RepeatForever()
         {
             while (true)
             {
@@ -295,27 +295,27 @@ namespace IteratorPattern
     // PAGED ITERATOR - For Large Collections
     // ═══════════════════════════════════════════════════════════════
     
-    public class PagedIterator&lt;T> : IEnumerable&lt;IEnumerable&lt;T>>
+    public class PagedIterator<T> : IEnumerable<IEnumerable<T>>
     {
-        private readonly IEnumerable&lt;T> _source;
+        private readonly IEnumerable<T> _source;
         private readonly int _pageSize;
 
-        public PagedIterator(IEnumerable&lt;T> source, int pageSize)
+        public PagedIterator(IEnumerable<T> source, int pageSize)
         {
             _source = source;
             _pageSize = pageSize;
         }
 
-        public IEnumerator&lt;IEnumerable&lt;T>> GetEnumerator()
+        public IEnumerator<IEnumerable<T>> GetEnumerator()
         {
-            var page = new List&lt;T>();
+            var page = new List<T>();
             foreach (var item in _source)
             {
                 page.Add(item);
                 if (page.Count == _pageSize)
                 {
                     yield return page;
-                    page = new List&lt;T>();
+                    page = new List<T>();
                 }
             }
             if (page.Count > 0)
@@ -351,19 +351,19 @@ namespace IteratorPattern
             //      / \ / \
             //     1  3 5  7
 
-            var tree = new BinaryTree&lt;int>
+            var tree = new BinaryTree<int>
             {
-                Root = new TreeNode&lt;int>(4)
+                Root = new TreeNode<int>(4)
                 {
-                    Left = new TreeNode&lt;int>(2)
+                    Left = new TreeNode<int>(2)
                     {
-                        Left = new TreeNode&lt;int>(1),
-                        Right = new TreeNode&lt;int>(3)
+                        Left = new TreeNode<int>(1),
+                        Right = new TreeNode<int>(3)
                     },
-                    Right = new TreeNode&lt;int>(6)
+                    Right = new TreeNode<int>(6)
                     {
-                        Left = new TreeNode&lt;int>(5),
-                        Right = new TreeNode&lt;int>(7)
+                        Left = new TreeNode<int>(5),
+                        Right = new TreeNode<int>(7)
                     }
                 }
             };
@@ -430,7 +430,7 @@ namespace IteratorPattern
             Console.WriteLine("═══════════════════════════════════════════════");
 
             var numbers = Enumerable.Range(1, 23);
-            var pagedIterator = new PagedIterator&lt;int>(numbers, 5);
+            var pagedIterator = new PagedIterator<int>(numbers, 5);
 
             int pageNum = 1;
             foreach (var page in pagedIterator)
@@ -463,7 +463,7 @@ namespace IteratorPattern
             Console.ReadKey();
         }
 
-        static IEnumerable&lt;long> Fibonacci()
+        static IEnumerable<long> Fibonacci()
         {
             long a = 0, b = 1;
             yield return a;
@@ -478,14 +478,14 @@ namespace IteratorPattern
             }
         }
 
-        static IEnumerable&lt;int> Primes()
+        static IEnumerable<int> Primes()
         {
             yield return 2;
             
             for (int n = 3; ; n += 2)
             {
                 bool isPrime = true;
-                for (int i = 3; i * i &lt;= n; i += 2)
+                for (int i = 3; i * i <= n; i += 2)
                 {
                     if (n % i == 0)
                     {
@@ -531,9 +531,9 @@ C# has built-in iterator support via `yield return`:
 
 ```csharp
 // The yield keyword makes creating iterators trivial
-public IEnumerable&lt;int> GetEvenNumbers(int max)
+public IEnumerable<int> GetEvenNumbers(int max)
 {
-    for (int i = 0; i &lt;= max; i += 2)
+    for (int i = 0; i <= max; i += 2)
     {
         yield return i;  // Lazy evaluation!
     }

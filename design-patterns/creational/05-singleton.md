@@ -189,16 +189,16 @@ namespace SingletonPattern
     }
 
     // ═══════════════════════════════════════════════════════════════
-    // IMPLEMENTATION 4: Lazy\&lt;T\> (RECOMMENDED)
+    // IMPLEMENTATION 4: Lazy\<T\> (RECOMMENDED)
     // ═══════════════════════════════════════════════════════════════
     
     /// <summary>
-    /// Thread-safe singleton using Lazy\&lt;T\>.
+    /// Thread-safe singleton using Lazy\<T\>.
     /// ✅ RECOMMENDED approach in modern C#.
     /// </summary>
     public class LazySingleton
     {
-        private static readonly Lazy&lt;LazySingleton> _lazy = 
+        private static readonly Lazy<LazySingleton> _lazy = 
             new(() => new LazySingleton());
         
         public string Data { get; set; } = "Lazy Singleton Data";
@@ -260,10 +260,10 @@ namespace SingletonPattern
     /// </summary>
     public class ConfigurationManager
     {
-        private static readonly Lazy&lt;ConfigurationManager> _lazy =
+        private static readonly Lazy<ConfigurationManager> _lazy =
             new(() => new ConfigurationManager());
 
-        private readonly Dictionary&lt;string, string> _settings;
+        private readonly Dictionary<string, string> _settings;
         public DateTime LoadedAt { get; }
 
         private ConfigurationManager()
@@ -272,7 +272,7 @@ namespace SingletonPattern
             LoadedAt = DateTime.Now;
             
             // Simulate loading from file/database
-            _settings = new Dictionary&lt;string, string>
+            _settings = new Dictionary<string, string>
             {
                 { "DatabaseConnection", "Server=localhost;Database=MyApp;Trusted_Connection=true;" },
                 { "ApiEndpoint", "https://api.example.com/v1" },
@@ -323,9 +323,9 @@ namespace SingletonPattern
     /// </summary>
     public class Logger
     {
-        private static readonly Lazy&lt;Logger> _lazy = new(() => new Logger());
+        private static readonly Lazy<Logger> _lazy = new(() => new Logger());
         private readonly object _logLock = new();
-        private readonly List&lt;string> _logHistory = new();
+        private readonly List<string> _logHistory = new();
 
         private Logger()
         {
@@ -389,10 +389,10 @@ namespace SingletonPattern
             Console.WriteLine($"\n  Same instance? {ReferenceEquals(basic1, basic2)}");
 
             // ─────────────────────────────────────────────
-            // Demo 2: Thread Safety with Lazy\&lt;T\>
+            // Demo 2: Thread Safety with Lazy\<T\>
             // ─────────────────────────────────────────────
             Console.WriteLine("\n═══════════════════════════════════════════════");
-            Console.WriteLine("  DEMO 2: Thread Safety (Lazy\&lt;T\>)");
+            Console.WriteLine("  DEMO 2: Thread Safety (Lazy\<T\>)");
             Console.WriteLine("═══════════════════════════════════════════════");
 
             Console.WriteLine("\n  Accessing LazySingleton from multiple threads:");
@@ -479,7 +479,7 @@ namespace SingletonPattern
   Same instance? True
 
 ═══════════════════════════════════════════════
-  DEMO 2: Thread Safety (Lazy\&lt;T\>)
+  DEMO 2: Thread Safety (Lazy\<T\>)
 ═══════════════════════════════════════════════
 
   Accessing LazySingleton from multiple threads:
@@ -520,7 +520,7 @@ namespace SingletonPattern
 | **Basic** | ❌ No | ✅ Yes | Fast | ❌ |
 | **Lock** | ✅ Yes | ✅ Yes | Slow | ❌ |
 | **Double-Check** | ✅ Yes | ✅ Yes | Good | ⚠️ |
-| **Lazy\&lt;T\>** | ✅ Yes | ✅ Yes | Good | ✅ Best |
+| **Lazy\<T\>** | ✅ Yes | ✅ Yes | Good | ✅ Best |
 | **Static Init** | ✅ Yes | ❌ No | Fast | ⚠️ |
 
 ---
@@ -575,8 +575,8 @@ public static Singleton Instance
     }
 }
 
-// ✅ GOOD: Use Lazy\&lt;T\>
-private static readonly Lazy&lt;Singleton> _lazy = new(() => new Singleton());
+// ✅ GOOD: Use Lazy\<T\>
+private static readonly Lazy<Singleton> _lazy = new(() => new Singleton());
 public static Singleton Instance => _lazy.Value;
 ```
 
@@ -630,7 +630,7 @@ public class Service
 - ⚡ **Lazy Initialization**: Instance created on first access (usually)
 - 🔒 **Thread Safety**: Must be implemented correctly for multi-threading
 - ⚠️ **Use Sparingly**: Often overused; consider alternatives
-- ✅ **Prefer Lazy\&lt;T\>**: Modern C# best practice
+- ✅ **Prefer Lazy\<T\>**: Modern C# best practice
 
 ---
 

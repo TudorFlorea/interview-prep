@@ -22,7 +22,7 @@ A Stack is a Last-In-First-Out (LIFO) data structure. Stacks are essential for p
 ### Key C# Patterns
 ```csharp
 // Basic stack usage
-Stack&lt;int> stack = new Stack&lt;int>();
+Stack<int> stack = new Stack<int>();
 stack.Push(x);           // Add to top
 stack.Pop();             // Remove and return top
 stack.Peek();            // Return top without removing
@@ -30,8 +30,8 @@ stack.Count;             // Size
 stack.Count > 0          // Not empty check
 
 // Monotonic increasing stack (for next smaller element)
-Stack&lt;int> stack = new Stack&lt;int>();
-for (int i = 0; i &lt; nums.Length; i++) {
+Stack<int> stack = new Stack<int>();
+for (int i = 0; i < nums.Length; i++) {
     while (stack.Count > 0 && nums[stack.Peek()] > nums[i]) {
         int idx = stack.Pop();
         result[idx] = nums[i];  // nums[i] is next smaller for nums[idx]
@@ -103,8 +103,8 @@ Stack-based matching.
 ```csharp
 public class Solution {
     public bool IsValid(string s) {
-        Stack&lt;char> stack = new Stack&lt;char>();
-        Dictionary&lt;char, char> pairs = new Dictionary&lt;char, char> {
+        Stack<char> stack = new Stack<char>();
+        Dictionary<char, char> pairs = new Dictionary<char, char> {
             { ')', '(' },
             { ']', '[' },
             { '}', '{' }
@@ -168,12 +168,12 @@ Main stack for values, min stack for minimums.
 
 ```csharp
 public class MinStack {
-    private Stack&lt;int> stack;
-    private Stack&lt;int> minStack;
+    private Stack<int> stack;
+    private Stack<int> minStack;
     
     public MinStack() {
-        stack = new Stack&lt;int>();
-        minStack = new Stack&lt;int>();
+        stack = new Stack<int>();
+        minStack = new Stack<int>();
     }
     
     public void Push(int val) {
@@ -203,10 +203,10 @@ Store (value, minAtThisLevel) pairs.
 
 ```csharp
 public class MinStack {
-    private Stack&lt;(int val, int min)> stack;
+    private Stack<(int val, int min)> stack;
     
     public MinStack() {
-        stack = new Stack&lt;(int, int)>();
+        stack = new Stack<(int, int)>();
     }
     
     public void Push(int val) {
@@ -267,8 +267,8 @@ Push numbers to stack, apply operators to top two elements.
 ```csharp
 public class Solution {
     public int EvalRPN(string[] tokens) {
-        Stack&lt;int> stack = new Stack&lt;int>();
-        HashSet&lt;string> operators = new HashSet&lt;string> { "+", "-", "*", "/" };
+        Stack<int> stack = new Stack<int>();
+        HashSet<string> operators = new HashSet<string> { "+", "-", "*", "/" };
         
         foreach (string token in tokens) {
             if (operators.Contains(token)) {
@@ -298,7 +298,7 @@ public class Solution {
 ```csharp
 public class Solution {
     public int EvalRPN(string[] tokens) {
-        Stack&lt;int> stack = new Stack&lt;int>();
+        Stack<int> stack = new Stack<int>();
         
         foreach (string token in tokens) {
             if (token == "+" || token == "-" || token == "*" || token == "/") {
@@ -350,13 +350,13 @@ Track count of open and close parentheses used.
 
 ```csharp
 public class Solution {
-    public IList&lt;string> GenerateParenthesis(int n) {
-        List&lt;string> result = new List&lt;string>();
+    public IList<string> GenerateParenthesis(int n) {
+        List<string> result = new List<string>();
         Backtrack(result, new StringBuilder(), 0, 0, n);
         return result;
     }
     
-    private void Backtrack(List&lt;string> result, StringBuilder current, 
+    private void Backtrack(List<string> result, StringBuilder current, 
                            int open, int close, int n) {
         // Base case: used all parentheses
         if (current.Length == 2 * n) {
@@ -365,14 +365,14 @@ public class Solution {
         }
         
         // Can add opening parenthesis if we haven't used all
-        if (open &lt; n) {
+        if (open < n) {
             current.Append('(');
             Backtrack(result, current, open + 1, close, n);
             current.Length--;  // Backtrack
         }
         
         // Can add closing parenthesis if there are unmatched opens
-        if (close &lt; open) {
+        if (close < open) {
             current.Append(')');
             Backtrack(result, current, open, close + 1, n);
             current.Length--;  // Backtrack
@@ -386,9 +386,9 @@ Track state on a stack instead of recursion.
 
 ```csharp
 public class Solution {
-    public IList&lt;string> GenerateParenthesis(int n) {
-        List&lt;string> result = new List&lt;string>();
-        Stack&lt;(string str, int open, int close)> stack = new Stack&lt;(string, int, int)>();
+    public IList<string> GenerateParenthesis(int n) {
+        List<string> result = new List<string>();
+        Stack<(string str, int open, int close)> stack = new Stack<(string, int, int)>();
         
         stack.Push(("", 0, 0));
         
@@ -400,11 +400,11 @@ public class Solution {
                 continue;
             }
             
-            if (open &lt; n) {
+            if (open < n) {
                 stack.Push((str + "(", open + 1, close));
             }
             
-            if (close &lt; open) {
+            if (close < open) {
                 stack.Push((str + ")", open, close + 1));
             }
         }
@@ -415,7 +415,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- Two rules: `open &lt; n` and `close &lt; open`
+- Two rules: `open < n` and `close < open`
 - This is backtracking, but stack-based iteration also works
 - `StringBuilder.Length--` removes last character (backtracking)
 - Time complexity involves Catalan numbers C_n = (2n)! / ((n+1)! × n!)
@@ -449,8 +449,8 @@ public class Solution {
         int n = temperatures.Length;
         int[] result = new int[n];
         
-        for (int i = 0; i &lt; n; i++) {
-            for (int j = i + 1; j &lt; n; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 if (temperatures[j] > temperatures[i]) {
                     result[i] = j - i;
                     break;
@@ -474,11 +474,11 @@ public class Solution {
     public int[] DailyTemperatures(int[] temperatures) {
         int n = temperatures.Length;
         int[] result = new int[n];
-        Stack&lt;int> stack = new Stack&lt;int>();  // Stores indices
+        Stack<int> stack = new Stack<int>();  // Stores indices
         
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             // Pop all days that have found their warmer day
-            while (stack.Count > 0 && temperatures[stack.Peek()] &lt; temperatures[i]) {
+            while (stack.Count > 0 && temperatures[stack.Peek()] < temperatures[i]) {
                 int prevDay = stack.Pop();
                 result[prevDay] = i - prevDay;
             }
@@ -530,14 +530,14 @@ public class Solution {
         
         // Create (position, time to reach target) pairs
         var cars = new (int pos, double time)[n];
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             cars[i] = (position[i], (double)(target - position[i]) / speed[i]);
         }
         
         // Sort by position descending (closest to target first)
         Array.Sort(cars, (a, b) => b.pos.CompareTo(a.pos));
         
-        Stack&lt;double> stack = new Stack&lt;double>();  // Fleet arrival times
+        Stack<double> stack = new Stack<double>();  // Fleet arrival times
         
         foreach (var (pos, time) in cars) {
             // If this car is slower (takes more time), it forms a new fleet
@@ -562,7 +562,7 @@ public class Solution {
         if (n == 0) return 0;
         
         var cars = new (int pos, double time)[n];
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             cars[i] = (position[i], (double)(target - position[i]) / speed[i]);
         }
         
@@ -619,7 +619,7 @@ public class Solution {
     public int LargestRectangleArea(int[] heights) {
         int maxArea = 0;
         
-        for (int i = 0; i &lt; heights.Length; i++) {
+        for (int i = 0; i < heights.Length; i++) {
             int height = heights[i];
             
             // Expand left
@@ -630,7 +630,7 @@ public class Solution {
             
             // Expand right
             int right = i;
-            while (right &lt; heights.Length - 1 && heights[right + 1] >= height) {
+            while (right < heights.Length - 1 && heights[right + 1] >= height) {
                 right++;
             }
             
@@ -652,10 +652,10 @@ Stack stores indices of bars in increasing height order.
 ```csharp
 public class Solution {
     public int LargestRectangleArea(int[] heights) {
-        Stack&lt;int> stack = new Stack&lt;int>();  // Indices
+        Stack<int> stack = new Stack<int>();  // Indices
         int maxArea = 0;
         
-        for (int i = 0; i &lt;= heights.Length; i++) {
+        for (int i = 0; i <= heights.Length; i++) {
             // Use 0 as sentinel for the end
             int currentHeight = (i == heights.Length) ? 0 : heights[i];
             
@@ -696,11 +696,11 @@ public class Solution {
         Array.Copy(heights, 0, h, 1, heights.Length);
         // h[0] = 0, h[h.Length-1] = 0 (defaults)
         
-        Stack&lt;int> stack = new Stack&lt;int>();
+        Stack<int> stack = new Stack<int>();
         stack.Push(0);  // Push sentinel index
         int maxArea = 0;
         
-        for (int i = 1; i &lt; h.Length; i++) {
+        for (int i = 1; i < h.Length; i++) {
             while (h[stack.Peek()] > h[i]) {
                 int height = h[stack.Pop()];
                 int width = i - stack.Peek() - 1;
@@ -739,8 +739,8 @@ public class Solution {
 
 ```csharp
 // Monotonic DECREASING stack (next greater element)
-for (int i = 0; i &lt; n; i++) {
-    while (stack.Count > 0 && arr[stack.Peek()] &lt; arr[i]) {
+for (int i = 0; i < n; i++) {
+    while (stack.Count > 0 && arr[stack.Peek()] < arr[i]) {
         int idx = stack.Pop();
         result[idx] = arr[i];  // arr[i] is next greater for arr[idx]
     }
@@ -748,7 +748,7 @@ for (int i = 0; i &lt; n; i++) {
 }
 
 // Monotonic INCREASING stack (next smaller element)
-for (int i = 0; i &lt; n; i++) {
+for (int i = 0; i < n; i++) {
     while (stack.Count > 0 && arr[stack.Peek()] > arr[i]) {
         int idx = stack.Pop();
         result[idx] = arr[i];  // arr[i] is next smaller for arr[idx]
@@ -760,7 +760,7 @@ for (int i = 0; i &lt; n; i++) {
 ### C# Stack Quick Reference
 
 ```csharp
-Stack&lt;int> stack = new Stack&lt;int>();
+Stack<int> stack = new Stack<int>();
 
 // Operations
 stack.Push(x);           // Add to top: O(1)
@@ -772,5 +772,5 @@ stack.Clear();           // Remove all elements
 stack.Contains(x);       // Check if element exists: O(n)
 
 // Initialize with collection
-Stack&lt;int> stack = new Stack&lt;int>(new[] { 1, 2, 3 });  // 3 is on top
+Stack<int> stack = new Stack<int>(new[] { 1, 2, 3 });  // 3 is on top
 ```

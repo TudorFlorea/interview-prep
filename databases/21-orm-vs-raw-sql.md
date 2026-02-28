@@ -176,7 +176,7 @@ cursor.execute("""
     SELECT r.*, p.name as product_name
     FROM ranked r
     JOIN products p ON r.product_id = p.id
-    WHERE rank &lt;= 5
+    WHERE rank <= 5
     ORDER BY month DESC, rank
 """)
 top_products_by_month = cursor.fetchall()

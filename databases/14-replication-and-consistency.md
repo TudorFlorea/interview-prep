@@ -168,7 +168,7 @@ def create_order(customer_id, items):
 def get_order_with_items(order_id, min_version=None):
     # If we know minimum version, wait for replica to catch up
     if min_version:
-        while replica_db.query("SELECT version FROM ...") &lt; min_version:
+        while replica_db.query("SELECT version FROM ...") < min_version:
             time.sleep(0.1)
     
     return replica_db.query("SELECT * FROM orders WHERE id = %s", order_id)
@@ -179,7 +179,7 @@ def get_database_connection(consistency='eventual'):
         return primary_db
     elif consistency == 'eventual':
         # Check which replicas are caught up
-        available = [r for r in replicas if r.lag_seconds &lt; 5]
+        available = [r for r in replicas if r.lag_seconds < 5]
         return random.choice(available) if available else primary_db
 ```
 
@@ -462,7 +462,7 @@ class DatabaseRouter:
             return self.primary  # Strong consistency
         if table == 'products':
             # Load balance reads across replicas
-            healthy = [r for r in self.replicas if r.lag_seconds &lt; 5]
+            healthy = [r for r in self.replicas if r.lag_seconds < 5]
             return random.choice(healthy)
         return self.primary
 ```
@@ -560,7 +560,7 @@ def get_order(order_id, just_created=False):
 - Users in US, EU, and Asia-Pacific
 - Data must stay in region for compliance (GDPR for EU)
 - Need 99.99% availability
-- Acceptable latency: &lt;100ms for reads, &lt;500ms for writes
+- Acceptable latency: <100ms for reads, <500ms for writes
 
 <details>
 <summary>✅ Solution</summary>

@@ -186,7 +186,7 @@ namespace ChainOfResponsibilityPattern
 
         protected override bool CanHandle(SupportTicket ticket)
         {
-            return ticket.Priority &lt;= TicketPriority.Medium &&
+            return ticket.Priority <= TicketPriority.Medium &&
                    ticket.Category != "Technical" &&
                    ticket.Category != "Billing";
         }
@@ -211,7 +211,7 @@ namespace ChainOfResponsibilityPattern
         protected override bool CanHandle(SupportTicket ticket)
         {
             return ticket.Category == "Technical" && 
-                   ticket.Priority &lt;= TicketPriority.High;
+                   ticket.Priority <= TicketPriority.High;
         }
 
         protected override void ProcessTicket(SupportTicket ticket)
@@ -323,7 +323,7 @@ namespace ChainOfResponsibilityPattern
 
     public class RateLimitMiddleware : Middleware
     {
-        private readonly Dictionary&lt;string, int> _requestCounts = new();
+        private readonly Dictionary<string, int> _requestCounts = new();
         private readonly int _limit = 5;
 
         public override bool Process(Request request)

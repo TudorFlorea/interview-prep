@@ -30,7 +30,7 @@ The next step is to declare the Abstract Factory—an interface with a list of c
 
 ```
 ┌───────────────────────────────────────────────────────────────────────┐
-│                        &lt;&lt;interface>>                                   │
+│                        <<interface>>                                   │
 │                        IFurnitureFactory                               │
 │  ───────────────────────────────────────────────────────────────────  │
 │  + CreateChair(): IChair                                               │
@@ -217,7 +217,7 @@ namespace AbstractFactoryPattern
     {
         public void Render()
         {
-            Console.WriteLine("    &lt; Linux Button >");
+            Console.WriteLine("    < Linux Button >");
         }
 
         public void OnClick(Action action)

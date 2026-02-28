@@ -430,13 +430,13 @@ $ curl -v https://api.github.com/users/octocat
 > User-Agent: curl/8.0.1
 > Accept: */*
 
-&lt; HTTP/2 200                           # Status code 200 OK
-&lt; content-type: application/json; charset=utf-8
-&lt; x-ratelimit-limit: 60               # Rate limiting headers
-&lt; x-ratelimit-remaining: 59
-&lt; x-ratelimit-reset: 1699900000
-&lt; etag: "abc123..."                    # For caching
-&lt; cache-control: public, max-age=60   # Cache for 60 seconds
+< HTTP/2 200                           # Status code 200 OK
+< content-type: application/json; charset=utf-8
+< x-ratelimit-limit: 60               # Rate limiting headers
+< x-ratelimit-remaining: 59
+< x-ratelimit-reset: 1699900000
+< etag: "abc123..."                    # For caching
+< cache-control: public, max-age=60   # Cache for 60 seconds
 
 {"login":"octocat","id":583231,...}
 ```

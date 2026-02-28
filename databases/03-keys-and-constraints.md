@@ -556,7 +556,7 @@ CREATE TABLE events (
         CHECK (expected_attendance IS NULL OR expected_attendance > 0)
 );
 
--- Note: Cross-table constraint (attendance &lt;= capacity) 
+-- Note: Cross-table constraint (attendance <= capacity) 
 -- can't be done with CHECK, requires trigger or application logic:
 CREATE OR REPLACE FUNCTION check_attendance_capacity()
 RETURNS TRIGGER AS $$

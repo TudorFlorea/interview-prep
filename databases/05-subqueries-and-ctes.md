@@ -415,7 +415,7 @@ WITH RECURSIVE bom AS (
         bom.level + 1
     FROM bom
     JOIN product_components pc ON bom.component_id = pc.product_id
-    WHERE bom.level &lt; 10  -- Safety limit
+    WHERE bom.level < 10  -- Safety limit
 )
 SELECT 
     component_id,
@@ -429,7 +429,7 @@ GROUP BY component_id;
 ```sql
 -- Always include termination conditions:
 -- 1. Level/depth limit
-WHERE level &lt; 100
+WHERE level < 100
 
 -- 2. Cycle detection (PostgreSQL)
 WITH RECURSIVE tree AS (
@@ -484,7 +484,7 @@ SET total_amount = (
 INSERT INTO order_archive (order_id, customer_id, total_amount, archived_at)
 SELECT order_id, customer_id, total_amount, NOW()
 FROM orders
-WHERE order_date &lt; DATE_SUB(NOW(), INTERVAL 1 YEAR);
+WHERE order_date < DATE_SUB(NOW(), INTERVAL 1 YEAR);
 
 -- Insert with subquery values
 INSERT INTO daily_summary (report_date, order_count, total_revenue)
@@ -525,7 +525,7 @@ WHERE (
     SELECT COUNT(*) FROM orders o2 
     WHERE o2.customer_id = c.customer_id 
     AND o2.total_amount >= o.total_amount
-) &lt;= 3;
+) <= 3;
 ```
 
 ---

@@ -95,7 +95,7 @@ WITH ranked AS (
         ) AS rn
     FROM products p
 )
-SELECT * FROM ranked WHERE rn &lt;= 3;
+SELECT * FROM ranked WHERE rn <= 3;
 
 -- Percentile ranking
 SELECT 
@@ -218,7 +218,7 @@ FROM monthly_sales;
 ### Window Frame Specification
 
 ```sql
-ROWS BETWEEN &lt;start> AND &lt;end>
+ROWS BETWEEN <start> AND <end>
 
 -- Start/End options:
 UNBOUNDED PRECEDING  -- First row of partition
@@ -293,11 +293,11 @@ GROUP BY ROLLUP (region, product);
 -- region    product     total_sales
 -- East      Widget      1000
 -- East      Gadget      1500
--- East      ALL PRODUCTS 2500      &lt;- subtotal for East
+-- East      ALL PRODUCTS 2500      <- subtotal for East
 -- West      Widget      2000
 -- West      Gadget      1000
--- West      ALL PRODUCTS 3000      &lt;- subtotal for West
--- ALL REGIONS ALL PRODUCTS 5500    &lt;- grand total
+-- West      ALL PRODUCTS 3000      <- subtotal for West
+-- ALL REGIONS ALL PRODUCTS 5500    <- grand total
 ```
 
 ### CUBE

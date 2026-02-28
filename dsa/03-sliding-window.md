@@ -25,14 +25,14 @@ The Sliding Window technique maintains a "window" over a contiguous subarray or 
 ```csharp
 // Fixed size window
 int windowSum = 0;
-for (int i = 0; i &lt; k; i++) windowSum += arr[i];  // Initialize
-for (int i = k; i &lt; arr.Length; i++) {
+for (int i = 0; i < k; i++) windowSum += arr[i];  // Initialize
+for (int i = k; i < arr.Length; i++) {
     windowSum += arr[i] - arr[i - k];  // Slide: add new, remove old
 }
 
 // Variable size window (expand right, contract left)
 int left = 0;
-for (int right = 0; right &lt; arr.Length; right++) {
+for (int right = 0; right < arr.Length; right++) {
     // Add arr[right] to window
     while (windowInvalid) {
         // Remove arr[left] from window
@@ -80,8 +80,8 @@ public class Solution {
     public int MaxProfit(int[] prices) {
         int maxProfit = 0;
         
-        for (int buy = 0; buy &lt; prices.Length; buy++) {
-            for (int sell = buy + 1; sell &lt; prices.Length; sell++) {
+        for (int buy = 0; buy < prices.Length; buy++) {
+            for (int sell = buy + 1; sell < prices.Length; sell++) {
                 int profit = prices[sell] - prices[buy];
                 maxProfit = Math.Max(maxProfit, profit);
             }
@@ -105,7 +105,7 @@ public class Solution {
         int maxProfit = 0;
         
         foreach (int price in prices) {
-            if (price &lt; minPrice) {
+            if (price < minPrice) {
                 minPrice = price;  // Found new minimum
             } else {
                 maxProfit = Math.Max(maxProfit, price - minPrice);
@@ -127,8 +127,8 @@ public class Solution {
         int right = 1;  // Sell pointer
         int maxProfit = 0;
         
-        while (right &lt; prices.Length) {
-            if (prices[left] &lt; prices[right]) {
+        while (right < prices.Length) {
+            if (prices[left] < prices[right]) {
                 // Profitable trade
                 maxProfit = Math.Max(maxProfit, prices[right] - prices[left]);
             } else {
@@ -181,9 +181,9 @@ public class Solution {
     public int LengthOfLongestSubstring(string s) {
         int maxLen = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
-            HashSet&lt;char> seen = new HashSet&lt;char>();
-            for (int j = i; j &lt; s.Length; j++) {
+        for (int i = 0; i < s.Length; i++) {
+            HashSet<char> seen = new HashSet<char>();
+            for (int j = i; j < s.Length; j++) {
                 if (seen.Contains(s[j])) break;
                 seen.Add(s[j]);
                 maxLen = Math.Max(maxLen, j - i + 1);
@@ -204,11 +204,11 @@ Expand right, contract left when duplicate found.
 ```csharp
 public class Solution {
     public int LengthOfLongestSubstring(string s) {
-        HashSet&lt;char> window = new HashSet&lt;char>();
+        HashSet<char> window = new HashSet<char>();
         int left = 0;
         int maxLen = 0;
         
-        for (int right = 0; right &lt; s.Length; right++) {
+        for (int right = 0; right < s.Length; right++) {
             // Shrink window until no duplicate
             while (window.Contains(s[right])) {
                 window.Remove(s[left]);
@@ -233,11 +233,11 @@ Store character positions to jump left pointer directly.
 ```csharp
 public class Solution {
     public int LengthOfLongestSubstring(string s) {
-        Dictionary&lt;char, int> lastSeen = new Dictionary&lt;char, int>();
+        Dictionary<char, int> lastSeen = new Dictionary<char, int>();
         int left = 0;
         int maxLen = 0;
         
-        for (int right = 0; right &lt; s.Length; right++) {
+        for (int right = 0; right < s.Length; right++) {
             char c = s[right];
             
             // If character seen and is in current window
@@ -289,18 +289,18 @@ public class Solution {
     public int CharacterReplacement(string s, int k) {
         int maxLen = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             int[] count = new int[26];
             int maxFreq = 0;
             
-            for (int j = i; j &lt; s.Length; j++) {
+            for (int j = i; j < s.Length; j++) {
                 count[s[j] - 'A']++;
                 maxFreq = Math.Max(maxFreq, count[s[j] - 'A']);
                 
                 int windowLen = j - i + 1;
                 int replacements = windowLen - maxFreq;
                 
-                if (replacements &lt;= k) {
+                if (replacements <= k) {
                     maxLen = Math.Max(maxLen, windowLen);
                 }
             }
@@ -325,7 +325,7 @@ public class Solution {
         int maxFreq = 0;  // Max frequency of any single char in current window
         int maxLen = 0;
         
-        for (int right = 0; right &lt; s.Length; right++) {
+        for (int right = 0; right < s.Length; right++) {
             count[s[right] - 'A']++;
             maxFreq = Math.Max(maxFreq, count[s[right] - 'A']);
             
@@ -358,7 +358,7 @@ public class Solution {
         int maxFreq = 0;
         int maxLen = 0;
         
-        for (int right = 0; right &lt; s.Length; right++) {
+        for (int right = 0; right < s.Length; right++) {
             count[s[right] - 'A']++;
             maxFreq = Math.Max(maxFreq, count[s[right] - 'A']);
             
@@ -418,9 +418,9 @@ public class Solution {
             target[c - 'a']++;
         }
         
-        for (int i = 0; i &lt;= s2.Length - s1.Length; i++) {
+        for (int i = 0; i <= s2.Length - s1.Length; i++) {
             int[] window = new int[26];
-            for (int j = i; j &lt; i + s1.Length; j++) {
+            for (int j = i; j < i + s1.Length; j++) {
                 window[s2[j] - 'a']++;
             }
             if (ArraysEqual(target, window)) return true;
@@ -430,7 +430,7 @@ public class Solution {
     }
     
     private bool ArraysEqual(int[] a, int[] b) {
-        for (int i = 0; i &lt; 26; i++) {
+        for (int i = 0; i < 26; i++) {
             if (a[i] != b[i]) return false;
         }
         return true;
@@ -453,19 +453,19 @@ public class Solution {
         int[] s2Count = new int[26];
         
         // Initialize: count s1 and first window of s2
-        for (int i = 0; i &lt; s1.Length; i++) {
+        for (int i = 0; i < s1.Length; i++) {
             s1Count[s1[i] - 'a']++;
             s2Count[s2[i] - 'a']++;
         }
         
         // Count matching character frequencies
         int matches = 0;
-        for (int i = 0; i &lt; 26; i++) {
+        for (int i = 0; i < 26; i++) {
             if (s1Count[i] == s2Count[i]) matches++;
         }
         
         // Slide the window
-        for (int i = s1.Length; i &lt; s2.Length; i++) {
+        for (int i = s1.Length; i < s2.Length; i++) {
             if (matches == 26) return true;
             
             // Add new character (right side of window)
@@ -499,7 +499,7 @@ public class Solution {
         
         foreach (char c in s1) target[c - 'a']++;
         
-        for (int i = 0; i &lt; s2.Length; i++) {
+        for (int i = 0; i < s2.Length; i++) {
             // Add to window
             window[s2[i] - 'a']++;
             
@@ -518,7 +518,7 @@ public class Solution {
     }
     
     private bool ArraysMatch(int[] a, int[] b) {
-        for (int i = 0; i &lt; 26; i++) {
+        for (int i = 0; i < 26; i++) {
             if (a[i] != b[i]) return false;
         }
         return true;
@@ -561,7 +561,7 @@ public class Solution {
     public string MinWindow(string s, string t) {
         if (t.Length > s.Length) return "";
         
-        Dictionary&lt;char, int> tCount = new Dictionary&lt;char, int>();
+        Dictionary<char, int> tCount = new Dictionary<char, int>();
         foreach (char c in t) {
             tCount[c] = tCount.GetValueOrDefault(c, 0) + 1;
         }
@@ -569,13 +569,13 @@ public class Solution {
         int minLen = int.MaxValue;
         int minStart = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
-            Dictionary&lt;char, int> window = new Dictionary&lt;char, int>();
-            for (int j = i; j &lt; s.Length; j++) {
+        for (int i = 0; i < s.Length; i++) {
+            Dictionary<char, int> window = new Dictionary<char, int>();
+            for (int j = i; j < s.Length; j++) {
                 window[s[j]] = window.GetValueOrDefault(s[j], 0) + 1;
                 
                 if (ContainsAll(window, tCount)) {
-                    if (j - i + 1 &lt; minLen) {
+                    if (j - i + 1 < minLen) {
                         minLen = j - i + 1;
                         minStart = i;
                     }
@@ -587,9 +587,9 @@ public class Solution {
         return minLen == int.MaxValue ? "" : s.Substring(minStart, minLen);
     }
     
-    private bool ContainsAll(Dictionary&lt;char, int> window, Dictionary&lt;char, int> target) {
+    private bool ContainsAll(Dictionary<char, int> window, Dictionary<char, int> target) {
         foreach (var kvp in target) {
-            if (!window.ContainsKey(kvp.Key) || window[kvp.Key] &lt; kvp.Value) {
+            if (!window.ContainsKey(kvp.Key) || window[kvp.Key] < kvp.Value) {
                 return false;
             }
         }
@@ -610,12 +610,12 @@ public class Solution {
         if (t.Length > s.Length) return "";
         
         // Count characters needed from t
-        Dictionary&lt;char, int> need = new Dictionary&lt;char, int>();
+        Dictionary<char, int> need = new Dictionary<char, int>();
         foreach (char c in t) {
             need[c] = need.GetValueOrDefault(c, 0) + 1;
         }
         
-        Dictionary&lt;char, int> window = new Dictionary&lt;char, int>();
+        Dictionary<char, int> window = new Dictionary<char, int>();
         int have = 0;           // Number of chars with satisfied count
         int required = need.Count;  // Number of unique chars needed
         
@@ -623,7 +623,7 @@ public class Solution {
         int minLen = int.MaxValue;
         int minStart = 0;
         
-        for (int right = 0; right &lt; s.Length; right++) {
+        for (int right = 0; right < s.Length; right++) {
             char c = s[right];
             window[c] = window.GetValueOrDefault(c, 0) + 1;
             
@@ -635,7 +635,7 @@ public class Solution {
             // Contract window while we have all required chars
             while (have == required) {
                 // Update minimum
-                if (right - left + 1 &lt; minLen) {
+                if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
                     minStart = left;
                 }
@@ -643,7 +643,7 @@ public class Solution {
                 // Remove left character
                 char leftChar = s[left];
                 window[leftChar]--;
-                if (need.ContainsKey(leftChar) && window[leftChar] &lt; need[leftChar]) {
+                if (need.ContainsKey(leftChar) && window[leftChar] < need[leftChar]) {
                     have--;
                 }
                 left++;
@@ -659,7 +659,7 @@ public class Solution {
 - "have" counts satisfied character types, not total characters
 - Contract window when valid to find minimum
 - Use `window[c] == need[c]` to detect when requirement is exactly met
-- Use `window[c] &lt; need[c]` to detect when we lose satisfaction
+- Use `window[c] < need[c]` to detect when we lose satisfaction
 - This pattern applies to many "minimum substring containing X" problems
 
 ---
@@ -696,9 +696,9 @@ public class Solution {
         int n = nums.Length;
         int[] result = new int[n - k + 1];
         
-        for (int i = 0; i &lt;= n - k; i++) {
+        for (int i = 0; i <= n - k; i++) {
             int max = nums[i];
-            for (int j = i; j &lt; i + k; j++) {
+            for (int j = i; j < i + k; j++) {
                 max = Math.Max(max, nums[j]);
             }
             result[i] = max;
@@ -720,16 +720,16 @@ public class Solution {
     public int[] MaxSlidingWindow(int[] nums, int k) {
         int n = nums.Length;
         int[] result = new int[n - k + 1];
-        LinkedList&lt;int> deque = new LinkedList&lt;int>();  // Store indices
+        LinkedList<int> deque = new LinkedList<int>();  // Store indices
         
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             // Remove indices outside current window
-            while (deque.Count > 0 && deque.First.Value &lt; i - k + 1) {
+            while (deque.Count > 0 && deque.First.Value < i - k + 1) {
                 deque.RemoveFirst();
             }
             
             // Remove indices of smaller elements (they won't be max)
-            while (deque.Count > 0 && nums[deque.Last.Value] &lt; nums[i]) {
+            while (deque.Count > 0 && nums[deque.Last.Value] < nums[i]) {
                 deque.RemoveLast();
             }
             
@@ -749,14 +749,14 @@ public class Solution {
 #### Why Monotonic Deque Works
 1. **Decreasing order**: Front of deque is always the maximum
 2. **Remove smaller elements**: If `nums[i] > nums[j]` where `i > j`, then `nums[j]` can never be maximum for any future window containing `i`
-3. **Remove outside elements**: Elements with index &lt; `i - k + 1` are outside current window
+3. **Remove outside elements**: Elements with index < `i - k + 1` are outside current window
 
 #### Key Takeaways
 - **Monotonic deque** is powerful for range max/min queries
 - Store indices, not values, to check window bounds
 - "Decreasing" means each new element removes all smaller elements
 - Similar problems: Next Greater Element, Daily Temperatures
-- C# doesn't have Deque, use `LinkedList&lt;T>` with AddFirst/AddLast/RemoveFirst/RemoveLast
+- C# doesn't have Deque, use `LinkedList<T>` with AddFirst/AddLast/RemoveFirst/RemoveLast
 
 ---
 
@@ -777,7 +777,7 @@ public class Solution {
 
 ```csharp
 int left = 0;
-for (int right = 0; right &lt; n; right++) {
+for (int right = 0; right < n; right++) {
     // 1. Add element at right to window
     
     // 2. Shrink window while constraint violated
@@ -794,12 +794,12 @@ for (int right = 0; right &lt; n; right++) {
 
 ```csharp
 // Initialize first window
-for (int i = 0; i &lt; k; i++) {
+for (int i = 0; i < k; i++) {
     // Add to window
 }
 
 // Slide window
-for (int i = k; i &lt; n; i++) {
+for (int i = k; i < n; i++) {
     // Process current window (before sliding)
     
     // Add new element (right)
@@ -811,14 +811,14 @@ for (int i = k; i &lt; n; i++) {
 
 ```csharp
 // HashSet - check duplicates in window
-HashSet&lt;char> window = new HashSet&lt;char>();
+HashSet<char> window = new HashSet<char>();
 
 // Dictionary - frequency counting
-Dictionary&lt;char, int> freq = new Dictionary&lt;char, int>();
+Dictionary<char, int> freq = new Dictionary<char, int>();
 freq[c] = freq.GetValueOrDefault(c, 0) + 1;
 
 // LinkedList as Deque (for monotonic deque)
-LinkedList&lt;int> deque = new LinkedList&lt;int>();
+LinkedList<int> deque = new LinkedList<int>();
 deque.AddLast(x);     // push back
 deque.RemoveLast();   // pop back
 deque.AddFirst(x);    // push front

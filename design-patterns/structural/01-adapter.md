@@ -38,7 +38,7 @@ The adapter wraps one of the objects to hide the complexity of conversion happen
                                     │ implements
                                     ▼
                            ┌─────────────────┐
-                           │  &lt;&lt;interface>>  │
+                           │  <<interface>>  │
                            │     ITarget     │
                            └─────────────────┘
 ```
@@ -193,7 +193,7 @@ namespace AdapterPattern
     public class PayPalAdapter : IPaymentProcessor
     {
         private readonly LegacyPayPalApi _paypal;
-        private readonly Dictionary&lt;string, string> _transactionMap = new();
+        private readonly Dictionary<string, string> _transactionMap = new();
 
         public PayPalAdapter(LegacyPayPalApi paypal)
         {
@@ -371,7 +371,7 @@ namespace AdapterPattern
             Console.WriteLine("  PROCESSING MULTIPLE PAYMENTS (Polymorphism)");
             Console.WriteLine("═══════════════════════════════════════════════");
 
-            var processors = new List&lt;IPaymentProcessor>
+            var processors = new List<IPaymentProcessor>
             {
                 new PayPalAdapter(new LegacyPayPalApi()),
                 new StripeAdapter(new StripeApi())

@@ -24,7 +24,7 @@ The Decorator pattern suggests wrapping objects in special wrapper objects. The 
 
 ```
         ┌─────────────────┐
-        │  &lt;&lt;interface>>  │
+        │  <<interface>>  │
         │   IComponent    │
         │─────────────────│
         │ + Operation()   │

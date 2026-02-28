@@ -26,7 +26,7 @@ The Observer pattern suggests adding a subscription mechanism to the publisher (
 ┌─────────────────────────────────────────────────────────────┐
 │                        Publisher                             │
 │─────────────────────────────────────────────────────────────│
-│  - subscribers: List&lt;ISubscriber>                           │
+│  - subscribers: List<ISubscriber>                           │
 │  - state                                                    │
 │  + subscribe(subscriber)                                    │
 │  + unsubscribe(subscriber)                                  │
@@ -78,13 +78,13 @@ namespace ObserverPattern
     
     public class StockMarket
     {
-        private readonly Dictionary&lt;string, List&lt;IStockObserver>> _observers = new();
-        private readonly Dictionary&lt;string, decimal> _prices = new();
+        private readonly Dictionary<string, List<IStockObserver>> _observers = new();
+        private readonly Dictionary<string, decimal> _prices = new();
 
         public void Subscribe(string symbol, IStockObserver observer)
         {
             if (!_observers.ContainsKey(symbol))
-                _observers[symbol] = new List&lt;IStockObserver>();
+                _observers[symbol] = new List<IStockObserver>();
             
             _observers[symbol].Add(observer);
             Console.WriteLine($"  ➕ New subscription for {symbol}");
@@ -149,7 +149,7 @@ namespace ObserverPattern
                 Console.WriteLine($"    🔔 [{_userName}] ALERT: {symbol} hit ${price}! " +
                     $"Consider selling (target: ${_targetHigh})");
             }
-            else if (price &lt;= _targetLow)
+            else if (price <= _targetLow)
             {
                 Console.WriteLine($"    🔔 [{_userName}] ALERT: {symbol} dropped to ${price}! " +
                     $"Consider buying (target: ${_targetLow})");
@@ -175,7 +175,7 @@ namespace ObserverPattern
         public void Update(string symbol, decimal price, decimal change)
         {
             // Buy on dips
-            if (change &lt; -_buyThreshold && _cash >= price)
+            if (change < -_buyThreshold && _cash >= price)
             {
                 int sharesToBuy = (int)(_cash / price);
                 _shares += sharesToBuy;
@@ -194,8 +194,8 @@ namespace ObserverPattern
 
     public class PortfolioTracker : IStockObserver
     {
-        private readonly Dictionary&lt;string, int> _holdings = new();
-        private readonly Dictionary&lt;string, decimal> _prices = new();
+        private readonly Dictionary<string, int> _holdings = new();
+        private readonly Dictionary<string, decimal> _prices = new();
 
         public void AddHolding(string symbol, int shares)
         {
@@ -249,7 +249,7 @@ namespace ObserverPattern
     public class WeatherStation
     {
         // C# events provide built-in observer support
-        public event EventHandler&lt;WeatherStationEventArgs>? WeatherChanged;
+        public event EventHandler<WeatherStationEventArgs>? WeatherChanged;
 
         private double _temperature;
         private double _humidity;
@@ -289,7 +289,7 @@ namespace ObserverPattern
 
     public class StatisticsDisplay
     {
-        private readonly List&lt;double> _temperatures = new();
+        private readonly List<double> _temperatures = new();
 
         public void HandleWeatherChange(object? sender, WeatherStationEventArgs e)
         {
@@ -302,7 +302,7 @@ namespace ObserverPattern
             double min = double.MaxValue, max = double.MinValue;
             foreach (var t in _temperatures)
             {
-                if (t &lt; min) min = t;
+                if (t < min) min = t;
                 if (t > max) max = t;
             }
 
@@ -319,7 +319,7 @@ namespace ObserverPattern
             string forecast;
             if (e.Pressure > _lastPressure)
                 forecast = "☀️ Improving weather!";
-            else if (e.Pressure &lt; _lastPressure)
+            else if (e.Pressure < _lastPressure)
                 forecast = "🌧️ Watch out for rain!";
             else
                 forecast = "☁️ More of the same";
@@ -330,14 +330,14 @@ namespace ObserverPattern
     }
 
     // ═══════════════════════════════════════════════════════════════
-    // OBSERVABLE WITH IObservable&lt;T> (Reactive Pattern)
+    // OBSERVABLE WITH IObservable<T> (Reactive Pattern)
     // ═══════════════════════════════════════════════════════════════
     
-    public class NewsAgency : IObservable&lt;string>
+    public class NewsAgency : IObservable<string>
     {
-        private readonly List&lt;IObserver&lt;string>> _observers = new();
+        private readonly List<IObserver<string>> _observers = new();
 
-        public IDisposable Subscribe(IObserver&lt;string> observer)
+        public IDisposable Subscribe(IObserver<string> observer)
         {
             _observers.Add(observer);
             return new Unsubscriber(_observers, observer);
@@ -363,10 +363,10 @@ namespace ObserverPattern
 
         private class Unsubscriber : IDisposable
         {
-            private readonly List&lt;IObserver&lt;string>> _observers;
-            private readonly IObserver&lt;string> _observer;
+            private readonly List<IObserver<string>> _observers;
+            private readonly IObserver<string> _observer;
 
-            public Unsubscriber(List&lt;IObserver&lt;string>> observers, IObserver&lt;string> observer)
+            public Unsubscriber(List<IObserver<string>> observers, IObserver<string> observer)
             {
                 _observers = observers;
                 _observer = observer;
@@ -380,7 +380,7 @@ namespace ObserverPattern
         }
     }
 
-    public class NewsSubscriber : IObserver&lt;string>
+    public class NewsSubscriber : IObserver<string>
     {
         private readonly string _name;
 
@@ -470,10 +470,10 @@ namespace ObserverPattern
             weatherStation.SetMeasurements(82.0, 40, 1020.0);
 
             // ─────────────────────────────────────────────
-            // Demo 3: IObservable&lt;T> Pattern
+            // Demo 3: IObservable<T> Pattern
             // ─────────────────────────────────────────────
             Console.WriteLine("\n═══════════════════════════════════════════════");
-            Console.WriteLine("  NEWS AGENCY (IObservable&lt;T>)");
+            Console.WriteLine("  NEWS AGENCY (IObservable<T>)");
             Console.WriteLine("═══════════════════════════════════════════════");
 
             var newsAgency = new NewsAgency();
@@ -532,7 +532,7 @@ namespace ObserverPattern
 |----------|----------|
 | **Custom Interface** | Full control, simple scenarios |
 | **C# Events/Delegates** | Standard .NET pattern, built-in support |
-| **IObservable&lt;T>/IObserver&lt;T>** | Reactive Extensions, streaming data |
+| **IObservable<T>/IObserver<T>** | Reactive Extensions, streaming data |
 
 ---
 

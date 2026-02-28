@@ -621,7 +621,7 @@ DECLARE
 BEGIN
     SELECT MAX(id) INTO max_id FROM orders;
     
-    WHILE last_id &lt; max_id LOOP
+    WHILE last_id < max_id LOOP
         UPDATE orders
         SET status = CASE 
             WHEN shipped_at IS NOT NULL THEN 'shipped'
@@ -629,7 +629,7 @@ BEGIN
             ELSE 'pending'
         END
         WHERE id > last_id 
-          AND id &lt;= last_id + batch_size
+          AND id <= last_id + batch_size
           AND status IS NULL;
         
         GET DIAGNOSTICS affected = ROW_COUNT;

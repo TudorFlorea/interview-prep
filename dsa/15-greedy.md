@@ -50,7 +50,7 @@ public class Solution {
         int maxSum = nums[0];
         int currentSum = nums[0];
         
-        for (int i = 1; i &lt; nums.Length; i++) {
+        for (int i = 1; i < nums.Length; i++) {
             // Either extend current subarray or start new one
             currentSum = Math.Max(nums[i], currentSum + nums[i]);
             maxSum = Math.Max(maxSum, currentSum);
@@ -89,7 +89,7 @@ public class Solution {
     public bool CanJump(int[] nums) {
         int maxReach = 0;
         
-        for (int i = 0; i &lt; nums.Length; i++) {
+        for (int i = 0; i < nums.Length; i++) {
             if (i > maxReach) return false;  // Can't reach this index
             maxReach = Math.Max(maxReach, i + nums[i]);
             if (maxReach >= nums.Length - 1) return true;
@@ -147,7 +147,7 @@ public class Solution {
         int currentEnd = 0;   // End of current jump range
         int farthest = 0;     // Farthest we can reach
         
-        for (int i = 0; i &lt; nums.Length - 1; i++) {
+        for (int i = 0; i < nums.Length - 1; i++) {
             farthest = Math.Max(farthest, i + nums[i]);
             
             if (i == currentEnd) {
@@ -191,12 +191,12 @@ public class Solution {
         int tank = 0;
         int start = 0;
         
-        for (int i = 0; i &lt; gas.Length; i++) {
+        for (int i = 0; i < gas.Length; i++) {
             totalGas += gas[i];
             totalCost += cost[i];
             tank += gas[i] - cost[i];
             
-            if (tank &lt; 0) {
+            if (tank < 0) {
                 // Can't start from any station before i+1
                 start = i + 1;
                 tank = 0;
@@ -236,7 +236,7 @@ public class Solution {
     public bool IsNStraightHand(int[] hand, int groupSize) {
         if (hand.Length % groupSize != 0) return false;
         
-        SortedDictionary&lt;int, int> count = new SortedDictionary&lt;int, int>();
+        SortedDictionary<int, int> count = new SortedDictionary<int, int>();
         foreach (int card in hand) {
             count[card] = count.GetValueOrDefault(card, 0) + 1;
         }
@@ -244,7 +244,7 @@ public class Solution {
         while (count.Count > 0) {
             int start = count.Keys.First();
             
-            for (int i = start; i &lt; start + groupSize; i++) {
+            for (int i = start; i < start + groupSize; i++) {
                 if (!count.ContainsKey(i)) return false;
                 
                 count[i]--;
@@ -292,7 +292,7 @@ public class Solution {
             }
             
             // This triplet is usable
-            for (int i = 0; i &lt; 3; i++) {
+            for (int i = 0; i < 3; i++) {
                 if (triplet[i] == target[i]) {
                     found[i] = true;
                 }
@@ -329,17 +329,17 @@ Output: [9,7,8]
 
 ```csharp
 public class Solution {
-    public IList&lt;int> PartitionLabels(string s) {
+    public IList<int> PartitionLabels(string s) {
         // Find last occurrence of each character
         int[] lastIndex = new int[26];
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             lastIndex[s[i] - 'a'] = i;
         }
         
-        List&lt;int> result = new List&lt;int>();
+        List<int> result = new List<int>();
         int start = 0, end = 0;
         
-        for (int i = 0; i &lt; s.Length; i++) {
+        for (int i = 0; i < s.Length; i++) {
             end = Math.Max(end, lastIndex[s[i] - 'a']);
             
             if (i == end) {
@@ -394,7 +394,7 @@ public class Solution {
                 maxOpen++;  // Treat as '('
             }
             
-            if (maxOpen &lt; 0) return false;  // Too many ')'
+            if (maxOpen < 0) return false;  // Too many ')'
             minOpen = Math.Max(minOpen, 0);  // Can't go negative
         }
         
@@ -447,14 +447,14 @@ foreach (var interval in intervals) {
 
 // Kadane's (max subarray sum)
 int maxSum = nums[0], current = nums[0];
-for (int i = 1; i &lt; nums.Length; i++) {
+for (int i = 1; i < nums.Length; i++) {
     current = Math.Max(nums[i], current + nums[i]);
     maxSum = Math.Max(maxSum, current);
 }
 
 // Jump game (reach check)
 int maxReach = 0;
-for (int i = 0; i &lt;= maxReach && maxReach &lt; n - 1; i++) {
+for (int i = 0; i <= maxReach && maxReach < n - 1; i++) {
     maxReach = Math.Max(maxReach, i + nums[i]);
 }
 ```

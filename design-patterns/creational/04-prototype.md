@@ -24,7 +24,7 @@ The Prototype pattern delegates the cloning process to the actual objects that a
 
 ```
 ┌───────────────────────────────────────────────────────────────────────┐
-│                        &lt;&lt;interface>>                                   │
+│                        <<interface>>                                   │
 │                         ICloneable                                     │
 │  ───────────────────────────────────────────────────────────────────  │
 │  + Clone(): ICloneable                                                 │
@@ -114,7 +114,7 @@ namespace PrototypePattern
             return new Author(Name, Email);
         }
 
-        public override string ToString() => $"{Name} &lt;{Email}>";
+        public override string ToString() => $"{Name} <{Email}>";
     }
 
     /// <summary>
@@ -125,14 +125,14 @@ namespace PrototypePattern
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public string Version { get; set; }
-        public List&lt;string> Tags { get; set; }
+        public List<string> Tags { get; set; }
 
         public Metadata()
         {
             CreatedAt = DateTime.Now;
             ModifiedAt = DateTime.Now;
             Version = "1.0";
-            Tags = new List&lt;string>();
+            Tags = new List<string>();
         }
 
         public Metadata Clone()
@@ -142,7 +142,7 @@ namespace PrototypePattern
                 CreatedAt = CreatedAt,
                 ModifiedAt = DateTime.Now,  // Update modified time on clone
                 Version = Version,
-                Tags = new List&lt;string>(Tags)  // Create new list with same items
+                Tags = new List<string>(Tags)  // Create new list with same items
             };
         }
     }
@@ -160,8 +160,8 @@ namespace PrototypePattern
         public string Content { get; set; }
         public Author Author { get; set; }
         public Metadata Metadata { get; set; }
-        public List&lt;string> Sections { get; set; }
-        public Dictionary&lt;string, string> Variables { get; set; }
+        public List<string> Sections { get; set; }
+        public Dictionary<string, string> Variables { get; set; }
 
         public ReportDocument()
         {
@@ -169,8 +169,8 @@ namespace PrototypePattern
             Content = "";
             Author = new Author("Unknown", "unknown@example.com");
             Metadata = new Metadata();
-            Sections = new List&lt;string>();
-            Variables = new Dictionary&lt;string, string>();
+            Sections = new List<string>();
+            Variables = new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -196,8 +196,8 @@ namespace PrototypePattern
                 Content = this.Content,
                 Author = this.Author.Clone(),  // Clone nested object
                 Metadata = this.Metadata.Clone(),  // Clone nested object
-                Sections = new List&lt;string>(this.Sections),  // New list
-                Variables = new Dictionary&lt;string, string>(this.Variables)  // New dict
+                Sections = new List<string>(this.Sections),  // New list
+                Variables = new Dictionary<string, string>(this.Variables)  // New dict
             };
 
             return clone;
@@ -237,7 +237,7 @@ namespace PrototypePattern
         public int Columns { get; set; }
         public string[,] Data { get; set; }
         public Author Author { get; set; }
-        public List&lt;string> Formulas { get; set; }
+        public List<string> Formulas { get; set; }
 
         public SpreadsheetDocument(int rows, int columns)
         {
@@ -246,11 +246,11 @@ namespace PrototypePattern
             Columns = columns;
             Data = new string[rows, columns];
             Author = new Author("Unknown", "unknown@example.com");
-            Formulas = new List&lt;string>();
+            Formulas = new List<string>();
             
             // Initialize with empty cells
-            for (int i = 0; i &lt; rows; i++)
-                for (int j = 0; j &lt; columns; j++)
+            for (int i = 0; i < rows; i++)
+                for (int j = 0; j < columns; j++)
                     Data[i, j] = "";
         }
 
@@ -268,12 +268,12 @@ namespace PrototypePattern
             {
                 Name = this.Name + " (Copy)",
                 Author = this.Author.Clone(),
-                Formulas = new List&lt;string>(this.Formulas)
+                Formulas = new List<string>(this.Formulas)
             };
 
             // Deep copy the 2D array
-            for (int i = 0; i &lt; Rows; i++)
-                for (int j = 0; j &lt; Columns; j++)
+            for (int i = 0; i < Rows; i++)
+                for (int j = 0; j < Columns; j++)
                     clone.Data[i, j] = this.Data[i, j];
 
             return clone;
@@ -297,7 +297,7 @@ namespace PrototypePattern
     /// </summary>
     public class DocumentRegistry
     {
-        private readonly Dictionary&lt;string, IDocumentPrototype> _prototypes = new();
+        private readonly Dictionary<string, IDocumentPrototype> _prototypes = new();
 
         public void RegisterPrototype(string key, IDocumentPrototype prototype)
         {
@@ -447,8 +447,8 @@ namespace PrototypePattern
             };
             
             // Simulate expensive initialization
-            for (int i = 0; i &lt; 1000; i++)
-                for (int j = 0; j &lt; 50; j++)
+            for (int i = 0; i < 1000; i++)
+                for (int j = 0; j < 50; j++)
                     expensivePrototype.Data[i, j] = $"Data_{i}_{j}";
 
             Console.WriteLine("\n  💡 Instead of creating new complex objects,");
@@ -484,7 +484,7 @@ namespace PrototypePattern
   ┌────────────────────────────────────────────┐
   │ 📄 Q4 Financial Report                     │
   ├────────────────────────────────────────────┤
-  │ Author:   Jane Smith &lt;jane@company.com>    │
+  │ Author:   Jane Smith <jane@company.com>    │
   │ Created:  2026-01-30 10:30:00              │
   │ Modified: 2026-01-30 10:30:00              │
   │ Version:  1.0                              │
@@ -509,7 +509,7 @@ namespace PrototypePattern
 
   📄 ORIGINAL (notice Author changed!):
   ...
-  │ Author:   MODIFIED AUTHOR &lt;jane@company.com>   │  ← Changed!
+  │ Author:   MODIFIED AUTHOR <jane@company.com>   │  ← Changed!
   ...
 ```
 
@@ -564,7 +564,7 @@ public object DeepClone()
 {
     var clone = (MyClass)MemberwiseClone();
     clone.NestedObject = NestedObject.Clone();  // Clone references too
-    clone.List = new List&lt;string>(List);
+    clone.List = new List<string>(List);
     return clone;
 }
 ```
@@ -574,7 +574,7 @@ public object DeepClone()
 clone.Items = original.Items;  // Both point to same list!
 
 // ✅ GOOD: Create new collections
-clone.Items = new List&lt;Item>(original.Items.Select(i => i.Clone()));
+clone.Items = new List<Item>(original.Items.Select(i => i.Clone()));
 ```
 
 ```csharp
@@ -611,10 +611,10 @@ public IPrototype Clone()
 ### Serialization-Based Deep Clone
 
 ```csharp
-public T DeepClone&lt;T>(T obj)
+public T DeepClone<T>(T obj)
 {
     var json = JsonSerializer.Serialize(obj);
-    return JsonSerializer.Deserialize&lt;T>(json)!;
+    return JsonSerializer.Deserialize<T>(json)!;
 }
 ```
 

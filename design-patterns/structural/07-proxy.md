@@ -34,7 +34,7 @@ The Proxy pattern suggests creating a new proxy class with the same interface as
                           └─────implements──────┘
                                     │
                            ┌────────┴────────┐
-                           │  &lt;&lt;interface>>  │
+                           │  <<interface>>  │
                            │    ISubject     │
                            │ + Request()     │
                            └─────────────────┘
@@ -253,7 +253,7 @@ namespace ProxyPattern
     public class CachingProxy : IDataService
     {
         private readonly IDataService _service;
-        private readonly Dictionary&lt;string, (string Data, DateTime CachedAt)> _cache = new();
+        private readonly Dictionary<string, (string Data, DateTime CachedAt)> _cache = new();
         private readonly TimeSpan _cacheExpiry;
 
         public CachingProxy(IDataService service, TimeSpan? cacheExpiry = null)
@@ -266,7 +266,7 @@ namespace ProxyPattern
         {
             if (_cache.TryGetValue(query, out var cached))
             {
-                if (DateTime.Now - cached.CachedAt &lt; _cacheExpiry)
+                if (DateTime.Now - cached.CachedAt < _cacheExpiry)
                 {
                     Console.WriteLine($"    📦 [CachingProxy] Cache HIT for '{query}'");
                     return cached.Data;

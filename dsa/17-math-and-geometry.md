@@ -50,8 +50,8 @@ public class Solution {
         int n = matrix.Length;
         
         // Transpose (swap across diagonal)
-        for (int i = 0; i &lt; n; i++) {
-            for (int j = i + 1; j &lt; n; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
@@ -59,7 +59,7 @@ public class Solution {
         }
         
         // Reverse each row
-        for (int i = 0; i &lt; n; i++) {
+        for (int i = 0; i < n; i++) {
             Array.Reverse(matrix[i]);
         }
     }
@@ -72,8 +72,8 @@ public class Solution {
     public void Rotate(int[][] matrix) {
         int n = matrix.Length;
         
-        for (int i = 0; i &lt; n / 2; i++) {
-            for (int j = i; j &lt; n - 1 - i; j++) {
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = i; j < n - 1 - i; j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[n - 1 - j][i];
                 matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
@@ -110,27 +110,27 @@ Output: [1,2,3,6,9,8,7,4,5]
 
 ```csharp
 public class Solution {
-    public IList&lt;int> SpiralOrder(int[][] matrix) {
-        List&lt;int> result = new List&lt;int>();
+    public IList<int> SpiralOrder(int[][] matrix) {
+        List<int> result = new List<int>();
         
         int top = 0, bottom = matrix.Length - 1;
         int left = 0, right = matrix[0].Length - 1;
         
-        while (top &lt;= bottom && left &lt;= right) {
+        while (top <= bottom && left <= right) {
             // Right
-            for (int c = left; c &lt;= right; c++) {
+            for (int c = left; c <= right; c++) {
                 result.Add(matrix[top][c]);
             }
             top++;
             
             // Down
-            for (int r = top; r &lt;= bottom; r++) {
+            for (int r = top; r <= bottom; r++) {
                 result.Add(matrix[r][right]);
             }
             right--;
             
             // Left (check if row still exists)
-            if (top &lt;= bottom) {
+            if (top <= bottom) {
                 for (int c = right; c >= left; c--) {
                     result.Add(matrix[bottom][c]);
                 }
@@ -138,7 +138,7 @@ public class Solution {
             }
             
             // Up (check if column still exists)
-            if (left &lt;= right) {
+            if (left <= right) {
                 for (int r = bottom; r >= top; r--) {
                     result.Add(matrix[r][left]);
                 }
@@ -184,16 +184,16 @@ public class Solution {
         bool firstRowZero = false, firstColZero = false;
         
         // Check if first row/column should be zero
-        for (int j = 0; j &lt; n; j++) {
+        for (int j = 0; j < n; j++) {
             if (matrix[0][j] == 0) firstRowZero = true;
         }
-        for (int i = 0; i &lt; m; i++) {
+        for (int i = 0; i < m; i++) {
             if (matrix[i][0] == 0) firstColZero = true;
         }
         
         // Use first row/column as markers
-        for (int i = 1; i &lt; m; i++) {
-            for (int j = 1; j &lt; n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 if (matrix[i][j] == 0) {
                     matrix[i][0] = 0;
                     matrix[0][j] = 0;
@@ -202,8 +202,8 @@ public class Solution {
         }
         
         // Set zeros based on markers
-        for (int i = 1; i &lt; m; i++) {
-            for (int j = 1; j &lt; n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 if (matrix[i][0] == 0 || matrix[0][j] == 0) {
                     matrix[i][j] = 0;
                 }
@@ -212,10 +212,10 @@ public class Solution {
         
         // Handle first row/column
         if (firstRowZero) {
-            for (int j = 0; j &lt; n; j++) matrix[0][j] = 0;
+            for (int j = 0; j < n; j++) matrix[0][j] = 0;
         }
         if (firstColZero) {
-            for (int i = 0; i &lt; m; i++) matrix[i][0] = 0;
+            for (int i = 0; i < m; i++) matrix[i][0] = 0;
         }
     }
 }
@@ -247,7 +247,7 @@ Output: true  (1² + 9² = 82 → 8² + 2² = 68 → ... → 1)
 ```csharp
 public class Solution {
     public bool IsHappy(int n) {
-        HashSet&lt;int> seen = new HashSet&lt;int>();
+        HashSet<int> seen = new HashSet<int>();
         
         while (n != 1 && !seen.Contains(n)) {
             seen.Add(n);
@@ -328,7 +328,7 @@ Output: [1,0,0,0]
 public class Solution {
     public int[] PlusOne(int[] digits) {
         for (int i = digits.Length - 1; i >= 0; i--) {
-            if (digits[i] &lt; 9) {
+            if (digits[i] < 9) {
                 digits[i]++;
                 return digits;
             }
@@ -344,7 +344,7 @@ public class Solution {
 ```
 
 #### Key Takeaways
-- If digit &lt; 9, just increment and return
+- If digit < 9, just increment and return
 - If digit = 9, set to 0 and continue carry
 - All 9s: create new array with 1 at front
 
@@ -373,7 +373,7 @@ Output: 0.25
 public class Solution {
     public double MyPow(double x, int n) {
         long N = n;  // Handle int.MinValue
-        if (N &lt; 0) {
+        if (N < 0) {
             x = 1 / x;
             N = -N;
         }
@@ -479,12 +479,12 @@ ds.count([11,10]);  // Returns 1 (square with corners [3,10],[11,2],[3,2],[11,10
 
 ```csharp
 public class DetectSquares {
-    private Dictionary&lt;(int, int), int> pointCount;
-    private List&lt;int[]> points;
+    private Dictionary<(int, int), int> pointCount;
+    private List<int[]> points;
     
     public DetectSquares() {
-        pointCount = new Dictionary&lt;(int, int), int>();
-        points = new List&lt;int[]>();
+        pointCount = new Dictionary<(int, int), int>();
+        points = new List<int[]>();
     }
     
     public void Add(int[] point) {
@@ -542,8 +542,8 @@ public class DetectSquares {
 // 180°: reverse rows then reverse columns
 
 // Transpose
-for (int i = 0; i &lt; n; i++)
-    for (int j = i + 1; j &lt; n; j++)
+for (int i = 0; i < n; i++)
+    for (int j = i + 1; j < n; j++)
         swap(matrix[i][j], matrix[j][i])
 ```
 
@@ -565,8 +565,8 @@ int LCM(int a, int b) => a / GCD(a, b) * b;
 
 // Check if prime
 bool IsPrime(int n) {
-    if (n &lt;= 1) return false;
-    for (int i = 2; i * i &lt;= n; i++)
+    if (n <= 1) return false;
+    for (int i = 2; i * i <= n; i++)
         if (n % i == 0) return false;
     return true;
 }

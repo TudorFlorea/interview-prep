@@ -21,12 +21,12 @@
 int[,] dp = new int[m + 1, n + 1];
 
 // Initialize base cases
-for (int i = 0; i &lt;= m; i++) dp[i, 0] = base_case;
-for (int j = 0; j &lt;= n; j++) dp[0, j] = base_case;
+for (int i = 0; i <= m; i++) dp[i, 0] = base_case;
+for (int j = 0; j <= n; j++) dp[0, j] = base_case;
 
 // Fill the table
-for (int i = 1; i &lt;= m; i++) {
-    for (int j = 1; j &lt;= n; j++) {
+for (int i = 1; i <= m; i++) {
+    for (int j = 1; j <= n; j++) {
         dp[i, j] = recurrence(dp[i-1, j], dp[i, j-1], dp[i-1, j-1]);
     }
 }
@@ -60,8 +60,8 @@ public class Solution {
         int[] dp = new int[n];
         Array.Fill(dp, 1);  // First row: all 1s
         
-        for (int i = 1; i &lt; m; i++) {
-            for (int j = 1; j &lt; n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 dp[j] = dp[j] + dp[j - 1];  // From top + from left
             }
         }
@@ -78,11 +78,11 @@ public class Solution {
         int[,] dp = new int[m, n];
         
         // First row and column: only one way
-        for (int i = 0; i &lt; m; i++) dp[i, 0] = 1;
-        for (int j = 0; j &lt; n; j++) dp[0, j] = 1;
+        for (int i = 0; i < m; i++) dp[i, 0] = 1;
+        for (int j = 0; j < n; j++) dp[0, j] = 1;
         
-        for (int i = 1; i &lt; m; i++) {
-            for (int j = 1; j &lt; n; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
                 dp[i, j] = dp[i - 1, j] + dp[i, j - 1];
             }
         }
@@ -120,8 +120,8 @@ public class Solution {
         int[] dp = new int[n];
         dp[0] = 1;
         
-        for (int i = 0; i &lt; m; i++) {
-            for (int j = 0; j &lt; n; j++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (obstacleGrid[i][j] == 1) {
                     dp[j] = 0;
                 } else if (j > 0) {
@@ -165,8 +165,8 @@ public class Solution {
         int[] prev = new int[n + 1];
         int[] curr = new int[n + 1];
         
-        for (int i = 1; i &lt;= m; i++) {
-            for (int j = 1; j &lt;= n; j++) {
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
                 if (text1[i - 1] == text2[j - 1]) {
                     curr[j] = prev[j - 1] + 1;
                 } else {
@@ -190,8 +190,8 @@ public class Solution {
         int m = text1.Length, n = text2.Length;
         int[,] dp = new int[m + 1, n + 1];
         
-        for (int i = 1; i &lt;= m; i++) {
-            for (int j = 1; j &lt;= n; j++) {
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
                 if (text1[i - 1] == text2[j - 1]) {
                     dp[i, j] = dp[i - 1, j - 1] + 1;
                 } else {
@@ -234,13 +234,13 @@ Track three states: holding, sold (in cooldown), rest (can buy).
 ```csharp
 public class Solution {
     public int MaxProfit(int[] prices) {
-        if (prices.Length &lt;= 1) return 0;
+        if (prices.Length <= 1) return 0;
         
         int held = -prices[0];  // Holding stock
         int sold = 0;           // Just sold (in cooldown)
         int rest = 0;           // Can buy
         
-        for (int i = 1; i &lt; prices.Length; i++) {
+        for (int i = 1; i < prices.Length; i++) {
             int prevHeld = held;
             int prevSold = sold;
             int prevRest = rest;
@@ -286,7 +286,7 @@ public class Solution {
         dp[0] = 1;  // One way to make 0: use no coins
         
         foreach (int coin in coins) {
-            for (int i = coin; i &lt;= amount; i++) {
+            for (int i = coin; i <= amount; i++) {
                 dp[i] += dp[i - coin];
             }
         }
@@ -378,8 +378,8 @@ public class Solution {
         
         bool[] dp = new bool[n + 1];
         
-        for (int i = 0; i &lt;= m; i++) {
-            for (int j = 0; j &lt;= n; j++) {
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
                 if (i == 0 && j == 0) {
                     dp[j] = true;
                 } else if (i == 0) {
@@ -432,8 +432,8 @@ public class Solution {
         memo = new int[m, n];
         
         int maxPath = 0;
-        for (int i = 0; i &lt; m; i++) {
-            for (int j = 0; j &lt; n; j++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 maxPath = Math.Max(maxPath, DFS(matrix, i, j));
             }
         }
@@ -446,12 +446,12 @@ public class Solution {
         
         int maxLen = 1;
         
-        for (int d = 0; d &lt; 4; d++) {
+        for (int d = 0; d < 4; d++) {
             int nr = row + dr[d];
             int nc = col + dc[d];
             
-            if (nr >= 0 && nr &lt; matrix.Length && 
-                nc >= 0 && nc &lt; matrix[0].Length &&
+            if (nr >= 0 && nr < matrix.Length && 
+                nc >= 0 && nc < matrix[0].Length &&
                 matrix[nr][nc] > matrix[row][col]) {
                 maxLen = Math.Max(maxLen, 1 + DFS(matrix, nr, nc));
             }
@@ -493,7 +493,7 @@ public class Solution {
         int[] dp = new int[n + 1];
         dp[0] = 1;  // Empty t is subsequence of any s
         
-        for (int i = 1; i &lt;= m; i++) {
+        for (int i = 1; i <= m; i++) {
             // Iterate backwards to use previous row values
             for (int j = Math.Min(i, n); j >= 1; j--) {
                 if (s[i - 1] == t[j - 1]) {
@@ -515,10 +515,10 @@ public class Solution {
         int[,] dp = new int[m + 1, n + 1];
         
         // Empty t is subsequence of any prefix of s
-        for (int i = 0; i &lt;= m; i++) dp[i, 0] = 1;
+        for (int i = 0; i <= m; i++) dp[i, 0] = 1;
         
-        for (int i = 1; i &lt;= m; i++) {
-            for (int j = 1; j &lt;= n; j++) {
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
                 dp[i, j] = dp[i - 1, j];  // Don't use s[i-1]
                 if (s[i - 1] == t[j - 1]) {
                     dp[i, j] += dp[i - 1, j - 1];  // Use s[i-1]
@@ -562,12 +562,12 @@ public class Solution {
         int[] curr = new int[n + 1];
         
         // Base: convert empty string to word2[0..j]
-        for (int j = 0; j &lt;= n; j++) prev[j] = j;
+        for (int j = 0; j <= n; j++) prev[j] = j;
         
-        for (int i = 1; i &lt;= m; i++) {
+        for (int i = 1; i <= m; i++) {
             curr[0] = i;  // Convert word1[0..i] to empty
             
-            for (int j = 1; j &lt;= n; j++) {
+            for (int j = 1; j <= n; j++) {
                 if (word1[i - 1] == word2[j - 1]) {
                     curr[j] = prev[j - 1];  // No operation needed
                 } else {
@@ -596,11 +596,11 @@ public class Solution {
         int m = word1.Length, n = word2.Length;
         int[,] dp = new int[m + 1, n + 1];
         
-        for (int i = 0; i &lt;= m; i++) dp[i, 0] = i;
-        for (int j = 0; j &lt;= n; j++) dp[0, j] = j;
+        for (int i = 0; i <= m; i++) dp[i, 0] = i;
+        for (int j = 0; j <= n; j++) dp[0, j] = j;
         
-        for (int i = 1; i &lt;= m; i++) {
-            for (int j = 1; j &lt;= n; j++) {
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
                 if (word1[i - 1] == word2[j - 1]) {
                     dp[i, j] = dp[i - 1, j - 1];
                 } else {
@@ -653,18 +653,18 @@ public class Solution {
         // Add virtual balloons of value 1 at boundaries
         int[] balloons = new int[n + 2];
         balloons[0] = balloons[n + 1] = 1;
-        for (int i = 0; i &lt; n; i++) balloons[i + 1] = nums[i];
+        for (int i = 0; i < n; i++) balloons[i + 1] = nums[i];
         
         int[,] dp = new int[n + 2, n + 2];
         // dp[i,j] = max coins from bursting all balloons between i and j (exclusive)
         
         // Iterate by length
-        for (int len = 1; len &lt;= n; len++) {
-            for (int left = 1; left &lt;= n - len + 1; left++) {
+        for (int len = 1; len <= n; len++) {
+            for (int left = 1; left <= n - len + 1; left++) {
                 int right = left + len - 1;
                 
                 // Try each balloon as the LAST one to burst in this range
-                for (int k = left; k &lt;= right; k++) {
+                for (int k = left; k <= right; k++) {
                     int coins = balloons[left - 1] * balloons[k] * balloons[right + 1];
                     int total = dp[left, k - 1] + coins + dp[k + 1, right];
                     dp[left, right] = Math.Max(dp[left, right], total);
@@ -709,14 +709,14 @@ public class Solution {
         dp[0, 0] = true;
         
         // Handle patterns like a*, a*b*, etc. matching empty string
-        for (int j = 2; j &lt;= n; j += 2) {
+        for (int j = 2; j <= n; j += 2) {
             if (p[j - 1] == '*') {
                 dp[0, j] = dp[0, j - 2];
             }
         }
         
-        for (int i = 1; i &lt;= m; i++) {
-            for (int j = 1; j &lt;= n; j++) {
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
                 if (p[j - 1] == '*') {
                     // Zero occurrences of preceding char
                     dp[i, j] = dp[i, j - 2];

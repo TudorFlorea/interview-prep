@@ -35,7 +35,7 @@ The Builder pattern suggests extracting the object construction code into separa
                                   │ uses
                                   ▼
 ┌───────────────────────────────────────────────────────────────────────┐
-│                        &lt;&lt;interface>>                                   │
+│                        <<interface>>                                   │
 │                          IBuilder                                      │
 │  ───────────────────────────────────────────────────────────────────  │
 │  + BuildStepA(): void                                                  │
@@ -101,7 +101,7 @@ namespace BuilderPattern
         public string PowerSupply { get; set; } = "";
         public string Case { get; set; } = "";
         public string CoolingSystem { get; set; } = "";
-        public List&lt;string> Peripherals { get; set; } = new();
+        public List<string> Peripherals { get; set; } = new();
         public bool HasWifi { get; set; }
         public bool HasBluetooth { get; set; }
         public string OperatingSystem { get; set; } = "";

@@ -715,7 +715,7 @@ SET
     avg_rating = (SELECT AVG(rating) FROM reviews r WHERE r.product_id = p.product_id),
     times_ordered = (SELECT COUNT(*) FROM order_items oi WHERE oi.product_id = p.product_id),
     stats_updated_at = NOW()
-WHERE p.stats_updated_at &lt; NOW() - INTERVAL 5 MINUTE
+WHERE p.stats_updated_at < NOW() - INTERVAL 5 MINUTE
    OR p.stats_updated_at IS NULL;
 ```
 

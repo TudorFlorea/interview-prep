@@ -85,13 +85,13 @@ namespace StatePattern
         public decimal InsertedMoney { get; set; }
         public string? SelectedProduct { get; set; }
         
-        private readonly Dictionary&lt;string, (decimal Price, int Stock)> _inventory;
+        private readonly Dictionary<string, (decimal Price, int Stock)> _inventory;
 
         public VendingMachine()
         {
             _state = new IdleState();
             InsertedMoney = 0;
-            _inventory = new Dictionary&lt;string, (decimal, int)>
+            _inventory = new Dictionary<string, (decimal, int)>
             {
                 { "Cola", (1.50m, 5) },
                 { "Chips", (1.00m, 3) },
@@ -195,7 +195,7 @@ namespace StatePattern
             }
 
             decimal price = machine.GetPrice(product);
-            if (machine.InsertedMoney &lt; price)
+            if (machine.InsertedMoney < price)
             {
                 Console.WriteLine($"  ⚠️ Insufficient funds. {product} costs ${price:F2}");
                 return;
@@ -281,10 +281,10 @@ namespace StatePattern
     public class MediaPlayer
     {
         private PlayerState _state;
-        private readonly List&lt;string> _playlist;
+        private readonly List<string> _playlist;
         private int _currentTrack;
 
-        public MediaPlayer(List&lt;string> playlist)
+        public MediaPlayer(List<string> playlist)
         {
             _playlist = playlist;
             _currentTrack = 0;
@@ -470,7 +470,7 @@ namespace StatePattern
             Console.WriteLine("  MEDIA PLAYER");
             Console.WriteLine("═══════════════════════════════════════════════");
 
-            var playlist = new List&lt;string>
+            var playlist = new List<string>
             {
                 "Bohemian Rhapsody - Queen",
                 "Hotel California - Eagles",

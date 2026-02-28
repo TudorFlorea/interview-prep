@@ -31,7 +31,7 @@ Words: apple, ant, cat
 ### Key C# Implementation
 ```csharp
 public class TrieNode {
-    public Dictionary&lt;char, TrieNode> children = new Dictionary&lt;char, TrieNode>();
+    public Dictionary<char, TrieNode> children = new Dictionary<char, TrieNode>();
     public bool isEndOfWord = false;
 }
 
@@ -132,7 +132,7 @@ public class Trie {
 ```csharp
 public class Trie {
     private class TrieNode {
-        public Dictionary&lt;char, TrieNode> children = new Dictionary&lt;char, TrieNode>();
+        public Dictionary<char, TrieNode> children = new Dictionary<char, TrieNode>();
         public bool isEndOfWord = false;
     }
     
@@ -307,7 +307,7 @@ public class Solution {
     private int[] rowDir = { -1, 1, 0, 0 };
     private int[] colDir = { 0, 0, -1, 1 };
     
-    public IList&lt;string> FindWords(char[][] board, string[] words) {
+    public IList<string> FindWords(char[][] board, string[] words) {
         // Build Trie
         TrieNode root = new TrieNode();
         foreach (string word in words) {
@@ -322,12 +322,12 @@ public class Solution {
             node.word = word;
         }
         
-        List&lt;string> result = new List&lt;string>();
+        List<string> result = new List<string>();
         int m = board.Length, n = board[0].Length;
         
         // DFS from each cell
-        for (int r = 0; r &lt; m; r++) {
-            for (int c = 0; c &lt; n; c++) {
+        for (int r = 0; r < m; r++) {
+            for (int c = 0; c < n; c++) {
                 DFS(board, r, c, root, result);
             }
         }
@@ -335,9 +335,9 @@ public class Solution {
         return result;
     }
     
-    private void DFS(char[][] board, int r, int c, TrieNode node, List&lt;string> result) {
+    private void DFS(char[][] board, int r, int c, TrieNode node, List<string> result) {
         // Bounds check
-        if (r &lt; 0 || r >= board.Length || c &lt; 0 || c >= board[0].Length) {
+        if (r < 0 || r >= board.Length || c < 0 || c >= board[0].Length) {
             return;
         }
         
@@ -360,7 +360,7 @@ public class Solution {
         board[r][c] = '#';
         
         // Explore neighbors
-        for (int d = 0; d &lt; 4; d++) {
+        for (int d = 0; d < 4; d++) {
             DFS(board, r + rowDir[d], c + colDir[d], node, result);
         }
         
@@ -377,7 +377,7 @@ public class Solution {
 
 ```csharp
 // Optimization: Prune empty Trie branches
-private void DFS(char[][] board, int r, int c, TrieNode parent, int parentIndex, List&lt;string> result) {
+private void DFS(char[][] board, int r, int c, TrieNode parent, int parentIndex, List<string> result) {
     // ... existing code ...
     
     // After exploring, if node has no children and no word, remove it

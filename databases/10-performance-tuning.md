@@ -25,7 +25,7 @@ Performance tuning is a holistic approach to database optimization that goes bey
 | **Query latency** | Response time | p99 > 1s, increasing trend |
 | **Throughput** | Queries/second | Decreasing under load |
 | **Connection count** | Active connections | Near pool maximum |
-| **Buffer hit ratio** | Cache effectiveness | &lt; 99% for OLTP |
+| **Buffer hit ratio** | Cache effectiveness | < 99% for OLTP |
 | **Lock waits** | Contention | Increasing wait times |
 | **Disk I/O** | Storage performance | High read latency, saturation |
 | **CPU usage** | Processing capacity | Sustained > 80% |
@@ -400,7 +400,7 @@ IGNORE 1 ROWS;
 
 ```sql
 -- ❌ Slow: Update all rows at once (locks table, logs huge transaction)
-UPDATE orders SET status = 'archived' WHERE order_date &lt; '2020-01-01';
+UPDATE orders SET status = 'archived' WHERE order_date < '2020-01-01';
 
 -- ✅ Better: Batch updates
 -- Process in chunks to reduce lock time and transaction log size
@@ -414,7 +414,7 @@ BEGIN
         SET status = 'archived' 
         WHERE order_id IN (
             SELECT order_id FROM orders 
-            WHERE order_date &lt; '2020-01-01' 
+            WHERE order_date < '2020-01-01' 
             AND status != 'archived'
             LIMIT batch_size
         );
@@ -632,7 +632,7 @@ Or per-app-server pools (less efficient):
 **Scenario:** You're taking over a database with these characteristics:
 - 500GB data, 50M row main table
 - 100 queries/second average, spikes to 500/second
-- p99 latency: 500ms (goal: &lt;100ms)
+- p99 latency: 500ms (goal: <100ms)
 - Current settings: defaults
 
 **Create a tuning plan covering:**
@@ -711,7 +711,7 @@ CREATE TABLE orders_partitioned (
 # Key metrics to alert on:
 - Query latency p99 > 100ms
 - Active connections > 80% of max
-- Buffer hit ratio &lt; 99%
+- Buffer hit ratio < 99%
 - Replication lag > 30 seconds
 - Disk usage > 80%
 - Lock wait time > 1 second

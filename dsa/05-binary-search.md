@@ -23,25 +23,25 @@ Binary Search is a divide-and-conquer algorithm that finds a target value in a s
 ```csharp
 // Classic binary search
 int left = 0, right = arr.Length - 1;
-while (left &lt;= right) {
+while (left <= right) {
     int mid = left + (right - left) / 2;  // Avoid overflow
     if (arr[mid] == target) return mid;
-    else if (arr[mid] &lt; target) left = mid + 1;
+    else if (arr[mid] < target) left = mid + 1;
     else right = mid - 1;
 }
 return -1;  // Not found
 
 // Lower bound (first >= target)
-while (left &lt; right) {
+while (left < right) {
     int mid = left + (right - left) / 2;
-    if (arr[mid] &lt; target) left = mid + 1;
+    if (arr[mid] < target) left = mid + 1;
     else right = mid;
 }
 
 // Upper bound (first > target)
-while (left &lt; right) {
+while (left < right) {
     int mid = left + (right - left) / 2;
-    if (arr[mid] &lt;= target) left = mid + 1;
+    if (arr[mid] <= target) left = mid + 1;
     else right = mid;
 }
 ```
@@ -85,12 +85,12 @@ public class Solution {
     public int Search(int[] nums, int target) {
         int left = 0, right = nums.Length - 1;
         
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;  // Avoid overflow
             
             if (nums[mid] == target) {
                 return mid;
-            } else if (nums[mid] &lt; target) {
+            } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
@@ -115,7 +115,7 @@ public class Solution {
         int mid = left + (right - left) / 2;
         
         if (nums[mid] == target) return mid;
-        if (nums[mid] &lt; target) return BinarySearch(nums, target, mid + 1, right);
+        if (nums[mid] < target) return BinarySearch(nums, target, mid + 1, right);
         return BinarySearch(nums, target, left, mid - 1);
     }
 }
@@ -123,7 +123,7 @@ public class Solution {
 
 #### Key Takeaways
 - Use `left + (right - left) / 2` instead of `(left + right) / 2` to avoid integer overflow
-- `while (left &lt;= right)` - include equality to check single-element ranges
+- `while (left <= right)` - include equality to check single-element ranges
 - Move `left = mid + 1` and `right = mid - 1` to avoid infinite loops
 - Foundation for all binary search variations
 
@@ -161,9 +161,9 @@ public class Solution {
         
         // Binary search to find the row
         int top = 0, bottom = m - 1;
-        while (top &lt;= bottom) {
+        while (top <= bottom) {
             int midRow = top + (bottom - top) / 2;
-            if (target &lt; matrix[midRow][0]) {
+            if (target < matrix[midRow][0]) {
                 bottom = midRow - 1;
             } else if (target > matrix[midRow][n - 1]) {
                 top = midRow + 1;
@@ -178,10 +178,10 @@ public class Solution {
     
     private bool BinarySearchRow(int[] row, int target) {
         int left = 0, right = row.Length - 1;
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
             if (row[mid] == target) return true;
-            if (row[mid] &lt; target) left = mid + 1;
+            if (row[mid] < target) left = mid + 1;
             else right = mid - 1;
         }
         return false;
@@ -201,7 +201,7 @@ public class Solution {
         int m = matrix.Length, n = matrix[0].Length;
         int left = 0, right = m * n - 1;
         
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
             
             // Convert 1D index to 2D coordinates
@@ -210,7 +210,7 @@ public class Solution {
             int value = matrix[row][col];
             
             if (value == target) return true;
-            if (value &lt; target) left = mid + 1;
+            if (value < target) left = mid + 1;
             else right = mid - 1;
         }
         
@@ -256,7 +256,7 @@ public class Solution {
     public int MinEatingSpeed(int[] piles, int h) {
         int maxPile = piles.Max();
         
-        for (int k = 1; k &lt;= maxPile; k++) {
+        for (int k = 1; k <= maxPile; k++) {
             if (CanFinish(piles, k, h)) {
                 return k;
             }
@@ -270,7 +270,7 @@ public class Solution {
         foreach (int pile in piles) {
             hours += (pile + k - 1) / k;  // Ceiling division
         }
-        return hours &lt;= h;
+        return hours <= h;
     }
 }
 ```
@@ -287,7 +287,7 @@ public class Solution {
         int left = 1;
         int right = piles.Max();
         
-        while (left &lt; right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             
             if (CanFinish(piles, mid, h)) {
@@ -305,7 +305,7 @@ public class Solution {
         foreach (int pile in piles) {
             hours += (pile + k - 1) / k;  // Ceiling: (a + b - 1) / b
         }
-        return hours &lt;= h;
+        return hours <= h;
     }
 }
 ```
@@ -366,7 +366,7 @@ public class Solution {
     public int FindMin(int[] nums) {
         int left = 0, right = nums.Length - 1;
         
-        while (left &lt; right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             
             if (nums[mid] > nums[right]) {
@@ -385,11 +385,11 @@ public class Solution {
 
 #### Why Compare with Right (not Left)?
 - If `nums[mid] > nums[right]`: rotation point is to the right
-- If `nums[mid] &lt; nums[right]`: this half is sorted, minimum might be at mid or left
+- If `nums[mid] < nums[right]`: this half is sorted, minimum might be at mid or left
 - Comparing with left is ambiguous when array isn't rotated
 
 #### Key Takeaways
-- Use `left &lt; right` (not `left &lt;= right`) to avoid infinite loop
+- Use `left < right` (not `left <= right`) to avoid infinite loop
 - Compare with `nums[right]` to determine which half has minimum
 - `right = mid` (not `mid - 1`) because mid could be the minimum
 - Works for both rotated and non-rotated arrays
@@ -425,7 +425,7 @@ public class Solution {
     public int Search(int[] nums, int target) {
         int left = 0, right = nums.Length - 1;
         
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
             
             if (nums[mid] == target) {
@@ -433,16 +433,16 @@ public class Solution {
             }
             
             // Determine which half is sorted
-            if (nums[left] &lt;= nums[mid]) {
+            if (nums[left] <= nums[mid]) {
                 // Left half is sorted
-                if (target >= nums[left] && target &lt; nums[mid]) {
+                if (target >= nums[left] && target < nums[mid]) {
                     right = mid - 1;  // Target in left half
                 } else {
                     left = mid + 1;   // Target in right half
                 }
             } else {
                 // Right half is sorted
-                if (target > nums[mid] && target &lt;= nums[right]) {
+                if (target > nums[mid] && target <= nums[right]) {
                     left = mid + 1;   // Target in right half
                 } else {
                     right = mid - 1;  // Target in left half
@@ -463,7 +463,7 @@ public class Solution {
         
         // Find minimum (pivot)
         int left = 0, right = n - 1;
-        while (left &lt; right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] > nums[right]) left = mid + 1;
             else right = mid;
@@ -472,7 +472,7 @@ public class Solution {
         int pivot = left;
         
         // Binary search in appropriate half
-        if (target >= nums[pivot] && target &lt;= nums[n - 1]) {
+        if (target >= nums[pivot] && target <= nums[n - 1]) {
             return BinarySearch(nums, target, pivot, n - 1);
         } else {
             return BinarySearch(nums, target, 0, pivot - 1);
@@ -480,10 +480,10 @@ public class Solution {
     }
     
     private int BinarySearch(int[] nums, int target, int left, int right) {
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) return mid;
-            if (nums[mid] &lt; target) left = mid + 1;
+            if (nums[mid] < target) left = mid + 1;
             else right = mid - 1;
         }
         return -1;
@@ -493,7 +493,7 @@ public class Solution {
 
 #### Key Takeaways
 - At least one half is always sorted
-- Check `nums[left] &lt;= nums[mid]` to identify sorted half (use `&lt;=` for edge cases)
+- Check `nums[left] <= nums[mid]` to identify sorted half (use `<=` for edge cases)
 - Check if target is in sorted half's range before deciding direction
 - Can solve in one pass (approach 1) or two passes (approach 2)
 
@@ -513,7 +513,7 @@ Timestamps are strictly increasing for each key.
 ```
 set("foo", "bar", 1)
 get("foo", 1)     // Returns "bar"
-get("foo", 3)     // Returns "bar" (timestamp 1 &lt;= 3)
+get("foo", 3)     // Returns "bar" (timestamp 1 <= 3)
 set("foo", "bar2", 4)
 get("foo", 4)     // Returns "bar2"
 get("foo", 5)     // Returns "bar2"
@@ -530,15 +530,15 @@ Dictionary of lists + binary search.
 
 ```csharp
 public class TimeMap {
-    private Dictionary&lt;string, List&lt;(int timestamp, string value)>> store;
+    private Dictionary<string, List<(int timestamp, string value)>> store;
     
     public TimeMap() {
-        store = new Dictionary&lt;string, List&lt;(int, string)>>();
+        store = new Dictionary<string, List<(int, string)>>();
     }
     
     public void Set(string key, string value, int timestamp) {
         if (!store.ContainsKey(key)) {
-            store[key] = new List&lt;(int, string)>();
+            store[key] = new List<(int, string)>();
         }
         store[key].Add((timestamp, value));
     }
@@ -548,14 +548,14 @@ public class TimeMap {
         
         var list = store[key];
         
-        // Binary search for largest timestamp &lt;= target
+        // Binary search for largest timestamp <= target
         int left = 0, right = list.Count - 1;
         string result = "";
         
-        while (left &lt;= right) {
+        while (left <= right) {
             int mid = left + (right - left) / 2;
             
-            if (list[mid].timestamp &lt;= timestamp) {
+            if (list[mid].timestamp <= timestamp) {
                 result = list[mid].value;
                 left = mid + 1;  // Try to find larger valid timestamp
             } else {
@@ -571,15 +571,15 @@ public class TimeMap {
 #### Alternative: Using Built-in Binary Search
 ```csharp
 public class TimeMap {
-    private Dictionary&lt;string, List&lt;(int timestamp, string value)>> store;
+    private Dictionary<string, List<(int timestamp, string value)>> store;
     
     public TimeMap() {
-        store = new Dictionary&lt;string, List&lt;(int, string)>>();
+        store = new Dictionary<string, List<(int, string)>>();
     }
     
     public void Set(string key, string value, int timestamp) {
         if (!store.ContainsKey(key)) {
-            store[key] = new List&lt;(int, string)>();
+            store[key] = new List<(int, string)>();
         }
         store[key].Add((timestamp, value));
     }
@@ -597,12 +597,12 @@ public class TimeMap {
     }
     
     // Returns index of first element > timestamp
-    private int BinarySearchUpperBound(List&lt;(int timestamp, string value)> list, int target) {
+    private int BinarySearchUpperBound(List<(int timestamp, string value)> list, int target) {
         int left = 0, right = list.Count;
         
-        while (left &lt; right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
-            if (list[mid].timestamp &lt;= target) {
+            if (list[mid].timestamp <= target) {
                 left = mid + 1;
             } else {
                 right = mid;
@@ -656,16 +656,16 @@ public class Solution {
         int[] merged = new int[nums1.Length + nums2.Length];
         int i = 0, j = 0, k = 0;
         
-        while (i &lt; nums1.Length && j &lt; nums2.Length) {
-            if (nums1[i] &lt; nums2[j]) {
+        while (i < nums1.Length && j < nums2.Length) {
+            if (nums1[i] < nums2[j]) {
                 merged[k++] = nums1[i++];
             } else {
                 merged[k++] = nums2[j++];
             }
         }
         
-        while (i &lt; nums1.Length) merged[k++] = nums1[i++];
-        while (j &lt; nums2.Length) merged[k++] = nums2[j++];
+        while (i < nums1.Length) merged[k++] = nums1[i++];
+        while (j < nums2.Length) merged[k++] = nums2[j++];
         
         int n = merged.Length;
         if (n % 2 == 0) {
@@ -693,7 +693,7 @@ public class Solution {
         int m = nums1.Length, n = nums2.Length;
         int left = 0, right = m;
         
-        while (left &lt;= right) {
+        while (left <= right) {
             // Partition positions
             int partitionX = left + (right - left) / 2;
             int partitionY = (m + n + 1) / 2 - partitionX;
@@ -706,7 +706,7 @@ public class Solution {
             int minRightY = (partitionY == n) ? int.MaxValue : nums2[partitionY];
             
             // Check if we found the correct partition
-            if (maxLeftX &lt;= minRightY && maxLeftY &lt;= minRightX) {
+            if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
                 // Found correct partition
                 if ((m + n) % 2 == 0) {
                     return (Math.Max(maxLeftX, maxLeftY) + 
@@ -735,8 +735,8 @@ nums2:  [...maxLeftY] | [minRightY...]
 
 For correct partition:
 1. Total elements on left = (m + n + 1) / 2
-2. maxLeftX &lt;= minRightY (all left elements of nums1 &lt;= all right of nums2)
-3. maxLeftY &lt;= minRightX (all left elements of nums2 &lt;= all right of nums1)
+2. maxLeftX <= minRightY (all left elements of nums1 <= all right of nums2)
+3. maxLeftY <= minRightX (all left elements of nums2 <= all right of nums1)
 ```
 
 #### Key Takeaways
@@ -765,26 +765,26 @@ For correct partition:
 
 ```csharp
 // Template 1: Find exact match
-while (left &lt;= right) {
+while (left <= right) {
     int mid = left + (right - left) / 2;
     if (arr[mid] == target) return mid;
-    if (arr[mid] &lt; target) left = mid + 1;
+    if (arr[mid] < target) left = mid + 1;
     else right = mid - 1;
 }
 return -1;
 
 // Template 2: Find boundary (first element >= target)
-while (left &lt; right) {
+while (left < right) {
     int mid = left + (right - left) / 2;
-    if (arr[mid] &lt; target) left = mid + 1;
+    if (arr[mid] < target) left = mid + 1;
     else right = mid;
 }
 return left;
 
-// Template 3: Find boundary (last element &lt;= target)
-while (left &lt; right) {
+// Template 3: Find boundary (last element <= target)
+while (left < right) {
     int mid = left + (right - left + 1) / 2;  // Round up
-    if (arr[mid] &lt;= target) left = mid;
+    if (arr[mid] <= target) left = mid;
     else right = mid - 1;
 }
 return left;
@@ -795,7 +795,7 @@ return left;
 1. **Overflow**: Use `left + (right - left) / 2` instead of `(left + right) / 2`
 2. **Infinite loop**: Ensure search space shrinks (`left = mid + 1` or `right = mid - 1`)
 3. **Off-by-one**: Check boundary conditions carefully
-4. **Wrong comparison**: Use `&lt;` vs `&lt;=` based on problem requirements
+4. **Wrong comparison**: Use `<` vs `<=` based on problem requirements
 
 ### C# Built-in Binary Search
 
@@ -804,10 +804,10 @@ return left;
 // - Index if found
 // - Bitwise complement of index of next larger element if not found
 int idx = Array.BinarySearch(arr, target);
-if (idx &lt; 0) {
+if (idx < 0) {
     int insertionPoint = ~idx;
 }
 
-// List&lt;T>.BinarySearch works the same way
+// List<T>.BinarySearch works the same way
 int idx = list.BinarySearch(target);
 ```
